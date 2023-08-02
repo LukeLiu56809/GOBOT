@@ -36,8 +36,10 @@ private slots:
     void onCollapseButtonClicked();
 
 private:
-    QMap<QString, QString> c_filesMap;
-    Ui::MainWindow *c_ui;
+    QMap<QString, QString> collapse_filesMap;
+    Ui::MainWindow *collapse_ui;
 };
 
 #endif // COLLAPSE_H
+
+

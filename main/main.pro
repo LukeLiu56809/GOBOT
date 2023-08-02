@@ -12,6 +12,7 @@ SOURCES += \
     ../Functions/Collapse/collapse.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
+    ../Functions/Relax/relax.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -19,6 +20,7 @@ HEADERS += \
     ../Functions/Collapse/collapse.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
+    ../Functions/Relax/relax.h \
     mainwindow.h
 
 FORMS += \

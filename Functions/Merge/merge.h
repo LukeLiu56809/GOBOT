@@ -17,6 +17,8 @@ public:
     explicit Merge(Ui::MainWindow *ui, QObject *parent = nullptr);
     QString getSavePath() const;
     QString getNameSave() const;
+    int getImportClosureIndex() const;
+    int getOntologyAnnotationsIndex() const;
 
 public slots:
     void addFiles();
@@ -33,8 +35,8 @@ private slots:
     void onMergeButtonClicked();
 
 private:
-    QMap<QString, QString> m_filesMap;
-    Ui::MainWindow *m_ui;
+    QMap<QString, QString> merge_filesMap;
+    Ui::MainWindow *merge_ui;
 };
 
 #endif // MERGE_H

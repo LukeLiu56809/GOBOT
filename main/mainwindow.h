@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include "../Functions/Merge/merge.h"
 #include "../Functions/Collapse/collapse.h"
-# include "../Functions/Mirror/mirror.h"
+#include "../Functions/Mirror/mirror.h"
+#include "../Functions/Relax/relax.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +24,7 @@ private:
     Merge *mergeHandler;
     Collapse *collapseHandler;
     Mirror *mirrorHandler;
+    Relax *relaxHandler;
 };
 
 #endif // MAINWINDOW_H

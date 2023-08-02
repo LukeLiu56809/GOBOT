@@ -7,14 +7,14 @@
 
 Merge::Merge(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
-    m_ui(ui)
+    merge_ui(ui)
 {
     // Connect the signals from the UI buttons to the appropriate slots
-    connect(m_ui->mergeAddFile, &QPushButton::clicked, this, &Merge::onMergeAddFileClicked);
-    connect(m_ui->mergeRemoveFile, &QPushButton::clicked, this, &Merge::onMergeRemoveFileClicked);
-    connect(m_ui->mergeSaveAs, &QPushButton::clicked, this, &Merge::onMergeSaveAsClicked);
-    connect(m_ui->mergeReset, &QPushButton::clicked, this, &Merge::onMergeResetClicked);
-    connect(m_ui->mergeButton, &QPushButton::clicked, this, &Merge::onMergeButtonClicked);
+    connect(merge_ui->mergeAddFile, &QPushButton::clicked, this, &Merge::onMergeAddFileClicked);
+    connect(merge_ui->mergeRemoveFile, &QPushButton::clicked, this, &Merge::onMergeRemoveFileClicked);
+    connect(merge_ui->mergeSaveAs, &QPushButton::clicked, this, &Merge::onMergeSaveAsClicked);
+    connect(merge_ui->mergeReset, &QPushButton::clicked, this, &Merge::onMergeResetClicked);
+    connect(merge_ui->mergeButton, &QPushButton::clicked, this, &Merge::onMergeButtonClicked);
 }
 
 void Merge::onMergeAddFileClicked()
@@ -53,17 +53,17 @@ void Merge::addFiles()
             QString fileName = fileInfo.fileName();
 
             // Append the file name to the list view box
-            m_ui->mergeFileNames->addItem(fileName);
+            merge_ui->mergeFileNames->addItem(fileName);
 
             // Add the file name and its corresponding parent directory path to the QMap
-            m_filesMap[fileName] = fileInfo.path();
+            merge_filesMap[fileName] = fileInfo.path();
         }
     }
 }
 
 void Merge::removeFiles()
 {
-    QListWidgetItem* selectedItem = m_ui->mergeFileNames->currentItem();
+    QListWidgetItem* selectedItem = merge_ui->mergeFileNames->currentItem();
 
     if (!selectedItem) {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
@@ -74,10 +74,10 @@ void Merge::removeFiles()
     QString selectedFileName = selectedItem->text();
 
     // Remove the selected item from the list view widget
-    m_ui->mergeFileNames->takeItem(m_ui->mergeFileNames->row(selectedItem));
+    merge_ui->mergeFileNames->takeItem(merge_ui->mergeFileNames->row(selectedItem));
 
     // Remove the selected file name from the QMap
-    m_filesMap.remove(selectedFileName);
+    merge_filesMap.remove(selectedFileName);
 }
 
 void Merge::saveFiles()
@@ -93,19 +93,19 @@ void Merge::saveFiles()
         QString directory = fileInfo.path();
 
         // Set the text of the QLineEdit widget to the selected save file name
-        m_ui->mergeNameSave->setText(fileName);
+        merge_ui->mergeNameSave->setText(fileName);
 
         // Set the text of the QLineEdit widget to the selected save file path
-        m_ui->mergeSavePath->setText(directory);
+        merge_ui->mergeSavePath->setText(directory);
     }
 }
 
 void Merge::resetMerge()
 {
-    m_filesMap.clear();
-    m_ui->mergeFileNames->clear();
-    m_ui->mergeNameSave->clear();
-    m_ui->mergeSavePath->clear();
+    merge_filesMap.clear();
+    merge_ui->mergeFileNames->clear();
+    merge_ui->mergeNameSave->clear();
+    merge_ui->mergeSavePath->clear();
 }
 
 void Merge::mergeFiles()
@@ -113,8 +113,8 @@ void Merge::mergeFiles()
     // Construct output file
     QString result = getSavePath() + "/" + getNameSave();
 
-    // Check if m_filesMap has less than 2 elements
-    if (m_filesMap.size() < 2)
+    // Check if merge_filesMap has less than 2 elements
+    if (merge_filesMap.size() < 2)
     {
         QMessageBox::warning(nullptr, "Error", "You need at least two files to merge.");
         return;
@@ -128,17 +128,17 @@ void Merge::mergeFiles()
     }
 
     // Construct system command
-    QStringList arguments;
-    arguments << "merge";
-
-    for (const QString& name : m_filesMap.keys()) {
-        arguments << "--input" << name;
+    QString command = "cd " + merge_filesMap.first() + " && robot merge";
+    for (QString& fileName : merge_filesMap.keys()) {
+        command += " --input " + fileName;
     }
-
-    arguments << "--output" << result;
-
-    // Convert arguments to a command string
-    QString command = "cd " + m_filesMap.first() + " && robot " + arguments.join(" ");
+    if (getImportClosureIndex() == 1) {
+        command += " --collapse-import-closure false";
+    }
+    if (getOntologyAnnotationsIndex() == 1) {
+        command += " --include-annotations true";
+    }
+    command += " --output " + result;
 
     // Call system with the command
     int check = system(command.toUtf8());
@@ -160,10 +160,20 @@ void Merge::mergeFiles()
 //------------------------------- Getter methods---------------------------------
 QString Merge::getSavePath() const
 {
-    return m_ui->mergeSavePath->text();
+    return merge_ui->mergeSavePath->text();
 }
 
 QString Merge::getNameSave() const
 {
-    return m_ui->mergeNameSave->text();
+    return merge_ui->mergeNameSave->text();
+}
+
+int Merge::getImportClosureIndex() const
+{
+    return merge_ui->mergeImportClosure->currentIndex();
+}
+
+int Merge::getOntologyAnnotationsIndex() const
+{
+    return merge_ui->mergeOntologyAnnotations->currentIndex();
 }

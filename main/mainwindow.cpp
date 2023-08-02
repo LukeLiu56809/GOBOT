@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     mergeHandler = new Merge(ui, this);
     collapseHandler = new Collapse(ui, this);
     mirrorHandler = new Mirror(ui, this);
+    relaxHandler = new Relax(ui, this);
 
     QByteArray pathValue = qgetenv("PATH");
     QString pathString = QString::fromLocal8Bit(pathValue);

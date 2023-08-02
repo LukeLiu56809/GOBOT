@@ -7,14 +7,14 @@
 
 Collapse::Collapse(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
-    c_ui(ui)
+    collapse_ui(ui)
 {
     // Connect the signals from the UI buttons to the appropriate slots
-    connect(c_ui->collapseAddFile, &QPushButton::clicked, this, &Collapse::onCollapseAddFileClicked);
-    connect(c_ui->collapseRemoveFile, &QPushButton::clicked, this, &Collapse::onCollapseRemoveFileClicked);
-    connect(c_ui->collapseSaveAs, &QPushButton::clicked, this, &Collapse::onCollapseSaveAsClicked);
-    connect(c_ui->collapseReset, &QPushButton::clicked, this, &Collapse::onCollapseResetClicked);
-    connect(c_ui->collapseButton, &QPushButton::clicked, this, &Collapse::onCollapseButtonClicked);
+    connect(collapse_ui->collapseAddFile, &QPushButton::clicked, this, &Collapse::onCollapseAddFileClicked);
+    connect(collapse_ui->collapseRemoveFile, &QPushButton::clicked, this, &Collapse::onCollapseRemoveFileClicked);
+    connect(collapse_ui->collapseSaveAs, &QPushButton::clicked, this, &Collapse::onCollapseSaveAsClicked);
+    connect(collapse_ui->collapseReset, &QPushButton::clicked, this, &Collapse::onCollapseResetClicked);
+    connect(collapse_ui->collapseButton, &QPushButton::clicked, this, &Collapse::onCollapseButtonClicked);
 }
 
 void Collapse::onCollapseAddFileClicked()
@@ -53,17 +53,17 @@ void Collapse::addFiles()
             QString fileName = fileInfo.fileName();
 
             // Append the file name to the list view box
-            c_ui->collapseFileNames->addItem(fileName);
+            collapse_ui->collapseFileNames->addItem(fileName);
 
             // Add the file name and its corresponding file path to the QMap
-            c_filesMap[fileName] = fileInfo.path();
+            collapse_filesMap[fileName] = fileInfo.path();
         }
     }
 }
 
 void Collapse::removeFiles()
 {
-    QListWidgetItem* selectedItem = c_ui->collapseFileNames->currentItem();
+    QListWidgetItem* selectedItem = collapse_ui->collapseFileNames->currentItem();
 
     if (!selectedItem) {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
@@ -74,10 +74,10 @@ void Collapse::removeFiles()
     QString selectedFileName = selectedItem->text();
 
     // Remove the selected item from the list view widget
-    c_ui->collapseFileNames->takeItem(c_ui->collapseFileNames->row(selectedItem));
+    collapse_ui->collapseFileNames->takeItem(collapse_ui->collapseFileNames->row(selectedItem));
 
     // Remove the selected file name from the QMap
-    c_filesMap.remove(selectedFileName);
+    collapse_filesMap.remove(selectedFileName);
 }
 
 void Collapse::saveFiles()
@@ -93,26 +93,26 @@ void Collapse::saveFiles()
         QString directory = fileInfo.path();
 
         // Set the text of the QLineEdit widget to the selected save file name
-        c_ui->collapseNameSave->setText(fileName);
+        collapse_ui->collapseNameSave->setText(fileName);
 
         // Set the text of the QLineEdit widget to the selected save file path
-        c_ui->collapseSavePath->setText(directory);
+        collapse_ui->collapseSavePath->setText(directory);
     }
 }
 
 void Collapse::resetCollapse()
 {
-    c_filesMap.clear();
-    c_ui->collapseFileNames->clear();
-    c_ui->collapseNameSave->clear();
-    c_ui->collapseThreshold->clear();
-    c_ui->collapseSavePath->clear();
+    collapse_filesMap.clear();
+    collapse_ui->collapseFileNames->clear();
+    collapse_ui->collapseNameSave->clear();
+    collapse_ui->collapseThreshold->clear();
+    collapse_ui->collapseSavePath->clear();
 }
 
 void Collapse::collapseFiles()
 {
     // Check if c_filesMap has at least one element
-    if (c_filesMap.isEmpty())
+    if (collapse_filesMap.isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "You need at least one file to collapse.");
         return;
@@ -141,7 +141,7 @@ void Collapse::collapseFiles()
     }
 
     // Use the file name to get the corresponding file path from the c_filesMap
-    QString selectedFilePath = c_filesMap.value(getSelectedFileName());
+    QString selectedFilePath = collapse_filesMap.value(getSelectedFileName());
 
     // Construct system command
     QString command = "cd " + selectedFilePath + " && robot collapse \\\n"
@@ -170,21 +170,22 @@ void Collapse::collapseFiles()
 //------------------------------- Getter methods---------------------------------
 QString Collapse::getThreshold() const
 {
-    return c_ui->collapseThreshold->text();
+    return collapse_ui->collapseThreshold->text();
 }
 
 QString Collapse::getSavePath() const
 {
-    return c_ui->collapseSavePath->text();
+    return collapse_ui->collapseSavePath->text();
 }
 
 QString Collapse::getNameSave() const
 {
-    return c_ui->collapseNameSave->text();
+    return collapse_ui->collapseNameSave->text();
 }
 
 QString Collapse::getSelectedFileName() const
 {
-    QListWidgetItem* selectedItem = c_ui->collapseFileNames->currentItem();
+    QListWidgetItem* selectedItem = collapse_ui->collapseFileNames->currentItem();
     return (selectedItem) ? selectedItem->text() : QString();
 }
+

@@ -1,48 +1,48 @@
-#include "mirror.h"
+#include "relax.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QFileInfo>
 
-Mirror::Mirror(Ui::MainWindow *ui, QObject *parent)
+Relax::Relax(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
-    mirror_ui(ui)
+    relax_ui(ui)
 {
     // Connect the signals from the UI buttons to the appropriate slots
-    connect(mirror_ui->mirrorAddFile, &QPushButton::clicked, this, &Mirror::onMirrorAddFileClicked);
-    connect(mirror_ui->mirrorRemoveFile, &QPushButton::clicked, this, &Mirror::onMirrorRemoveFileClicked);
-    connect(mirror_ui->mirrorSaveAs, &QPushButton::clicked, this, &Mirror::onMirrorSaveAsClicked);
-    connect(mirror_ui->mirrorReset, &QPushButton::clicked, this, &Mirror::onMirrorResetClicked);
-    connect(mirror_ui->mirrorButton, &QPushButton::clicked, this, &Mirror::onMirrorButtonClicked);
+    connect(relax_ui->relaxAddFile, &QPushButton::clicked, this, &Relax::onRelaxAddFileClicked);
+    connect(relax_ui->relaxRemoveFile, &QPushButton::clicked, this, &Relax::onRelaxRemoveFileClicked);
+    connect(relax_ui->relaxSaveAs, &QPushButton::clicked, this, &Relax::onRelaxSaveAsClicked);
+    connect(relax_ui->relaxReset, &QPushButton::clicked, this, &Relax::onRelaxResetClicked);
+    connect(relax_ui->relaxButton, &QPushButton::clicked, this, &Relax::onRelaxButtonClicked);
 }
 
-void Mirror::onMirrorAddFileClicked()
+void Relax::onRelaxAddFileClicked()
 {
     addFiles();
 }
 
-void Mirror::onMirrorRemoveFileClicked()
+void Relax::onRelaxRemoveFileClicked()
 {
     removeFiles();
 }
 
-void Mirror::onMirrorSaveAsClicked()
+void Relax::onRelaxSaveAsClicked()
 {
     saveFiles();
 }
 
-void Mirror::onMirrorResetClicked()
+void Relax::onRelaxResetClicked()
 {
-    resetMirror();
+    resetRelax();
 }
 
-void Mirror::onMirrorButtonClicked()
+void Relax::onRelaxButtonClicked()
 {
-    mirrorFiles();
+    relaxFiles();
 }
 
-void Mirror::addFiles()
+void Relax::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
@@ -53,17 +53,17 @@ void Mirror::addFiles()
             QString fileName = fileInfo.fileName();
 
             // Append the file name to the list view box
-            mirror_ui->mirrorFileNames->addItem(fileName);
+            relax_ui->relaxFileNames->addItem(fileName);
 
             // Add the file name and its corresponding file path to the QMap
-            mirror_filesMap[fileName] = fileInfo.path();
+            relax_filesMap[fileName] = fileInfo.path();
         }
     }
 }
 
-void Mirror::removeFiles()
+void Relax::removeFiles()
 {
-    QListWidgetItem* selectedItem = mirror_ui->mirrorFileNames->currentItem();
+    QListWidgetItem* selectedItem = relax_ui->relaxFileNames->currentItem();
 
     if (!selectedItem) {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
@@ -74,13 +74,13 @@ void Mirror::removeFiles()
     QString selectedFileName = selectedItem->text();
 
     // Remove the selected item from the list view widget
-    mirror_ui->mirrorFileNames->takeItem(mirror_ui->mirrorFileNames->row(selectedItem));
+    relax_ui->relaxFileNames->takeItem(relax_ui->relaxFileNames->row(selectedItem));
 
     // Remove the selected file name from the QMap
-    mirror_filesMap.remove(selectedFileName);
+    relax_filesMap.remove(selectedFileName);
 }
 
-void Mirror::saveFiles()
+void Relax::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files;;All Files (*)");
 
@@ -93,27 +93,28 @@ void Mirror::saveFiles()
         QString directory = fileInfo.path();
 
         // Set the text of the QLineEdit widget to the selected save file name
-        mirror_ui->mirrorNameSave->setText(fileName);
+        relax_ui->relaxNameSave->setText(fileName);
 
         // Set the text of the QLineEdit widget to the selected save file path
-        mirror_ui->mirrorSavePath->setText(directory);
+        relax_ui->relaxSavePath->setText(directory);
     }
 }
 
-void Mirror::resetMirror()
+void Relax::resetRelax()
 {
-    mirror_filesMap.clear();
-    mirror_ui->mirrorFileNames->clear();
-    mirror_ui->mirrorNameSave->clear();
-    mirror_ui->mirrorSavePath->clear();
+    relax_filesMap.clear();
+    relax_ui->relaxFileNames->clear();
+    relax_ui->relaxNameSave->clear();
+    relax_ui->relaxSavePath->clear();
 }
 
-void Mirror::mirrorFiles()
+void Relax::relaxFiles()
 {
+
     // Check if c_filesMap has at least one element
-    if (mirror_filesMap.isEmpty())
+    if (relax_filesMap.isEmpty())
     {
-        QMessageBox::warning(nullptr, "Error", "You need at least one file to mirror.");
+        QMessageBox::warning(nullptr, "Error", "You need at least one file to relax.");
         return;
     }
 
@@ -129,17 +130,17 @@ void Mirror::mirrorFiles()
 
     // Check if the user selected a file in the list view widget
     if (getSelectedFileName().isEmpty()) {
-        QMessageBox::warning(nullptr, "Error", "Select a file to mirror.");
+        QMessageBox::warning(nullptr, "Error", "Select a file to relax.");
         return;
     }
 
     // Use the file name to get the corresponding file path from the c_filesMap
-    QString selectedFilePath = mirror_filesMap.value(getSelectedFileName());
+    QString selectedFilePath = relax_filesMap.value(getSelectedFileName());
 
     // Construct system command
-    QString command = "cd " + selectedFilePath + " && robot mirror --input " + getSelectedFileName() + " \\\n"
-                                                 " --directory " + getSavePath() + " \\\n"
-                                                 " --output " + result;
+    QString command = "cd " + selectedFilePath + " && robot relax --input " +
+                      getSelectedFileName() +
+                      " --output " + result;
 
     // Convert command from QString to char*
     QByteArray commandStr = command.toLatin1();
@@ -161,19 +162,20 @@ void Mirror::mirrorFiles()
     qDebug() << "Command:" << commandStr_2;
 }
 
+
 //------------------------------- Getter methods---------------------------------
-QString Mirror::getSavePath() const
+QString Relax::getSavePath() const
 {
-    return mirror_ui->mirrorSavePath->text();
+    return relax_ui->relaxSavePath->text();
 }
 
-QString Mirror::getNameSave() const
+QString Relax::getNameSave() const
 {
-    return mirror_ui->mirrorNameSave->text();
+    return relax_ui->relaxNameSave->text();
 }
 
-QString Mirror::getSelectedFileName() const
+QString Relax::getSelectedFileName() const
 {
-    QListWidgetItem* selectedItem = mirror_ui->mirrorFileNames->currentItem();
+    QListWidgetItem* selectedItem = relax_ui->relaxFileNames->currentItem();
     return (selectedItem) ? selectedItem->text() : QString();
 }
