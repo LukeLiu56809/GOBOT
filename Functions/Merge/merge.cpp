@@ -106,21 +106,19 @@ void Merge::resetMerge()
     merge_ui->mergeFileNames->clear();
     merge_ui->mergeNameSave->clear();
     merge_ui->mergeSavePath->clear();
+    merge_ui->mergeImportClosure->setCurrentIndex(0);
+    merge_ui->mergeOntologyAnnotations->setCurrentIndex(0);
 }
 
 void Merge::mergeFiles()
 {
-    // Construct output file
     QString result = getSavePath() + "/" + getNameSave();
 
-    // Check if merge_filesMap has less than 2 elements
     if (merge_filesMap.size() < 2)
     {
         QMessageBox::warning(nullptr, "Error", "You need at least two files to merge.");
         return;
     }
-
-    // Check if user chose a resultant directory
     if (getSavePath().isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
@@ -129,21 +127,22 @@ void Merge::mergeFiles()
 
     // Construct system command
     QString command = "cd " + merge_filesMap.first() + " && robot merge";
-    for (QString& fileName : merge_filesMap.keys()) {
+    for (QString& fileName : merge_filesMap.keys())
+    {
         command += " --input " + fileName;
     }
-    if (getImportClosureIndex() == 1) {
+    if (getImportClosureIndex() == 1)
+    {
         command += " --collapse-import-closure false";
     }
-    if (getOntologyAnnotationsIndex() == 1) {
+    if (getOntologyAnnotationsIndex() == 1)
+    {
         command += " --include-annotations true";
     }
     command += " --output " + result;
 
-    // Call system with the command
+    // System call
     int check = system(command.toUtf8());
-
-    // Check the return value of the system function to see if the command was executed successfully
     if (check != 0)
     {
         qDebug() << "Error executing system command.";
@@ -153,8 +152,6 @@ void Merge::mergeFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "Command string:" << command;
 }
 
 //------------------------------- Getter methods---------------------------------

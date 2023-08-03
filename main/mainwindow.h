@@ -6,6 +6,7 @@
 #include "../Functions/Collapse/collapse.h"
 #include "../Functions/Mirror/mirror.h"
 #include "../Functions/Relax/relax.h"
+#include "../Functions/Reduce/reduce.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,12 +20,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
 private:
     Ui::MainWindow *ui;
     Merge *mergeHandler;
     Collapse *collapseHandler;
     Mirror *mirrorHandler;
     Relax *relaxHandler;
+    Reduce *reduceHandler;
 };
 
 #endif // MAINWINDOW_H

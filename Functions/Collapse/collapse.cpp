@@ -15,6 +15,21 @@ Collapse::Collapse(Ui::MainWindow *ui, QObject *parent)
     connect(collapse_ui->collapseSaveAs, &QPushButton::clicked, this, &Collapse::onCollapseSaveAsClicked);
     connect(collapse_ui->collapseReset, &QPushButton::clicked, this, &Collapse::onCollapseResetClicked);
     connect(collapse_ui->collapseButton, &QPushButton::clicked, this, &Collapse::onCollapseButtonClicked);
+    connect(collapse_ui->collapseThreshold, &QCheckBox::stateChanged, this, &Collapse::onCollapseThresholdClicked);
+    connect(collapse_ui->collapsePreciousClasses, &QCheckBox::stateChanged, this, &Collapse::onCollapsePreciousClassesClicked);
+    connect(collapse_ui->collapsePreciousTerms, &QCheckBox::stateChanged, this, &Collapse::onCollapsePreciousTermsClicked);
+    connect(collapse_ui->collapsePreciousTermsFile, &QPushButton::clicked, this, &Collapse::onCollapsePreciousTermsFileClicked);
+
+    collapseThresholdEdit = collapse_ui->collapseThresholdEdit;
+    collapseThresholdEdit->hide();
+
+    collapsePreciousClassesEdit = collapse_ui->collapsePreciousClassesEdit;
+    collapsePreciousClassesEdit->hide();
+
+    collapsePreciousTermsEdit = collapse_ui->collapsePreciousTermsEdit;
+    collapsePreciousTermsEdit->hide();
+    collapsePreciousTermsFile = collapse_ui->collapsePreciousTermsFile;
+    collapsePreciousTermsFile->hide();
 }
 
 void Collapse::onCollapseAddFileClicked()
@@ -102,61 +117,66 @@ void Collapse::saveFiles()
 
 void Collapse::resetCollapse()
 {
+    // Uncheck the checkboxes
+    collapse_ui->collapseThreshold->setChecked(false);
+    collapse_ui->collapsePreciousClasses->setChecked(false);
+    collapse_ui->collapsePreciousTerms->setChecked(false);
+
+    // Clear the QMap and clear the list view box
     collapse_filesMap.clear();
     collapse_ui->collapseFileNames->clear();
+
+    // Clear the QLineEdit widgets
     collapse_ui->collapseNameSave->clear();
-    collapse_ui->collapseThreshold->clear();
     collapse_ui->collapseSavePath->clear();
+    collapse_ui->collapseThresholdEdit->setValue(0);
+    collapse_ui->collapsePreciousClassesEdit->clear();
+    collapse_ui->collapsePreciousTermsEdit->clear();
 }
+
 
 void Collapse::collapseFiles()
 {
-    // Check if c_filesMap has at least one element
+    QString selectedFilePath = collapse_filesMap.value(getSelectedFileName());
+    QString result = getSavePath() + "/" + getNameSave();
+
     if (collapse_filesMap.isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "You need at least one file to collapse.");
         return;
     }
-
-    // Check if the user entered in a threshold value
     if (getThreshold().isEmpty()) {
         QMessageBox::warning(nullptr, "Error", "Enter a threshold value.");
         return;
     }
-
-    // Construct output file
-    QString result = getSavePath() + "/" + getNameSave();
-
-    // Check if user chose a resultant directory
     if (getSavePath().isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-
-    // Check if the user selected a file in the list view widget
     if (getSelectedFileName().isEmpty()) {
         QMessageBox::warning(nullptr, "Error", "Select a file to collapse.");
         return;
     }
 
-    // Use the file name to get the corresponding file path from the c_filesMap
-    QString selectedFilePath = collapse_filesMap.value(getSelectedFileName());
-
     // Construct system command
     QString command = "cd " + selectedFilePath + " && robot collapse \\\n"
                                                  " --input " + getSelectedFileName() + " \\\n"
-                                                " --threshold " + getThreshold() + " \\\n"
-                                         " --output " + result;
+                                                 " --threshold " + getThreshold() + " \\\n ";
+    if (!getPreciousClasses().isEmpty())
+    {
+        command += "--precious " + getPreciousClasses() + " \\\n";
+    }
+    if (!getPreciousTerms().isEmpty())
+    {
+        command += "--precious-terms " + termPath + "/" + getPreciousTerms() + " \\\n";
+    }
+    command += " --output " + result;
 
-    // Convert command from QString to char*
+    // System call
     QByteArray commandStr = command.toLatin1();
     const char *commandStr_2 = commandStr.data();
-
-    // Call system with the char* command
     int check = system(commandStr_2);
-
-    // Check the return value of the system function to see if the command was executed successfully
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
@@ -167,10 +187,65 @@ void Collapse::collapseFiles()
     }
 }
 
+void Collapse::onCollapseThresholdClicked(bool checked)
+{
+    collapseThresholdEdit->setVisible(checked);
+}
+
+void Collapse::onCollapsePreciousClassesClicked(bool checked)
+{
+    collapse_ui->collapsePreciousClassesEdit->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        collapse_ui->collapsePreciousTerms->setChecked(false);
+        collapse_ui->collapsePreciousTermsEdit->clear();
+    } else {
+        collapse_ui->collapsePreciousClassesEdit->clear();
+    }
+}
+
+void Collapse::onCollapsePreciousTermsClicked(bool checked)
+{
+    collapse_ui->collapsePreciousTermsFile->setVisible(checked);
+    collapse_ui->collapsePreciousTermsEdit->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        collapse_ui->collapsePreciousClasses->setChecked(false);
+        collapse_ui->collapsePreciousClassesEdit->clear();
+    } else {
+        collapse_ui->collapsePreciousTermsEdit->clear();
+    }
+}
+
+void Collapse::onCollapsePreciousTermsFileClicked()
+{
+    QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
+    if (!file.isEmpty()) {
+        QFileInfo fileInfo(file);
+        QString fileName = fileInfo.fileName();
+        collapse_ui->collapsePreciousTermsEdit->setText(fileName);
+
+        QString directory = fileInfo.path();
+        termPath = directory;
+    }
+}
+
 //------------------------------- Getter methods---------------------------------
 QString Collapse::getThreshold() const
 {
-    return collapse_ui->collapseThreshold->text();
+    return collapse_ui->collapseThresholdEdit->text();
+}
+
+QString Collapse::getPreciousClasses() const
+{
+    return collapse_ui->collapsePreciousClassesEdit->text();
+}
+
+QString Collapse::getPreciousTerms() const
+{
+    return collapse_ui->collapsePreciousTermsEdit->text();
 }
 
 QString Collapse::getSavePath() const

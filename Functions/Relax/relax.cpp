@@ -110,46 +110,33 @@ void Relax::resetRelax()
 
 void Relax::relaxFiles()
 {
+    QString selectedFilePath = relax_filesMap.value(getSelectedFileName());
+    QString result = getSavePath() + "/" + getNameSave();
 
-    // Check if c_filesMap has at least one element
     if (relax_filesMap.isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "You need at least one file to relax.");
         return;
     }
-
-    // Construct output file
-    QString result = getSavePath() + "/" + getNameSave();
-
-    // Check if user chose a resultant directory
     if (getSavePath().isEmpty())
     {
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-
-    // Check if the user selected a file in the list view widget
     if (getSelectedFileName().isEmpty()) {
         QMessageBox::warning(nullptr, "Error", "Select a file to relax.");
         return;
     }
-
-    // Use the file name to get the corresponding file path from the c_filesMap
-    QString selectedFilePath = relax_filesMap.value(getSelectedFileName());
 
     // Construct system command
     QString command = "cd " + selectedFilePath + " && robot relax --input " +
                       getSelectedFileName() +
                       " --output " + result;
 
-    // Convert command from QString to char*
+    // System call
     QByteArray commandStr = command.toLatin1();
     const char *commandStr_2 = commandStr.data();
-
-    // Call system with the char* command
     int check = system(commandStr_2);
-
-    // Check the return value of the system function to see if the command was executed successfully
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
@@ -158,8 +145,6 @@ void Relax::relaxFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "Command:" << commandStr_2;
 }
 
 

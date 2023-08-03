@@ -55,22 +55,26 @@ OBJECTS_DIR   = ./
 SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
+		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp moc_collapse.cpp \
 		moc_merge.cpp \
 		moc_mirror.cpp \
+		moc_reduce.cpp \
 		moc_relax.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = collapse.o \
 		merge.o \
 		mirror.o \
+		reduce.o \
 		relax.o \
 		main.o \
 		mainwindow.o \
 		moc_collapse.o \
 		moc_merge.o \
 		moc_mirror.o \
+		moc_reduce.o \
 		moc_relax.o \
 		moc_mainwindow.o
 DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
@@ -232,10 +236,12 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../main/main.pro ../Functions/Collapse/collapse.h \
 		../Functions/Merge/merge.h \
 		../Functions/Mirror/mirror.h \
+		../Functions/Reduce/reduce.h \
 		../Functions/Relax/relax.h \
 		../main/mainwindow.h ../Functions/Collapse/collapse.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
+		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp
@@ -608,8 +614,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Relax/relax.h ../main/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Relax/relax.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../main/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../main/mainwindow.ui $(DISTDIR)/
 
 
@@ -639,14 +645,22 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_collapse.cpp moc_merge.cpp moc_mirror.cpp moc_relax.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_merge.cpp moc_mirror.cpp moc_relax.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Collapse/collapse.h -o moc_collapse.cpp
 
@@ -666,6 +680,14 @@ moc_mirror.cpp: ../Functions/Mirror/mirror.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Mirror/mirror.h -o moc_mirror.cpp
 
+moc_reduce.cpp: ../Functions/Reduce/reduce.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Reduce/reduce.h -o moc_reduce.cpp
+
 moc_relax.cpp: ../Functions/Relax/relax.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -683,8 +705,17 @@ moc_mainwindow.cpp: ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
 		../Functions/Collapse/collapse.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		../Functions/Mirror/mirror.h \
 		../Functions/Relax/relax.h \
+		../Functions/Reduce/reduce.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../main/mainwindow.h -o moc_mainwindow.cpp
 
@@ -716,6 +747,14 @@ collapse.o: ../Functions/Collapse/collapse.cpp ../Functions/Collapse/collapse.h 
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		ui_mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
@@ -759,6 +798,22 @@ mirror.o: ../Functions/Mirror/mirror.cpp ../Functions/Mirror/mirror.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mirror.o ../Functions/Mirror/mirror.cpp
 
+reduce.o: ../Functions/Reduce/reduce.cpp ../Functions/Reduce/reduce.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o reduce.o ../Functions/Reduce/reduce.cpp
+
 relax.o: ../Functions/Relax/relax.cpp ../Functions/Relax/relax.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -784,8 +839,17 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
 		../Functions/Collapse/collapse.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		../Functions/Mirror/mirror.h \
 		../Functions/Relax/relax.h \
+		../Functions/Reduce/reduce.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main/main.cpp
@@ -799,8 +863,17 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
 		../Functions/Collapse/collapse.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		../Functions/Mirror/mirror.h \
 		../Functions/Relax/relax.h \
+		../Functions/Reduce/reduce.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../main/mainwindow.cpp
 
@@ -812,6 +885,9 @@ moc_merge.o: moc_merge.cpp
 
 moc_mirror.o: moc_mirror.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mirror.o moc_mirror.cpp
+
+moc_reduce.o: moc_reduce.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_reduce.o moc_reduce.cpp
 
 moc_relax.o: moc_relax.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_relax.o moc_relax.cpp

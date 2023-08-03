@@ -10,14 +10,11 @@ MainWindow::MainWindow(QWidget *parent)
     collapseHandler = new Collapse(ui, this);
     mirrorHandler = new Mirror(ui, this);
     relaxHandler = new Relax(ui, this);
-
-    QByteArray pathValue = qgetenv("PATH");
-    QString pathString = QString::fromLocal8Bit(pathValue);
-
-    qDebug() << "System Path:" << pathString;
+    reduceHandler = new Reduce(ui, this);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+

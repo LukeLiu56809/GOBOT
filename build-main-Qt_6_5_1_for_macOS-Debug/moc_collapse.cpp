@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../Functions/Collapse/collapse.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
@@ -49,11 +50,16 @@ static constexpr auto qt_meta_stringdata_CLASSCollapseENDCLASS = QtMocHelpers::s
     "onCollapseRemoveFileClicked",
     "onCollapseSaveAsClicked",
     "onCollapseResetClicked",
-    "onCollapseButtonClicked"
+    "onCollapseButtonClicked",
+    "onCollapseThresholdClicked",
+    "checked",
+    "onCollapsePreciousClassesClicked",
+    "onCollapsePreciousTermsClicked",
+    "onCollapsePreciousTermsFileClicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSCollapseENDCLASS_t {
-    uint offsetsAndSizes[24];
+    uint offsetsAndSizes[34];
     char stringdata0[9];
     char stringdata1[9];
     char stringdata2[1];
@@ -66,6 +72,11 @@ struct qt_meta_stringdata_CLASSCollapseENDCLASS_t {
     char stringdata9[24];
     char stringdata10[23];
     char stringdata11[24];
+    char stringdata12[27];
+    char stringdata13[8];
+    char stringdata14[33];
+    char stringdata15[31];
+    char stringdata16[35];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSCollapseENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -82,7 +93,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSCollapseENDCLASS_t qt_meta_stri
         QT_MOC_LITERAL(94, 27),  // "onCollapseRemoveFileClicked"
         QT_MOC_LITERAL(122, 23),  // "onCollapseSaveAsClicked"
         QT_MOC_LITERAL(146, 22),  // "onCollapseResetClicked"
-        QT_MOC_LITERAL(169, 23)   // "onCollapseButtonClicked"
+        QT_MOC_LITERAL(169, 23),  // "onCollapseButtonClicked"
+        QT_MOC_LITERAL(193, 26),  // "onCollapseThresholdClicked"
+        QT_MOC_LITERAL(220, 7),  // "checked"
+        QT_MOC_LITERAL(228, 32),  // "onCollapsePreciousClassesClicked"
+        QT_MOC_LITERAL(261, 30),  // "onCollapsePreciousTermsClicked"
+        QT_MOC_LITERAL(292, 34)   // "onCollapsePreciousTermsFileCl..."
     },
     "Collapse",
     "addFiles",
@@ -95,7 +111,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSCollapseENDCLASS_t qt_meta_stri
     "onCollapseRemoveFileClicked",
     "onCollapseSaveAsClicked",
     "onCollapseResetClicked",
-    "onCollapseButtonClicked"
+    "onCollapseButtonClicked",
+    "onCollapseThresholdClicked",
+    "checked",
+    "onCollapsePreciousClassesClicked",
+    "onCollapsePreciousTermsClicked",
+    "onCollapsePreciousTermsFileClicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -107,7 +128,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSCollapseENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -115,16 +136,20 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSCollapseENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   74,    2, 0x0a,    1 /* Public */,
-       3,    0,   75,    2, 0x0a,    2 /* Public */,
-       4,    0,   76,    2, 0x0a,    3 /* Public */,
-       5,    0,   77,    2, 0x0a,    4 /* Public */,
-       6,    0,   78,    2, 0x0a,    5 /* Public */,
-       7,    0,   79,    2, 0x08,    6 /* Private */,
-       8,    0,   80,    2, 0x08,    7 /* Private */,
-       9,    0,   81,    2, 0x08,    8 /* Private */,
-      10,    0,   82,    2, 0x08,    9 /* Private */,
-      11,    0,   83,    2, 0x08,   10 /* Private */,
+       1,    0,   98,    2, 0x0a,    1 /* Public */,
+       3,    0,   99,    2, 0x0a,    2 /* Public */,
+       4,    0,  100,    2, 0x0a,    3 /* Public */,
+       5,    0,  101,    2, 0x0a,    4 /* Public */,
+       6,    0,  102,    2, 0x0a,    5 /* Public */,
+       7,    0,  103,    2, 0x08,    6 /* Private */,
+       8,    0,  104,    2, 0x08,    7 /* Private */,
+       9,    0,  105,    2, 0x08,    8 /* Private */,
+      10,    0,  106,    2, 0x08,    9 /* Private */,
+      11,    0,  107,    2, 0x08,   10 /* Private */,
+      12,    1,  108,    2, 0x08,   11 /* Private */,
+      14,    1,  111,    2, 0x08,   13 /* Private */,
+      15,    1,  114,    2, 0x08,   15 /* Private */,
+      16,    0,  117,    2, 0x08,   17 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -136,6 +161,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSCollapseENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   13,
+    QMetaType::Void, QMetaType::Bool,   13,
+    QMetaType::Void, QMetaType::Bool,   13,
     QMetaType::Void,
 
        0        // eod
@@ -169,6 +198,17 @@ Q_CONSTINIT const QMetaObject Collapse::staticMetaObject = { {
         // method 'onCollapseResetClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onCollapseButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onCollapseThresholdClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'onCollapsePreciousClassesClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'onCollapsePreciousTermsClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'onCollapsePreciousTermsFileClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -190,10 +230,13 @@ void Collapse::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 7: _t->onCollapseSaveAsClicked(); break;
         case 8: _t->onCollapseResetClicked(); break;
         case 9: _t->onCollapseButtonClicked(); break;
+        case 10: _t->onCollapseThresholdClicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 11: _t->onCollapsePreciousClassesClicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 12: _t->onCollapsePreciousTermsClicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 13: _t->onCollapsePreciousTermsFileClicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *Collapse::metaObject() const
@@ -215,13 +258,13 @@ int Collapse::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 14)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 14;
     }
     return _id;
 }
