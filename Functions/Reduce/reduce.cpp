@@ -82,7 +82,7 @@ void Reduce::removeFiles()
 
 void Reduce::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files;;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         // Extract the file name from the full path
@@ -131,7 +131,7 @@ void Reduce::reduceFiles()
     }
 
     // Construct system command
-    QString command = "cd " + selectedFilePath + " && robot reduce --input " +
+    QString command = "cd " + selectedFilePath + " && robot reduce -i " +
                       getSelectedFileName();
     if (reduce_ui->reducePreserveAxioms->isChecked())
     {
@@ -141,7 +141,7 @@ void Reduce::reduceFiles()
     {
         command += " --named-classes-only true";
     }
-    command += " --output " + result;
+    command += " -o " + result;
 
     // System Call
     QByteArray commandStr = command.toLatin1();

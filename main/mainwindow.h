@@ -7,6 +7,7 @@
 #include "../Functions/Mirror/mirror.h"
 #include "../Functions/Relax/relax.h"
 #include "../Functions/Reduce/reduce.h"
+#include "../Functions/Convert/convert.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +30,7 @@ private:
     Mirror *mirrorHandler;
     Relax *relaxHandler;
     Reduce *reduceHandler;
+    Convert *convertHandler;
 };
 
 #endif // MAINWINDOW_H

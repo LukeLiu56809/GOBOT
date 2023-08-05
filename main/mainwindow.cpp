@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     mirrorHandler = new Mirror(ui, this);
     relaxHandler = new Relax(ui, this);
     reduceHandler = new Reduce(ui, this);
+    convertHandler = new Convert(ui, this);
 }
 
 MainWindow::~MainWindow()

@@ -129,7 +129,7 @@ void Merge::mergeFiles()
     QString command = "cd " + merge_filesMap.first() + " && robot merge";
     for (QString& fileName : merge_filesMap.keys())
     {
-        command += " --input " + fileName;
+        command += " -i " + fileName;
     }
     if (getImportClosureIndex() == 1)
     {
@@ -139,7 +139,7 @@ void Merge::mergeFiles()
     {
         command += " --include-annotations true";
     }
-    command += " --output " + result;
+    command += " -o " + result;
 
     // System call
     int check = system(command.toUtf8());

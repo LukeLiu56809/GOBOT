@@ -82,7 +82,7 @@ void Mirror::removeFiles()
 
 void Mirror::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files;;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         // Extract the file name from the full path
@@ -129,9 +129,9 @@ void Mirror::mirrorFiles()
     }
 
     // Construct system command
-    QString command = "cd " + selectedFilePath + " && robot mirror --input " + getSelectedFileName() + " \\\n"
+    QString command = "cd " + selectedFilePath + " && robot mirror -i " + getSelectedFileName() + " \\\n"
                                                  " --directory " + getSavePath() + " \\\n"
-                                                 " --output " + result;
+                                                 " -o " + result;
 
     // System call
     QByteArray commandStr = command.toLatin1();

@@ -140,6 +140,28 @@ public:
     QListWidget *reduceFileNames;
     QCheckBox *reducePreserveAxioms;
     QCheckBox *reduceIgnoreClasses;
+    QWidget *convert;
+    QWidget *layoutWidget_24;
+    QHBoxLayout *horizontalLayout_37;
+    QPushButton *convertAddFile;
+    QPushButton *convertRemoveFile;
+    QCheckBox *convertCompress;
+    QWidget *layoutWidget_25;
+    QHBoxLayout *horizontalLayout_38;
+    QPushButton *convertSaveAs;
+    QLineEdit *convertNameSave;
+    QLabel *label_17;
+    QLineEdit *convertSavePath;
+    QListWidget *convertFileNames;
+    QWidget *layoutWidget_26;
+    QHBoxLayout *horizontalLayout_39;
+    QPushButton *convertReset;
+    QPushButton *convertButton;
+    QCheckBox *convertIgnoreChecks;
+    QWidget *widget13;
+    QHBoxLayout *horizontalLayout_40;
+    QLabel *label_18;
+    QComboBox *convertFormat;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -806,6 +828,136 @@ public:
         reduceIgnoreClasses->setGeometry(QRect(240, 80, 161, 31));
         reduceIgnoreClasses->setFont(font3);
         tabWidget->addTab(reduce, QString());
+        convert = new QWidget();
+        convert->setObjectName("convert");
+        layoutWidget_24 = new QWidget(convert);
+        layoutWidget_24->setObjectName("layoutWidget_24");
+        layoutWidget_24->setGeometry(QRect(10, 10, 212, 41));
+        horizontalLayout_37 = new QHBoxLayout(layoutWidget_24);
+        horizontalLayout_37->setObjectName("horizontalLayout_37");
+        horizontalLayout_37->setContentsMargins(0, 0, 0, 0);
+        convertAddFile = new QPushButton(layoutWidget_24);
+        convertAddFile->setObjectName("convertAddFile");
+        sizePolicy.setHeightForWidth(convertAddFile->sizePolicy().hasHeightForWidth());
+        convertAddFile->setSizePolicy(sizePolicy);
+        convertAddFile->setMinimumSize(QSize(100, 0));
+        convertAddFile->setMaximumSize(QSize(100, 16777215));
+        convertAddFile->setFocusPolicy(Qt::NoFocus);
+        convertAddFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        convertAddFile->setFlat(false);
+
+        horizontalLayout_37->addWidget(convertAddFile);
+
+        convertRemoveFile = new QPushButton(layoutWidget_24);
+        convertRemoveFile->setObjectName("convertRemoveFile");
+        sizePolicy.setHeightForWidth(convertRemoveFile->sizePolicy().hasHeightForWidth());
+        convertRemoveFile->setSizePolicy(sizePolicy);
+        convertRemoveFile->setMinimumSize(QSize(100, 0));
+        convertRemoveFile->setMaximumSize(QSize(100, 16777215));
+        convertRemoveFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_37->addWidget(convertRemoveFile);
+
+        convertCompress = new QCheckBox(convert);
+        convertCompress->setObjectName("convertCompress");
+        convertCompress->setGeometry(QRect(240, 80, 161, 31));
+        convertCompress->setFont(font3);
+        layoutWidget_25 = new QWidget(convert);
+        layoutWidget_25->setObjectName("layoutWidget_25");
+        layoutWidget_25->setGeometry(QRect(240, 190, 401, 33));
+        horizontalLayout_38 = new QHBoxLayout(layoutWidget_25);
+        horizontalLayout_38->setObjectName("horizontalLayout_38");
+        horizontalLayout_38->setContentsMargins(0, 0, 0, 0);
+        convertSaveAs = new QPushButton(layoutWidget_25);
+        convertSaveAs->setObjectName("convertSaveAs");
+        convertSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_38->addWidget(convertSaveAs);
+
+        convertNameSave = new QLineEdit(layoutWidget_25);
+        convertNameSave->setObjectName("convertNameSave");
+        convertNameSave->setFocusPolicy(Qt::NoFocus);
+        convertNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        convertNameSave->setDragEnabled(false);
+        convertNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_38->addWidget(convertNameSave);
+
+        label_17 = new QLabel(layoutWidget_25);
+        label_17->setObjectName("label_17");
+        label_17->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_38->addWidget(label_17);
+
+        convertSavePath = new QLineEdit(layoutWidget_25);
+        convertSavePath->setObjectName("convertSavePath");
+        convertSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_38->addWidget(convertSavePath);
+
+        convertFileNames = new QListWidget(convert);
+        convertFileNames->setObjectName("convertFileNames");
+        convertFileNames->setGeometry(QRect(10, 50, 211, 201));
+        convertFileNames->setFocusPolicy(Qt::ClickFocus);
+        convertFileNames->setFrameShape(QFrame::Box);
+        convertFileNames->setFrameShadow(QFrame::Plain);
+        layoutWidget_26 = new QWidget(convert);
+        layoutWidget_26->setObjectName("layoutWidget_26");
+        layoutWidget_26->setGeometry(QRect(240, 220, 157, 32));
+        horizontalLayout_39 = new QHBoxLayout(layoutWidget_26);
+        horizontalLayout_39->setObjectName("horizontalLayout_39");
+        horizontalLayout_39->setContentsMargins(0, 0, 0, 0);
+        convertReset = new QPushButton(layoutWidget_26);
+        convertReset->setObjectName("convertReset");
+        sizePolicy1.setHeightForWidth(convertReset->sizePolicy().hasHeightForWidth());
+        convertReset->setSizePolicy(sizePolicy1);
+        convertReset->setMaximumSize(QSize(150, 16777215));
+        convertReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_39->addWidget(convertReset);
+
+        convertButton = new QPushButton(layoutWidget_26);
+        convertButton->setObjectName("convertButton");
+        sizePolicy1.setHeightForWidth(convertButton->sizePolicy().hasHeightForWidth());
+        convertButton->setSizePolicy(sizePolicy1);
+        convertButton->setMinimumSize(QSize(0, 0));
+        convertButton->setMaximumSize(QSize(150, 16777215));
+        convertButton->setFocusPolicy(Qt::NoFocus);
+        convertButton->setAutoFillBackground(false);
+        convertButton->setAutoDefault(false);
+        convertButton->setFlat(false);
+
+        horizontalLayout_39->addWidget(convertButton);
+
+        convertIgnoreChecks = new QCheckBox(convert);
+        convertIgnoreChecks->setObjectName("convertIgnoreChecks");
+        convertIgnoreChecks->setGeometry(QRect(240, 110, 161, 31));
+        convertIgnoreChecks->setFont(font3);
+        widget13 = new QWidget(convert);
+        widget13->setObjectName("widget13");
+        widget13->setGeometry(QRect(240, 50, 111, 32));
+        horizontalLayout_40 = new QHBoxLayout(widget13);
+        horizontalLayout_40->setObjectName("horizontalLayout_40");
+        horizontalLayout_40->setContentsMargins(0, 0, 0, 0);
+        label_18 = new QLabel(widget13);
+        label_18->setObjectName("label_18");
+        label_18->setFont(font3);
+
+        horizontalLayout_40->addWidget(label_18);
+
+        convertFormat = new QComboBox(widget13);
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->addItem(QString());
+        convertFormat->setObjectName("convertFormat");
+
+        horizontalLayout_40->addWidget(convertFormat);
+
+        tabWidget->addTab(convert, QString());
 
         gridLayout->addWidget(tabWidget, 1, 0, 1, 1);
 
@@ -813,7 +965,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(0);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         collapseAddFile->setDefault(false);
@@ -824,6 +976,8 @@ public:
         relaxButton->setDefault(true);
         reduceButton->setDefault(true);
         reduceAddFile->setDefault(false);
+        convertAddFile->setDefault(false);
+        convertButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -895,6 +1049,26 @@ public:
         reducePreserveAxioms->setText(QCoreApplication::translate("MainWindow", "Preserve Annotated Axioms", nullptr));
         reduceIgnoreClasses->setText(QCoreApplication::translate("MainWindow", "Ignore Anonymous Classes", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(reduce), QCoreApplication::translate("MainWindow", "Reduce", nullptr));
+        convertAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        convertRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        convertCompress->setText(QCoreApplication::translate("MainWindow", "Compress File (.gz)", nullptr));
+        convertSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        convertNameSave->setText(QString());
+        convertNameSave->setPlaceholderText(QString());
+        label_17->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        convertReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        convertButton->setText(QCoreApplication::translate("MainWindow", "Convert", nullptr));
+        convertIgnoreChecks->setText(QCoreApplication::translate("MainWindow", "Ignore checks", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
+        convertFormat->setItemText(0, QCoreApplication::translate("MainWindow", "json", nullptr));
+        convertFormat->setItemText(1, QCoreApplication::translate("MainWindow", "obo", nullptr));
+        convertFormat->setItemText(2, QCoreApplication::translate("MainWindow", "ofn", nullptr));
+        convertFormat->setItemText(3, QCoreApplication::translate("MainWindow", "omn", nullptr));
+        convertFormat->setItemText(4, QCoreApplication::translate("MainWindow", "owl", nullptr));
+        convertFormat->setItemText(5, QCoreApplication::translate("MainWindow", "owx", nullptr));
+        convertFormat->setItemText(6, QCoreApplication::translate("MainWindow", "ttl", nullptr));
+
+        tabWidget->setTabText(tabWidget->indexOf(convert), QCoreApplication::translate("MainWindow", "Convert", nullptr));
     } // retranslateUi
 
 };

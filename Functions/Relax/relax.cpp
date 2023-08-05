@@ -82,7 +82,7 @@ void Relax::removeFiles()
 
 void Relax::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files;;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         // Extract the file name from the full path
@@ -129,9 +129,9 @@ void Relax::relaxFiles()
     }
 
     // Construct system command
-    QString command = "cd " + selectedFilePath + " && robot relax --input " +
+    QString command = "cd " + selectedFilePath + " && robot relax -i " +
                       getSelectedFileName() +
-                      " --output " + result;
+                      " -o " + result;
 
     // System call
     QByteArray commandStr = command.toLatin1();

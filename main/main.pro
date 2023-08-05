@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     ../Functions/Collapse/collapse.cpp \
+    ../Functions/Convert/convert.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
     ../Functions/Reduce/reduce.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     ../Functions/Collapse/collapse.h \
+    ../Functions/Convert/convert.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
     ../Functions/Reduce/reduce.h \

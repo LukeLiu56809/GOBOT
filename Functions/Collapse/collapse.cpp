@@ -161,7 +161,7 @@ void Collapse::collapseFiles()
 
     // Construct system command
     QString command = "cd " + selectedFilePath + " && robot collapse \\\n"
-                                                 " --input " + getSelectedFileName() + " \\\n"
+                                                 " -i " + getSelectedFileName() + " \\\n"
                                                  " --threshold " + getThreshold() + " \\\n ";
     if (!getPreciousClasses().isEmpty())
     {
@@ -171,7 +171,7 @@ void Collapse::collapseFiles()
     {
         command += "--precious-terms " + termPath + "/" + getPreciousTerms() + " \\\n";
     }
-    command += " --output " + result;
+    command += " -o " + result;
 
     // System call
     QByteArray commandStr = command.toLatin1();
