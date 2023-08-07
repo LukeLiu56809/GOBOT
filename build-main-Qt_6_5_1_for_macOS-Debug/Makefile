@@ -58,6 +58,8 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Mirror/mirror.cpp \
 		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
+		../Functions/Repair/repair.cpp \
+		../Functions/Validate/validate.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp moc_collapse.cpp \
 		moc_convert.cpp \
@@ -65,6 +67,8 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		moc_mirror.cpp \
 		moc_reduce.cpp \
 		moc_relax.cpp \
+		moc_repair.cpp \
+		moc_validate.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = collapse.o \
 		convert.o \
@@ -72,6 +76,8 @@ OBJECTS       = collapse.o \
 		mirror.o \
 		reduce.o \
 		relax.o \
+		repair.o \
+		validate.o \
 		main.o \
 		mainwindow.o \
 		moc_collapse.o \
@@ -80,6 +86,8 @@ OBJECTS       = collapse.o \
 		moc_mirror.o \
 		moc_reduce.o \
 		moc_relax.o \
+		moc_repair.o \
+		moc_validate.o \
 		moc_mainwindow.o
 DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../../Qt/6.5.1/macos/mkspecs/features/device_config.prf \
@@ -243,12 +251,16 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Mirror/mirror.h \
 		../Functions/Reduce/reduce.h \
 		../Functions/Relax/relax.h \
+		../Functions/Repair/repair.h \
+		../Functions/Validate/validate.h \
 		../main/mainwindow.h ../Functions/Collapse/collapse.cpp \
 		../Functions/Convert/convert.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
 		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
+		../Functions/Repair/repair.cpp \
+		../Functions/Validate/validate.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp
 QMAKE_TARGET  = main
@@ -620,8 +632,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../main/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Repair/repair.h ../Functions/Validate/validate.h ../main/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Repair/repair.cpp ../Functions/Validate/validate.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../main/mainwindow.ui $(DISTDIR)/
 
 
@@ -651,9 +663,9 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_validate.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_validate.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -710,6 +722,28 @@ moc_relax.cpp: ../Functions/Relax/relax.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Relax/relax.h -o moc_relax.cpp
 
+moc_repair.cpp: ../Functions/Repair/repair.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Repair/repair.h -o moc_repair.cpp
+
+moc_validate.cpp: ../Functions/Validate/validate.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Validate/validate.h -o moc_validate.cpp
+
 moc_mainwindow.cpp: ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -731,6 +765,8 @@ moc_mainwindow.cpp: ../main/mainwindow.h \
 		../Functions/Relax/relax.h \
 		../Functions/Reduce/reduce.h \
 		../Functions/Convert/convert.h \
+		../Functions/Validate/validate.h \
+		../Functions/Repair/repair.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../main/mainwindow.h -o moc_mainwindow.cpp
 
@@ -861,6 +897,44 @@ relax.o: ../Functions/Relax/relax.cpp ../Functions/Relax/relax.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o relax.o ../Functions/Relax/relax.cpp
 
+repair.o: ../Functions/Repair/repair.cpp ../Functions/Repair/repair.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o repair.o ../Functions/Repair/repair.cpp
+
+validate.o: ../Functions/Validate/validate.cpp ../Functions/Validate/validate.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validate.o ../Functions/Validate/validate.cpp
+
 main.o: ../main/main.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -882,6 +956,8 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../Functions/Relax/relax.h \
 		../Functions/Reduce/reduce.h \
 		../Functions/Convert/convert.h \
+		../Functions/Validate/validate.h \
+		../Functions/Repair/repair.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main/main.cpp
@@ -907,7 +983,11 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../Functions/Relax/relax.h \
 		../Functions/Reduce/reduce.h \
 		../Functions/Convert/convert.h \
-		ui_mainwindow.h
+		../Functions/Validate/validate.h \
+		../Functions/Repair/repair.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcessEnvironment \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../main/mainwindow.cpp
 
 moc_collapse.o: moc_collapse.cpp 
@@ -927,6 +1007,12 @@ moc_reduce.o: moc_reduce.cpp
 
 moc_relax.o: moc_relax.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_relax.o moc_relax.cpp
+
+moc_repair.o: moc_repair.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_repair.o moc_repair.cpp
+
+moc_validate.o: moc_validate.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_validate.o moc_validate.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

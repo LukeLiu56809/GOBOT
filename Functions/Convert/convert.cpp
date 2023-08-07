@@ -111,6 +111,7 @@ void Convert::resetConvert()
     convert_ui->convertNameSave->clear();
     convert_ui->convertSavePath->clear();
     convert_ui->convertCompress->setChecked(false);
+    convert_ui->convertFormat->setCurrentIndex(0);
 }
 
 void Convert::convertFiles()

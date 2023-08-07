@@ -15,6 +15,8 @@ SOURCES += \
     ../Functions/Mirror/mirror.cpp \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
+    ../Functions/Repair/repair.cpp \
+    ../Functions/Validate/validate.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -25,6 +27,8 @@ HEADERS += \
     ../Functions/Mirror/mirror.h \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
+    ../Functions/Repair/repair.h \
+    ../Functions/Validate/validate.h \
     mainwindow.h
 
 FORMS += \

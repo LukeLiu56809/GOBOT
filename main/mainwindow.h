@@ -8,6 +8,8 @@
 #include "../Functions/Relax/relax.h"
 #include "../Functions/Reduce/reduce.h"
 #include "../Functions/Convert/convert.h"
+#include "../Functions/Validate/validate.h"
+#include "../Functions/Repair/repair.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,6 +33,8 @@ private:
     Relax *relaxHandler;
     Reduce *reduceHandler;
     Convert *convertHandler;
+    Validate *validateHandler;
+    Repair *repairHandler;
 };
 
 #endif // MAINWINDOW_H

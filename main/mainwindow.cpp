@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QProcessEnvironment>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,6 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
     relaxHandler = new Relax(ui, this);
     reduceHandler = new Reduce(ui, this);
     convertHandler = new Convert(ui, this);
+    validateHandler = new Validate(ui, this);
+    repairHandler = new Repair(ui, this);
+
+    //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
+    //ui->systemPath->setText(systemPath);
 }
 
 MainWindow::~MainWindow()
