@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     ../Functions/Collapse/collapse.cpp \
     ../Functions/Convert/convert.cpp \
+    ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
     ../Functions/Repair/repair.cpp \
+    ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
     main.cpp \
     mainwindow.cpp
@@ -23,11 +25,13 @@ SOURCES += \
 HEADERS += \
     ../Functions/Collapse/collapse.h \
     ../Functions/Convert/convert.h \
+    ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
     ../Functions/Repair/repair.h \
+    ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
     mainwindow.h
 

@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     convertHandler = new Convert(ui, this);
     validateHandler = new Validate(ui, this);
     repairHandler = new Repair(ui, this);
+    unmergeHandler = new Unmerge(ui, this);
+    measureHandler = new Measure(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

@@ -10,6 +10,8 @@
 #include "../Functions/Convert/convert.h"
 #include "../Functions/Validate/validate.h"
 #include "../Functions/Repair/repair.h"
+#include "../Functions/Unmerge/unmerge.h"
+#include "../Functions/Measure/measure.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,6 +37,8 @@ private:
     Convert *convertHandler;
     Validate *validateHandler;
     Repair *repairHandler;
+    Unmerge *unmergeHandler;
+    Measure *measureHandler;
 };
 
 #endif // MAINWINDOW_H

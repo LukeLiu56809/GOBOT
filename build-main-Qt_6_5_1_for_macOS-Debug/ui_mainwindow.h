@@ -61,6 +61,31 @@ public:
     QSplitter *splitter_2;
     QLabel *label_6;
     QComboBox *mergeImportClosure;
+    QWidget *unmerge;
+    QLabel *label_11;
+    QFrame *line_2;
+    QLabel *label_37;
+    QWidget *layoutWidget_56;
+    QHBoxLayout *horizontalLayout_72;
+    QPushButton *unmergeAddMoreFiles;
+    QPushButton *unmergeRemoveMoreFiles;
+    QFrame *line_4;
+    QWidget *layoutWidget_57;
+    QHBoxLayout *horizontalLayout_73;
+    QPushButton *unmergeSaveAs;
+    QLineEdit *unmergeNameSave;
+    QLabel *label_38;
+    QLineEdit *unmergeSavePath;
+    QWidget *layoutWidget_58;
+    QHBoxLayout *horizontalLayout_74;
+    QPushButton *unmergeReset;
+    QPushButton *unmergeButton;
+    QListWidget *firstFile;
+    QListWidget *moreFiles;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_71;
+    QPushButton *unmergeAddFirstFile;
+    QPushButton *unmergeRemoveFirstFile;
     QWidget *collapse;
     QListWidget *collapseFileNames;
     QLabel *label_3;
@@ -231,6 +256,34 @@ public:
     QHBoxLayout *horizontalLayout_23;
     QPushButton *repairAddFile;
     QPushButton *repairRemoveFile;
+    QWidget *measure;
+    QWidget *layoutWidget_59;
+    QHBoxLayout *horizontalLayout_75;
+    QPushButton *measureAddFile;
+    QPushButton *measureRemoveFile;
+    QWidget *layoutWidget_60;
+    QHBoxLayout *horizontalLayout_76;
+    QPushButton *measureSaveAs;
+    QLineEdit *measureNameSave;
+    QLabel *label_39;
+    QLineEdit *measureSavePath;
+    QWidget *layoutWidget_61;
+    QHBoxLayout *horizontalLayout_77;
+    QPushButton *measureReset;
+    QPushButton *measureButton;
+    QListWidget *measureFileNames;
+    QWidget *layoutWidget_62;
+    QHBoxLayout *horizontalLayout_78;
+    QLabel *label_40;
+    QComboBox *measureFormat;
+    QLabel *label_41;
+    QCheckBox *all;
+    QCheckBox *extended;
+    QCheckBox *essential;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_79;
+    QCheckBox *reasoner;
+    QComboBox *reasonerMetrics;
     QButtonGroup *buttonGroup;
 
     void setupUi(QMainWindow *MainWindow)
@@ -322,7 +375,7 @@ public:
 
         splitter_3 = new QSplitter(merge);
         splitter_3->setObjectName("splitter_3");
-        splitter_3->setGeometry(QRect(240, 50, 201, 32));
+        splitter_3->setGeometry(QRect(240, 50, 192, 32));
         splitter_3->setOrientation(Qt::Horizontal);
         label_7 = new QLabel(splitter_3);
         label_7->setObjectName("label_7");
@@ -414,7 +467,7 @@ public:
 
         splitter_2 = new QSplitter(merge);
         splitter_2->setObjectName("splitter_2");
-        splitter_2->setGeometry(QRect(240, 80, 171, 32));
+        splitter_2->setGeometry(QRect(240, 80, 157, 32));
         splitter_2->setOrientation(Qt::Horizontal);
         label_6 = new QLabel(splitter_2);
         label_6->setObjectName("label_6");
@@ -429,6 +482,158 @@ public:
         mergeImportClosure->setEditable(false);
         splitter_2->addWidget(mergeImportClosure);
         tabWidget->addTab(merge, QString());
+        unmerge = new QWidget();
+        unmerge->setObjectName("unmerge");
+        label_11 = new QLabel(unmerge);
+        label_11->setObjectName("label_11");
+        label_11->setGeometry(QRect(33, 11, 164, 16));
+        label_11->setFont(font3);
+        line_2 = new QFrame(unmerge);
+        line_2->setObjectName("line_2");
+        line_2->setGeometry(QRect(11, 20, 209, 16));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+        label_37 = new QLabel(unmerge);
+        label_37->setObjectName("label_37");
+        label_37->setGeometry(QRect(60, 100, 111, 16));
+        label_37->setFont(font3);
+        layoutWidget_56 = new QWidget(unmerge);
+        layoutWidget_56->setObjectName("layoutWidget_56");
+        layoutWidget_56->setGeometry(QRect(10, 120, 212, 32));
+        horizontalLayout_72 = new QHBoxLayout(layoutWidget_56);
+        horizontalLayout_72->setObjectName("horizontalLayout_72");
+        horizontalLayout_72->setContentsMargins(0, 0, 0, 0);
+        unmergeAddMoreFiles = new QPushButton(layoutWidget_56);
+        unmergeAddMoreFiles->setObjectName("unmergeAddMoreFiles");
+        sizePolicy.setHeightForWidth(unmergeAddMoreFiles->sizePolicy().hasHeightForWidth());
+        unmergeAddMoreFiles->setSizePolicy(sizePolicy);
+        unmergeAddMoreFiles->setMinimumSize(QSize(100, 0));
+        unmergeAddMoreFiles->setMaximumSize(QSize(100, 16777215));
+        unmergeAddMoreFiles->setFocusPolicy(Qt::NoFocus);
+        unmergeAddMoreFiles->setContextMenuPolicy(Qt::DefaultContextMenu);
+        unmergeAddMoreFiles->setFlat(false);
+
+        horizontalLayout_72->addWidget(unmergeAddMoreFiles);
+
+        unmergeRemoveMoreFiles = new QPushButton(layoutWidget_56);
+        unmergeRemoveMoreFiles->setObjectName("unmergeRemoveMoreFiles");
+        sizePolicy.setHeightForWidth(unmergeRemoveMoreFiles->sizePolicy().hasHeightForWidth());
+        unmergeRemoveMoreFiles->setSizePolicy(sizePolicy);
+        unmergeRemoveMoreFiles->setMinimumSize(QSize(100, 0));
+        unmergeRemoveMoreFiles->setMaximumSize(QSize(100, 16777215));
+        unmergeRemoveMoreFiles->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_72->addWidget(unmergeRemoveMoreFiles);
+
+        line_4 = new QFrame(unmerge);
+        line_4->setObjectName("line_4");
+        line_4->setGeometry(QRect(10, 110, 209, 16));
+        line_4->setFrameShape(QFrame::HLine);
+        line_4->setFrameShadow(QFrame::Sunken);
+        layoutWidget_57 = new QWidget(unmerge);
+        layoutWidget_57->setObjectName("layoutWidget_57");
+        layoutWidget_57->setGeometry(QRect(240, 190, 401, 33));
+        horizontalLayout_73 = new QHBoxLayout(layoutWidget_57);
+        horizontalLayout_73->setObjectName("horizontalLayout_73");
+        horizontalLayout_73->setContentsMargins(0, 0, 0, 0);
+        unmergeSaveAs = new QPushButton(layoutWidget_57);
+        unmergeSaveAs->setObjectName("unmergeSaveAs");
+        unmergeSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_73->addWidget(unmergeSaveAs);
+
+        unmergeNameSave = new QLineEdit(layoutWidget_57);
+        unmergeNameSave->setObjectName("unmergeNameSave");
+        unmergeNameSave->setFocusPolicy(Qt::NoFocus);
+        unmergeNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        unmergeNameSave->setDragEnabled(false);
+        unmergeNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_73->addWidget(unmergeNameSave);
+
+        label_38 = new QLabel(layoutWidget_57);
+        label_38->setObjectName("label_38");
+        label_38->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_73->addWidget(label_38);
+
+        unmergeSavePath = new QLineEdit(layoutWidget_57);
+        unmergeSavePath->setObjectName("unmergeSavePath");
+        unmergeSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_73->addWidget(unmergeSavePath);
+
+        layoutWidget_58 = new QWidget(unmerge);
+        layoutWidget_58->setObjectName("layoutWidget_58");
+        layoutWidget_58->setGeometry(QRect(240, 220, 171, 32));
+        horizontalLayout_74 = new QHBoxLayout(layoutWidget_58);
+        horizontalLayout_74->setObjectName("horizontalLayout_74");
+        horizontalLayout_74->setContentsMargins(0, 0, 0, 0);
+        unmergeReset = new QPushButton(layoutWidget_58);
+        unmergeReset->setObjectName("unmergeReset");
+        sizePolicy1.setHeightForWidth(unmergeReset->sizePolicy().hasHeightForWidth());
+        unmergeReset->setSizePolicy(sizePolicy1);
+        unmergeReset->setMaximumSize(QSize(150, 16777215));
+        unmergeReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_74->addWidget(unmergeReset);
+
+        unmergeButton = new QPushButton(layoutWidget_58);
+        unmergeButton->setObjectName("unmergeButton");
+        sizePolicy1.setHeightForWidth(unmergeButton->sizePolicy().hasHeightForWidth());
+        unmergeButton->setSizePolicy(sizePolicy1);
+        unmergeButton->setMinimumSize(QSize(0, 0));
+        unmergeButton->setMaximumSize(QSize(150, 16777215));
+        unmergeButton->setFont(font4);
+        unmergeButton->setFocusPolicy(Qt::NoFocus);
+        unmergeButton->setAutoFillBackground(false);
+        unmergeButton->setCheckable(false);
+        unmergeButton->setChecked(false);
+        unmergeButton->setAutoExclusive(false);
+        unmergeButton->setAutoDefault(false);
+        unmergeButton->setFlat(false);
+
+        horizontalLayout_74->addWidget(unmergeButton);
+
+        firstFile = new QListWidget(unmerge);
+        firstFile->setObjectName("firstFile");
+        firstFile->setGeometry(QRect(10, 70, 211, 21));
+        firstFile->setFrameShape(QFrame::Box);
+        firstFile->setFrameShadow(QFrame::Plain);
+        moreFiles = new QListWidget(unmerge);
+        moreFiles->setObjectName("moreFiles");
+        moreFiles->setGeometry(QRect(10, 160, 211, 91));
+        moreFiles->setFrameShape(QFrame::Box);
+        moreFiles->setFrameShadow(QFrame::Plain);
+        widget = new QWidget(unmerge);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(11, 30, 212, 32));
+        horizontalLayout_71 = new QHBoxLayout(widget);
+        horizontalLayout_71->setObjectName("horizontalLayout_71");
+        horizontalLayout_71->setContentsMargins(0, 0, 0, 0);
+        unmergeAddFirstFile = new QPushButton(widget);
+        unmergeAddFirstFile->setObjectName("unmergeAddFirstFile");
+        sizePolicy.setHeightForWidth(unmergeAddFirstFile->sizePolicy().hasHeightForWidth());
+        unmergeAddFirstFile->setSizePolicy(sizePolicy);
+        unmergeAddFirstFile->setMinimumSize(QSize(100, 0));
+        unmergeAddFirstFile->setMaximumSize(QSize(100, 16777215));
+        unmergeAddFirstFile->setFocusPolicy(Qt::NoFocus);
+        unmergeAddFirstFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        unmergeAddFirstFile->setFlat(false);
+
+        horizontalLayout_71->addWidget(unmergeAddFirstFile);
+
+        unmergeRemoveFirstFile = new QPushButton(widget);
+        unmergeRemoveFirstFile->setObjectName("unmergeRemoveFirstFile");
+        sizePolicy.setHeightForWidth(unmergeRemoveFirstFile->sizePolicy().hasHeightForWidth());
+        unmergeRemoveFirstFile->setSizePolicy(sizePolicy);
+        unmergeRemoveFirstFile->setMinimumSize(QSize(100, 0));
+        unmergeRemoveFirstFile->setMaximumSize(QSize(100, 16777215));
+        unmergeRemoveFirstFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_71->addWidget(unmergeRemoveFirstFile);
+
+        tabWidget->addTab(unmerge, QString());
         collapse = new QWidget();
         collapse->setObjectName("collapse");
         collapseFileNames = new QListWidget(collapse);
@@ -634,7 +839,7 @@ public:
         mirrorFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget8 = new QWidget(mirror);
         layoutWidget8->setObjectName("layoutWidget8");
-        layoutWidget8->setGeometry(QRect(240, 50, 401, 33));
+        layoutWidget8->setGeometry(QRect(240, 190, 401, 33));
         horizontalLayout_4 = new QHBoxLayout(layoutWidget8);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -667,7 +872,7 @@ public:
 
         layoutWidget9 = new QWidget(mirror);
         layoutWidget9->setObjectName("layoutWidget9");
-        layoutWidget9->setGeometry(QRect(240, 80, 151, 32));
+        layoutWidget9->setGeometry(QRect(240, 220, 151, 32));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget9);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -732,7 +937,7 @@ public:
 
         layoutWidget11 = new QWidget(relax);
         layoutWidget11->setObjectName("layoutWidget11");
-        layoutWidget11->setGeometry(QRect(240, 50, 401, 33));
+        layoutWidget11->setGeometry(QRect(240, 190, 401, 33));
         horizontalLayout_14 = new QHBoxLayout(layoutWidget11);
         horizontalLayout_14->setObjectName("horizontalLayout_14");
         horizontalLayout_14->setContentsMargins(0, 0, 0, 0);
@@ -765,7 +970,7 @@ public:
 
         layoutWidget12 = new QWidget(relax);
         layoutWidget12->setObjectName("layoutWidget12");
-        layoutWidget12->setGeometry(QRect(240, 80, 147, 32));
+        layoutWidget12->setGeometry(QRect(240, 220, 147, 32));
         horizontalLayout_15 = new QHBoxLayout(layoutWidget12);
         horizontalLayout_15->setObjectName("horizontalLayout_15");
         horizontalLayout_15->setContentsMargins(0, 0, 0, 0);
@@ -973,7 +1178,7 @@ public:
         convertFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_26 = new QWidget(convert);
         layoutWidget_26->setObjectName("layoutWidget_26");
-        layoutWidget_26->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget_26->setGeometry(QRect(240, 220, 159, 32));
         horizontalLayout_39 = new QHBoxLayout(layoutWidget_26);
         horizontalLayout_39->setObjectName("horizontalLayout_39");
         horizontalLayout_39->setContentsMargins(0, 0, 0, 0);
@@ -1032,7 +1237,7 @@ public:
         diff->setObjectName("diff");
         layoutWidget_31 = new QWidget(diff);
         layoutWidget_31->setObjectName("layoutWidget_31");
-        layoutWidget_31->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget_31->setGeometry(QRect(240, 220, 160, 32));
         horizontalLayout_45 = new QHBoxLayout(layoutWidget_31);
         horizontalLayout_45->setObjectName("horizontalLayout_45");
         horizontalLayout_45->setContentsMargins(0, 0, 0, 0);
@@ -1173,7 +1378,7 @@ public:
 
         layoutWidget_34 = new QWidget(validate);
         layoutWidget_34->setObjectName("layoutWidget_34");
-        layoutWidget_34->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget_34->setGeometry(QRect(240, 220, 161, 32));
         horizontalLayout_50 = new QHBoxLayout(layoutWidget_34);
         horizontalLayout_50->setObjectName("horizontalLayout_50");
         horizontalLayout_50->setContentsMargins(0, 0, 0, 0);
@@ -1380,7 +1585,7 @@ public:
 
         label_10 = new QLabel(repair);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(240, 50, 58, 31));
+        label_10->setGeometry(QRect(240, 50, 141, 31));
         label_10->setFont(font3);
         layoutWidget_10 = new QWidget(repair);
         layoutWidget_10->setObjectName("layoutWidget_10");
@@ -1408,6 +1613,165 @@ public:
         horizontalLayout_23->addWidget(repairRemoveFile);
 
         tabWidget->addTab(repair, QString());
+        measure = new QWidget();
+        measure->setObjectName("measure");
+        layoutWidget_59 = new QWidget(measure);
+        layoutWidget_59->setObjectName("layoutWidget_59");
+        layoutWidget_59->setGeometry(QRect(10, 10, 212, 41));
+        horizontalLayout_75 = new QHBoxLayout(layoutWidget_59);
+        horizontalLayout_75->setObjectName("horizontalLayout_75");
+        horizontalLayout_75->setContentsMargins(0, 0, 0, 0);
+        measureAddFile = new QPushButton(layoutWidget_59);
+        measureAddFile->setObjectName("measureAddFile");
+        sizePolicy.setHeightForWidth(measureAddFile->sizePolicy().hasHeightForWidth());
+        measureAddFile->setSizePolicy(sizePolicy);
+        measureAddFile->setMinimumSize(QSize(100, 0));
+        measureAddFile->setMaximumSize(QSize(100, 16777215));
+        measureAddFile->setFocusPolicy(Qt::NoFocus);
+        measureAddFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        measureAddFile->setFlat(false);
+
+        horizontalLayout_75->addWidget(measureAddFile);
+
+        measureRemoveFile = new QPushButton(layoutWidget_59);
+        measureRemoveFile->setObjectName("measureRemoveFile");
+        sizePolicy.setHeightForWidth(measureRemoveFile->sizePolicy().hasHeightForWidth());
+        measureRemoveFile->setSizePolicy(sizePolicy);
+        measureRemoveFile->setMinimumSize(QSize(100, 0));
+        measureRemoveFile->setMaximumSize(QSize(100, 16777215));
+        measureRemoveFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_75->addWidget(measureRemoveFile);
+
+        layoutWidget_60 = new QWidget(measure);
+        layoutWidget_60->setObjectName("layoutWidget_60");
+        layoutWidget_60->setGeometry(QRect(240, 190, 401, 33));
+        horizontalLayout_76 = new QHBoxLayout(layoutWidget_60);
+        horizontalLayout_76->setObjectName("horizontalLayout_76");
+        horizontalLayout_76->setContentsMargins(0, 0, 0, 0);
+        measureSaveAs = new QPushButton(layoutWidget_60);
+        measureSaveAs->setObjectName("measureSaveAs");
+        measureSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_76->addWidget(measureSaveAs);
+
+        measureNameSave = new QLineEdit(layoutWidget_60);
+        measureNameSave->setObjectName("measureNameSave");
+        measureNameSave->setFocusPolicy(Qt::NoFocus);
+        measureNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        measureNameSave->setDragEnabled(false);
+        measureNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_76->addWidget(measureNameSave);
+
+        label_39 = new QLabel(layoutWidget_60);
+        label_39->setObjectName("label_39");
+        label_39->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_76->addWidget(label_39);
+
+        measureSavePath = new QLineEdit(layoutWidget_60);
+        measureSavePath->setObjectName("measureSavePath");
+        measureSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_76->addWidget(measureSavePath);
+
+        layoutWidget_61 = new QWidget(measure);
+        layoutWidget_61->setObjectName("layoutWidget_61");
+        layoutWidget_61->setGeometry(QRect(240, 220, 161, 32));
+        horizontalLayout_77 = new QHBoxLayout(layoutWidget_61);
+        horizontalLayout_77->setObjectName("horizontalLayout_77");
+        horizontalLayout_77->setContentsMargins(0, 0, 0, 0);
+        measureReset = new QPushButton(layoutWidget_61);
+        measureReset->setObjectName("measureReset");
+        sizePolicy1.setHeightForWidth(measureReset->sizePolicy().hasHeightForWidth());
+        measureReset->setSizePolicy(sizePolicy1);
+        measureReset->setMaximumSize(QSize(150, 16777215));
+        measureReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_77->addWidget(measureReset);
+
+        measureButton = new QPushButton(layoutWidget_61);
+        measureButton->setObjectName("measureButton");
+        sizePolicy1.setHeightForWidth(measureButton->sizePolicy().hasHeightForWidth());
+        measureButton->setSizePolicy(sizePolicy1);
+        measureButton->setMinimumSize(QSize(0, 0));
+        measureButton->setMaximumSize(QSize(150, 16777215));
+        measureButton->setFocusPolicy(Qt::NoFocus);
+        measureButton->setAutoFillBackground(false);
+        measureButton->setAutoDefault(false);
+        measureButton->setFlat(false);
+
+        horizontalLayout_77->addWidget(measureButton);
+
+        measureFileNames = new QListWidget(measure);
+        measureFileNames->setObjectName("measureFileNames");
+        measureFileNames->setGeometry(QRect(10, 50, 211, 201));
+        measureFileNames->setFocusPolicy(Qt::ClickFocus);
+        measureFileNames->setFrameShape(QFrame::Box);
+        measureFileNames->setFrameShadow(QFrame::Plain);
+        layoutWidget_62 = new QWidget(measure);
+        layoutWidget_62->setObjectName("layoutWidget_62");
+        layoutWidget_62->setGeometry(QRect(240, 50, 117, 32));
+        horizontalLayout_78 = new QHBoxLayout(layoutWidget_62);
+        horizontalLayout_78->setObjectName("horizontalLayout_78");
+        horizontalLayout_78->setContentsMargins(0, 0, 0, 0);
+        label_40 = new QLabel(layoutWidget_62);
+        label_40->setObjectName("label_40");
+        label_40->setFont(font3);
+
+        horizontalLayout_78->addWidget(label_40);
+
+        measureFormat = new QComboBox(layoutWidget_62);
+        measureFormat->addItem(QString());
+        measureFormat->addItem(QString());
+        measureFormat->addItem(QString());
+        measureFormat->addItem(QString());
+        measureFormat->addItem(QString());
+        measureFormat->setObjectName("measureFormat");
+
+        horizontalLayout_78->addWidget(measureFormat);
+
+        label_41 = new QLabel(measure);
+        label_41->setObjectName("label_41");
+        label_41->setGeometry(QRect(240, 80, 41, 26));
+        label_41->setFont(font3);
+        all = new QCheckBox(measure);
+        buttonGroup = new QButtonGroup(MainWindow);
+        buttonGroup->setObjectName("buttonGroup");
+        buttonGroup->addButton(all);
+        all->setObjectName("all");
+        all->setGeometry(QRect(260, 138, 38, 18));
+        extended = new QCheckBox(measure);
+        buttonGroup->addButton(extended);
+        extended->setObjectName("extended");
+        extended->setGeometry(QRect(260, 119, 72, 18));
+        essential = new QCheckBox(measure);
+        buttonGroup->addButton(essential);
+        essential->setObjectName("essential");
+        essential->setGeometry(QRect(260, 100, 121, 18));
+        essential->setChecked(true);
+        widget1 = new QWidget(measure);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(260, 151, 166, 33));
+        horizontalLayout_79 = new QHBoxLayout(widget1);
+        horizontalLayout_79->setObjectName("horizontalLayout_79");
+        horizontalLayout_79->setContentsMargins(0, 0, 0, 0);
+        reasoner = new QCheckBox(widget1);
+        buttonGroup->addButton(reasoner);
+        reasoner->setObjectName("reasoner");
+
+        horizontalLayout_79->addWidget(reasoner);
+
+        reasonerMetrics = new QComboBox(widget1);
+        reasonerMetrics->addItem(QString());
+        reasonerMetrics->addItem(QString());
+        reasonerMetrics->addItem(QString());
+        reasonerMetrics->setObjectName("reasonerMetrics");
+
+        horizontalLayout_79->addWidget(reasonerMetrics);
+
+        tabWidget->addTab(measure, QString());
 
         gridLayout->addWidget(tabWidget, 1, 0, 1, 1);
 
@@ -1415,9 +1779,12 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(8);
+        tabWidget->setCurrentIndex(10);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
+        unmergeAddMoreFiles->setDefault(false);
+        unmergeButton->setDefault(true);
+        unmergeAddFirstFile->setDefault(false);
         collapseAddFile->setDefault(false);
         collapseButton->setDefault(true);
         mirrorAddFile->setDefault(false);
@@ -1433,6 +1800,8 @@ public:
         validateButton->setDefault(true);
         repairButton->setDefault(true);
         repairAddFile->setDefault(false);
+        measureAddFile->setDefault(false);
+        measureButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1461,6 +1830,19 @@ public:
 
         mergeImportClosure->setCurrentText(QCoreApplication::translate("MainWindow", "True", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(merge), QCoreApplication::translate("MainWindow", "Merge", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "Ontology to remove axioms from", nullptr));
+        label_37->setText(QCoreApplication::translate("MainWindow", "Axioms to be removed", nullptr));
+        unmergeAddMoreFiles->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        unmergeRemoveMoreFiles->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        unmergeSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        unmergeNameSave->setText(QString());
+        unmergeNameSave->setPlaceholderText(QString());
+        label_38->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        unmergeReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        unmergeButton->setText(QCoreApplication::translate("MainWindow", "Unmerge File", nullptr));
+        unmergeAddFirstFile->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        unmergeRemoveFirstFile->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(unmerge), QCoreApplication::translate("MainWindow", "Unmerge", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Precious", nullptr));
         collapseAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         collapseRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
@@ -1512,7 +1894,7 @@ public:
         convertNameSave->setPlaceholderText(QString());
         label_17->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
         convertReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        convertButton->setText(QCoreApplication::translate("MainWindow", "Convert", nullptr));
+        convertButton->setText(QCoreApplication::translate("MainWindow", "Convert File", nullptr));
         convertIgnoreChecks->setText(QCoreApplication::translate("MainWindow", "Ignore checks", nullptr));
         label_18->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
         convertFormat->setItemText(0, QCoreApplication::translate("MainWindow", "json", nullptr));
@@ -1525,7 +1907,7 @@ public:
 
         tabWidget->setTabText(tabWidget->indexOf(convert), QCoreApplication::translate("MainWindow", "Convert", nullptr));
         mergeReset_3->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        mergeButton_3->setText(QCoreApplication::translate("MainWindow", "Merge Files", nullptr));
+        mergeButton_3->setText(QCoreApplication::translate("MainWindow", "DIff Files", nullptr));
         mergeSaveAs_3->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         mergeNameSave_3->setText(QString());
         mergeNameSave_3->setPlaceholderText(QString());
@@ -1539,7 +1921,7 @@ public:
         validateAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         validateRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
         validateReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        validateButton->setText(QCoreApplication::translate("MainWindow", "Convert", nullptr));
+        validateButton->setText(QCoreApplication::translate("MainWindow", "Validate File", nullptr));
         validateSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         validateNameSave->setText(QString());
         validateNameSave->setPlaceholderText(QString());
@@ -1560,11 +1942,36 @@ public:
         repairTerms->setText(QCoreApplication::translate("MainWindow", "Terms <term file>", nullptr));
         repairTermsFile->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
         repairReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        repairButton->setText(QCoreApplication::translate("MainWindow", "Collapse File", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "Precious", nullptr));
+        repairButton->setText(QCoreApplication::translate("MainWindow", "Repair File", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Migrate annotation axioms", nullptr));
         repairAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         repairRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(repair), QCoreApplication::translate("MainWindow", "Repair", nullptr));
+        measureAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        measureRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        measureSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        measureNameSave->setText(QString());
+        measureNameSave->setPlaceholderText(QString());
+        label_39->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        measureReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        measureButton->setText(QCoreApplication::translate("MainWindow", "Measure file", nullptr));
+        label_40->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
+        measureFormat->setItemText(0, QCoreApplication::translate("MainWindow", "tsv", nullptr));
+        measureFormat->setItemText(1, QCoreApplication::translate("MainWindow", "csv", nullptr));
+        measureFormat->setItemText(2, QCoreApplication::translate("MainWindow", "html", nullptr));
+        measureFormat->setItemText(3, QCoreApplication::translate("MainWindow", "json", nullptr));
+        measureFormat->setItemText(4, QCoreApplication::translate("MainWindow", "yaml", nullptr));
+
+        label_41->setText(QCoreApplication::translate("MainWindow", "Metrics", nullptr));
+        all->setText(QCoreApplication::translate("MainWindow", "All", nullptr));
+        extended->setText(QCoreApplication::translate("MainWindow", "Extended", nullptr));
+        essential->setText(QCoreApplication::translate("MainWindow", "Essential <Default>", nullptr));
+        reasoner->setText(QCoreApplication::translate("MainWindow", "Reasoner", nullptr));
+        reasonerMetrics->setItemText(0, QCoreApplication::translate("MainWindow", "essential", nullptr));
+        reasonerMetrics->setItemText(1, QCoreApplication::translate("MainWindow", "extended", nullptr));
+        reasonerMetrics->setItemText(2, QCoreApplication::translate("MainWindow", "all", nullptr));
+
+        tabWidget->setTabText(tabWidget->indexOf(measure), QCoreApplication::translate("MainWindow", "Measure", nullptr));
     } // retranslateUi
 
 };

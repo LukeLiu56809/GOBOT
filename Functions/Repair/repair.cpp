@@ -136,7 +136,7 @@ void Repair::repairFiles()
 
     if (repair_filesMap.isEmpty())
     {
-        QMessageBox::warning(nullptr, "Error", "You need at least one file to Repair.");
+        QMessageBox::warning(nullptr, "Error", "You need at least one file to repair.");
         return;
     }
     if (getSavePath().isEmpty())
@@ -145,21 +145,20 @@ void Repair::repairFiles()
         return;
     }
     if (getSelectedFileName().isEmpty()) {
-        QMessageBox::warning(nullptr, "Error", "Select a file to Repair.");
+        QMessageBox::warning(nullptr, "Error", "Select a file to repair.");
         return;
     }
 
     // Construct system command
     QString command = "cd " + selectedFilePath + " && robot repair \\\n"
                                                  " -i " + getSelectedFileName() + " \\\n";
-
     if (!getClasses().isEmpty())
     {
-        command += "--precious " + getClasses() + " \\\n";
+        command += "--annotation-property " + getClasses() + " \\\n";
     }
     if (!getTerms().isEmpty())
     {
-        command += "--precious-terms " + termPath + "/" + getTerms() + " \\\n";
+        command += "--annotation-properties-file " + termPath + "/" + getTerms() + " \\\n";
     }
     command += " -o " + result;
 

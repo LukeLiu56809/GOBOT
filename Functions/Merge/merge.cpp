@@ -126,10 +126,10 @@ void Merge::mergeFiles()
     }
 
     // Construct system command
-    QString command = "cd " + merge_filesMap.first() + " && robot merge";
+    QString command = "robot merge";
     for (QString& fileName : merge_filesMap.keys())
     {
-        command += " -i " + fileName;
+        command += " -i " + merge_filesMap[fileName] + "/" + fileName;
     }
     if (getImportClosureIndex() == 1)
     {
@@ -152,6 +152,8 @@ void Merge::mergeFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
+
+    qDebug() << "String:" << command;
 }
 
 //------------------------------- Getter methods---------------------------------

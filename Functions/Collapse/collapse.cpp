@@ -28,6 +28,7 @@ Collapse::Collapse(Ui::MainWindow *ui, QObject *parent)
 
     collapsePreciousTermsEdit = collapse_ui->collapsePreciousTermsEdit;
     collapsePreciousTermsEdit->hide();
+
     collapsePreciousTermsFile = collapse_ui->collapsePreciousTermsFile;
     collapsePreciousTermsFile->hide();
 }
