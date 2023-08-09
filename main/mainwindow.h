@@ -12,6 +12,7 @@
 #include "../Functions/Repair/repair.h"
 #include "../Functions/Unmerge/unmerge.h"
 #include "../Functions/Measure/measure.h"
+#include "../Functions/Expand/expand.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +40,7 @@ private:
     Repair *repairHandler;
     Unmerge *unmergeHandler;
     Measure *measureHandler;
+    Expand *expandHandler;
 };
 
 #endif // MAINWINDOW_H

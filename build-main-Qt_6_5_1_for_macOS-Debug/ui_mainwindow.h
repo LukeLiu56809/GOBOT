@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
@@ -284,7 +283,39 @@ public:
     QHBoxLayout *horizontalLayout_79;
     QCheckBox *reasoner;
     QComboBox *reasonerMetrics;
-    QButtonGroup *buttonGroup;
+    QWidget *expand;
+    QWidget *layoutWidget_63;
+    QHBoxLayout *horizontalLayout_80;
+    QPushButton *expandReset;
+    QPushButton *expandButton;
+    QWidget *layoutWidget_64;
+    QHBoxLayout *horizontalLayout_81;
+    QPushButton *expandSaveAs;
+    QLineEdit *expandNameSave;
+    QLabel *label_42;
+    QLineEdit *expandSavePath;
+    QCheckBox *expandAnnotateExpansion;
+    QWidget *layoutWidget_65;
+    QHBoxLayout *horizontalLayout_82;
+    QPushButton *expandAddFile;
+    QPushButton *expandRemoveFile;
+    QListWidget *expandFileNames;
+    QLabel *label_43;
+    QLabel *label_70;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_130;
+    QLabel *label_69;
+    QLineEdit *expandTerm;
+    QWidget *widget3;
+    QHBoxLayout *horizontalLayout_131;
+    QCheckBox *expandTermFile;
+    QPushButton *expandTermSave;
+    QLineEdit *expandTermSaveName;
+    QWidget *widget4;
+    QHBoxLayout *horizontalLayout_132;
+    QCheckBox *expandNoTermFile;
+    QPushButton *expandNoTermSave;
+    QLineEdit *expandNoTermSaveName;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -1737,17 +1768,12 @@ public:
         label_41->setGeometry(QRect(240, 80, 41, 26));
         label_41->setFont(font3);
         all = new QCheckBox(measure);
-        buttonGroup = new QButtonGroup(MainWindow);
-        buttonGroup->setObjectName("buttonGroup");
-        buttonGroup->addButton(all);
         all->setObjectName("all");
         all->setGeometry(QRect(260, 138, 38, 18));
         extended = new QCheckBox(measure);
-        buttonGroup->addButton(extended);
         extended->setObjectName("extended");
         extended->setGeometry(QRect(260, 119, 72, 18));
         essential = new QCheckBox(measure);
-        buttonGroup->addButton(essential);
         essential->setObjectName("essential");
         essential->setGeometry(QRect(260, 100, 121, 18));
         essential->setChecked(true);
@@ -1758,7 +1784,6 @@ public:
         horizontalLayout_79->setObjectName("horizontalLayout_79");
         horizontalLayout_79->setContentsMargins(0, 0, 0, 0);
         reasoner = new QCheckBox(widget1);
-        buttonGroup->addButton(reasoner);
         reasoner->setObjectName("reasoner");
 
         horizontalLayout_79->addWidget(reasoner);
@@ -1772,6 +1797,176 @@ public:
         horizontalLayout_79->addWidget(reasonerMetrics);
 
         tabWidget->addTab(measure, QString());
+        expand = new QWidget();
+        expand->setObjectName("expand");
+        layoutWidget_63 = new QWidget(expand);
+        layoutWidget_63->setObjectName("layoutWidget_63");
+        layoutWidget_63->setGeometry(QRect(240, 220, 157, 32));
+        horizontalLayout_80 = new QHBoxLayout(layoutWidget_63);
+        horizontalLayout_80->setObjectName("horizontalLayout_80");
+        horizontalLayout_80->setContentsMargins(0, 0, 0, 0);
+        expandReset = new QPushButton(layoutWidget_63);
+        expandReset->setObjectName("expandReset");
+        sizePolicy1.setHeightForWidth(expandReset->sizePolicy().hasHeightForWidth());
+        expandReset->setSizePolicy(sizePolicy1);
+        expandReset->setMaximumSize(QSize(150, 16777215));
+        expandReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_80->addWidget(expandReset);
+
+        expandButton = new QPushButton(layoutWidget_63);
+        expandButton->setObjectName("expandButton");
+        sizePolicy1.setHeightForWidth(expandButton->sizePolicy().hasHeightForWidth());
+        expandButton->setSizePolicy(sizePolicy1);
+        expandButton->setMinimumSize(QSize(0, 0));
+        expandButton->setMaximumSize(QSize(150, 16777215));
+        expandButton->setFocusPolicy(Qt::NoFocus);
+        expandButton->setAutoFillBackground(false);
+        expandButton->setAutoDefault(false);
+        expandButton->setFlat(false);
+
+        horizontalLayout_80->addWidget(expandButton);
+
+        layoutWidget_64 = new QWidget(expand);
+        layoutWidget_64->setObjectName("layoutWidget_64");
+        layoutWidget_64->setGeometry(QRect(240, 190, 401, 33));
+        horizontalLayout_81 = new QHBoxLayout(layoutWidget_64);
+        horizontalLayout_81->setObjectName("horizontalLayout_81");
+        horizontalLayout_81->setContentsMargins(0, 0, 0, 0);
+        expandSaveAs = new QPushButton(layoutWidget_64);
+        expandSaveAs->setObjectName("expandSaveAs");
+        expandSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_81->addWidget(expandSaveAs);
+
+        expandNameSave = new QLineEdit(layoutWidget_64);
+        expandNameSave->setObjectName("expandNameSave");
+        expandNameSave->setFocusPolicy(Qt::NoFocus);
+        expandNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        expandNameSave->setDragEnabled(false);
+        expandNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_81->addWidget(expandNameSave);
+
+        label_42 = new QLabel(layoutWidget_64);
+        label_42->setObjectName("label_42");
+        label_42->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_81->addWidget(label_42);
+
+        expandSavePath = new QLineEdit(layoutWidget_64);
+        expandSavePath->setObjectName("expandSavePath");
+        expandSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_81->addWidget(expandSavePath);
+
+        expandAnnotateExpansion = new QCheckBox(expand);
+        expandAnnotateExpansion->setObjectName("expandAnnotateExpansion");
+        expandAnnotateExpansion->setGeometry(QRect(240, 160, 161, 31));
+        expandAnnotateExpansion->setFont(font3);
+        layoutWidget_65 = new QWidget(expand);
+        layoutWidget_65->setObjectName("layoutWidget_65");
+        layoutWidget_65->setGeometry(QRect(10, 10, 212, 41));
+        horizontalLayout_82 = new QHBoxLayout(layoutWidget_65);
+        horizontalLayout_82->setObjectName("horizontalLayout_82");
+        horizontalLayout_82->setContentsMargins(0, 0, 0, 0);
+        expandAddFile = new QPushButton(layoutWidget_65);
+        expandAddFile->setObjectName("expandAddFile");
+        sizePolicy.setHeightForWidth(expandAddFile->sizePolicy().hasHeightForWidth());
+        expandAddFile->setSizePolicy(sizePolicy);
+        expandAddFile->setMinimumSize(QSize(100, 0));
+        expandAddFile->setMaximumSize(QSize(100, 16777215));
+        expandAddFile->setFocusPolicy(Qt::NoFocus);
+        expandAddFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        expandAddFile->setFlat(false);
+
+        horizontalLayout_82->addWidget(expandAddFile);
+
+        expandRemoveFile = new QPushButton(layoutWidget_65);
+        expandRemoveFile->setObjectName("expandRemoveFile");
+        sizePolicy.setHeightForWidth(expandRemoveFile->sizePolicy().hasHeightForWidth());
+        expandRemoveFile->setSizePolicy(sizePolicy);
+        expandRemoveFile->setMinimumSize(QSize(100, 0));
+        expandRemoveFile->setMaximumSize(QSize(100, 16777215));
+        expandRemoveFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_82->addWidget(expandRemoveFile);
+
+        expandFileNames = new QListWidget(expand);
+        expandFileNames->setObjectName("expandFileNames");
+        expandFileNames->setGeometry(QRect(10, 50, 211, 201));
+        expandFileNames->setFocusPolicy(Qt::ClickFocus);
+        expandFileNames->setFrameShape(QFrame::Box);
+        expandFileNames->setFrameShadow(QFrame::Plain);
+        label_43 = new QLabel(expand);
+        label_43->setObjectName("label_43");
+        label_43->setGeometry(QRect(240, 50, 101, 26));
+        label_43->setFont(font3);
+        label_70 = new QLabel(expand);
+        label_70->setObjectName("label_70");
+        label_70->setGeometry(QRect(260, 90, 51, 21));
+        widget2 = new QWidget(expand);
+        widget2->setObjectName("widget2");
+        widget2->setGeometry(QRect(260, 70, 165, 23));
+        horizontalLayout_130 = new QHBoxLayout(widget2);
+        horizontalLayout_130->setObjectName("horizontalLayout_130");
+        horizontalLayout_130->setContentsMargins(0, 0, 0, 0);
+        label_69 = new QLabel(widget2);
+        label_69->setObjectName("label_69");
+
+        horizontalLayout_130->addWidget(label_69);
+
+        expandTerm = new QLineEdit(widget2);
+        expandTerm->setObjectName("expandTerm");
+        expandTerm->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_130->addWidget(expandTerm);
+
+        widget3 = new QWidget(expand);
+        widget3->setObjectName("widget3");
+        widget3->setGeometry(QRect(280, 100, 321, 33));
+        horizontalLayout_131 = new QHBoxLayout(widget3);
+        horizontalLayout_131->setObjectName("horizontalLayout_131");
+        horizontalLayout_131->setContentsMargins(0, 0, 0, 0);
+        expandTermFile = new QCheckBox(widget3);
+        expandTermFile->setObjectName("expandTermFile");
+
+        horizontalLayout_131->addWidget(expandTermFile);
+
+        expandTermSave = new QPushButton(widget3);
+        expandTermSave->setObjectName("expandTermSave");
+
+        horizontalLayout_131->addWidget(expandTermSave);
+
+        expandTermSaveName = new QLineEdit(widget3);
+        expandTermSaveName->setObjectName("expandTermSaveName");
+        expandTermSaveName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_131->addWidget(expandTermSaveName);
+
+        widget4 = new QWidget(expand);
+        widget4->setObjectName("widget4");
+        widget4->setGeometry(QRect(280, 130, 341, 33));
+        horizontalLayout_132 = new QHBoxLayout(widget4);
+        horizontalLayout_132->setObjectName("horizontalLayout_132");
+        horizontalLayout_132->setContentsMargins(0, 0, 0, 0);
+        expandNoTermFile = new QCheckBox(widget4);
+        expandNoTermFile->setObjectName("expandNoTermFile");
+
+        horizontalLayout_132->addWidget(expandNoTermFile);
+
+        expandNoTermSave = new QPushButton(widget4);
+        expandNoTermSave->setObjectName("expandNoTermSave");
+
+        horizontalLayout_132->addWidget(expandNoTermSave);
+
+        expandNoTermSaveName = new QLineEdit(widget4);
+        expandNoTermSaveName->setObjectName("expandNoTermSaveName");
+        expandNoTermSaveName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_132->addWidget(expandNoTermSaveName);
+
+        tabWidget->addTab(expand, QString());
 
         gridLayout->addWidget(tabWidget, 1, 0, 1, 1);
 
@@ -1779,7 +1974,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(10);
+        tabWidget->setCurrentIndex(11);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -1802,6 +1997,8 @@ public:
         repairAddFile->setDefault(false);
         measureAddFile->setDefault(false);
         measureButton->setDefault(true);
+        expandButton->setDefault(true);
+        expandAddFile->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1972,6 +2169,23 @@ public:
         reasonerMetrics->setItemText(2, QCoreApplication::translate("MainWindow", "all", nullptr));
 
         tabWidget->setTabText(tabWidget->indexOf(measure), QCoreApplication::translate("MainWindow", "Measure", nullptr));
+        expandReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        expandButton->setText(QCoreApplication::translate("MainWindow", "Expand File", nullptr));
+        expandSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        expandNameSave->setText(QString());
+        expandNameSave->setPlaceholderText(QString());
+        label_42->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        expandAnnotateExpansion->setText(QCoreApplication::translate("MainWindow", "Annotate expansion axioms", nullptr));
+        expandAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        expandRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        label_43->setText(QCoreApplication::translate("MainWindow", "Specify expansions", nullptr));
+        label_70->setText(QCoreApplication::translate("MainWindow", "Term file", nullptr));
+        label_69->setText(QCoreApplication::translate("MainWindow", "IRI/CURIE", nullptr));
+        expandTermFile->setText(QCoreApplication::translate("MainWindow", "expand-term-file", nullptr));
+        expandTermSave->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
+        expandNoTermFile->setText(QCoreApplication::translate("MainWindow", "no-expand-term-file", nullptr));
+        expandNoTermSave->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(expand), QCoreApplication::translate("MainWindow", "Expand", nullptr));
     } // retranslateUi
 
 };
