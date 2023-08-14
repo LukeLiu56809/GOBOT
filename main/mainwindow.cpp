@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     unmergeHandler = new Unmerge(ui, this);
     measureHandler = new Measure(ui, this);
     expandHandler = new Expand(ui, this);
+    diffHandler = new Diff(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

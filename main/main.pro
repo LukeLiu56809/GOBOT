@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     ../Functions/Collapse/collapse.cpp \
     ../Functions/Convert/convert.cpp \
+    ../Functions/Diff/diff.cpp \
     ../Functions/Expand/expand.cpp \
     ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 HEADERS += \
     ../Functions/Collapse/collapse.h \
     ../Functions/Convert/convert.h \
+    ../Functions/Diff/diff.h \
     ../Functions/Expand/expand.h \
     ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \

@@ -13,6 +13,7 @@
 #include "../Functions/Unmerge/unmerge.h"
 #include "../Functions/Measure/measure.h"
 #include "../Functions/Expand/expand.h"
+#include "../Functions/Diff/diff.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,6 +42,7 @@ private:
     Unmerge *unmergeHandler;
     Measure *measureHandler;
     Expand *expandHandler;
+    Diff *diffHandler;
 };
 
 #endif // MAINWINDOW_H
