@@ -121,6 +121,7 @@ void Expand::resetExpand()
     // Uncheck the checkboxes
     expand_ui->expandTermFile->setChecked(false);
     expand_ui->expandNoTermFile->setChecked(false);
+    expand_ui->expandAnnotateExpansion->setChecked(false);
 
     // Clear the QMap and clear the list view box
     expand_filesMap.clear();
@@ -131,6 +132,7 @@ void Expand::resetExpand()
     expand_ui->expandSavePath->clear();
     expand_ui->expandTermSaveName->clear();
     expand_ui->expandNoTermSaveName->clear();
+    expand_ui->expandTerm->clear();
 }
 
 
@@ -175,9 +177,7 @@ void Expand::expandFiles()
     command += " -o " + result;
 
     // System call
-    QByteArray commandStr = command.toLatin1();
-    const char *commandStr_2 = commandStr.data();
-    int check = system(commandStr_2);
+    int check = system(command.toUtf8());
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>690</width>
-    <height>424</height>
+    <width>711</width>
+    <height>563</height>
    </rect>
   </property>
   <property name="font">
@@ -22,39 +22,12 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QLabel" name="mainHeader1">
-        <property name="font">
-         <font>
-          <family>Futura</family>
-          <pointsize>64</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>ROBOT </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="Line" name="line">
-        <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="font">
        <font>
         <family>Galvji</family>
         <pointsize>10</pointsize>
+        <bold>false</bold>
        </font>
       </property>
       <property name="tabPosition">
@@ -64,7 +37,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>13</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideRight</enum>
@@ -89,7 +62,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -108,7 +81,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -234,7 +207,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -295,8 +268,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>157</width>
+          <y>230</y>
+          <width>159</width>
           <height>32</height>
          </rect>
         </property>
@@ -347,6 +320,7 @@
             <font>
              <family>Galvji</family>
              <pointsize>10</pointsize>
+             <bold>false</bold>
              <kerning>true</kerning>
             </font>
            </property>
@@ -386,7 +360,7 @@
          <rect>
           <x>240</x>
           <y>80</y>
-          <width>157</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -402,7 +376,7 @@
           </font>
          </property>
          <property name="text">
-          <string> Import Closure</string>
+          <string>Collapse Import Closure</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -472,7 +446,7 @@
         <property name="geometry">
          <rect>
           <x>60</x>
-          <y>100</y>
+          <y>110</y>
           <width>111</width>
           <height>16</height>
          </rect>
@@ -492,7 +466,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>120</y>
+          <y>130</y>
           <width>212</width>
           <height>32</height>
          </rect>
@@ -569,7 +543,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>110</y>
+          <y>120</y>
           <width>209</width>
           <height>16</height>
          </rect>
@@ -582,7 +556,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -643,7 +617,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
+          <y>230</y>
           <width>171</width>
           <height>32</height>
          </rect>
@@ -695,6 +669,7 @@
             <font>
              <family>Galvji</family>
              <pointsize>10</pointsize>
+             <bold>false</bold>
              <kerning>true</kerning>
             </font>
            </property>
@@ -749,7 +724,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>160</y>
+          <y>170</y>
           <width>211</width>
           <height>91</height>
          </rect>
@@ -761,7 +736,7 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -847,7 +822,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -886,7 +861,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -948,7 +923,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -1009,8 +984,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>163</width>
+          <y>230</y>
+          <width>165</width>
           <height>32</height>
          </rect>
         </property>
@@ -1213,7 +1188,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -1290,7 +1265,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -1309,7 +1284,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -1370,8 +1345,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>151</width>
+          <y>230</y>
+          <width>153</width>
           <height>32</height>
          </rect>
         </property>
@@ -1449,7 +1424,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -1468,7 +1443,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -1545,7 +1520,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -1606,8 +1581,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>147</width>
+          <y>230</y>
+          <width>149</width>
           <height>32</height>
          </rect>
         </property>
@@ -1685,7 +1660,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -1746,8 +1721,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>157</width>
+          <y>230</y>
+          <width>159</width>
           <height>32</height>
          </rect>
         </property>
@@ -1820,7 +1795,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -1897,7 +1872,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -1916,7 +1891,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>50</y>
+          <y>60</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -1936,7 +1911,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>80</y>
+          <y>90</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -1961,7 +1936,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -2058,7 +2033,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -2119,7 +2094,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -2138,8 +2113,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>159</width>
+          <y>230</y>
+          <width>162</width>
           <height>32</height>
          </rect>
         </property>
@@ -2302,7 +2277,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>220</y>
+          <y>230</y>
           <width>160</width>
           <height>32</height>
          </rect>
@@ -2354,6 +2329,7 @@
             <font>
              <family>Galvji</family>
              <pointsize>10</pointsize>
+             <bold>false</bold>
              <kerning>true</kerning>
             </font>
            </property>
@@ -2392,7 +2368,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -2453,7 +2429,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>21</width>
           <height>21</height>
          </rect>
@@ -2472,7 +2448,7 @@
        <widget class="QLabel" name="label_23">
         <property name="geometry">
          <rect>
-          <x>370</x>
+          <x>390</x>
           <y>10</y>
           <width>31</width>
           <height>21</height>
@@ -2493,7 +2469,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>70</y>
+          <y>80</y>
           <width>281</width>
           <height>31</height>
          </rect>
@@ -2519,7 +2495,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
+          <y>50</y>
           <width>281</width>
           <height>33</height>
          </rect>
@@ -2555,7 +2531,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>120</y>
+          <y>130</y>
           <width>281</width>
           <height>33</height>
          </rect>
@@ -2587,8 +2563,8 @@
        <widget class="QWidget" name="layoutWidget_118">
         <property name="geometry">
          <rect>
-          <x>370</x>
-          <y>70</y>
+          <x>390</x>
+          <y>80</y>
           <width>281</width>
           <height>31</height>
          </rect>
@@ -2616,8 +2592,8 @@
        <widget class="QWidget" name="layoutWidget_119">
         <property name="geometry">
          <rect>
-          <x>370</x>
-          <y>40</y>
+          <x>390</x>
+          <y>50</y>
           <width>281</width>
           <height>33</height>
          </rect>
@@ -2652,8 +2628,8 @@
        <widget class="QWidget" name="layoutWidget_120">
         <property name="geometry">
          <rect>
-          <x>370</x>
-          <y>120</y>
+          <x>390</x>
+          <y>130</y>
           <width>281</width>
           <height>33</height>
          </rect>
@@ -2685,8 +2661,8 @@
        <widget class="Line" name="line_9">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>10</y>
+          <x>330</x>
+          <y>20</y>
           <width>20</width>
           <height>141</height>
          </rect>
@@ -2704,7 +2680,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -2781,8 +2757,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>161</width>
+          <y>230</y>
+          <width>163</width>
           <height>32</height>
          </rect>
         </property>
@@ -2855,7 +2831,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -2874,7 +2850,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -3039,7 +3015,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -3058,7 +3034,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -3161,7 +3137,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
+          <y>230</y>
           <width>163</width>
           <height>32</height>
          </rect>
@@ -3248,14 +3224,14 @@
          </font>
         </property>
         <property name="text">
-         <string>Migrate annotation axioms</string>
+         <string>Migrate Annotation Axioms</string>
         </property>
        </widget>
        <widget class="QWidget" name="layoutWidget_10">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -3322,7 +3298,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -3399,7 +3375,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -3460,8 +3436,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>161</width>
+          <y>230</y>
+          <width>163</width>
           <height>32</height>
          </rect>
         </property>
@@ -3534,7 +3510,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -3554,7 +3530,7 @@
          <rect>
           <x>240</x>
           <y>50</y>
-          <width>117</width>
+          <width>119</width>
           <height>32</height>
          </rect>
         </property>
@@ -3666,12 +3642,12 @@
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>260</x>
           <y>151</y>
-          <width>166</width>
+          <width>170</width>
           <height>33</height>
          </rect>
         </property>
@@ -3713,8 +3689,8 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>220</y>
-          <width>157</width>
+          <y>230</y>
+          <width>159</width>
           <height>32</height>
          </rect>
         </property>
@@ -3787,7 +3763,7 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>190</y>
+          <y>200</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -3861,14 +3837,14 @@
          </font>
         </property>
         <property name="text">
-         <string>Annotate expansion axioms</string>
+         <string>Annotate Expansion Axioms</string>
         </property>
        </widget>
        <widget class="QWidget" name="layoutWidget_65">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>20</y>
           <width>212</width>
           <height>41</height>
          </rect>
@@ -3945,7 +3921,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>60</y>
           <width>211</width>
           <height>201</height>
          </rect>
@@ -3977,7 +3953,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Specify expansions</string>
+         <string>Specify Expansions</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_70">
@@ -3993,7 +3969,7 @@
          <string>Term file</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>260</x>
@@ -4019,7 +3995,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -4052,7 +4028,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -4101,7 +4077,7 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_133">
          <item>
-          <widget class="QPushButton" name="unmergeAddFirstFile_3">
+          <widget class="QPushButton" name="queryAddOntology">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4138,7 +4114,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="unmergeRemoveFirstFile_3">
+          <widget class="QPushButton" name="queryRemoveOntology">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4167,7 +4143,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QListWidget" name="firstFile_3">
+       <widget class="QListWidget" name="queryOntologyName">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4216,7 +4192,7 @@
          <string>Import Ontology</string>
         </property>
        </widget>
-       <widget class="QListWidget" name="moreFiles_3">
+       <widget class="QListWidget" name="queryQueryName">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4256,7 +4232,7 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_134">
          <item>
-          <widget class="QPushButton" name="unmergeAddMoreFiles_3">
+          <widget class="QPushButton" name="queryAddQuery">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4293,7 +4269,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="unmergeRemoveMoreFiles_3">
+          <widget class="QPushButton" name="queryRemoveQuery">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4345,15 +4321,15 @@
        <widget class="QWidget" name="layoutWidget_115">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>220</y>
+          <x>270</x>
+          <y>480</y>
           <width>171</width>
           <height>32</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_135">
          <item>
-          <widget class="QPushButton" name="unmergeReset_3">
+          <widget class="QPushButton" name="queryReset">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4375,7 +4351,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="unmergeButton_3">
+          <widget class="QPushButton" name="queryButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -4398,6 +4374,7 @@
             <font>
              <family>Galvji</family>
              <pointsize>10</pointsize>
+             <bold>false</bold>
              <kerning>true</kerning>
             </font>
            </property>
@@ -4435,15 +4412,15 @@
        <widget class="QWidget" name="layoutWidget_116">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>190</y>
+          <x>270</x>
+          <y>450</y>
           <width>401</width>
           <height>33</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_136">
          <item>
-          <widget class="QPushButton" name="unmergeSaveAs_3">
+          <widget class="QPushButton" name="querySaveAs">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -4453,7 +4430,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="unmergeNameSave_3">
+          <widget class="QLineEdit" name="queryNameSave">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -4485,7 +4462,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="unmergeSavePath_3">
+          <widget class="QLineEdit" name="querySavePath">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -4493,13 +4470,106 @@
          </item>
         </layout>
        </widget>
-       <widget class="QCheckBox" name="reduceIgnoreClasses_4">
+       <widget class="QWidget" name="layoutWidget_121">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>60</y>
-          <width>251</width>
-          <height>31</height>
+          <x>280</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_141">
+         <item>
+          <widget class="QPushButton" name="queryAddUpdate">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="queryRemoveUpdate">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QListWidget" name="queryUpdateName">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>150</y>
+          <width>211</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_51">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>10</y>
+          <width>91</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="font">
@@ -4508,18 +4578,124 @@
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="text">
+         <string>Handling Imports</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_81">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>50</y>
+          <width>328</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_97">
+         <item>
+          <widget class="QCheckBox" name="queryCatalog">
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+           <property name="text">
+            <string>Catalog file</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="queryCatalogSave">
+           <property name="text">
+            <string>Select File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="queryCatalogSaveName">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>20</y>
+          <width>20</width>
+          <height>401</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_52">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>100</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>SPARQL UPDATE</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="queryTemporaryFile">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>210</y>
+          <width>251</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
         </property>
         <property name="text">
          <string>Store intermediate results to a temporary file</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
        </widget>
-       <widget class="QCheckBox" name="reducePreserveAxioms_3">
+       <widget class="QLabel" name="label_53">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>30</y>
-          <width>251</width>
-          <height>31</height>
+          <x>260</x>
+          <y>240</y>
+          <width>91</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="font">
@@ -4530,15 +4706,704 @@
          </font>
         </property>
         <property name="text">
-         <string>Include import statements as named graphs</string>
+         <string>Executing On Disk</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="reduceIgnoreClasses_5">
+       <widget class="QWidget" name="layoutWidget_82">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>300</y>
+          <width>391</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_98">
+         <item>
+          <widget class="QPushButton" name="queryTDBDirectory">
+           <property name="text">
+            <string>Change TDB Directory</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="queryTBDDirectoryName">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QCheckBox" name="queryTDB">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>260</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>Load ontology onto disk</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="queryKeepTDB">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>280</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>Keep TDB directory</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_54">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>340</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Create TDB Directory</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_83">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>360</y>
+          <width>391</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_99">
+         <item>
+          <widget class="QPushButton" name="querySelectTDB">
+           <property name="text">
+            <string>Select Directory</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="querySelectTDBName">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="queryCreateTDB">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>390</y>
+          <width>110</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Execute</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="queryUseGraphs">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>33</y>
+          <width>204</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>Include all imports as named graphs</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Template">
+       <attribute name="title">
+        <string>Template</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget_84">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_100">
+         <item>
+          <widget class="QPushButton" name="templateAddMoreFiles">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Files</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="templateRemoveMoreFiles">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Files</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="Line" name="line_6">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>20</y>
+          <width>209</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_86">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>250</y>
+          <width>401</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_102">
+         <item>
+          <widget class="QPushButton" name="templateSaveAs">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Save As</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="templateNameSave">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_57">
+           <property name="text">
+            <string>To:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="templateSavePath">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_85">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_101">
+         <item>
+          <widget class="QPushButton" name="templateAddFirstFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="templateRemoveFirstFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="Line" name="line_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>209</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_80">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>280</y>
+          <width>171</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_96">
+         <item>
+          <widget class="QPushButton" name="templateReset">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="templateButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>false</bold>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Unmerge File</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QListWidget" name="templateFirstFile">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_56">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>11</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Ontology</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_55">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>110</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Templates</string>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="templateMoreFiles">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>211</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_87">
         <property name="geometry">
          <rect>
           <x>240</x>
           <y>90</y>
-          <width>141</width>
+          <width>234</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_103">
+         <item>
+          <widget class="QCheckBox" name="templatePrefix">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+           <property name="text">
+            <string>Prefix</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="templatePrefixName">
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_88">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>120</y>
+          <width>251</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_104">
+         <item>
+          <widget class="QCheckBox" name="templateIRI">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+           <property name="text">
+            <string>Ontology IRI</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="templateIRIName">
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QCheckBox" name="templateForce">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>150</y>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
@@ -4549,9 +5414,232 @@
           <bold>true</bold>
          </font>
         </property>
-        <property name="text">
-         <string>Load ontology on disk</string>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
         </property>
+        <property name="text">
+         <string>Proceeed with errors</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="templateAncestor">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>210</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>Ancestors</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>30</y>
+          <width>201</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_105">
+         <item>
+          <widget class="QLabel" name="label_60">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Merging Options</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="templateMerge">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>no merge</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>no merge</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>merge-before</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>merge-after</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>60</y>
+          <width>206</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_106">
+         <item>
+          <widget class="QLabel" name="label_58">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Collapse Import Closure</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="templateImportClosure">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>True</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>180</y>
+          <width>431</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_107">
+         <item>
+          <widget class="QCheckBox" name="templateError">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::ClickFocus</enum>
+           </property>
+           <property name="text">
+            <string>Write errors to file</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="templateErrorPath">
+           <property name="text">
+            <string>Select Path</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="templateErrorPathName">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>

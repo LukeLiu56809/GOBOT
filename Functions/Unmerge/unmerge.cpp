@@ -179,7 +179,6 @@ void Unmerge::unmergeFiles()
     int check = system(command.toUtf8());
     if (check != 0)
     {
-        qDebug() << "Error executing system command.";
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
     }
     else

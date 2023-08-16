@@ -152,8 +152,6 @@ void Merge::mergeFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String:" << command;
 }
 
 //------------------------------- Getter methods---------------------------------

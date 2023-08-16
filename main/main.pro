@@ -16,9 +16,11 @@ SOURCES += \
     ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
+    ../Functions/Query/query.cpp \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
     ../Functions/Repair/repair.cpp \
+    ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
     main.cpp \
@@ -32,9 +34,11 @@ HEADERS += \
     ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
+    ../Functions/Query/query.h \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
     ../Functions/Repair/repair.h \
+    ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
     mainwindow.h

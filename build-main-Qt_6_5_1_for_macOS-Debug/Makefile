@@ -59,9 +59,11 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Measure/measure.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
+		../Functions/Query/query.cpp \
 		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
 		../Functions/Repair/repair.cpp \
+		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
 		../main/main.cpp \
@@ -72,9 +74,11 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		moc_measure.cpp \
 		moc_merge.cpp \
 		moc_mirror.cpp \
+		moc_query.cpp \
 		moc_reduce.cpp \
 		moc_relax.cpp \
 		moc_repair.cpp \
+		moc_template.cpp \
 		moc_unmerge.cpp \
 		moc_validate.cpp \
 		moc_mainwindow.cpp
@@ -85,9 +89,11 @@ OBJECTS       = collapse.o \
 		measure.o \
 		merge.o \
 		mirror.o \
+		query.o \
 		reduce.o \
 		relax.o \
 		repair.o \
+		template.o \
 		unmerge.o \
 		validate.o \
 		main.o \
@@ -99,9 +105,11 @@ OBJECTS       = collapse.o \
 		moc_measure.o \
 		moc_merge.o \
 		moc_mirror.o \
+		moc_query.o \
 		moc_reduce.o \
 		moc_relax.o \
 		moc_repair.o \
+		moc_template.o \
 		moc_unmerge.o \
 		moc_validate.o \
 		moc_mainwindow.o
@@ -268,9 +276,11 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Measure/measure.h \
 		../Functions/Merge/merge.h \
 		../Functions/Mirror/mirror.h \
+		../Functions/Query/query.h \
 		../Functions/Reduce/reduce.h \
 		../Functions/Relax/relax.h \
 		../Functions/Repair/repair.h \
+		../Functions/Template/template.h \
 		../Functions/Unmerge/unmerge.h \
 		../Functions/Validate/validate.h \
 		../main/mainwindow.h ../Functions/Collapse/collapse.cpp \
@@ -280,9 +290,11 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Measure/measure.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
+		../Functions/Query/query.cpp \
 		../Functions/Reduce/reduce.cpp \
 		../Functions/Relax/relax.cpp \
 		../Functions/Repair/repair.cpp \
+		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
 		../main/main.cpp \
@@ -656,8 +668,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Repair/repair.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../main/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Repair/repair.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Query/query.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Repair/repair.h ../Functions/Template/template.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../main/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Query/query.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Repair/repair.cpp ../Functions/Template/template.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../main/mainwindow.ui $(DISTDIR)/
 
 
@@ -687,9 +699,9 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reduce.cpp moc_relax.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -772,6 +784,24 @@ moc_mirror.cpp: ../Functions/Mirror/mirror.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Mirror/mirror.h -o moc_mirror.cpp
 
+moc_query.cpp: ../Functions/Query/query.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Query/query.h -o moc_query.cpp
+
 moc_reduce.cpp: ../Functions/Reduce/reduce.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -801,6 +831,20 @@ moc_repair.cpp: ../Functions/Repair/repair.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Repair/repair.h -o moc_repair.cpp
+
+moc_template.cpp: ../Functions/Template/template.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Template/template.h -o moc_template.cpp
 
 moc_unmerge.cpp: ../Functions/Unmerge/unmerge.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
@@ -851,6 +895,8 @@ moc_mainwindow.cpp: ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
 		../Functions/Expand/expand.h \
 		../Functions/Diff/diff.h \
+		../Functions/Query/query.h \
+		../Functions/Template/template.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../main/mainwindow.h -o moc_mainwindow.cpp
 
@@ -1015,6 +1061,32 @@ mirror.o: ../Functions/Mirror/mirror.cpp ../Functions/Mirror/mirror.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mirror.o ../Functions/Mirror/mirror.cpp
 
+query.o: ../Functions/Query/query.cpp ../Functions/Query/query.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o query.o ../Functions/Query/query.cpp
+
 reduce.o: ../Functions/Reduce/reduce.cpp ../Functions/Reduce/reduce.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -1068,6 +1140,28 @@ repair.o: ../Functions/Repair/repair.cpp ../Functions/Repair/repair.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o repair.o ../Functions/Repair/repair.cpp
+
+template.o: ../Functions/Template/template.cpp ../Functions/Template/template.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o template.o ../Functions/Template/template.cpp
 
 unmerge.o: ../Functions/Unmerge/unmerge.cpp ../Functions/Unmerge/unmerge.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
@@ -1134,6 +1228,8 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
 		../Functions/Expand/expand.h \
 		../Functions/Diff/diff.h \
+		../Functions/Query/query.h \
+		../Functions/Template/template.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main/main.cpp
@@ -1169,6 +1265,8 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
 		../Functions/Expand/expand.h \
 		../Functions/Diff/diff.h \
+		../Functions/Query/query.h \
+		../Functions/Template/template.h \
 		ui_mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcessEnvironment \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h
@@ -1195,6 +1293,9 @@ moc_merge.o: moc_merge.cpp
 moc_mirror.o: moc_mirror.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mirror.o moc_mirror.cpp
 
+moc_query.o: moc_query.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_query.o moc_query.cpp
+
 moc_reduce.o: moc_reduce.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_reduce.o moc_reduce.cpp
 
@@ -1203,6 +1304,9 @@ moc_relax.o: moc_relax.cpp
 
 moc_repair.o: moc_repair.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_repair.o moc_repair.cpp
+
+moc_template.o: moc_template.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_template.o moc_template.cpp
 
 moc_unmerge.o: moc_unmerge.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_unmerge.o moc_unmerge.cpp

@@ -14,6 +14,8 @@
 #include "../Functions/Measure/measure.h"
 #include "../Functions/Expand/expand.h"
 #include "../Functions/Diff/diff.h"
+#include "../Functions/Query/query.h"
+#include "../Functions/Template/template.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,6 +45,8 @@ private:
     Measure *measureHandler;
     Expand *expandHandler;
     Diff *diffHandler;
+    Query *queryHandler;
+    Template *templateHandler;
 };
 
 #endif // MAINWINDOW_H

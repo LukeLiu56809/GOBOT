@@ -84,74 +84,6 @@ void Diff::onDiffButtonClicked()
     diffFiles();
 }
 
-void Diff::onLeftOntologyClicked(bool checked)
-{
-    leftOntologySave->setVisible(checked);
-    leftOntologySaveName->setVisible(checked);
-
-    // Uncheck the other checkbox
-    if (checked) {
-        diff_ui->leftIRI->setChecked(false);
-        diff_ui->leftIRIName->clear();
-    } else {
-        diff_ui->leftOntologySaveName->clear();
-    }
-}
-
-void Diff::onLeftIRIClicked(bool checked)
-{
-    leftIRIName->setVisible(checked);
-
-    // Uncheck the other checkbox
-    if (checked) {
-        diff_ui->leftOntology->setChecked(false);
-        diff_ui->leftOntologySaveName->clear();
-    } else {
-        diff_ui->leftIRIName->clear();
-    }
-}
-
-void Diff::onLeftCatalogClicked(bool checked)
-{
-    leftCatalogSave->setVisible(checked);
-    leftCatalogSaveName->setVisible(checked);
-    diff_ui->leftCatalogSaveName->clear();
-}
-
-void Diff::onRightOntologyClicked(bool checked)
-{
-    rightOntologySave->setVisible(checked);
-    rightOntologySaveName->setVisible(checked);
-
-    // Uncheck the other checkbox
-    if (checked) {
-        diff_ui->rightIRI->setChecked(false);
-        diff_ui->rightIRIName->clear();
-    } else {
-        diff_ui->rightOntologySaveName->clear();
-    }
-}
-
-void Diff::onRightIRIClicked(bool checked)
-{
-    rightIRIName->setVisible(checked);
-
-    // Uncheck the other checkbox
-    if (checked) {
-        diff_ui->rightOntology->setChecked(false);
-        diff_ui->rightOntologySaveName->clear();
-    } else {
-        diff_ui->rightIRIName->clear();
-    }
-}
-
-void Diff::onRightCatalogClicked(bool checked)
-{
-    rightCatalogSave->setVisible(checked);
-    rightCatalogSaveName->setVisible(checked);
-    diff_ui->rightCatalogSaveName->clear();
-}
-
 void Diff::addFiles(QMap<QString, QString>& filesMap, QLineEdit* fileNameLineEdit)
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
@@ -265,9 +197,7 @@ void Diff::diffFiles()
     command += " -o " + result;
 
     // System call
-    QByteArray commandStr = command.toLatin1();
-    const char *commandStr_2 = commandStr.data();
-    int check = system(commandStr_2);
+    int check = system(command.toUtf8());
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
@@ -276,6 +206,74 @@ void Diff::diffFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
+}
+
+void Diff::onLeftOntologyClicked(bool checked)
+{
+    leftOntologySave->setVisible(checked);
+    leftOntologySaveName->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        diff_ui->leftIRI->setChecked(false);
+        diff_ui->leftIRIName->clear();
+    } else {
+        diff_ui->leftOntologySaveName->clear();
+    }
+}
+
+void Diff::onLeftIRIClicked(bool checked)
+{
+    leftIRIName->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        diff_ui->leftOntology->setChecked(false);
+        diff_ui->leftOntologySaveName->clear();
+    } else {
+        diff_ui->leftIRIName->clear();
+    }
+}
+
+void Diff::onLeftCatalogClicked(bool checked)
+{
+    leftCatalogSave->setVisible(checked);
+    leftCatalogSaveName->setVisible(checked);
+    diff_ui->leftCatalogSaveName->clear();
+}
+
+void Diff::onRightOntologyClicked(bool checked)
+{
+    rightOntologySave->setVisible(checked);
+    rightOntologySaveName->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        diff_ui->rightIRI->setChecked(false);
+        diff_ui->rightIRIName->clear();
+    } else {
+        diff_ui->rightOntologySaveName->clear();
+    }
+}
+
+void Diff::onRightIRIClicked(bool checked)
+{
+    rightIRIName->setVisible(checked);
+
+    // Uncheck the other checkbox
+    if (checked) {
+        diff_ui->rightOntology->setChecked(false);
+        diff_ui->rightOntologySaveName->clear();
+    } else {
+        diff_ui->rightIRIName->clear();
+    }
+}
+
+void Diff::onRightCatalogClicked(bool checked)
+{
+    rightCatalogSave->setVisible(checked);
+    rightCatalogSaveName->setVisible(checked);
+    diff_ui->rightCatalogSaveName->clear();
 }
 
 //------------------------------- Getter methods---------------------------------

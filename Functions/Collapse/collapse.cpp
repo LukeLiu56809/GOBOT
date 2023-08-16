@@ -175,9 +175,7 @@ void Collapse::collapseFiles()
     command += " -o " + result;
 
     // System call
-    QByteArray commandStr = command.toLatin1();
-    const char *commandStr_2 = commandStr.data();
-    int check = system(commandStr_2);
+    int check = system(command.toUtf8());
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");

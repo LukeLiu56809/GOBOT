@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     measureHandler = new Measure(ui, this);
     expandHandler = new Expand(ui, this);
     diffHandler = new Diff(ui, this);
+    queryHandler = new Query(ui, this);
+    templateHandler = new Template(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

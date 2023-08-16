@@ -113,7 +113,10 @@ void Measure::resetMeasure()
     measure_ui->measureSavePath->clear();
     measure_ui->measureFormat->setCurrentIndex(0);
     measure_ui->reasonerMetrics->setCurrentIndex(0);
-    measure_ui->essential->setChecked(true);
+    measure_ui->essential->setChecked(false);
+    measure_ui->extended->setChecked(false);
+    measure_ui->all->setChecked(false);
+    measure_ui->reasoner->setChecked(false);
 }
 
 void Measure::measureFiles()
@@ -158,12 +161,10 @@ void Measure::measureFiles()
         command += " --metrics " + measure_ui->reasonerMetrics->currentText()
                    + "-reasoner ";
     }
-    command += "-o " + result;
+    command += " -o " + result;
 
     // System Call
-    QByteArray commandStr = command.toLatin1();
-    const char *commandStr_2 = commandStr.data();
-    int check = system(commandStr_2);
+    int check = system(command.toUtf8());
     if (check != 0)
     {
         QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
@@ -172,8 +173,6 @@ void Measure::measureFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String: " << commandStr_2;
 }
 
 void Measure::onReasonerCheckboxStateChanged(int checked)

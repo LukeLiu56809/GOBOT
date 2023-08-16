@@ -24,7 +24,6 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,9 +33,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout_3;
-    QLabel *mainHeader1;
-    QFrame *line;
     QTabWidget *tabWidget;
     QWidget *merge;
     QListWidget *mergeFileNames;
@@ -81,36 +77,36 @@ public:
     QPushButton *unmergeButton;
     QListWidget *firstFile;
     QListWidget *moreFiles;
-    QWidget *widget;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_71;
     QPushButton *unmergeAddFirstFile;
     QPushButton *unmergeRemoveFirstFile;
     QWidget *collapse;
     QListWidget *collapseFileNames;
     QLabel *label_3;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *collapseAddFile;
     QPushButton *collapseRemoveFile;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_9;
     QPushButton *collapseSaveAs;
     QLineEdit *collapseNameSave;
     QLabel *label_2;
     QLineEdit *collapseSavePath;
-    QWidget *layoutWidget4;
+    QWidget *layoutWidget5;
     QHBoxLayout *horizontalLayout_10;
     QPushButton *collapseReset;
     QPushButton *collapseButton;
-    QWidget *layoutWidget5;
+    QWidget *layoutWidget6;
     QHBoxLayout *horizontalLayout_11;
     QCheckBox *collapseThreshold;
     QSpinBox *collapseThresholdEdit;
-    QWidget *layoutWidget6;
+    QWidget *layoutWidget7;
     QHBoxLayout *horizontalLayout_12;
     QCheckBox *collapsePreciousClasses;
     QLineEdit *collapsePreciousClassesEdit;
-    QWidget *layoutWidget7;
+    QWidget *layoutWidget8;
     QHBoxLayout *horizontalLayout_13;
     QCheckBox *collapsePreciousTerms;
     QPushButton *collapsePreciousTermsFile;
@@ -121,34 +117,34 @@ public:
     QPushButton *mirrorAddFile;
     QPushButton *mirrorRemoveFile;
     QListWidget *mirrorFileNames;
-    QWidget *layoutWidget8;
+    QWidget *layoutWidget9;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *mirrorSaveAs;
     QLineEdit *mirrorNameSave;
     QLabel *label_4;
     QLineEdit *mirrorSavePath;
-    QWidget *layoutWidget9;
+    QWidget *layoutWidget10;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *mirrorReset;
     QPushButton *mirrorButton;
     QWidget *relax;
     QListWidget *relaxFileNames;
-    QWidget *layoutWidget10;
+    QWidget *layoutWidget11;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *relaxAddFile;
     QPushButton *relaxRemoveFile;
-    QWidget *layoutWidget11;
+    QWidget *layoutWidget12;
     QHBoxLayout *horizontalLayout_14;
     QPushButton *relaxSaveAs;
     QLineEdit *relaxNameSave;
     QLabel *label_5;
     QLineEdit *relaxSavePath;
-    QWidget *layoutWidget12;
+    QWidget *layoutWidget13;
     QHBoxLayout *horizontalLayout_15;
     QPushButton *relaxReset;
     QPushButton *relaxButton;
     QWidget *reduce;
-    QWidget *layoutWidget13;
+    QWidget *layoutWidget14;
     QHBoxLayout *horizontalLayout_16;
     QPushButton *reduceSaveAs;
     QLineEdit *reduceNameSave;
@@ -183,7 +179,7 @@ public:
     QPushButton *convertReset;
     QPushButton *convertButton;
     QCheckBox *convertIgnoreChecks;
-    QWidget *layoutWidget14;
+    QWidget *layoutWidget15;
     QHBoxLayout *horizontalLayout_40;
     QLabel *label_18;
     QComboBox *convertFormat;
@@ -200,11 +196,11 @@ public:
     QLineEdit *diffSavePath;
     QLabel *label_22;
     QLabel *label_23;
-    QWidget *layoutWidget15;
+    QWidget *layoutWidget16;
     QHBoxLayout *horizontalLayout_46;
     QCheckBox *leftIRI;
     QLineEdit *leftIRIName;
-    QWidget *layoutWidget16;
+    QWidget *layoutWidget17;
     QHBoxLayout *horizontalLayout_48;
     QCheckBox *leftOntology;
     QPushButton *leftOntologySave;
@@ -299,7 +295,7 @@ public:
     QCheckBox *all;
     QCheckBox *extended;
     QCheckBox *essential;
-    QWidget *widget1;
+    QWidget *layoutWidget18;
     QHBoxLayout *horizontalLayout_79;
     QCheckBox *reasoner;
     QComboBox *reasonerMetrics;
@@ -322,16 +318,16 @@ public:
     QListWidget *expandFileNames;
     QLabel *label_43;
     QLabel *label_70;
-    QWidget *widget2;
+    QWidget *layoutWidget19;
     QHBoxLayout *horizontalLayout_130;
     QLabel *label_69;
     QLineEdit *expandTerm;
-    QWidget *widget3;
+    QWidget *layoutWidget20;
     QHBoxLayout *horizontalLayout_131;
     QCheckBox *expandTermFile;
     QPushButton *expandTermSave;
     QLineEdit *expandTermSaveName;
-    QWidget *widget4;
+    QWidget *layoutWidget21;
     QHBoxLayout *horizontalLayout_132;
     QCheckBox *expandNoTermFile;
     QPushButton *expandNoTermSave;
@@ -339,37 +335,110 @@ public:
     QWidget *query;
     QWidget *layoutWidget_113;
     QHBoxLayout *horizontalLayout_133;
-    QPushButton *unmergeAddFirstFile_3;
-    QPushButton *unmergeRemoveFirstFile_3;
-    QListWidget *firstFile_3;
+    QPushButton *queryAddOntology;
+    QPushButton *queryRemoveOntology;
+    QListWidget *queryOntologyName;
     QFrame *line_7;
     QLabel *label_71;
-    QListWidget *moreFiles_3;
+    QListWidget *queryQueryName;
     QFrame *line_8;
     QWidget *layoutWidget_114;
     QHBoxLayout *horizontalLayout_134;
-    QPushButton *unmergeAddMoreFiles_3;
-    QPushButton *unmergeRemoveMoreFiles_3;
+    QPushButton *queryAddQuery;
+    QPushButton *queryRemoveQuery;
     QLabel *label_72;
     QWidget *layoutWidget_115;
     QHBoxLayout *horizontalLayout_135;
-    QPushButton *unmergeReset_3;
-    QPushButton *unmergeButton_3;
+    QPushButton *queryReset;
+    QPushButton *queryButton;
     QWidget *layoutWidget_116;
     QHBoxLayout *horizontalLayout_136;
-    QPushButton *unmergeSaveAs_3;
-    QLineEdit *unmergeNameSave_3;
+    QPushButton *querySaveAs;
+    QLineEdit *queryNameSave;
     QLabel *label_73;
-    QLineEdit *unmergeSavePath_3;
-    QCheckBox *reduceIgnoreClasses_4;
-    QCheckBox *reducePreserveAxioms_3;
-    QCheckBox *reduceIgnoreClasses_5;
+    QLineEdit *querySavePath;
+    QWidget *layoutWidget_121;
+    QHBoxLayout *horizontalLayout_141;
+    QPushButton *queryAddUpdate;
+    QPushButton *queryRemoveUpdate;
+    QListWidget *queryUpdateName;
+    QLabel *label_51;
+    QWidget *layoutWidget_81;
+    QHBoxLayout *horizontalLayout_97;
+    QCheckBox *queryCatalog;
+    QPushButton *queryCatalogSave;
+    QLineEdit *queryCatalogSaveName;
+    QFrame *line;
+    QLabel *label_52;
+    QCheckBox *queryTemporaryFile;
+    QLabel *label_53;
+    QWidget *layoutWidget_82;
+    QHBoxLayout *horizontalLayout_98;
+    QPushButton *queryTDBDirectory;
+    QLineEdit *queryTBDDirectoryName;
+    QCheckBox *queryTDB;
+    QCheckBox *queryKeepTDB;
+    QLabel *label_54;
+    QWidget *layoutWidget_83;
+    QHBoxLayout *horizontalLayout_99;
+    QPushButton *querySelectTDB;
+    QLineEdit *querySelectTDBName;
+    QPushButton *queryCreateTDB;
+    QCheckBox *queryUseGraphs;
+    QWidget *Template;
+    QWidget *layoutWidget_84;
+    QHBoxLayout *horizontalLayout_100;
+    QPushButton *templateAddMoreFiles;
+    QPushButton *templateRemoveMoreFiles;
+    QFrame *line_6;
+    QWidget *layoutWidget_86;
+    QHBoxLayout *horizontalLayout_102;
+    QPushButton *templateSaveAs;
+    QLineEdit *templateNameSave;
+    QLabel *label_57;
+    QLineEdit *templateSavePath;
+    QWidget *layoutWidget_85;
+    QHBoxLayout *horizontalLayout_101;
+    QPushButton *templateAddFirstFile;
+    QPushButton *templateRemoveFirstFile;
+    QFrame *line_10;
+    QWidget *layoutWidget_80;
+    QHBoxLayout *horizontalLayout_96;
+    QPushButton *templateReset;
+    QPushButton *templateButton;
+    QListWidget *templateFirstFile;
+    QLabel *label_56;
+    QLabel *label_55;
+    QListWidget *templateMoreFiles;
+    QWidget *layoutWidget_87;
+    QHBoxLayout *horizontalLayout_103;
+    QCheckBox *templatePrefix;
+    QLineEdit *templatePrefixName;
+    QWidget *layoutWidget_88;
+    QHBoxLayout *horizontalLayout_104;
+    QCheckBox *templateIRI;
+    QLineEdit *templateIRIName;
+    QCheckBox *templateForce;
+    QCheckBox *templateAncestor;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_105;
+    QLabel *label_60;
+    QComboBox *templateMerge;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_106;
+    QLabel *label_58;
+    QComboBox *templateImportClosure;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_107;
+    QCheckBox *templateError;
+    QPushButton *templateErrorPath;
+    QLineEdit *templateErrorPathName;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(690, 424);
+        MainWindow->resize(711, 563);
         QFont font;
         font.setFamilies({QString::fromUtf8("Futura")});
         font.setPointSize(13);
@@ -378,34 +447,13 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        mainHeader1 = new QLabel(centralwidget);
-        mainHeader1->setObjectName("mainHeader1");
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Futura")});
-        font1.setPointSize(64);
-        font1.setBold(true);
-        mainHeader1->setFont(font1);
-
-        verticalLayout_3->addWidget(mainHeader1);
-
-        line = new QFrame(centralwidget);
-        line->setObjectName("line");
-        line->setFrameShadow(QFrame::Plain);
-        line->setFrameShape(QFrame::HLine);
-
-        verticalLayout_3->addWidget(line);
-
-
-        gridLayout->addLayout(verticalLayout_3, 0, 0, 1, 1);
-
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName("tabWidget");
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Galvji")});
-        font2.setPointSize(10);
-        tabWidget->setFont(font2);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Galvji")});
+        font1.setPointSize(10);
+        font1.setBold(false);
+        tabWidget->setFont(font1);
         tabWidget->setTabPosition(QTabWidget::North);
         tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setElideMode(Qt::ElideRight);
@@ -417,13 +465,13 @@ public:
         merge->setObjectName("merge");
         mergeFileNames = new QListWidget(merge);
         mergeFileNames->setObjectName("mergeFileNames");
-        mergeFileNames->setGeometry(QRect(10, 50, 211, 201));
+        mergeFileNames->setGeometry(QRect(10, 60, 211, 201));
         mergeFileNames->setFocusPolicy(Qt::ClickFocus);
         mergeFileNames->setFrameShape(QFrame::Box);
         mergeFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_2 = new QWidget(merge);
         layoutWidget_2->setObjectName("layoutWidget_2");
-        layoutWidget_2->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_2->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout = new QHBoxLayout(layoutWidget_2);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -458,11 +506,11 @@ public:
         splitter_3->setOrientation(Qt::Horizontal);
         label_7 = new QLabel(splitter_3);
         label_7->setObjectName("label_7");
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Galvji")});
-        font3.setPointSize(10);
-        font3.setBold(true);
-        label_7->setFont(font3);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Galvji")});
+        font2.setPointSize(10);
+        font2.setBold(true);
+        label_7->setFont(font2);
         label_7->setAlignment(Qt::AlignCenter);
         splitter_3->addWidget(label_7);
         mergeOntologyAnnotations = new QComboBox(splitter_3);
@@ -474,7 +522,7 @@ public:
         splitter_3->addWidget(mergeOntologyAnnotations);
         layoutWidget = new QWidget(merge);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_6 = new QHBoxLayout(layoutWidget);
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -507,7 +555,7 @@ public:
 
         layoutWidget1 = new QWidget(merge);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget1->setGeometry(QRect(240, 230, 159, 32));
         horizontalLayout_7 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -529,11 +577,12 @@ public:
         mergeButton->setSizePolicy(sizePolicy1);
         mergeButton->setMinimumSize(QSize(0, 0));
         mergeButton->setMaximumSize(QSize(150, 16777215));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Galvji")});
-        font4.setPointSize(10);
-        font4.setKerning(true);
-        mergeButton->setFont(font4);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Galvji")});
+        font3.setPointSize(10);
+        font3.setBold(false);
+        font3.setKerning(true);
+        mergeButton->setFont(font3);
         mergeButton->setFocusPolicy(Qt::NoFocus);
         mergeButton->setAutoFillBackground(false);
         mergeButton->setCheckable(false);
@@ -546,11 +595,11 @@ public:
 
         splitter_2 = new QSplitter(merge);
         splitter_2->setObjectName("splitter_2");
-        splitter_2->setGeometry(QRect(240, 80, 157, 32));
+        splitter_2->setGeometry(QRect(240, 80, 211, 32));
         splitter_2->setOrientation(Qt::Horizontal);
         label_6 = new QLabel(splitter_2);
         label_6->setObjectName("label_6");
-        label_6->setFont(font3);
+        label_6->setFont(font2);
         label_6->setAlignment(Qt::AlignCenter);
         splitter_2->addWidget(label_6);
         mergeImportClosure = new QComboBox(splitter_2);
@@ -566,7 +615,7 @@ public:
         label_11 = new QLabel(unmerge);
         label_11->setObjectName("label_11");
         label_11->setGeometry(QRect(33, 11, 164, 16));
-        label_11->setFont(font3);
+        label_11->setFont(font2);
         line_2 = new QFrame(unmerge);
         line_2->setObjectName("line_2");
         line_2->setGeometry(QRect(11, 20, 209, 16));
@@ -574,11 +623,11 @@ public:
         line_2->setFrameShadow(QFrame::Sunken);
         label_37 = new QLabel(unmerge);
         label_37->setObjectName("label_37");
-        label_37->setGeometry(QRect(60, 100, 111, 16));
-        label_37->setFont(font3);
+        label_37->setGeometry(QRect(60, 110, 111, 16));
+        label_37->setFont(font2);
         layoutWidget_56 = new QWidget(unmerge);
         layoutWidget_56->setObjectName("layoutWidget_56");
-        layoutWidget_56->setGeometry(QRect(10, 120, 212, 32));
+        layoutWidget_56->setGeometry(QRect(10, 130, 212, 32));
         horizontalLayout_72 = new QHBoxLayout(layoutWidget_56);
         horizontalLayout_72->setObjectName("horizontalLayout_72");
         horizontalLayout_72->setContentsMargins(0, 0, 0, 0);
@@ -606,12 +655,12 @@ public:
 
         line_4 = new QFrame(unmerge);
         line_4->setObjectName("line_4");
-        line_4->setGeometry(QRect(10, 110, 209, 16));
+        line_4->setGeometry(QRect(10, 120, 209, 16));
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
         layoutWidget_57 = new QWidget(unmerge);
         layoutWidget_57->setObjectName("layoutWidget_57");
-        layoutWidget_57->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_57->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_73 = new QHBoxLayout(layoutWidget_57);
         horizontalLayout_73->setObjectName("horizontalLayout_73");
         horizontalLayout_73->setContentsMargins(0, 0, 0, 0);
@@ -644,7 +693,7 @@ public:
 
         layoutWidget_58 = new QWidget(unmerge);
         layoutWidget_58->setObjectName("layoutWidget_58");
-        layoutWidget_58->setGeometry(QRect(240, 220, 171, 32));
+        layoutWidget_58->setGeometry(QRect(240, 230, 171, 32));
         horizontalLayout_74 = new QHBoxLayout(layoutWidget_58);
         horizontalLayout_74->setObjectName("horizontalLayout_74");
         horizontalLayout_74->setContentsMargins(0, 0, 0, 0);
@@ -663,7 +712,7 @@ public:
         unmergeButton->setSizePolicy(sizePolicy1);
         unmergeButton->setMinimumSize(QSize(0, 0));
         unmergeButton->setMaximumSize(QSize(150, 16777215));
-        unmergeButton->setFont(font4);
+        unmergeButton->setFont(font3);
         unmergeButton->setFocusPolicy(Qt::NoFocus);
         unmergeButton->setAutoFillBackground(false);
         unmergeButton->setCheckable(false);
@@ -681,16 +730,16 @@ public:
         firstFile->setFrameShadow(QFrame::Plain);
         moreFiles = new QListWidget(unmerge);
         moreFiles->setObjectName("moreFiles");
-        moreFiles->setGeometry(QRect(10, 160, 211, 91));
+        moreFiles->setGeometry(QRect(10, 170, 211, 91));
         moreFiles->setFrameShape(QFrame::Box);
         moreFiles->setFrameShadow(QFrame::Plain);
-        widget = new QWidget(unmerge);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 30, 212, 32));
-        horizontalLayout_71 = new QHBoxLayout(widget);
+        layoutWidget2 = new QWidget(unmerge);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(10, 30, 212, 32));
+        horizontalLayout_71 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_71->setObjectName("horizontalLayout_71");
         horizontalLayout_71->setContentsMargins(0, 0, 0, 0);
-        unmergeAddFirstFile = new QPushButton(widget);
+        unmergeAddFirstFile = new QPushButton(layoutWidget2);
         unmergeAddFirstFile->setObjectName("unmergeAddFirstFile");
         sizePolicy.setHeightForWidth(unmergeAddFirstFile->sizePolicy().hasHeightForWidth());
         unmergeAddFirstFile->setSizePolicy(sizePolicy);
@@ -702,7 +751,7 @@ public:
 
         horizontalLayout_71->addWidget(unmergeAddFirstFile);
 
-        unmergeRemoveFirstFile = new QPushButton(widget);
+        unmergeRemoveFirstFile = new QPushButton(layoutWidget2);
         unmergeRemoveFirstFile->setObjectName("unmergeRemoveFirstFile");
         sizePolicy.setHeightForWidth(unmergeRemoveFirstFile->sizePolicy().hasHeightForWidth());
         unmergeRemoveFirstFile->setSizePolicy(sizePolicy);
@@ -717,21 +766,21 @@ public:
         collapse->setObjectName("collapse");
         collapseFileNames = new QListWidget(collapse);
         collapseFileNames->setObjectName("collapseFileNames");
-        collapseFileNames->setGeometry(QRect(10, 50, 211, 201));
+        collapseFileNames->setGeometry(QRect(10, 60, 211, 201));
         collapseFileNames->setFocusPolicy(Qt::ClickFocus);
         collapseFileNames->setFrameShape(QFrame::Box);
         collapseFileNames->setFrameShadow(QFrame::Plain);
         label_3 = new QLabel(collapse);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(240, 50, 58, 31));
-        label_3->setFont(font3);
-        layoutWidget2 = new QWidget(collapse);
-        layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(10, 10, 212, 41));
-        horizontalLayout_8 = new QHBoxLayout(layoutWidget2);
+        label_3->setFont(font2);
+        layoutWidget3 = new QWidget(collapse);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(10, 20, 212, 41));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_8->setObjectName("horizontalLayout_8");
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        collapseAddFile = new QPushButton(layoutWidget2);
+        collapseAddFile = new QPushButton(layoutWidget3);
         collapseAddFile->setObjectName("collapseAddFile");
         sizePolicy.setHeightForWidth(collapseAddFile->sizePolicy().hasHeightForWidth());
         collapseAddFile->setSizePolicy(sizePolicy);
@@ -741,7 +790,7 @@ public:
 
         horizontalLayout_8->addWidget(collapseAddFile);
 
-        collapseRemoveFile = new QPushButton(layoutWidget2);
+        collapseRemoveFile = new QPushButton(layoutWidget3);
         collapseRemoveFile->setObjectName("collapseRemoveFile");
         sizePolicy.setHeightForWidth(collapseRemoveFile->sizePolicy().hasHeightForWidth());
         collapseRemoveFile->setSizePolicy(sizePolicy);
@@ -750,19 +799,19 @@ public:
 
         horizontalLayout_8->addWidget(collapseRemoveFile);
 
-        layoutWidget3 = new QWidget(collapse);
-        layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(240, 190, 401, 33));
-        horizontalLayout_9 = new QHBoxLayout(layoutWidget3);
+        layoutWidget4 = new QWidget(collapse);
+        layoutWidget4->setObjectName("layoutWidget4");
+        layoutWidget4->setGeometry(QRect(240, 200, 401, 33));
+        horizontalLayout_9 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_9->setObjectName("horizontalLayout_9");
         horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
-        collapseSaveAs = new QPushButton(layoutWidget3);
+        collapseSaveAs = new QPushButton(layoutWidget4);
         collapseSaveAs->setObjectName("collapseSaveAs");
         collapseSaveAs->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_9->addWidget(collapseSaveAs);
 
-        collapseNameSave = new QLineEdit(layoutWidget3);
+        collapseNameSave = new QLineEdit(layoutWidget4);
         collapseNameSave->setObjectName("collapseNameSave");
         collapseNameSave->setFocusPolicy(Qt::NoFocus);
         collapseNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -771,25 +820,25 @@ public:
 
         horizontalLayout_9->addWidget(collapseNameSave);
 
-        label_2 = new QLabel(layoutWidget3);
+        label_2 = new QLabel(layoutWidget4);
         label_2->setObjectName("label_2");
         label_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_9->addWidget(label_2);
 
-        collapseSavePath = new QLineEdit(layoutWidget3);
+        collapseSavePath = new QLineEdit(layoutWidget4);
         collapseSavePath->setObjectName("collapseSavePath");
         collapseSavePath->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_9->addWidget(collapseSavePath);
 
-        layoutWidget4 = new QWidget(collapse);
-        layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(240, 220, 163, 32));
-        horizontalLayout_10 = new QHBoxLayout(layoutWidget4);
+        layoutWidget5 = new QWidget(collapse);
+        layoutWidget5->setObjectName("layoutWidget5");
+        layoutWidget5->setGeometry(QRect(240, 230, 165, 32));
+        horizontalLayout_10 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_10->setObjectName("horizontalLayout_10");
         horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
-        collapseReset = new QPushButton(layoutWidget4);
+        collapseReset = new QPushButton(layoutWidget5);
         collapseReset->setObjectName("collapseReset");
         sizePolicy1.setHeightForWidth(collapseReset->sizePolicy().hasHeightForWidth());
         collapseReset->setSizePolicy(sizePolicy1);
@@ -798,7 +847,7 @@ public:
 
         horizontalLayout_10->addWidget(collapseReset);
 
-        collapseButton = new QPushButton(layoutWidget4);
+        collapseButton = new QPushButton(layoutWidget5);
         collapseButton->setObjectName("collapseButton");
         sizePolicy1.setHeightForWidth(collapseButton->sizePolicy().hasHeightForWidth());
         collapseButton->setSizePolicy(sizePolicy1);
@@ -811,33 +860,33 @@ public:
 
         horizontalLayout_10->addWidget(collapseButton);
 
-        layoutWidget5 = new QWidget(collapse);
-        layoutWidget5->setObjectName("layoutWidget5");
-        layoutWidget5->setGeometry(QRect(240, 130, 121, 28));
-        horizontalLayout_11 = new QHBoxLayout(layoutWidget5);
+        layoutWidget6 = new QWidget(collapse);
+        layoutWidget6->setObjectName("layoutWidget6");
+        layoutWidget6->setGeometry(QRect(240, 130, 121, 28));
+        horizontalLayout_11 = new QHBoxLayout(layoutWidget6);
         horizontalLayout_11->setObjectName("horizontalLayout_11");
         horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
-        collapseThreshold = new QCheckBox(layoutWidget5);
+        collapseThreshold = new QCheckBox(layoutWidget6);
         collapseThreshold->setObjectName("collapseThreshold");
-        collapseThreshold->setFont(font3);
+        collapseThreshold->setFont(font2);
         collapseThreshold->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout_11->addWidget(collapseThreshold);
 
-        collapseThresholdEdit = new QSpinBox(layoutWidget5);
+        collapseThresholdEdit = new QSpinBox(layoutWidget6);
         collapseThresholdEdit->setObjectName("collapseThresholdEdit");
         collapseThresholdEdit->setFocusPolicy(Qt::NoFocus);
         collapseThresholdEdit->setMinimum(2);
 
         horizontalLayout_11->addWidget(collapseThresholdEdit);
 
-        layoutWidget6 = new QWidget(collapse);
-        layoutWidget6->setObjectName("layoutWidget6");
-        layoutWidget6->setGeometry(QRect(260, 70, 234, 31));
-        horizontalLayout_12 = new QHBoxLayout(layoutWidget6);
+        layoutWidget7 = new QWidget(collapse);
+        layoutWidget7->setObjectName("layoutWidget7");
+        layoutWidget7->setGeometry(QRect(260, 70, 234, 31));
+        horizontalLayout_12 = new QHBoxLayout(layoutWidget7);
         horizontalLayout_12->setObjectName("horizontalLayout_12");
         horizontalLayout_12->setContentsMargins(0, 0, 0, 0);
-        collapsePreciousClasses = new QCheckBox(layoutWidget6);
+        collapsePreciousClasses = new QCheckBox(layoutWidget7);
         collapsePreciousClasses->setObjectName("collapsePreciousClasses");
         collapsePreciousClasses->setFocusPolicy(Qt::ClickFocus);
         collapsePreciousClasses->setCheckable(true);
@@ -848,19 +897,19 @@ public:
 
         horizontalLayout_12->addWidget(collapsePreciousClasses);
 
-        collapsePreciousClassesEdit = new QLineEdit(layoutWidget6);
+        collapsePreciousClassesEdit = new QLineEdit(layoutWidget7);
         collapsePreciousClassesEdit->setObjectName("collapsePreciousClassesEdit");
         collapsePreciousClassesEdit->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout_12->addWidget(collapsePreciousClassesEdit);
 
-        layoutWidget7 = new QWidget(collapse);
-        layoutWidget7->setObjectName("layoutWidget7");
-        layoutWidget7->setGeometry(QRect(260, 100, 328, 33));
-        horizontalLayout_13 = new QHBoxLayout(layoutWidget7);
+        layoutWidget8 = new QWidget(collapse);
+        layoutWidget8->setObjectName("layoutWidget8");
+        layoutWidget8->setGeometry(QRect(260, 100, 328, 33));
+        horizontalLayout_13 = new QHBoxLayout(layoutWidget8);
         horizontalLayout_13->setObjectName("horizontalLayout_13");
         horizontalLayout_13->setContentsMargins(0, 0, 0, 0);
-        collapsePreciousTerms = new QCheckBox(layoutWidget7);
+        collapsePreciousTerms = new QCheckBox(layoutWidget8);
         collapsePreciousTerms->setObjectName("collapsePreciousTerms");
         collapsePreciousTerms->setFocusPolicy(Qt::ClickFocus);
         collapsePreciousTerms->setChecked(false);
@@ -868,12 +917,12 @@ public:
 
         horizontalLayout_13->addWidget(collapsePreciousTerms);
 
-        collapsePreciousTermsFile = new QPushButton(layoutWidget7);
+        collapsePreciousTermsFile = new QPushButton(layoutWidget8);
         collapsePreciousTermsFile->setObjectName("collapsePreciousTermsFile");
 
         horizontalLayout_13->addWidget(collapsePreciousTermsFile);
 
-        collapsePreciousTermsEdit = new QLineEdit(layoutWidget7);
+        collapsePreciousTermsEdit = new QLineEdit(layoutWidget8);
         collapsePreciousTermsEdit->setObjectName("collapsePreciousTermsEdit");
         collapsePreciousTermsEdit->setFocusPolicy(Qt::NoFocus);
 
@@ -884,7 +933,7 @@ public:
         mirror->setObjectName("mirror");
         layoutWidget_3 = new QWidget(mirror);
         layoutWidget_3->setObjectName("layoutWidget_3");
-        layoutWidget_3->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_3->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget_3);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -912,23 +961,23 @@ public:
 
         mirrorFileNames = new QListWidget(mirror);
         mirrorFileNames->setObjectName("mirrorFileNames");
-        mirrorFileNames->setGeometry(QRect(10, 50, 211, 201));
+        mirrorFileNames->setGeometry(QRect(10, 60, 211, 201));
         mirrorFileNames->setFocusPolicy(Qt::ClickFocus);
         mirrorFileNames->setFrameShape(QFrame::Box);
         mirrorFileNames->setFrameShadow(QFrame::Plain);
-        layoutWidget8 = new QWidget(mirror);
-        layoutWidget8->setObjectName("layoutWidget8");
-        layoutWidget8->setGeometry(QRect(240, 190, 401, 33));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget8);
+        layoutWidget9 = new QWidget(mirror);
+        layoutWidget9->setObjectName("layoutWidget9");
+        layoutWidget9->setGeometry(QRect(240, 200, 401, 33));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget9);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        mirrorSaveAs = new QPushButton(layoutWidget8);
+        mirrorSaveAs = new QPushButton(layoutWidget9);
         mirrorSaveAs->setObjectName("mirrorSaveAs");
         mirrorSaveAs->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_4->addWidget(mirrorSaveAs);
 
-        mirrorNameSave = new QLineEdit(layoutWidget8);
+        mirrorNameSave = new QLineEdit(layoutWidget9);
         mirrorNameSave->setObjectName("mirrorNameSave");
         mirrorNameSave->setFocusPolicy(Qt::NoFocus);
         mirrorNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -937,25 +986,25 @@ public:
 
         horizontalLayout_4->addWidget(mirrorNameSave);
 
-        label_4 = new QLabel(layoutWidget8);
+        label_4 = new QLabel(layoutWidget9);
         label_4->setObjectName("label_4");
         label_4->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(label_4);
 
-        mirrorSavePath = new QLineEdit(layoutWidget8);
+        mirrorSavePath = new QLineEdit(layoutWidget9);
         mirrorSavePath->setObjectName("mirrorSavePath");
         mirrorSavePath->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_4->addWidget(mirrorSavePath);
 
-        layoutWidget9 = new QWidget(mirror);
-        layoutWidget9->setObjectName("layoutWidget9");
-        layoutWidget9->setGeometry(QRect(240, 220, 151, 32));
-        horizontalLayout_5 = new QHBoxLayout(layoutWidget9);
+        layoutWidget10 = new QWidget(mirror);
+        layoutWidget10->setObjectName("layoutWidget10");
+        layoutWidget10->setGeometry(QRect(240, 230, 153, 32));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget10);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        mirrorReset = new QPushButton(layoutWidget9);
+        mirrorReset = new QPushButton(layoutWidget10);
         mirrorReset->setObjectName("mirrorReset");
         sizePolicy1.setHeightForWidth(mirrorReset->sizePolicy().hasHeightForWidth());
         mirrorReset->setSizePolicy(sizePolicy1);
@@ -964,7 +1013,7 @@ public:
 
         horizontalLayout_5->addWidget(mirrorReset);
 
-        mirrorButton = new QPushButton(layoutWidget9);
+        mirrorButton = new QPushButton(layoutWidget10);
         mirrorButton->setObjectName("mirrorButton");
         sizePolicy1.setHeightForWidth(mirrorButton->sizePolicy().hasHeightForWidth());
         mirrorButton->setSizePolicy(sizePolicy1);
@@ -982,17 +1031,17 @@ public:
         relax->setObjectName("relax");
         relaxFileNames = new QListWidget(relax);
         relaxFileNames->setObjectName("relaxFileNames");
-        relaxFileNames->setGeometry(QRect(10, 50, 211, 201));
+        relaxFileNames->setGeometry(QRect(10, 60, 211, 201));
         relaxFileNames->setFocusPolicy(Qt::ClickFocus);
         relaxFileNames->setFrameShape(QFrame::Box);
         relaxFileNames->setFrameShadow(QFrame::Plain);
-        layoutWidget10 = new QWidget(relax);
-        layoutWidget10->setObjectName("layoutWidget10");
-        layoutWidget10->setGeometry(QRect(10, 10, 212, 41));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget10);
+        layoutWidget11 = new QWidget(relax);
+        layoutWidget11->setObjectName("layoutWidget11");
+        layoutWidget11->setGeometry(QRect(10, 20, 212, 41));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget11);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        relaxAddFile = new QPushButton(layoutWidget10);
+        relaxAddFile = new QPushButton(layoutWidget11);
         relaxAddFile->setObjectName("relaxAddFile");
         sizePolicy.setHeightForWidth(relaxAddFile->sizePolicy().hasHeightForWidth());
         relaxAddFile->setSizePolicy(sizePolicy);
@@ -1004,7 +1053,7 @@ public:
 
         horizontalLayout_3->addWidget(relaxAddFile);
 
-        relaxRemoveFile = new QPushButton(layoutWidget10);
+        relaxRemoveFile = new QPushButton(layoutWidget11);
         relaxRemoveFile->setObjectName("relaxRemoveFile");
         sizePolicy.setHeightForWidth(relaxRemoveFile->sizePolicy().hasHeightForWidth());
         relaxRemoveFile->setSizePolicy(sizePolicy);
@@ -1014,19 +1063,19 @@ public:
 
         horizontalLayout_3->addWidget(relaxRemoveFile);
 
-        layoutWidget11 = new QWidget(relax);
-        layoutWidget11->setObjectName("layoutWidget11");
-        layoutWidget11->setGeometry(QRect(240, 190, 401, 33));
-        horizontalLayout_14 = new QHBoxLayout(layoutWidget11);
+        layoutWidget12 = new QWidget(relax);
+        layoutWidget12->setObjectName("layoutWidget12");
+        layoutWidget12->setGeometry(QRect(240, 200, 401, 33));
+        horizontalLayout_14 = new QHBoxLayout(layoutWidget12);
         horizontalLayout_14->setObjectName("horizontalLayout_14");
         horizontalLayout_14->setContentsMargins(0, 0, 0, 0);
-        relaxSaveAs = new QPushButton(layoutWidget11);
+        relaxSaveAs = new QPushButton(layoutWidget12);
         relaxSaveAs->setObjectName("relaxSaveAs");
         relaxSaveAs->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_14->addWidget(relaxSaveAs);
 
-        relaxNameSave = new QLineEdit(layoutWidget11);
+        relaxNameSave = new QLineEdit(layoutWidget12);
         relaxNameSave->setObjectName("relaxNameSave");
         relaxNameSave->setFocusPolicy(Qt::NoFocus);
         relaxNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -1035,25 +1084,25 @@ public:
 
         horizontalLayout_14->addWidget(relaxNameSave);
 
-        label_5 = new QLabel(layoutWidget11);
+        label_5 = new QLabel(layoutWidget12);
         label_5->setObjectName("label_5");
         label_5->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_14->addWidget(label_5);
 
-        relaxSavePath = new QLineEdit(layoutWidget11);
+        relaxSavePath = new QLineEdit(layoutWidget12);
         relaxSavePath->setObjectName("relaxSavePath");
         relaxSavePath->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_14->addWidget(relaxSavePath);
 
-        layoutWidget12 = new QWidget(relax);
-        layoutWidget12->setObjectName("layoutWidget12");
-        layoutWidget12->setGeometry(QRect(240, 220, 147, 32));
-        horizontalLayout_15 = new QHBoxLayout(layoutWidget12);
+        layoutWidget13 = new QWidget(relax);
+        layoutWidget13->setObjectName("layoutWidget13");
+        layoutWidget13->setGeometry(QRect(240, 230, 149, 32));
+        horizontalLayout_15 = new QHBoxLayout(layoutWidget13);
         horizontalLayout_15->setObjectName("horizontalLayout_15");
         horizontalLayout_15->setContentsMargins(0, 0, 0, 0);
-        relaxReset = new QPushButton(layoutWidget12);
+        relaxReset = new QPushButton(layoutWidget13);
         relaxReset->setObjectName("relaxReset");
         sizePolicy1.setHeightForWidth(relaxReset->sizePolicy().hasHeightForWidth());
         relaxReset->setSizePolicy(sizePolicy1);
@@ -1062,7 +1111,7 @@ public:
 
         horizontalLayout_15->addWidget(relaxReset);
 
-        relaxButton = new QPushButton(layoutWidget12);
+        relaxButton = new QPushButton(layoutWidget13);
         relaxButton->setObjectName("relaxButton");
         sizePolicy1.setHeightForWidth(relaxButton->sizePolicy().hasHeightForWidth());
         relaxButton->setSizePolicy(sizePolicy1);
@@ -1078,19 +1127,19 @@ public:
         tabWidget->addTab(relax, QString());
         reduce = new QWidget();
         reduce->setObjectName("reduce");
-        layoutWidget13 = new QWidget(reduce);
-        layoutWidget13->setObjectName("layoutWidget13");
-        layoutWidget13->setGeometry(QRect(240, 190, 401, 33));
-        horizontalLayout_16 = new QHBoxLayout(layoutWidget13);
+        layoutWidget14 = new QWidget(reduce);
+        layoutWidget14->setObjectName("layoutWidget14");
+        layoutWidget14->setGeometry(QRect(240, 200, 401, 33));
+        horizontalLayout_16 = new QHBoxLayout(layoutWidget14);
         horizontalLayout_16->setObjectName("horizontalLayout_16");
         horizontalLayout_16->setContentsMargins(0, 0, 0, 0);
-        reduceSaveAs = new QPushButton(layoutWidget13);
+        reduceSaveAs = new QPushButton(layoutWidget14);
         reduceSaveAs->setObjectName("reduceSaveAs");
         reduceSaveAs->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_16->addWidget(reduceSaveAs);
 
-        reduceNameSave = new QLineEdit(layoutWidget13);
+        reduceNameSave = new QLineEdit(layoutWidget14);
         reduceNameSave->setObjectName("reduceNameSave");
         reduceNameSave->setFocusPolicy(Qt::NoFocus);
         reduceNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -1099,13 +1148,13 @@ public:
 
         horizontalLayout_16->addWidget(reduceNameSave);
 
-        label_8 = new QLabel(layoutWidget13);
+        label_8 = new QLabel(layoutWidget14);
         label_8->setObjectName("label_8");
         label_8->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_16->addWidget(label_8);
 
-        reduceSavePath = new QLineEdit(layoutWidget13);
+        reduceSavePath = new QLineEdit(layoutWidget14);
         reduceSavePath->setObjectName("reduceSavePath");
         reduceSavePath->setFocusPolicy(Qt::NoFocus);
 
@@ -1113,7 +1162,7 @@ public:
 
         layoutWidget_4 = new QWidget(reduce);
         layoutWidget_4->setObjectName("layoutWidget_4");
-        layoutWidget_4->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget_4->setGeometry(QRect(240, 230, 159, 32));
         horizontalLayout_17 = new QHBoxLayout(layoutWidget_4);
         horizontalLayout_17->setObjectName("horizontalLayout_17");
         horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
@@ -1141,7 +1190,7 @@ public:
 
         layoutWidget_5 = new QWidget(reduce);
         layoutWidget_5->setObjectName("layoutWidget_5");
-        layoutWidget_5->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_5->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_18 = new QHBoxLayout(layoutWidget_5);
         horizontalLayout_18->setObjectName("horizontalLayout_18");
         horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
@@ -1169,24 +1218,24 @@ public:
 
         reduceFileNames = new QListWidget(reduce);
         reduceFileNames->setObjectName("reduceFileNames");
-        reduceFileNames->setGeometry(QRect(10, 50, 211, 201));
+        reduceFileNames->setGeometry(QRect(10, 60, 211, 201));
         reduceFileNames->setFocusPolicy(Qt::ClickFocus);
         reduceFileNames->setFrameShape(QFrame::Box);
         reduceFileNames->setFrameShadow(QFrame::Plain);
         reducePreserveAxioms = new QCheckBox(reduce);
         reducePreserveAxioms->setObjectName("reducePreserveAxioms");
-        reducePreserveAxioms->setGeometry(QRect(240, 50, 161, 31));
-        reducePreserveAxioms->setFont(font3);
+        reducePreserveAxioms->setGeometry(QRect(240, 60, 161, 31));
+        reducePreserveAxioms->setFont(font2);
         reduceIgnoreClasses = new QCheckBox(reduce);
         reduceIgnoreClasses->setObjectName("reduceIgnoreClasses");
-        reduceIgnoreClasses->setGeometry(QRect(240, 80, 161, 31));
-        reduceIgnoreClasses->setFont(font3);
+        reduceIgnoreClasses->setGeometry(QRect(240, 90, 161, 31));
+        reduceIgnoreClasses->setFont(font2);
         tabWidget->addTab(reduce, QString());
         convert = new QWidget();
         convert->setObjectName("convert");
         layoutWidget_24 = new QWidget(convert);
         layoutWidget_24->setObjectName("layoutWidget_24");
-        layoutWidget_24->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_24->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_37 = new QHBoxLayout(layoutWidget_24);
         horizontalLayout_37->setObjectName("horizontalLayout_37");
         horizontalLayout_37->setContentsMargins(0, 0, 0, 0);
@@ -1215,10 +1264,10 @@ public:
         convertCompress = new QCheckBox(convert);
         convertCompress->setObjectName("convertCompress");
         convertCompress->setGeometry(QRect(240, 80, 161, 31));
-        convertCompress->setFont(font3);
+        convertCompress->setFont(font2);
         layoutWidget_25 = new QWidget(convert);
         layoutWidget_25->setObjectName("layoutWidget_25");
-        layoutWidget_25->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_25->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_38 = new QHBoxLayout(layoutWidget_25);
         horizontalLayout_38->setObjectName("horizontalLayout_38");
         horizontalLayout_38->setContentsMargins(0, 0, 0, 0);
@@ -1251,13 +1300,13 @@ public:
 
         convertFileNames = new QListWidget(convert);
         convertFileNames->setObjectName("convertFileNames");
-        convertFileNames->setGeometry(QRect(10, 50, 211, 201));
+        convertFileNames->setGeometry(QRect(10, 60, 211, 201));
         convertFileNames->setFocusPolicy(Qt::ClickFocus);
         convertFileNames->setFrameShape(QFrame::Box);
         convertFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_26 = new QWidget(convert);
         layoutWidget_26->setObjectName("layoutWidget_26");
-        layoutWidget_26->setGeometry(QRect(240, 220, 159, 32));
+        layoutWidget_26->setGeometry(QRect(240, 230, 162, 32));
         horizontalLayout_39 = new QHBoxLayout(layoutWidget_26);
         horizontalLayout_39->setObjectName("horizontalLayout_39");
         horizontalLayout_39->setContentsMargins(0, 0, 0, 0);
@@ -1286,20 +1335,20 @@ public:
         convertIgnoreChecks = new QCheckBox(convert);
         convertIgnoreChecks->setObjectName("convertIgnoreChecks");
         convertIgnoreChecks->setGeometry(QRect(240, 110, 161, 31));
-        convertIgnoreChecks->setFont(font3);
-        layoutWidget14 = new QWidget(convert);
-        layoutWidget14->setObjectName("layoutWidget14");
-        layoutWidget14->setGeometry(QRect(240, 50, 117, 32));
-        horizontalLayout_40 = new QHBoxLayout(layoutWidget14);
+        convertIgnoreChecks->setFont(font2);
+        layoutWidget15 = new QWidget(convert);
+        layoutWidget15->setObjectName("layoutWidget15");
+        layoutWidget15->setGeometry(QRect(240, 50, 117, 32));
+        horizontalLayout_40 = new QHBoxLayout(layoutWidget15);
         horizontalLayout_40->setObjectName("horizontalLayout_40");
         horizontalLayout_40->setContentsMargins(0, 0, 0, 0);
-        label_18 = new QLabel(layoutWidget14);
+        label_18 = new QLabel(layoutWidget15);
         label_18->setObjectName("label_18");
-        label_18->setFont(font3);
+        label_18->setFont(font2);
 
         horizontalLayout_40->addWidget(label_18);
 
-        convertFormat = new QComboBox(layoutWidget14);
+        convertFormat = new QComboBox(layoutWidget15);
         convertFormat->addItem(QString());
         convertFormat->addItem(QString());
         convertFormat->addItem(QString());
@@ -1316,7 +1365,7 @@ public:
         diff->setObjectName("diff");
         layoutWidget_31 = new QWidget(diff);
         layoutWidget_31->setObjectName("layoutWidget_31");
-        layoutWidget_31->setGeometry(QRect(10, 220, 160, 32));
+        layoutWidget_31->setGeometry(QRect(10, 230, 160, 32));
         horizontalLayout_45 = new QHBoxLayout(layoutWidget_31);
         horizontalLayout_45->setObjectName("horizontalLayout_45");
         horizontalLayout_45->setContentsMargins(0, 0, 0, 0);
@@ -1335,7 +1384,7 @@ public:
         diffButton->setSizePolicy(sizePolicy1);
         diffButton->setMinimumSize(QSize(0, 0));
         diffButton->setMaximumSize(QSize(150, 16777215));
-        diffButton->setFont(font4);
+        diffButton->setFont(font3);
         diffButton->setFocusPolicy(Qt::NoFocus);
         diffButton->setAutoFillBackground(false);
         diffButton->setCheckable(false);
@@ -1348,7 +1397,7 @@ public:
 
         layoutWidget_33 = new QWidget(diff);
         layoutWidget_33->setObjectName("layoutWidget_33");
-        layoutWidget_33->setGeometry(QRect(10, 190, 401, 33));
+        layoutWidget_33->setGeometry(QRect(10, 200, 401, 33));
         horizontalLayout_47 = new QHBoxLayout(layoutWidget_33);
         horizontalLayout_47->setObjectName("horizontalLayout_47");
         horizontalLayout_47->setContentsMargins(0, 0, 0, 0);
@@ -1381,47 +1430,47 @@ public:
 
         label_22 = new QLabel(diff);
         label_22->setObjectName("label_22");
-        label_22->setGeometry(QRect(10, 10, 21, 21));
-        label_22->setFont(font3);
+        label_22->setGeometry(QRect(10, 20, 21, 21));
+        label_22->setFont(font2);
         label_23 = new QLabel(diff);
         label_23->setObjectName("label_23");
-        label_23->setGeometry(QRect(370, 10, 31, 21));
-        label_23->setFont(font3);
-        layoutWidget15 = new QWidget(diff);
-        layoutWidget15->setObjectName("layoutWidget15");
-        layoutWidget15->setGeometry(QRect(10, 70, 281, 31));
-        horizontalLayout_46 = new QHBoxLayout(layoutWidget15);
+        label_23->setGeometry(QRect(390, 10, 31, 21));
+        label_23->setFont(font2);
+        layoutWidget16 = new QWidget(diff);
+        layoutWidget16->setObjectName("layoutWidget16");
+        layoutWidget16->setGeometry(QRect(10, 80, 281, 31));
+        horizontalLayout_46 = new QHBoxLayout(layoutWidget16);
         horizontalLayout_46->setObjectName("horizontalLayout_46");
         horizontalLayout_46->setContentsMargins(0, 0, 0, 0);
-        leftIRI = new QCheckBox(layoutWidget15);
+        leftIRI = new QCheckBox(layoutWidget16);
         leftIRI->setObjectName("leftIRI");
 
         horizontalLayout_46->addWidget(leftIRI);
 
-        leftIRIName = new QLineEdit(layoutWidget15);
+        leftIRIName = new QLineEdit(layoutWidget16);
         leftIRIName->setObjectName("leftIRIName");
         leftIRIName->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout_46->addWidget(leftIRIName);
 
-        layoutWidget16 = new QWidget(diff);
-        layoutWidget16->setObjectName("layoutWidget16");
-        layoutWidget16->setGeometry(QRect(10, 40, 281, 33));
-        horizontalLayout_48 = new QHBoxLayout(layoutWidget16);
+        layoutWidget17 = new QWidget(diff);
+        layoutWidget17->setObjectName("layoutWidget17");
+        layoutWidget17->setGeometry(QRect(10, 50, 281, 33));
+        horizontalLayout_48 = new QHBoxLayout(layoutWidget17);
         horizontalLayout_48->setObjectName("horizontalLayout_48");
         horizontalLayout_48->setContentsMargins(0, 0, 0, 0);
-        leftOntology = new QCheckBox(layoutWidget16);
+        leftOntology = new QCheckBox(layoutWidget17);
         leftOntology->setObjectName("leftOntology");
         leftOntology->setChecked(false);
 
         horizontalLayout_48->addWidget(leftOntology);
 
-        leftOntologySave = new QPushButton(layoutWidget16);
+        leftOntologySave = new QPushButton(layoutWidget17);
         leftOntologySave->setObjectName("leftOntologySave");
 
         horizontalLayout_48->addWidget(leftOntologySave);
 
-        leftOntologySaveName = new QLineEdit(layoutWidget16);
+        leftOntologySaveName = new QLineEdit(layoutWidget17);
         leftOntologySaveName->setObjectName("leftOntologySaveName");
         leftOntologySaveName->setFocusPolicy(Qt::NoFocus);
 
@@ -1429,7 +1478,7 @@ public:
 
         layoutWidget_117 = new QWidget(diff);
         layoutWidget_117->setObjectName("layoutWidget_117");
-        layoutWidget_117->setGeometry(QRect(10, 120, 281, 33));
+        layoutWidget_117->setGeometry(QRect(10, 130, 281, 33));
         horizontalLayout_137 = new QHBoxLayout(layoutWidget_117);
         horizontalLayout_137->setObjectName("horizontalLayout_137");
         horizontalLayout_137->setContentsMargins(0, 0, 0, 0);
@@ -1451,7 +1500,7 @@ public:
 
         layoutWidget_118 = new QWidget(diff);
         layoutWidget_118->setObjectName("layoutWidget_118");
-        layoutWidget_118->setGeometry(QRect(370, 70, 281, 31));
+        layoutWidget_118->setGeometry(QRect(390, 80, 281, 31));
         horizontalLayout_138 = new QHBoxLayout(layoutWidget_118);
         horizontalLayout_138->setObjectName("horizontalLayout_138");
         horizontalLayout_138->setContentsMargins(0, 0, 0, 0);
@@ -1469,7 +1518,7 @@ public:
 
         layoutWidget_119 = new QWidget(diff);
         layoutWidget_119->setObjectName("layoutWidget_119");
-        layoutWidget_119->setGeometry(QRect(370, 40, 281, 33));
+        layoutWidget_119->setGeometry(QRect(390, 50, 281, 33));
         horizontalLayout_139 = new QHBoxLayout(layoutWidget_119);
         horizontalLayout_139->setObjectName("horizontalLayout_139");
         horizontalLayout_139->setContentsMargins(0, 0, 0, 0);
@@ -1492,7 +1541,7 @@ public:
 
         layoutWidget_120 = new QWidget(diff);
         layoutWidget_120->setObjectName("layoutWidget_120");
-        layoutWidget_120->setGeometry(QRect(370, 120, 281, 33));
+        layoutWidget_120->setGeometry(QRect(390, 130, 281, 33));
         horizontalLayout_140 = new QHBoxLayout(layoutWidget_120);
         horizontalLayout_140->setObjectName("horizontalLayout_140");
         horizontalLayout_140->setContentsMargins(0, 0, 0, 0);
@@ -1514,7 +1563,7 @@ public:
 
         line_9 = new QFrame(diff);
         line_9->setObjectName("line_9");
-        line_9->setGeometry(QRect(320, 10, 20, 141));
+        line_9->setGeometry(QRect(330, 20, 20, 141));
         line_9->setFrameShape(QFrame::VLine);
         line_9->setFrameShadow(QFrame::Sunken);
         tabWidget->addTab(diff, QString());
@@ -1522,7 +1571,7 @@ public:
         validate->setObjectName("validate");
         layoutWidget_32 = new QWidget(validate);
         layoutWidget_32->setObjectName("layoutWidget_32");
-        layoutWidget_32->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_32->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_49 = new QHBoxLayout(layoutWidget_32);
         horizontalLayout_49->setObjectName("horizontalLayout_49");
         horizontalLayout_49->setContentsMargins(0, 0, 0, 0);
@@ -1550,7 +1599,7 @@ public:
 
         layoutWidget_34 = new QWidget(validate);
         layoutWidget_34->setObjectName("layoutWidget_34");
-        layoutWidget_34->setGeometry(QRect(240, 220, 161, 32));
+        layoutWidget_34->setGeometry(QRect(240, 230, 163, 32));
         horizontalLayout_50 = new QHBoxLayout(layoutWidget_34);
         horizontalLayout_50->setObjectName("horizontalLayout_50");
         horizontalLayout_50->setContentsMargins(0, 0, 0, 0);
@@ -1578,13 +1627,13 @@ public:
 
         validateFileNames = new QListWidget(validate);
         validateFileNames->setObjectName("validateFileNames");
-        validateFileNames->setGeometry(QRect(10, 50, 211, 201));
+        validateFileNames->setGeometry(QRect(10, 60, 211, 201));
         validateFileNames->setFocusPolicy(Qt::ClickFocus);
         validateFileNames->setFrameShape(QFrame::Box);
         validateFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_35 = new QWidget(validate);
         layoutWidget_35->setObjectName("layoutWidget_35");
-        layoutWidget_35->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_35->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_51 = new QHBoxLayout(layoutWidget_35);
         horizontalLayout_51->setObjectName("horizontalLayout_51");
         horizontalLayout_51->setContentsMargins(0, 0, 0, 0);
@@ -1623,7 +1672,7 @@ public:
         horizontalLayout_52->setContentsMargins(0, 0, 0, 0);
         label_25 = new QLabel(layoutWidget_36);
         label_25->setObjectName("label_25");
-        label_25->setFont(font3);
+        label_25->setFont(font2);
 
         horizontalLayout_52->addWidget(label_25);
 
@@ -1665,13 +1714,13 @@ public:
 
         repairFileNames = new QListWidget(repair);
         repairFileNames->setObjectName("repairFileNames");
-        repairFileNames->setGeometry(QRect(10, 50, 211, 201));
+        repairFileNames->setGeometry(QRect(10, 60, 211, 201));
         repairFileNames->setFocusPolicy(Qt::ClickFocus);
         repairFileNames->setFrameShape(QFrame::Box);
         repairFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_7 = new QWidget(repair);
         layoutWidget_7->setObjectName("layoutWidget_7");
-        layoutWidget_7->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_7->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_20 = new QHBoxLayout(layoutWidget_7);
         horizontalLayout_20->setObjectName("horizontalLayout_20");
         horizontalLayout_20->setContentsMargins(0, 0, 0, 0);
@@ -1729,7 +1778,7 @@ public:
 
         layoutWidget_9 = new QWidget(repair);
         layoutWidget_9->setObjectName("layoutWidget_9");
-        layoutWidget_9->setGeometry(QRect(240, 220, 163, 32));
+        layoutWidget_9->setGeometry(QRect(240, 230, 163, 32));
         horizontalLayout_22 = new QHBoxLayout(layoutWidget_9);
         horizontalLayout_22->setObjectName("horizontalLayout_22");
         horizontalLayout_22->setContentsMargins(0, 0, 0, 0);
@@ -1758,10 +1807,10 @@ public:
         label_10 = new QLabel(repair);
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(240, 50, 141, 31));
-        label_10->setFont(font3);
+        label_10->setFont(font2);
         layoutWidget_10 = new QWidget(repair);
         layoutWidget_10->setObjectName("layoutWidget_10");
-        layoutWidget_10->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_10->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_23 = new QHBoxLayout(layoutWidget_10);
         horizontalLayout_23->setObjectName("horizontalLayout_23");
         horizontalLayout_23->setContentsMargins(0, 0, 0, 0);
@@ -1789,7 +1838,7 @@ public:
         measure->setObjectName("measure");
         layoutWidget_59 = new QWidget(measure);
         layoutWidget_59->setObjectName("layoutWidget_59");
-        layoutWidget_59->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_59->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_75 = new QHBoxLayout(layoutWidget_59);
         horizontalLayout_75->setObjectName("horizontalLayout_75");
         horizontalLayout_75->setContentsMargins(0, 0, 0, 0);
@@ -1817,7 +1866,7 @@ public:
 
         layoutWidget_60 = new QWidget(measure);
         layoutWidget_60->setObjectName("layoutWidget_60");
-        layoutWidget_60->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_60->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_76 = new QHBoxLayout(layoutWidget_60);
         horizontalLayout_76->setObjectName("horizontalLayout_76");
         horizontalLayout_76->setContentsMargins(0, 0, 0, 0);
@@ -1850,7 +1899,7 @@ public:
 
         layoutWidget_61 = new QWidget(measure);
         layoutWidget_61->setObjectName("layoutWidget_61");
-        layoutWidget_61->setGeometry(QRect(240, 220, 161, 32));
+        layoutWidget_61->setGeometry(QRect(240, 230, 163, 32));
         horizontalLayout_77 = new QHBoxLayout(layoutWidget_61);
         horizontalLayout_77->setObjectName("horizontalLayout_77");
         horizontalLayout_77->setContentsMargins(0, 0, 0, 0);
@@ -1878,19 +1927,19 @@ public:
 
         measureFileNames = new QListWidget(measure);
         measureFileNames->setObjectName("measureFileNames");
-        measureFileNames->setGeometry(QRect(10, 50, 211, 201));
+        measureFileNames->setGeometry(QRect(10, 60, 211, 201));
         measureFileNames->setFocusPolicy(Qt::ClickFocus);
         measureFileNames->setFrameShape(QFrame::Box);
         measureFileNames->setFrameShadow(QFrame::Plain);
         layoutWidget_62 = new QWidget(measure);
         layoutWidget_62->setObjectName("layoutWidget_62");
-        layoutWidget_62->setGeometry(QRect(240, 50, 117, 32));
+        layoutWidget_62->setGeometry(QRect(240, 50, 119, 32));
         horizontalLayout_78 = new QHBoxLayout(layoutWidget_62);
         horizontalLayout_78->setObjectName("horizontalLayout_78");
         horizontalLayout_78->setContentsMargins(0, 0, 0, 0);
         label_40 = new QLabel(layoutWidget_62);
         label_40->setObjectName("label_40");
-        label_40->setFont(font3);
+        label_40->setFont(font2);
 
         horizontalLayout_78->addWidget(label_40);
 
@@ -1907,7 +1956,7 @@ public:
         label_41 = new QLabel(measure);
         label_41->setObjectName("label_41");
         label_41->setGeometry(QRect(240, 80, 41, 26));
-        label_41->setFont(font3);
+        label_41->setFont(font2);
         all = new QCheckBox(measure);
         all->setObjectName("all");
         all->setGeometry(QRect(260, 138, 38, 18));
@@ -1918,18 +1967,18 @@ public:
         essential->setObjectName("essential");
         essential->setGeometry(QRect(260, 100, 121, 18));
         essential->setChecked(false);
-        widget1 = new QWidget(measure);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(260, 151, 166, 33));
-        horizontalLayout_79 = new QHBoxLayout(widget1);
+        layoutWidget18 = new QWidget(measure);
+        layoutWidget18->setObjectName("layoutWidget18");
+        layoutWidget18->setGeometry(QRect(260, 151, 170, 33));
+        horizontalLayout_79 = new QHBoxLayout(layoutWidget18);
         horizontalLayout_79->setObjectName("horizontalLayout_79");
         horizontalLayout_79->setContentsMargins(0, 0, 0, 0);
-        reasoner = new QCheckBox(widget1);
+        reasoner = new QCheckBox(layoutWidget18);
         reasoner->setObjectName("reasoner");
 
         horizontalLayout_79->addWidget(reasoner);
 
-        reasonerMetrics = new QComboBox(widget1);
+        reasonerMetrics = new QComboBox(layoutWidget18);
         reasonerMetrics->addItem(QString());
         reasonerMetrics->addItem(QString());
         reasonerMetrics->addItem(QString());
@@ -1942,7 +1991,7 @@ public:
         expand->setObjectName("expand");
         layoutWidget_63 = new QWidget(expand);
         layoutWidget_63->setObjectName("layoutWidget_63");
-        layoutWidget_63->setGeometry(QRect(240, 220, 157, 32));
+        layoutWidget_63->setGeometry(QRect(240, 230, 159, 32));
         horizontalLayout_80 = new QHBoxLayout(layoutWidget_63);
         horizontalLayout_80->setObjectName("horizontalLayout_80");
         horizontalLayout_80->setContentsMargins(0, 0, 0, 0);
@@ -1970,7 +2019,7 @@ public:
 
         layoutWidget_64 = new QWidget(expand);
         layoutWidget_64->setObjectName("layoutWidget_64");
-        layoutWidget_64->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_64->setGeometry(QRect(240, 200, 401, 33));
         horizontalLayout_81 = new QHBoxLayout(layoutWidget_64);
         horizontalLayout_81->setObjectName("horizontalLayout_81");
         horizontalLayout_81->setContentsMargins(0, 0, 0, 0);
@@ -2004,10 +2053,10 @@ public:
         expandAnnotateExpansion = new QCheckBox(expand);
         expandAnnotateExpansion->setObjectName("expandAnnotateExpansion");
         expandAnnotateExpansion->setGeometry(QRect(240, 160, 161, 31));
-        expandAnnotateExpansion->setFont(font3);
+        expandAnnotateExpansion->setFont(font2);
         layoutWidget_65 = new QWidget(expand);
         layoutWidget_65->setObjectName("layoutWidget_65");
-        layoutWidget_65->setGeometry(QRect(10, 10, 212, 41));
+        layoutWidget_65->setGeometry(QRect(10, 20, 212, 41));
         horizontalLayout_82 = new QHBoxLayout(layoutWidget_65);
         horizontalLayout_82->setObjectName("horizontalLayout_82");
         horizontalLayout_82->setContentsMargins(0, 0, 0, 0);
@@ -2035,73 +2084,73 @@ public:
 
         expandFileNames = new QListWidget(expand);
         expandFileNames->setObjectName("expandFileNames");
-        expandFileNames->setGeometry(QRect(10, 50, 211, 201));
+        expandFileNames->setGeometry(QRect(10, 60, 211, 201));
         expandFileNames->setFocusPolicy(Qt::ClickFocus);
         expandFileNames->setFrameShape(QFrame::Box);
         expandFileNames->setFrameShadow(QFrame::Plain);
         label_43 = new QLabel(expand);
         label_43->setObjectName("label_43");
         label_43->setGeometry(QRect(240, 50, 101, 26));
-        label_43->setFont(font3);
+        label_43->setFont(font2);
         label_70 = new QLabel(expand);
         label_70->setObjectName("label_70");
         label_70->setGeometry(QRect(260, 90, 51, 21));
-        widget2 = new QWidget(expand);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(260, 70, 165, 23));
-        horizontalLayout_130 = new QHBoxLayout(widget2);
+        layoutWidget19 = new QWidget(expand);
+        layoutWidget19->setObjectName("layoutWidget19");
+        layoutWidget19->setGeometry(QRect(260, 70, 165, 23));
+        horizontalLayout_130 = new QHBoxLayout(layoutWidget19);
         horizontalLayout_130->setObjectName("horizontalLayout_130");
         horizontalLayout_130->setContentsMargins(0, 0, 0, 0);
-        label_69 = new QLabel(widget2);
+        label_69 = new QLabel(layoutWidget19);
         label_69->setObjectName("label_69");
 
         horizontalLayout_130->addWidget(label_69);
 
-        expandTerm = new QLineEdit(widget2);
+        expandTerm = new QLineEdit(layoutWidget19);
         expandTerm->setObjectName("expandTerm");
         expandTerm->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout_130->addWidget(expandTerm);
 
-        widget3 = new QWidget(expand);
-        widget3->setObjectName("widget3");
-        widget3->setGeometry(QRect(280, 100, 321, 33));
-        horizontalLayout_131 = new QHBoxLayout(widget3);
+        layoutWidget20 = new QWidget(expand);
+        layoutWidget20->setObjectName("layoutWidget20");
+        layoutWidget20->setGeometry(QRect(280, 100, 321, 33));
+        horizontalLayout_131 = new QHBoxLayout(layoutWidget20);
         horizontalLayout_131->setObjectName("horizontalLayout_131");
         horizontalLayout_131->setContentsMargins(0, 0, 0, 0);
-        expandTermFile = new QCheckBox(widget3);
+        expandTermFile = new QCheckBox(layoutWidget20);
         expandTermFile->setObjectName("expandTermFile");
 
         horizontalLayout_131->addWidget(expandTermFile);
 
-        expandTermSave = new QPushButton(widget3);
+        expandTermSave = new QPushButton(layoutWidget20);
         expandTermSave->setObjectName("expandTermSave");
 
         horizontalLayout_131->addWidget(expandTermSave);
 
-        expandTermSaveName = new QLineEdit(widget3);
+        expandTermSaveName = new QLineEdit(layoutWidget20);
         expandTermSaveName->setObjectName("expandTermSaveName");
         expandTermSaveName->setFocusPolicy(Qt::NoFocus);
 
         horizontalLayout_131->addWidget(expandTermSaveName);
 
-        widget4 = new QWidget(expand);
-        widget4->setObjectName("widget4");
-        widget4->setGeometry(QRect(280, 130, 341, 33));
-        horizontalLayout_132 = new QHBoxLayout(widget4);
+        layoutWidget21 = new QWidget(expand);
+        layoutWidget21->setObjectName("layoutWidget21");
+        layoutWidget21->setGeometry(QRect(280, 130, 341, 33));
+        horizontalLayout_132 = new QHBoxLayout(layoutWidget21);
         horizontalLayout_132->setObjectName("horizontalLayout_132");
         horizontalLayout_132->setContentsMargins(0, 0, 0, 0);
-        expandNoTermFile = new QCheckBox(widget4);
+        expandNoTermFile = new QCheckBox(layoutWidget21);
         expandNoTermFile->setObjectName("expandNoTermFile");
 
         horizontalLayout_132->addWidget(expandNoTermFile);
 
-        expandNoTermSave = new QPushButton(widget4);
+        expandNoTermSave = new QPushButton(layoutWidget21);
         expandNoTermSave->setObjectName("expandNoTermSave");
 
         horizontalLayout_132->addWidget(expandNoTermSave);
 
-        expandNoTermSaveName = new QLineEdit(widget4);
+        expandNoTermSaveName = new QLineEdit(layoutWidget21);
         expandNoTermSaveName->setObjectName("expandNoTermSaveName");
         expandNoTermSaveName->setFocusPolicy(Qt::NoFocus);
 
@@ -2116,33 +2165,33 @@ public:
         horizontalLayout_133 = new QHBoxLayout(layoutWidget_113);
         horizontalLayout_133->setObjectName("horizontalLayout_133");
         horizontalLayout_133->setContentsMargins(0, 0, 0, 0);
-        unmergeAddFirstFile_3 = new QPushButton(layoutWidget_113);
-        unmergeAddFirstFile_3->setObjectName("unmergeAddFirstFile_3");
-        sizePolicy.setHeightForWidth(unmergeAddFirstFile_3->sizePolicy().hasHeightForWidth());
-        unmergeAddFirstFile_3->setSizePolicy(sizePolicy);
-        unmergeAddFirstFile_3->setMinimumSize(QSize(100, 0));
-        unmergeAddFirstFile_3->setMaximumSize(QSize(100, 16777215));
-        unmergeAddFirstFile_3->setFocusPolicy(Qt::NoFocus);
-        unmergeAddFirstFile_3->setContextMenuPolicy(Qt::DefaultContextMenu);
-        unmergeAddFirstFile_3->setFlat(false);
+        queryAddOntology = new QPushButton(layoutWidget_113);
+        queryAddOntology->setObjectName("queryAddOntology");
+        sizePolicy.setHeightForWidth(queryAddOntology->sizePolicy().hasHeightForWidth());
+        queryAddOntology->setSizePolicy(sizePolicy);
+        queryAddOntology->setMinimumSize(QSize(100, 0));
+        queryAddOntology->setMaximumSize(QSize(100, 16777215));
+        queryAddOntology->setFocusPolicy(Qt::NoFocus);
+        queryAddOntology->setContextMenuPolicy(Qt::DefaultContextMenu);
+        queryAddOntology->setFlat(false);
 
-        horizontalLayout_133->addWidget(unmergeAddFirstFile_3);
+        horizontalLayout_133->addWidget(queryAddOntology);
 
-        unmergeRemoveFirstFile_3 = new QPushButton(layoutWidget_113);
-        unmergeRemoveFirstFile_3->setObjectName("unmergeRemoveFirstFile_3");
-        sizePolicy.setHeightForWidth(unmergeRemoveFirstFile_3->sizePolicy().hasHeightForWidth());
-        unmergeRemoveFirstFile_3->setSizePolicy(sizePolicy);
-        unmergeRemoveFirstFile_3->setMinimumSize(QSize(100, 0));
-        unmergeRemoveFirstFile_3->setMaximumSize(QSize(100, 16777215));
-        unmergeRemoveFirstFile_3->setFocusPolicy(Qt::NoFocus);
+        queryRemoveOntology = new QPushButton(layoutWidget_113);
+        queryRemoveOntology->setObjectName("queryRemoveOntology");
+        sizePolicy.setHeightForWidth(queryRemoveOntology->sizePolicy().hasHeightForWidth());
+        queryRemoveOntology->setSizePolicy(sizePolicy);
+        queryRemoveOntology->setMinimumSize(QSize(100, 0));
+        queryRemoveOntology->setMaximumSize(QSize(100, 16777215));
+        queryRemoveOntology->setFocusPolicy(Qt::NoFocus);
 
-        horizontalLayout_133->addWidget(unmergeRemoveFirstFile_3);
+        horizontalLayout_133->addWidget(queryRemoveOntology);
 
-        firstFile_3 = new QListWidget(query);
-        firstFile_3->setObjectName("firstFile_3");
-        firstFile_3->setGeometry(QRect(10, 70, 211, 21));
-        firstFile_3->setFrameShape(QFrame::Box);
-        firstFile_3->setFrameShadow(QFrame::Plain);
+        queryOntologyName = new QListWidget(query);
+        queryOntologyName->setObjectName("queryOntologyName");
+        queryOntologyName->setGeometry(QRect(10, 70, 211, 21));
+        queryOntologyName->setFrameShape(QFrame::Box);
+        queryOntologyName->setFrameShadow(QFrame::Plain);
         line_7 = new QFrame(query);
         line_7->setObjectName("line_7");
         line_7->setGeometry(QRect(10, 20, 209, 16));
@@ -2151,12 +2200,12 @@ public:
         label_71 = new QLabel(query);
         label_71->setObjectName("label_71");
         label_71->setGeometry(QRect(73, 10, 101, 20));
-        label_71->setFont(font3);
-        moreFiles_3 = new QListWidget(query);
-        moreFiles_3->setObjectName("moreFiles_3");
-        moreFiles_3->setGeometry(QRect(10, 160, 211, 21));
-        moreFiles_3->setFrameShape(QFrame::Box);
-        moreFiles_3->setFrameShadow(QFrame::Plain);
+        label_71->setFont(font2);
+        queryQueryName = new QListWidget(query);
+        queryQueryName->setObjectName("queryQueryName");
+        queryQueryName->setGeometry(QRect(10, 160, 211, 21));
+        queryQueryName->setFrameShape(QFrame::Box);
+        queryQueryName->setFrameShadow(QFrame::Plain);
         line_8 = new QFrame(query);
         line_8->setObjectName("line_8");
         line_8->setGeometry(QRect(10, 110, 209, 16));
@@ -2168,84 +2217,84 @@ public:
         horizontalLayout_134 = new QHBoxLayout(layoutWidget_114);
         horizontalLayout_134->setObjectName("horizontalLayout_134");
         horizontalLayout_134->setContentsMargins(0, 0, 0, 0);
-        unmergeAddMoreFiles_3 = new QPushButton(layoutWidget_114);
-        unmergeAddMoreFiles_3->setObjectName("unmergeAddMoreFiles_3");
-        sizePolicy.setHeightForWidth(unmergeAddMoreFiles_3->sizePolicy().hasHeightForWidth());
-        unmergeAddMoreFiles_3->setSizePolicy(sizePolicy);
-        unmergeAddMoreFiles_3->setMinimumSize(QSize(100, 0));
-        unmergeAddMoreFiles_3->setMaximumSize(QSize(100, 16777215));
-        unmergeAddMoreFiles_3->setFocusPolicy(Qt::NoFocus);
-        unmergeAddMoreFiles_3->setContextMenuPolicy(Qt::DefaultContextMenu);
-        unmergeAddMoreFiles_3->setFlat(false);
+        queryAddQuery = new QPushButton(layoutWidget_114);
+        queryAddQuery->setObjectName("queryAddQuery");
+        sizePolicy.setHeightForWidth(queryAddQuery->sizePolicy().hasHeightForWidth());
+        queryAddQuery->setSizePolicy(sizePolicy);
+        queryAddQuery->setMinimumSize(QSize(100, 0));
+        queryAddQuery->setMaximumSize(QSize(100, 16777215));
+        queryAddQuery->setFocusPolicy(Qt::NoFocus);
+        queryAddQuery->setContextMenuPolicy(Qt::DefaultContextMenu);
+        queryAddQuery->setFlat(false);
 
-        horizontalLayout_134->addWidget(unmergeAddMoreFiles_3);
+        horizontalLayout_134->addWidget(queryAddQuery);
 
-        unmergeRemoveMoreFiles_3 = new QPushButton(layoutWidget_114);
-        unmergeRemoveMoreFiles_3->setObjectName("unmergeRemoveMoreFiles_3");
-        sizePolicy.setHeightForWidth(unmergeRemoveMoreFiles_3->sizePolicy().hasHeightForWidth());
-        unmergeRemoveMoreFiles_3->setSizePolicy(sizePolicy);
-        unmergeRemoveMoreFiles_3->setMinimumSize(QSize(100, 0));
-        unmergeRemoveMoreFiles_3->setMaximumSize(QSize(100, 16777215));
-        unmergeRemoveMoreFiles_3->setFocusPolicy(Qt::NoFocus);
+        queryRemoveQuery = new QPushButton(layoutWidget_114);
+        queryRemoveQuery->setObjectName("queryRemoveQuery");
+        sizePolicy.setHeightForWidth(queryRemoveQuery->sizePolicy().hasHeightForWidth());
+        queryRemoveQuery->setSizePolicy(sizePolicy);
+        queryRemoveQuery->setMinimumSize(QSize(100, 0));
+        queryRemoveQuery->setMaximumSize(QSize(100, 16777215));
+        queryRemoveQuery->setFocusPolicy(Qt::NoFocus);
 
-        horizontalLayout_134->addWidget(unmergeRemoveMoreFiles_3);
+        horizontalLayout_134->addWidget(queryRemoveQuery);
 
         label_72 = new QLabel(query);
         label_72->setObjectName("label_72");
         label_72->setGeometry(QRect(90, 100, 71, 20));
-        label_72->setFont(font3);
+        label_72->setFont(font2);
         layoutWidget_115 = new QWidget(query);
         layoutWidget_115->setObjectName("layoutWidget_115");
-        layoutWidget_115->setGeometry(QRect(240, 220, 171, 32));
+        layoutWidget_115->setGeometry(QRect(270, 480, 171, 32));
         horizontalLayout_135 = new QHBoxLayout(layoutWidget_115);
         horizontalLayout_135->setObjectName("horizontalLayout_135");
         horizontalLayout_135->setContentsMargins(0, 0, 0, 0);
-        unmergeReset_3 = new QPushButton(layoutWidget_115);
-        unmergeReset_3->setObjectName("unmergeReset_3");
-        sizePolicy1.setHeightForWidth(unmergeReset_3->sizePolicy().hasHeightForWidth());
-        unmergeReset_3->setSizePolicy(sizePolicy1);
-        unmergeReset_3->setMaximumSize(QSize(150, 16777215));
-        unmergeReset_3->setFocusPolicy(Qt::NoFocus);
+        queryReset = new QPushButton(layoutWidget_115);
+        queryReset->setObjectName("queryReset");
+        sizePolicy1.setHeightForWidth(queryReset->sizePolicy().hasHeightForWidth());
+        queryReset->setSizePolicy(sizePolicy1);
+        queryReset->setMaximumSize(QSize(150, 16777215));
+        queryReset->setFocusPolicy(Qt::NoFocus);
 
-        horizontalLayout_135->addWidget(unmergeReset_3);
+        horizontalLayout_135->addWidget(queryReset);
 
-        unmergeButton_3 = new QPushButton(layoutWidget_115);
-        unmergeButton_3->setObjectName("unmergeButton_3");
-        sizePolicy1.setHeightForWidth(unmergeButton_3->sizePolicy().hasHeightForWidth());
-        unmergeButton_3->setSizePolicy(sizePolicy1);
-        unmergeButton_3->setMinimumSize(QSize(0, 0));
-        unmergeButton_3->setMaximumSize(QSize(150, 16777215));
-        unmergeButton_3->setFont(font4);
-        unmergeButton_3->setFocusPolicy(Qt::NoFocus);
-        unmergeButton_3->setAutoFillBackground(false);
-        unmergeButton_3->setCheckable(false);
-        unmergeButton_3->setChecked(false);
-        unmergeButton_3->setAutoExclusive(false);
-        unmergeButton_3->setAutoDefault(false);
-        unmergeButton_3->setFlat(false);
+        queryButton = new QPushButton(layoutWidget_115);
+        queryButton->setObjectName("queryButton");
+        sizePolicy1.setHeightForWidth(queryButton->sizePolicy().hasHeightForWidth());
+        queryButton->setSizePolicy(sizePolicy1);
+        queryButton->setMinimumSize(QSize(0, 0));
+        queryButton->setMaximumSize(QSize(150, 16777215));
+        queryButton->setFont(font3);
+        queryButton->setFocusPolicy(Qt::NoFocus);
+        queryButton->setAutoFillBackground(false);
+        queryButton->setCheckable(false);
+        queryButton->setChecked(false);
+        queryButton->setAutoExclusive(false);
+        queryButton->setAutoDefault(false);
+        queryButton->setFlat(false);
 
-        horizontalLayout_135->addWidget(unmergeButton_3);
+        horizontalLayout_135->addWidget(queryButton);
 
         layoutWidget_116 = new QWidget(query);
         layoutWidget_116->setObjectName("layoutWidget_116");
-        layoutWidget_116->setGeometry(QRect(240, 190, 401, 33));
+        layoutWidget_116->setGeometry(QRect(270, 450, 401, 33));
         horizontalLayout_136 = new QHBoxLayout(layoutWidget_116);
         horizontalLayout_136->setObjectName("horizontalLayout_136");
         horizontalLayout_136->setContentsMargins(0, 0, 0, 0);
-        unmergeSaveAs_3 = new QPushButton(layoutWidget_116);
-        unmergeSaveAs_3->setObjectName("unmergeSaveAs_3");
-        unmergeSaveAs_3->setFocusPolicy(Qt::NoFocus);
+        querySaveAs = new QPushButton(layoutWidget_116);
+        querySaveAs->setObjectName("querySaveAs");
+        querySaveAs->setFocusPolicy(Qt::NoFocus);
 
-        horizontalLayout_136->addWidget(unmergeSaveAs_3);
+        horizontalLayout_136->addWidget(querySaveAs);
 
-        unmergeNameSave_3 = new QLineEdit(layoutWidget_116);
-        unmergeNameSave_3->setObjectName("unmergeNameSave_3");
-        unmergeNameSave_3->setFocusPolicy(Qt::NoFocus);
-        unmergeNameSave_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        unmergeNameSave_3->setDragEnabled(false);
-        unmergeNameSave_3->setClearButtonEnabled(false);
+        queryNameSave = new QLineEdit(layoutWidget_116);
+        queryNameSave->setObjectName("queryNameSave");
+        queryNameSave->setFocusPolicy(Qt::NoFocus);
+        queryNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        queryNameSave->setDragEnabled(false);
+        queryNameSave->setClearButtonEnabled(false);
 
-        horizontalLayout_136->addWidget(unmergeNameSave_3);
+        horizontalLayout_136->addWidget(queryNameSave);
 
         label_73 = new QLabel(layoutWidget_116);
         label_73->setObjectName("label_73");
@@ -2253,33 +2302,467 @@ public:
 
         horizontalLayout_136->addWidget(label_73);
 
-        unmergeSavePath_3 = new QLineEdit(layoutWidget_116);
-        unmergeSavePath_3->setObjectName("unmergeSavePath_3");
-        unmergeSavePath_3->setFocusPolicy(Qt::NoFocus);
+        querySavePath = new QLineEdit(layoutWidget_116);
+        querySavePath->setObjectName("querySavePath");
+        querySavePath->setFocusPolicy(Qt::NoFocus);
 
-        horizontalLayout_136->addWidget(unmergeSavePath_3);
+        horizontalLayout_136->addWidget(querySavePath);
 
-        reduceIgnoreClasses_4 = new QCheckBox(query);
-        reduceIgnoreClasses_4->setObjectName("reduceIgnoreClasses_4");
-        reduceIgnoreClasses_4->setGeometry(QRect(240, 60, 251, 31));
-        reduceIgnoreClasses_4->setFont(font3);
-        reducePreserveAxioms_3 = new QCheckBox(query);
-        reducePreserveAxioms_3->setObjectName("reducePreserveAxioms_3");
-        reducePreserveAxioms_3->setGeometry(QRect(240, 30, 251, 31));
-        reducePreserveAxioms_3->setFont(font3);
-        reduceIgnoreClasses_5 = new QCheckBox(query);
-        reduceIgnoreClasses_5->setObjectName("reduceIgnoreClasses_5");
-        reduceIgnoreClasses_5->setGeometry(QRect(240, 90, 141, 31));
-        reduceIgnoreClasses_5->setFont(font3);
+        layoutWidget_121 = new QWidget(query);
+        layoutWidget_121->setObjectName("layoutWidget_121");
+        layoutWidget_121->setGeometry(QRect(280, 120, 212, 32));
+        horizontalLayout_141 = new QHBoxLayout(layoutWidget_121);
+        horizontalLayout_141->setObjectName("horizontalLayout_141");
+        horizontalLayout_141->setContentsMargins(0, 0, 0, 0);
+        queryAddUpdate = new QPushButton(layoutWidget_121);
+        queryAddUpdate->setObjectName("queryAddUpdate");
+        sizePolicy.setHeightForWidth(queryAddUpdate->sizePolicy().hasHeightForWidth());
+        queryAddUpdate->setSizePolicy(sizePolicy);
+        queryAddUpdate->setMinimumSize(QSize(100, 0));
+        queryAddUpdate->setMaximumSize(QSize(100, 16777215));
+        queryAddUpdate->setFocusPolicy(Qt::NoFocus);
+        queryAddUpdate->setContextMenuPolicy(Qt::DefaultContextMenu);
+        queryAddUpdate->setFlat(false);
+
+        horizontalLayout_141->addWidget(queryAddUpdate);
+
+        queryRemoveUpdate = new QPushButton(layoutWidget_121);
+        queryRemoveUpdate->setObjectName("queryRemoveUpdate");
+        sizePolicy.setHeightForWidth(queryRemoveUpdate->sizePolicy().hasHeightForWidth());
+        queryRemoveUpdate->setSizePolicy(sizePolicy);
+        queryRemoveUpdate->setMinimumSize(QSize(100, 0));
+        queryRemoveUpdate->setMaximumSize(QSize(100, 16777215));
+        queryRemoveUpdate->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_141->addWidget(queryRemoveUpdate);
+
+        queryUpdateName = new QListWidget(query);
+        queryUpdateName->setObjectName("queryUpdateName");
+        queryUpdateName->setGeometry(QRect(280, 150, 211, 51));
+        queryUpdateName->setFrameShape(QFrame::Box);
+        queryUpdateName->setFrameShadow(QFrame::Plain);
+        label_51 = new QLabel(query);
+        label_51->setObjectName("label_51");
+        label_51->setGeometry(QRect(260, 10, 91, 21));
+        label_51->setFont(font2);
+        layoutWidget_81 = new QWidget(query);
+        layoutWidget_81->setObjectName("layoutWidget_81");
+        layoutWidget_81->setGeometry(QRect(280, 50, 328, 33));
+        horizontalLayout_97 = new QHBoxLayout(layoutWidget_81);
+        horizontalLayout_97->setObjectName("horizontalLayout_97");
+        horizontalLayout_97->setContentsMargins(0, 0, 0, 0);
+        queryCatalog = new QCheckBox(layoutWidget_81);
+        queryCatalog->setObjectName("queryCatalog");
+        queryCatalog->setFocusPolicy(Qt::ClickFocus);
+        queryCatalog->setChecked(false);
+        queryCatalog->setTristate(false);
+
+        horizontalLayout_97->addWidget(queryCatalog);
+
+        queryCatalogSave = new QPushButton(layoutWidget_81);
+        queryCatalogSave->setObjectName("queryCatalogSave");
+
+        horizontalLayout_97->addWidget(queryCatalogSave);
+
+        queryCatalogSaveName = new QLineEdit(layoutWidget_81);
+        queryCatalogSaveName->setObjectName("queryCatalogSaveName");
+        queryCatalogSaveName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_97->addWidget(queryCatalogSaveName);
+
+        line = new QFrame(query);
+        line->setObjectName("line");
+        line->setGeometry(QRect(230, 20, 20, 401));
+        line->setFrameShape(QFrame::VLine);
+        line->setFrameShadow(QFrame::Sunken);
+        label_52 = new QLabel(query);
+        label_52->setObjectName("label_52");
+        label_52->setGeometry(QRect(260, 100, 91, 21));
+        label_52->setFont(font2);
+        queryTemporaryFile = new QCheckBox(query);
+        queryTemporaryFile->setObjectName("queryTemporaryFile");
+        queryTemporaryFile->setGeometry(QRect(280, 210, 251, 18));
+        queryTemporaryFile->setFocusPolicy(Qt::ClickFocus);
+        queryTemporaryFile->setCheckable(true);
+        queryTemporaryFile->setChecked(false);
+        queryTemporaryFile->setAutoRepeat(false);
+        queryTemporaryFile->setAutoExclusive(false);
+        queryTemporaryFile->setTristate(false);
+        label_53 = new QLabel(query);
+        label_53->setObjectName("label_53");
+        label_53->setGeometry(QRect(260, 240, 91, 21));
+        label_53->setFont(font2);
+        layoutWidget_82 = new QWidget(query);
+        layoutWidget_82->setObjectName("layoutWidget_82");
+        layoutWidget_82->setGeometry(QRect(280, 300, 391, 33));
+        horizontalLayout_98 = new QHBoxLayout(layoutWidget_82);
+        horizontalLayout_98->setObjectName("horizontalLayout_98");
+        horizontalLayout_98->setContentsMargins(0, 0, 0, 0);
+        queryTDBDirectory = new QPushButton(layoutWidget_82);
+        queryTDBDirectory->setObjectName("queryTDBDirectory");
+
+        horizontalLayout_98->addWidget(queryTDBDirectory);
+
+        queryTBDDirectoryName = new QLineEdit(layoutWidget_82);
+        queryTBDDirectoryName->setObjectName("queryTBDDirectoryName");
+        queryTBDDirectoryName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_98->addWidget(queryTBDDirectoryName);
+
+        queryTDB = new QCheckBox(query);
+        queryTDB->setObjectName("queryTDB");
+        queryTDB->setGeometry(QRect(280, 260, 141, 21));
+        queryTDB->setFocusPolicy(Qt::ClickFocus);
+        queryTDB->setCheckable(true);
+        queryTDB->setChecked(false);
+        queryTDB->setAutoRepeat(false);
+        queryTDB->setAutoExclusive(false);
+        queryTDB->setTristate(false);
+        queryKeepTDB = new QCheckBox(query);
+        queryKeepTDB->setObjectName("queryKeepTDB");
+        queryKeepTDB->setGeometry(QRect(280, 280, 141, 21));
+        queryKeepTDB->setFocusPolicy(Qt::ClickFocus);
+        queryKeepTDB->setCheckable(true);
+        queryKeepTDB->setChecked(false);
+        queryKeepTDB->setAutoRepeat(false);
+        queryKeepTDB->setAutoExclusive(false);
+        queryKeepTDB->setTristate(false);
+        label_54 = new QLabel(query);
+        label_54->setObjectName("label_54");
+        label_54->setGeometry(QRect(260, 340, 111, 21));
+        label_54->setFont(font2);
+        layoutWidget_83 = new QWidget(query);
+        layoutWidget_83->setObjectName("layoutWidget_83");
+        layoutWidget_83->setGeometry(QRect(280, 360, 391, 33));
+        horizontalLayout_99 = new QHBoxLayout(layoutWidget_83);
+        horizontalLayout_99->setObjectName("horizontalLayout_99");
+        horizontalLayout_99->setContentsMargins(0, 0, 0, 0);
+        querySelectTDB = new QPushButton(layoutWidget_83);
+        querySelectTDB->setObjectName("querySelectTDB");
+
+        horizontalLayout_99->addWidget(querySelectTDB);
+
+        querySelectTDBName = new QLineEdit(layoutWidget_83);
+        querySelectTDBName->setObjectName("querySelectTDBName");
+        querySelectTDBName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_99->addWidget(querySelectTDBName);
+
+        queryCreateTDB = new QPushButton(query);
+        queryCreateTDB->setObjectName("queryCreateTDB");
+        queryCreateTDB->setGeometry(QRect(280, 390, 110, 32));
+        queryUseGraphs = new QCheckBox(query);
+        queryUseGraphs->setObjectName("queryUseGraphs");
+        queryUseGraphs->setGeometry(QRect(280, 33, 204, 21));
+        queryUseGraphs->setFocusPolicy(Qt::ClickFocus);
+        queryUseGraphs->setCheckable(true);
+        queryUseGraphs->setChecked(false);
+        queryUseGraphs->setAutoRepeat(false);
+        queryUseGraphs->setAutoExclusive(false);
+        queryUseGraphs->setTristate(false);
         tabWidget->addTab(query, QString());
+        Template = new QWidget();
+        Template->setObjectName("Template");
+        layoutWidget_84 = new QWidget(Template);
+        layoutWidget_84->setObjectName("layoutWidget_84");
+        layoutWidget_84->setGeometry(QRect(10, 130, 212, 32));
+        horizontalLayout_100 = new QHBoxLayout(layoutWidget_84);
+        horizontalLayout_100->setObjectName("horizontalLayout_100");
+        horizontalLayout_100->setContentsMargins(0, 0, 0, 0);
+        templateAddMoreFiles = new QPushButton(layoutWidget_84);
+        templateAddMoreFiles->setObjectName("templateAddMoreFiles");
+        sizePolicy.setHeightForWidth(templateAddMoreFiles->sizePolicy().hasHeightForWidth());
+        templateAddMoreFiles->setSizePolicy(sizePolicy);
+        templateAddMoreFiles->setMinimumSize(QSize(100, 0));
+        templateAddMoreFiles->setMaximumSize(QSize(100, 16777215));
+        templateAddMoreFiles->setFocusPolicy(Qt::NoFocus);
+        templateAddMoreFiles->setContextMenuPolicy(Qt::DefaultContextMenu);
+        templateAddMoreFiles->setFlat(false);
 
-        gridLayout->addWidget(tabWidget, 1, 0, 1, 1);
+        horizontalLayout_100->addWidget(templateAddMoreFiles);
+
+        templateRemoveMoreFiles = new QPushButton(layoutWidget_84);
+        templateRemoveMoreFiles->setObjectName("templateRemoveMoreFiles");
+        sizePolicy.setHeightForWidth(templateRemoveMoreFiles->sizePolicy().hasHeightForWidth());
+        templateRemoveMoreFiles->setSizePolicy(sizePolicy);
+        templateRemoveMoreFiles->setMinimumSize(QSize(100, 0));
+        templateRemoveMoreFiles->setMaximumSize(QSize(100, 16777215));
+        templateRemoveMoreFiles->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_100->addWidget(templateRemoveMoreFiles);
+
+        line_6 = new QFrame(Template);
+        line_6->setObjectName("line_6");
+        line_6->setGeometry(QRect(11, 20, 209, 16));
+        line_6->setFrameShape(QFrame::HLine);
+        line_6->setFrameShadow(QFrame::Sunken);
+        layoutWidget_86 = new QWidget(Template);
+        layoutWidget_86->setObjectName("layoutWidget_86");
+        layoutWidget_86->setGeometry(QRect(240, 250, 401, 33));
+        horizontalLayout_102 = new QHBoxLayout(layoutWidget_86);
+        horizontalLayout_102->setObjectName("horizontalLayout_102");
+        horizontalLayout_102->setContentsMargins(0, 0, 0, 0);
+        templateSaveAs = new QPushButton(layoutWidget_86);
+        templateSaveAs->setObjectName("templateSaveAs");
+        templateSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_102->addWidget(templateSaveAs);
+
+        templateNameSave = new QLineEdit(layoutWidget_86);
+        templateNameSave->setObjectName("templateNameSave");
+        templateNameSave->setFocusPolicy(Qt::NoFocus);
+        templateNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        templateNameSave->setDragEnabled(false);
+        templateNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_102->addWidget(templateNameSave);
+
+        label_57 = new QLabel(layoutWidget_86);
+        label_57->setObjectName("label_57");
+        label_57->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_102->addWidget(label_57);
+
+        templateSavePath = new QLineEdit(layoutWidget_86);
+        templateSavePath->setObjectName("templateSavePath");
+        templateSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_102->addWidget(templateSavePath);
+
+        layoutWidget_85 = new QWidget(Template);
+        layoutWidget_85->setObjectName("layoutWidget_85");
+        layoutWidget_85->setGeometry(QRect(10, 30, 212, 32));
+        horizontalLayout_101 = new QHBoxLayout(layoutWidget_85);
+        horizontalLayout_101->setObjectName("horizontalLayout_101");
+        horizontalLayout_101->setContentsMargins(0, 0, 0, 0);
+        templateAddFirstFile = new QPushButton(layoutWidget_85);
+        templateAddFirstFile->setObjectName("templateAddFirstFile");
+        sizePolicy.setHeightForWidth(templateAddFirstFile->sizePolicy().hasHeightForWidth());
+        templateAddFirstFile->setSizePolicy(sizePolicy);
+        templateAddFirstFile->setMinimumSize(QSize(100, 0));
+        templateAddFirstFile->setMaximumSize(QSize(100, 16777215));
+        templateAddFirstFile->setFocusPolicy(Qt::NoFocus);
+        templateAddFirstFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        templateAddFirstFile->setFlat(false);
+
+        horizontalLayout_101->addWidget(templateAddFirstFile);
+
+        templateRemoveFirstFile = new QPushButton(layoutWidget_85);
+        templateRemoveFirstFile->setObjectName("templateRemoveFirstFile");
+        sizePolicy.setHeightForWidth(templateRemoveFirstFile->sizePolicy().hasHeightForWidth());
+        templateRemoveFirstFile->setSizePolicy(sizePolicy);
+        templateRemoveFirstFile->setMinimumSize(QSize(100, 0));
+        templateRemoveFirstFile->setMaximumSize(QSize(100, 16777215));
+        templateRemoveFirstFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_101->addWidget(templateRemoveFirstFile);
+
+        line_10 = new QFrame(Template);
+        line_10->setObjectName("line_10");
+        line_10->setGeometry(QRect(10, 120, 209, 16));
+        line_10->setFrameShape(QFrame::HLine);
+        line_10->setFrameShadow(QFrame::Sunken);
+        layoutWidget_80 = new QWidget(Template);
+        layoutWidget_80->setObjectName("layoutWidget_80");
+        layoutWidget_80->setGeometry(QRect(240, 280, 171, 32));
+        horizontalLayout_96 = new QHBoxLayout(layoutWidget_80);
+        horizontalLayout_96->setObjectName("horizontalLayout_96");
+        horizontalLayout_96->setContentsMargins(0, 0, 0, 0);
+        templateReset = new QPushButton(layoutWidget_80);
+        templateReset->setObjectName("templateReset");
+        sizePolicy1.setHeightForWidth(templateReset->sizePolicy().hasHeightForWidth());
+        templateReset->setSizePolicy(sizePolicy1);
+        templateReset->setMaximumSize(QSize(150, 16777215));
+        templateReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_96->addWidget(templateReset);
+
+        templateButton = new QPushButton(layoutWidget_80);
+        templateButton->setObjectName("templateButton");
+        sizePolicy1.setHeightForWidth(templateButton->sizePolicy().hasHeightForWidth());
+        templateButton->setSizePolicy(sizePolicy1);
+        templateButton->setMinimumSize(QSize(0, 0));
+        templateButton->setMaximumSize(QSize(150, 16777215));
+        templateButton->setFont(font3);
+        templateButton->setFocusPolicy(Qt::NoFocus);
+        templateButton->setAutoFillBackground(false);
+        templateButton->setCheckable(false);
+        templateButton->setChecked(false);
+        templateButton->setAutoExclusive(false);
+        templateButton->setAutoDefault(false);
+        templateButton->setFlat(false);
+
+        horizontalLayout_96->addWidget(templateButton);
+
+        templateFirstFile = new QListWidget(Template);
+        templateFirstFile->setObjectName("templateFirstFile");
+        templateFirstFile->setGeometry(QRect(10, 70, 211, 21));
+        templateFirstFile->setFrameShape(QFrame::Box);
+        templateFirstFile->setFrameShadow(QFrame::Plain);
+        label_56 = new QLabel(Template);
+        label_56->setObjectName("label_56");
+        label_56->setGeometry(QRect(80, 11, 81, 16));
+        label_56->setFont(font2);
+        label_55 = new QLabel(Template);
+        label_55->setObjectName("label_55");
+        label_55->setGeometry(QRect(90, 110, 61, 16));
+        label_55->setFont(font2);
+        templateMoreFiles = new QListWidget(Template);
+        templateMoreFiles->setObjectName("templateMoreFiles");
+        templateMoreFiles->setGeometry(QRect(10, 170, 211, 141));
+        templateMoreFiles->setFrameShape(QFrame::Box);
+        templateMoreFiles->setFrameShadow(QFrame::Plain);
+        layoutWidget_87 = new QWidget(Template);
+        layoutWidget_87->setObjectName("layoutWidget_87");
+        layoutWidget_87->setGeometry(QRect(240, 90, 234, 31));
+        horizontalLayout_103 = new QHBoxLayout(layoutWidget_87);
+        horizontalLayout_103->setObjectName("horizontalLayout_103");
+        horizontalLayout_103->setContentsMargins(0, 0, 0, 0);
+        templatePrefix = new QCheckBox(layoutWidget_87);
+        templatePrefix->setObjectName("templatePrefix");
+        templatePrefix->setFont(font2);
+        templatePrefix->setFocusPolicy(Qt::ClickFocus);
+        templatePrefix->setCheckable(true);
+        templatePrefix->setChecked(false);
+        templatePrefix->setAutoRepeat(false);
+        templatePrefix->setAutoExclusive(false);
+        templatePrefix->setTristate(false);
+
+        horizontalLayout_103->addWidget(templatePrefix);
+
+        templatePrefixName = new QLineEdit(layoutWidget_87);
+        templatePrefixName->setObjectName("templatePrefixName");
+        templatePrefixName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_103->addWidget(templatePrefixName);
+
+        layoutWidget_88 = new QWidget(Template);
+        layoutWidget_88->setObjectName("layoutWidget_88");
+        layoutWidget_88->setGeometry(QRect(240, 120, 251, 31));
+        horizontalLayout_104 = new QHBoxLayout(layoutWidget_88);
+        horizontalLayout_104->setObjectName("horizontalLayout_104");
+        horizontalLayout_104->setContentsMargins(0, 0, 0, 0);
+        templateIRI = new QCheckBox(layoutWidget_88);
+        templateIRI->setObjectName("templateIRI");
+        templateIRI->setFont(font2);
+        templateIRI->setFocusPolicy(Qt::ClickFocus);
+        templateIRI->setCheckable(true);
+        templateIRI->setChecked(false);
+        templateIRI->setAutoRepeat(false);
+        templateIRI->setAutoExclusive(false);
+        templateIRI->setTristate(false);
+
+        horizontalLayout_104->addWidget(templateIRI);
+
+        templateIRIName = new QLineEdit(layoutWidget_88);
+        templateIRIName->setObjectName("templateIRIName");
+        templateIRIName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_104->addWidget(templateIRIName);
+
+        templateForce = new QCheckBox(Template);
+        templateForce->setObjectName("templateForce");
+        templateForce->setGeometry(QRect(240, 150, 131, 31));
+        templateForce->setFont(font2);
+        templateForce->setFocusPolicy(Qt::ClickFocus);
+        templateForce->setCheckable(true);
+        templateForce->setChecked(false);
+        templateForce->setAutoRepeat(false);
+        templateForce->setAutoExclusive(false);
+        templateForce->setTristate(false);
+        templateAncestor = new QCheckBox(Template);
+        templateAncestor->setObjectName("templateAncestor");
+        templateAncestor->setGeometry(QRect(240, 210, 81, 31));
+        templateAncestor->setFont(font2);
+        templateAncestor->setFocusPolicy(Qt::ClickFocus);
+        templateAncestor->setCheckable(true);
+        templateAncestor->setChecked(false);
+        templateAncestor->setAutoRepeat(false);
+        templateAncestor->setAutoExclusive(false);
+        templateAncestor->setTristate(false);
+        widget = new QWidget(Template);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(240, 30, 201, 32));
+        horizontalLayout_105 = new QHBoxLayout(widget);
+        horizontalLayout_105->setObjectName("horizontalLayout_105");
+        horizontalLayout_105->setContentsMargins(0, 0, 0, 0);
+        label_60 = new QLabel(widget);
+        label_60->setObjectName("label_60");
+        label_60->setFont(font2);
+        label_60->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_105->addWidget(label_60);
+
+        templateMerge = new QComboBox(widget);
+        templateMerge->addItem(QString());
+        templateMerge->addItem(QString());
+        templateMerge->addItem(QString());
+        templateMerge->setObjectName("templateMerge");
+        templateMerge->setFocusPolicy(Qt::NoFocus);
+        templateMerge->setEditable(false);
+
+        horizontalLayout_105->addWidget(templateMerge);
+
+        widget1 = new QWidget(Template);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(240, 60, 206, 32));
+        horizontalLayout_106 = new QHBoxLayout(widget1);
+        horizontalLayout_106->setObjectName("horizontalLayout_106");
+        horizontalLayout_106->setContentsMargins(0, 0, 0, 0);
+        label_58 = new QLabel(widget1);
+        label_58->setObjectName("label_58");
+        label_58->setFont(font2);
+        label_58->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_106->addWidget(label_58);
+
+        templateImportClosure = new QComboBox(widget1);
+        templateImportClosure->addItem(QString());
+        templateImportClosure->addItem(QString());
+        templateImportClosure->setObjectName("templateImportClosure");
+        templateImportClosure->setFocusPolicy(Qt::NoFocus);
+        templateImportClosure->setEditable(false);
+
+        horizontalLayout_106->addWidget(templateImportClosure);
+
+        widget2 = new QWidget(Template);
+        widget2->setObjectName("widget2");
+        widget2->setGeometry(QRect(240, 180, 431, 33));
+        horizontalLayout_107 = new QHBoxLayout(widget2);
+        horizontalLayout_107->setObjectName("horizontalLayout_107");
+        horizontalLayout_107->setContentsMargins(0, 0, 0, 0);
+        templateError = new QCheckBox(widget2);
+        templateError->setObjectName("templateError");
+        templateError->setFont(font2);
+        templateError->setFocusPolicy(Qt::ClickFocus);
+        templateError->setCheckable(true);
+        templateError->setChecked(false);
+        templateError->setAutoRepeat(false);
+        templateError->setAutoExclusive(false);
+        templateError->setTristate(false);
+
+        horizontalLayout_107->addWidget(templateError);
+
+        templateErrorPath = new QPushButton(widget2);
+        templateErrorPath->setObjectName("templateErrorPath");
+
+        horizontalLayout_107->addWidget(templateErrorPath);
+
+        templateErrorPathName = new QLineEdit(widget2);
+        templateErrorPathName->setObjectName("templateErrorPathName");
+        templateErrorPathName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_107->addWidget(templateErrorPathName);
+
+        tabWidget->addTab(Template, QString());
+
+        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(7);
+        tabWidget->setCurrentIndex(13);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -2304,9 +2787,13 @@ public:
         measureButton->setDefault(true);
         expandButton->setDefault(true);
         expandAddFile->setDefault(false);
-        unmergeAddFirstFile_3->setDefault(false);
-        unmergeAddMoreFiles_3->setDefault(false);
-        unmergeButton_3->setDefault(true);
+        queryAddOntology->setDefault(false);
+        queryAddQuery->setDefault(false);
+        queryButton->setDefault(true);
+        queryAddUpdate->setDefault(false);
+        templateAddMoreFiles->setDefault(false);
+        templateAddFirstFile->setDefault(false);
+        templateButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2315,7 +2802,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        mainHeader1->setText(QCoreApplication::translate("MainWindow", "ROBOT ", nullptr));
         mergeAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         mergeRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", " Ontology Annotations", nullptr));
@@ -2329,7 +2815,7 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
         mergeReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         mergeButton->setText(QCoreApplication::translate("MainWindow", "Merge Files", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", " Import Closure", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Collapse Import Closure", nullptr));
         mergeImportClosure->setItemText(0, QCoreApplication::translate("MainWindow", "True", nullptr));
         mergeImportClosure->setItemText(1, QCoreApplication::translate("MainWindow", "False", nullptr));
 
@@ -2455,7 +2941,7 @@ public:
         repairTermsFile->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
         repairReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         repairButton->setText(QCoreApplication::translate("MainWindow", "Repair File", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "Migrate annotation axioms", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Migrate Annotation Axioms", nullptr));
         repairAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         repairRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(repair), QCoreApplication::translate("MainWindow", "Repair", nullptr));
@@ -2490,10 +2976,10 @@ public:
         expandNameSave->setText(QString());
         expandNameSave->setPlaceholderText(QString());
         label_42->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
-        expandAnnotateExpansion->setText(QCoreApplication::translate("MainWindow", "Annotate expansion axioms", nullptr));
+        expandAnnotateExpansion->setText(QCoreApplication::translate("MainWindow", "Annotate Expansion Axioms", nullptr));
         expandAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
         expandRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
-        label_43->setText(QCoreApplication::translate("MainWindow", "Specify expansions", nullptr));
+        label_43->setText(QCoreApplication::translate("MainWindow", "Specify Expansions", nullptr));
         label_70->setText(QCoreApplication::translate("MainWindow", "Term file", nullptr));
         label_69->setText(QCoreApplication::translate("MainWindow", "IRI/CURIE", nullptr));
         expandTermFile->setText(QCoreApplication::translate("MainWindow", "expand-term-file", nullptr));
@@ -2501,22 +2987,64 @@ public:
         expandNoTermFile->setText(QCoreApplication::translate("MainWindow", "no-expand-term-file", nullptr));
         expandNoTermSave->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(expand), QCoreApplication::translate("MainWindow", "Expand", nullptr));
-        unmergeAddFirstFile_3->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
-        unmergeRemoveFirstFile_3->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        queryAddOntology->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        queryRemoveOntology->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
         label_71->setText(QCoreApplication::translate("MainWindow", "Import Ontology", nullptr));
-        unmergeAddMoreFiles_3->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
-        unmergeRemoveMoreFiles_3->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        queryAddQuery->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        queryRemoveQuery->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
         label_72->setText(QCoreApplication::translate("MainWindow", "Query File", nullptr));
-        unmergeReset_3->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        unmergeButton_3->setText(QCoreApplication::translate("MainWindow", "Query", nullptr));
-        unmergeSaveAs_3->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
-        unmergeNameSave_3->setText(QString());
-        unmergeNameSave_3->setPlaceholderText(QString());
+        queryReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        queryButton->setText(QCoreApplication::translate("MainWindow", "Query", nullptr));
+        querySaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        queryNameSave->setText(QString());
+        queryNameSave->setPlaceholderText(QString());
         label_73->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
-        reduceIgnoreClasses_4->setText(QCoreApplication::translate("MainWindow", "Store intermediate results to a temporary file", nullptr));
-        reducePreserveAxioms_3->setText(QCoreApplication::translate("MainWindow", "Include import statements as named graphs", nullptr));
-        reduceIgnoreClasses_5->setText(QCoreApplication::translate("MainWindow", "Load ontology on disk", nullptr));
+        queryAddUpdate->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        queryRemoveUpdate->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        label_51->setText(QCoreApplication::translate("MainWindow", "Handling Imports", nullptr));
+        queryCatalog->setText(QCoreApplication::translate("MainWindow", "Catalog file", nullptr));
+        queryCatalogSave->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
+        label_52->setText(QCoreApplication::translate("MainWindow", "SPARQL UPDATE", nullptr));
+        queryTemporaryFile->setText(QCoreApplication::translate("MainWindow", "Store intermediate results to a temporary file", nullptr));
+        label_53->setText(QCoreApplication::translate("MainWindow", "Executing On Disk", nullptr));
+        queryTDBDirectory->setText(QCoreApplication::translate("MainWindow", "Change TDB Directory", nullptr));
+        queryTDB->setText(QCoreApplication::translate("MainWindow", "Load ontology onto disk", nullptr));
+        queryKeepTDB->setText(QCoreApplication::translate("MainWindow", "Keep TDB directory", nullptr));
+        label_54->setText(QCoreApplication::translate("MainWindow", "Create TDB Directory", nullptr));
+        querySelectTDB->setText(QCoreApplication::translate("MainWindow", "Select Directory", nullptr));
+        queryCreateTDB->setText(QCoreApplication::translate("MainWindow", "Execute", nullptr));
+        queryUseGraphs->setText(QCoreApplication::translate("MainWindow", "Include all imports as named graphs", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(query), QCoreApplication::translate("MainWindow", "Query", nullptr));
+        templateAddMoreFiles->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        templateRemoveMoreFiles->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        templateSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        templateNameSave->setText(QString());
+        templateNameSave->setPlaceholderText(QString());
+        label_57->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        templateAddFirstFile->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        templateRemoveFirstFile->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        templateReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        templateButton->setText(QCoreApplication::translate("MainWindow", "Unmerge File", nullptr));
+        label_56->setText(QCoreApplication::translate("MainWindow", "Input Ontology", nullptr));
+        label_55->setText(QCoreApplication::translate("MainWindow", "Templates", nullptr));
+        templatePrefix->setText(QCoreApplication::translate("MainWindow", "Prefix", nullptr));
+        templateIRI->setText(QCoreApplication::translate("MainWindow", "Ontology IRI", nullptr));
+        templateForce->setText(QCoreApplication::translate("MainWindow", "Proceeed with errors", nullptr));
+        templateAncestor->setText(QCoreApplication::translate("MainWindow", "Ancestors", nullptr));
+        label_60->setText(QCoreApplication::translate("MainWindow", "Merging Options", nullptr));
+        templateMerge->setItemText(0, QCoreApplication::translate("MainWindow", "no merge", nullptr));
+        templateMerge->setItemText(1, QCoreApplication::translate("MainWindow", "merge-before", nullptr));
+        templateMerge->setItemText(2, QCoreApplication::translate("MainWindow", "merge-after", nullptr));
+
+        templateMerge->setCurrentText(QCoreApplication::translate("MainWindow", "no merge", nullptr));
+        label_58->setText(QCoreApplication::translate("MainWindow", "Collapse Import Closure", nullptr));
+        templateImportClosure->setItemText(0, QCoreApplication::translate("MainWindow", "True", nullptr));
+        templateImportClosure->setItemText(1, QCoreApplication::translate("MainWindow", "False", nullptr));
+
+        templateImportClosure->setCurrentText(QCoreApplication::translate("MainWindow", "True", nullptr));
+        templateError->setText(QCoreApplication::translate("MainWindow", "Write errors to file", nullptr));
+        templateErrorPath->setText(QCoreApplication::translate("MainWindow", "Select Path", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Template), QCoreApplication::translate("MainWindow", "Template", nullptr));
     } // retranslateUi
 
 };
