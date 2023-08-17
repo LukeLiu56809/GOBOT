@@ -174,15 +174,15 @@ void Export::exportFiles()
         command += " --include \"";
         if (export_ui->exportClasses->isChecked())
         {
-            command += getClasses() + " ";
+            command += "classes ";
         }
         if (export_ui->exportIndividuals->isChecked())
         {
-            command += getIndividuals() + " ";
+            command += "individuals ";
         }
         if (export_ui->exportProperties->isChecked())
         {
-            command += getProperties();
+            command += "properties";
         }
         command += "\"";
     }
@@ -278,22 +278,6 @@ QString Export::getSplit() const
 {
     return export_ui->exportSplitName->text();
 }
-
-QString Export::getClasses() const
-{
-    return export_ui->exportClasses->text();
-}
-
-QString Export::getIndividuals() const
-{
-    return export_ui->exportIndividuals->text();
-}
-
-QString Export::getProperties() const
-{
-    return export_ui->exportProperties->text();
-}
-
 
 QString Export::getSelectedFileName() const
 {

@@ -22,9 +22,6 @@ public:
     QString getHeader() const;
     QString getSort() const;
     QString getSplit() const;
-    QString getClasses() const;
-    QString getIndividuals() const;
-    QString getProperties() const;
 
 public slots:
     void addFiles();
