@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     diffHandler = new Diff(ui, this);
     queryHandler = new Query(ui, this);
     templateHandler = new Template(ui, this);
+    exportHandler = new Export(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

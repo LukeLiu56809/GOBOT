@@ -16,6 +16,7 @@
 #include "../Functions/Diff/diff.h"
 #include "../Functions/Query/query.h"
 #include "../Functions/Template/template.h"
+#include "../Functions/Export/export.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -47,6 +48,7 @@ private:
     Diff *diffHandler;
     Query *queryHandler;
     Template *templateHandler;
+    Export *exportHandler;
 };
 
 #endif // MAINWINDOW_H

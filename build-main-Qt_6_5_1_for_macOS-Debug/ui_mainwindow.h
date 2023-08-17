@@ -433,6 +433,51 @@ public:
     QCheckBox *templateError;
     QPushButton *templateErrorPath;
     QLineEdit *templateErrorPathName;
+    QWidget *Export;
+    QWidget *layoutWidget_89;
+    QHBoxLayout *horizontalLayout_108;
+    QLabel *label_59;
+    QComboBox *exportFormat;
+    QWidget *layoutWidget_90;
+    QHBoxLayout *horizontalLayout_109;
+    QPushButton *exportSaveAs;
+    QLineEdit *exportNameSave;
+    QLabel *label_61;
+    QLineEdit *exportSavePath;
+    QListWidget *exportFileNames;
+    QWidget *layoutWidget_91;
+    QHBoxLayout *horizontalLayout_110;
+    QPushButton *exportAddFile;
+    QPushButton *exportRemoveFile;
+    QWidget *layoutWidget_92;
+    QHBoxLayout *horizontalLayout_111;
+    QPushButton *exportReset;
+    QPushButton *exportButton;
+    QWidget *layoutWidget_131;
+    QHBoxLayout *horizontalLayout_154;
+    QCheckBox *exportHeader;
+    QLineEdit *exportHeaderName;
+    QWidget *layoutWidget_132;
+    QHBoxLayout *horizontalLayout_155;
+    QCheckBox *exportSort;
+    QLineEdit *exportSortName;
+    QWidget *layoutWidget_133;
+    QHBoxLayout *horizontalLayout_156;
+    QCheckBox *exportSplit;
+    QLineEdit *exportSplitName;
+    QLabel *label_62;
+    QCheckBox *exportIndividuals;
+    QCheckBox *exportClasses;
+    QCheckBox *exportProperties;
+    QLabel *label_158;
+    QCheckBox *exportAnonymous;
+    QCheckBox *exportAny;
+    QCheckBox *exportNamed;
+    QCheckBox *exportIRI;
+    QCheckBox *exportId;
+    QLabel *label_159;
+    QCheckBox *exportName;
+    QCheckBox *exportLabel;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -457,7 +502,7 @@ public:
         tabWidget->setTabPosition(QTabWidget::North);
         tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setElideMode(Qt::ElideRight);
-        tabWidget->setUsesScrollButtons(false);
+        tabWidget->setUsesScrollButtons(true);
         tabWidget->setTabsClosable(false);
         tabWidget->setMovable(false);
         tabWidget->setTabBarAutoHide(false);
@@ -2755,6 +2800,236 @@ public:
         horizontalLayout_107->addWidget(templateErrorPathName);
 
         tabWidget->addTab(Template, QString());
+        Export = new QWidget();
+        Export->setObjectName("Export");
+        layoutWidget_89 = new QWidget(Export);
+        layoutWidget_89->setObjectName("layoutWidget_89");
+        layoutWidget_89->setGeometry(QRect(240, 50, 117, 32));
+        horizontalLayout_108 = new QHBoxLayout(layoutWidget_89);
+        horizontalLayout_108->setObjectName("horizontalLayout_108");
+        horizontalLayout_108->setContentsMargins(0, 0, 0, 0);
+        label_59 = new QLabel(layoutWidget_89);
+        label_59->setObjectName("label_59");
+        label_59->setFont(font2);
+
+        horizontalLayout_108->addWidget(label_59);
+
+        exportFormat = new QComboBox(layoutWidget_89);
+        exportFormat->addItem(QString());
+        exportFormat->addItem(QString());
+        exportFormat->addItem(QString());
+        exportFormat->addItem(QString());
+        exportFormat->addItem(QString());
+        exportFormat->addItem(QString());
+        exportFormat->setObjectName("exportFormat");
+
+        horizontalLayout_108->addWidget(exportFormat);
+
+        layoutWidget_90 = new QWidget(Export);
+        layoutWidget_90->setObjectName("layoutWidget_90");
+        layoutWidget_90->setGeometry(QRect(240, 300, 401, 33));
+        horizontalLayout_109 = new QHBoxLayout(layoutWidget_90);
+        horizontalLayout_109->setObjectName("horizontalLayout_109");
+        horizontalLayout_109->setContentsMargins(0, 0, 0, 0);
+        exportSaveAs = new QPushButton(layoutWidget_90);
+        exportSaveAs->setObjectName("exportSaveAs");
+        exportSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_109->addWidget(exportSaveAs);
+
+        exportNameSave = new QLineEdit(layoutWidget_90);
+        exportNameSave->setObjectName("exportNameSave");
+        exportNameSave->setFocusPolicy(Qt::NoFocus);
+        exportNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        exportNameSave->setDragEnabled(false);
+        exportNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_109->addWidget(exportNameSave);
+
+        label_61 = new QLabel(layoutWidget_90);
+        label_61->setObjectName("label_61");
+        label_61->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_109->addWidget(label_61);
+
+        exportSavePath = new QLineEdit(layoutWidget_90);
+        exportSavePath->setObjectName("exportSavePath");
+        exportSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_109->addWidget(exportSavePath);
+
+        exportFileNames = new QListWidget(Export);
+        exportFileNames->setObjectName("exportFileNames");
+        exportFileNames->setGeometry(QRect(10, 60, 211, 201));
+        exportFileNames->setFocusPolicy(Qt::ClickFocus);
+        exportFileNames->setFrameShape(QFrame::Box);
+        exportFileNames->setFrameShadow(QFrame::Plain);
+        layoutWidget_91 = new QWidget(Export);
+        layoutWidget_91->setObjectName("layoutWidget_91");
+        layoutWidget_91->setGeometry(QRect(10, 20, 212, 41));
+        horizontalLayout_110 = new QHBoxLayout(layoutWidget_91);
+        horizontalLayout_110->setObjectName("horizontalLayout_110");
+        horizontalLayout_110->setContentsMargins(0, 0, 0, 0);
+        exportAddFile = new QPushButton(layoutWidget_91);
+        exportAddFile->setObjectName("exportAddFile");
+        sizePolicy.setHeightForWidth(exportAddFile->sizePolicy().hasHeightForWidth());
+        exportAddFile->setSizePolicy(sizePolicy);
+        exportAddFile->setMinimumSize(QSize(100, 0));
+        exportAddFile->setMaximumSize(QSize(100, 16777215));
+        exportAddFile->setFocusPolicy(Qt::NoFocus);
+        exportAddFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        exportAddFile->setFlat(false);
+
+        horizontalLayout_110->addWidget(exportAddFile);
+
+        exportRemoveFile = new QPushButton(layoutWidget_91);
+        exportRemoveFile->setObjectName("exportRemoveFile");
+        sizePolicy.setHeightForWidth(exportRemoveFile->sizePolicy().hasHeightForWidth());
+        exportRemoveFile->setSizePolicy(sizePolicy);
+        exportRemoveFile->setMinimumSize(QSize(100, 0));
+        exportRemoveFile->setMaximumSize(QSize(100, 16777215));
+        exportRemoveFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_110->addWidget(exportRemoveFile);
+
+        layoutWidget_92 = new QWidget(Export);
+        layoutWidget_92->setObjectName("layoutWidget_92");
+        layoutWidget_92->setGeometry(QRect(240, 330, 162, 32));
+        horizontalLayout_111 = new QHBoxLayout(layoutWidget_92);
+        horizontalLayout_111->setObjectName("horizontalLayout_111");
+        horizontalLayout_111->setContentsMargins(0, 0, 0, 0);
+        exportReset = new QPushButton(layoutWidget_92);
+        exportReset->setObjectName("exportReset");
+        sizePolicy1.setHeightForWidth(exportReset->sizePolicy().hasHeightForWidth());
+        exportReset->setSizePolicy(sizePolicy1);
+        exportReset->setMaximumSize(QSize(150, 16777215));
+        exportReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_111->addWidget(exportReset);
+
+        exportButton = new QPushButton(layoutWidget_92);
+        exportButton->setObjectName("exportButton");
+        sizePolicy1.setHeightForWidth(exportButton->sizePolicy().hasHeightForWidth());
+        exportButton->setSizePolicy(sizePolicy1);
+        exportButton->setMinimumSize(QSize(0, 0));
+        exportButton->setMaximumSize(QSize(150, 16777215));
+        exportButton->setFocusPolicy(Qt::NoFocus);
+        exportButton->setAutoFillBackground(false);
+        exportButton->setAutoDefault(false);
+        exportButton->setFlat(false);
+
+        horizontalLayout_111->addWidget(exportButton);
+
+        layoutWidget_131 = new QWidget(Export);
+        layoutWidget_131->setObjectName("layoutWidget_131");
+        layoutWidget_131->setGeometry(QRect(240, 80, 311, 31));
+        horizontalLayout_154 = new QHBoxLayout(layoutWidget_131);
+        horizontalLayout_154->setObjectName("horizontalLayout_154");
+        horizontalLayout_154->setContentsMargins(0, 0, 0, 0);
+        exportHeader = new QCheckBox(layoutWidget_131);
+        exportHeader->setObjectName("exportHeader");
+        exportHeader->setFont(font2);
+        exportHeader->setChecked(false);
+
+        horizontalLayout_154->addWidget(exportHeader);
+
+        exportHeaderName = new QLineEdit(layoutWidget_131);
+        exportHeaderName->setObjectName("exportHeaderName");
+        exportHeaderName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_154->addWidget(exportHeaderName);
+
+        layoutWidget_132 = new QWidget(Export);
+        layoutWidget_132->setObjectName("layoutWidget_132");
+        layoutWidget_132->setGeometry(QRect(240, 110, 331, 31));
+        horizontalLayout_155 = new QHBoxLayout(layoutWidget_132);
+        horizontalLayout_155->setObjectName("horizontalLayout_155");
+        horizontalLayout_155->setContentsMargins(0, 0, 0, 0);
+        exportSort = new QCheckBox(layoutWidget_132);
+        exportSort->setObjectName("exportSort");
+        exportSort->setFont(font2);
+        exportSort->setChecked(false);
+
+        horizontalLayout_155->addWidget(exportSort);
+
+        exportSortName = new QLineEdit(layoutWidget_132);
+        exportSortName->setObjectName("exportSortName");
+        exportSortName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_155->addWidget(exportSortName);
+
+        layoutWidget_133 = new QWidget(Export);
+        layoutWidget_133->setObjectName("layoutWidget_133");
+        layoutWidget_133->setGeometry(QRect(240, 140, 81, 31));
+        horizontalLayout_156 = new QHBoxLayout(layoutWidget_133);
+        horizontalLayout_156->setObjectName("horizontalLayout_156");
+        horizontalLayout_156->setContentsMargins(0, 0, 0, 0);
+        exportSplit = new QCheckBox(layoutWidget_133);
+        exportSplit->setObjectName("exportSplit");
+        exportSplit->setFont(font2);
+        exportSplit->setChecked(false);
+
+        horizontalLayout_156->addWidget(exportSplit);
+
+        exportSplitName = new QLineEdit(layoutWidget_133);
+        exportSplitName->setObjectName("exportSplitName");
+        exportSplitName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_156->addWidget(exportSplitName);
+
+        label_62 = new QLabel(Export);
+        label_62->setObjectName("label_62");
+        label_62->setGeometry(QRect(240, 180, 81, 26));
+        label_62->setFont(font2);
+        exportIndividuals = new QCheckBox(Export);
+        exportIndividuals->setObjectName("exportIndividuals");
+        exportIndividuals->setGeometry(QRect(260, 220, 81, 31));
+        exportIndividuals->setFont(font1);
+        exportClasses = new QCheckBox(Export);
+        exportClasses->setObjectName("exportClasses");
+        exportClasses->setGeometry(QRect(260, 200, 61, 31));
+        exportClasses->setFont(font1);
+        exportProperties = new QCheckBox(Export);
+        exportProperties->setObjectName("exportProperties");
+        exportProperties->setGeometry(QRect(260, 240, 81, 31));
+        exportProperties->setFont(font1);
+        label_158 = new QLabel(Export);
+        label_158->setObjectName("label_158");
+        label_158->setGeometry(QRect(370, 180, 81, 26));
+        label_158->setFont(font2);
+        exportAnonymous = new QCheckBox(Export);
+        exportAnonymous->setObjectName("exportAnonymous");
+        exportAnonymous->setGeometry(QRect(390, 240, 91, 31));
+        exportAnonymous->setFont(font1);
+        exportAny = new QCheckBox(Export);
+        exportAny->setObjectName("exportAny");
+        exportAny->setGeometry(QRect(390, 200, 51, 31));
+        exportAny->setFont(font1);
+        exportNamed = new QCheckBox(Export);
+        exportNamed->setObjectName("exportNamed");
+        exportNamed->setGeometry(QRect(390, 220, 61, 31));
+        exportNamed->setFont(font1);
+        exportIRI = new QCheckBox(Export);
+        exportIRI->setObjectName("exportIRI");
+        exportIRI->setGeometry(QRect(510, 240, 41, 31));
+        exportIRI->setFont(font1);
+        exportId = new QCheckBox(Export);
+        exportId->setObjectName("exportId");
+        exportId->setGeometry(QRect(510, 220, 41, 31));
+        exportId->setFont(font1);
+        label_159 = new QLabel(Export);
+        label_159->setObjectName("label_159");
+        label_159->setGeometry(QRect(490, 180, 81, 26));
+        label_159->setFont(font2);
+        exportName = new QCheckBox(Export);
+        exportName->setObjectName("exportName");
+        exportName->setGeometry(QRect(510, 200, 61, 31));
+        exportName->setFont(font1);
+        exportLabel = new QCheckBox(Export);
+        exportLabel->setObjectName("exportLabel");
+        exportLabel->setGeometry(QRect(510, 260, 61, 31));
+        exportLabel->setFont(font1);
+        tabWidget->addTab(Export, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -2762,7 +3037,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(13);
+        tabWidget->setCurrentIndex(14);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -2794,6 +3069,8 @@ public:
         templateAddMoreFiles->setDefault(false);
         templateAddFirstFile->setDefault(false);
         templateButton->setDefault(true);
+        exportAddFile->setDefault(false);
+        exportButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2952,7 +3229,7 @@ public:
         measureNameSave->setPlaceholderText(QString());
         label_39->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
         measureReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        measureButton->setText(QCoreApplication::translate("MainWindow", "Measure file", nullptr));
+        measureButton->setText(QCoreApplication::translate("MainWindow", "Measure File", nullptr));
         label_40->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
         measureFormat->setItemText(0, QCoreApplication::translate("MainWindow", "tsv", nullptr));
         measureFormat->setItemText(1, QCoreApplication::translate("MainWindow", "csv", nullptr));
@@ -3024,7 +3301,7 @@ public:
         templateAddFirstFile->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
         templateRemoveFirstFile->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
         templateReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        templateButton->setText(QCoreApplication::translate("MainWindow", "Unmerge File", nullptr));
+        templateButton->setText(QCoreApplication::translate("MainWindow", "Template", nullptr));
         label_56->setText(QCoreApplication::translate("MainWindow", "Input Ontology", nullptr));
         label_55->setText(QCoreApplication::translate("MainWindow", "Templates", nullptr));
         templatePrefix->setText(QCoreApplication::translate("MainWindow", "Prefix", nullptr));
@@ -3045,6 +3322,39 @@ public:
         templateError->setText(QCoreApplication::translate("MainWindow", "Write errors to file", nullptr));
         templateErrorPath->setText(QCoreApplication::translate("MainWindow", "Select Path", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Template), QCoreApplication::translate("MainWindow", "Template", nullptr));
+        label_59->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
+        exportFormat->setItemText(0, QCoreApplication::translate("MainWindow", "tsv", nullptr));
+        exportFormat->setItemText(1, QCoreApplication::translate("MainWindow", "csv", nullptr));
+        exportFormat->setItemText(2, QCoreApplication::translate("MainWindow", "html", nullptr));
+        exportFormat->setItemText(3, QCoreApplication::translate("MainWindow", "html-list", nullptr));
+        exportFormat->setItemText(4, QCoreApplication::translate("MainWindow", "json", nullptr));
+        exportFormat->setItemText(5, QCoreApplication::translate("MainWindow", "xlsx", nullptr));
+
+        exportSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        exportNameSave->setText(QString());
+        exportNameSave->setPlaceholderText(QString());
+        label_61->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        exportAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        exportRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        exportReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        exportButton->setText(QCoreApplication::translate("MainWindow", "Export File", nullptr));
+        exportHeader->setText(QCoreApplication::translate("MainWindow", "Header", nullptr));
+        exportSort->setText(QCoreApplication::translate("MainWindow", "Sort Header", nullptr));
+        exportSplit->setText(QCoreApplication::translate("MainWindow", "Split", nullptr));
+        label_62->setText(QCoreApplication::translate("MainWindow", "Include Entities", nullptr));
+        exportIndividuals->setText(QCoreApplication::translate("MainWindow", "individuals", nullptr));
+        exportClasses->setText(QCoreApplication::translate("MainWindow", "classes", nullptr));
+        exportProperties->setText(QCoreApplication::translate("MainWindow", "properties", nullptr));
+        label_158->setText(QCoreApplication::translate("MainWindow", "Select Entities", nullptr));
+        exportAnonymous->setText(QCoreApplication::translate("MainWindow", "ANONYMOUS", nullptr));
+        exportAny->setText(QCoreApplication::translate("MainWindow", "ANY", nullptr));
+        exportNamed->setText(QCoreApplication::translate("MainWindow", "NAMED", nullptr));
+        exportIRI->setText(QCoreApplication::translate("MainWindow", "IRI", nullptr));
+        exportId->setText(QCoreApplication::translate("MainWindow", "ID", nullptr));
+        label_159->setText(QCoreApplication::translate("MainWindow", "Format Entities", nullptr));
+        exportName->setText(QCoreApplication::translate("MainWindow", "NAME", nullptr));
+        exportLabel->setText(QCoreApplication::translate("MainWindow", "LABEL", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Export), QCoreApplication::translate("MainWindow", "Export", nullptr));
     } // retranslateUi
 
 };
