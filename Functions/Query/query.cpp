@@ -83,18 +83,22 @@ void Query::onQueryButtonClicked()
 
 void Query::addFiles(QMap<QString, QString>& filesMap, QListWidget* file)
 {
-    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
+    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
         // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
 
-        // Add the file name and its corresponding file path to the QMap
-        filesMap[fileName] = fileInfo.path();
+        // Clear the existing content in firstFile
+        file->clear();
+        filesMap.clear();
 
-        // Set the file name in the corresponding QLineEdit widget
+        // Append the file name to the list view box
         file->addItem(fileName);
+
+        // Add the file name and its corresponding parent directory path to the QMap
+        filesMap[fileName] = fileInfo.path();
     }
 }
 

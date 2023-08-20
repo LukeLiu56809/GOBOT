@@ -17,6 +17,7 @@
 #include "../Functions/Query/query.h"
 #include "../Functions/Template/template.h"
 #include "../Functions/Export/export.h"
+#include "../Functions/Extract/extract.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -49,6 +50,7 @@ private:
     Query *queryHandler;
     Template *templateHandler;
     Export *exportHandler;
+    Extract *extractHandler;
 };
 
 #endif // MAINWINDOW_H

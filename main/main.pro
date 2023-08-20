@@ -14,6 +14,7 @@ SOURCES += \
     ../Functions/Diff/diff.cpp \
     ../Functions/Expand/expand.cpp \
     ../Functions/Export/export.cpp \
+    ../Functions/Extract/extract.cpp \
     ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     ../Functions/Diff/diff.h \
     ../Functions/Expand/expand.h \
     ../Functions/Export/export.h \
+    ../Functions/Extract/extract.h \
     ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
