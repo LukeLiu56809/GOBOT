@@ -147,7 +147,7 @@ void Export::exportFiles()
     }
     if (getSelectedFileName().isEmpty())
     {
-        QMessageBox::warning(nullptr, "Error", "Select a file to Export.");
+        QMessageBox::warning(nullptr, "Error", "Select a file to export.");
         return;
     }
     if (getSavePath().isEmpty())
@@ -168,23 +168,18 @@ void Export::exportFiles()
     {
         command += " --split \"" + getSplit() + " \"";
     }
-    if (export_ui->exportClasses->isChecked() || export_ui->exportIndividuals->isChecked() ||
-        export_ui->exportProperties->isChecked())
-    {
-        command += " --include \"";
-        if (export_ui->exportClasses->isChecked())
-        {
-            command += "classes ";
-        }
-        if (export_ui->exportIndividuals->isChecked())
-        {
-            command += "individuals ";
-        }
-        if (export_ui->exportProperties->isChecked())
-        {
-            command += "properties";
-        }
-        command += "\"";
+    QStringList exportOptions;
+    if (export_ui->exportClasses->isChecked()) {
+        exportOptions << "classes";
+    }
+    if (export_ui->exportIndividuals->isChecked()) {
+        exportOptions << "individuals";
+    }
+    if (export_ui->exportProperties->isChecked()) {
+        exportOptions << "properties";
+    }
+    if (!exportOptions.isEmpty()) {
+        command += " --include \"" + exportOptions.join(" ") + "\"";
     }
     if (export_ui->exportAny->isChecked())
     {

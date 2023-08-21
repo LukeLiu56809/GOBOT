@@ -19,6 +19,7 @@ SOURCES += \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
     ../Functions/Query/query.cpp \
+    ../Functions/Reason/reason.cpp \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
     ../Functions/Repair/repair.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
     ../Functions/Query/query.h \
+    ../Functions/Reason/reason.h \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
     ../Functions/Repair/repair.h \

@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     templateHandler = new Template(ui, this);
     exportHandler = new Export(ui, this);
     extractHandler = new Extract(ui, this);
+    reasonHandler = new Reason(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);
