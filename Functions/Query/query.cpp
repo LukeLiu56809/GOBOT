@@ -23,6 +23,8 @@ Query::Query(Ui::MainWindow *ui, QObject *parent)
     connect(query_ui->queryRemoveUpdate, &QPushButton::clicked, this, &Query::onQueryRemoveUpdateClicked);
 
     connect(query_ui->queryCatalogSave, &QCheckBox::clicked, this, &Query::onQueryCatalogSaveClicked);
+    connect(query_ui->queryTDBDirectory, &QCheckBox::clicked, this, &Query::onQueryTDBDirectoryClicked);
+    connect(query_ui->queryCreateTDB, &QCheckBox::clicked, this, &Query::onQueryCreateTDBClicked);
     connect(query_ui->queryCatalog, &QCheckBox::stateChanged, this, &Query::onCatalogClicked);
 
     queryCatalogSave = query_ui->queryCatalogSave;
@@ -49,6 +51,16 @@ void Query::onQueryAddUpdateClicked()
 void Query::onQueryCatalogSaveClicked()
 {
     addCatalog();
+}
+
+void Query::onQueryTDBDirectoryClicked()
+{
+    queryDirectory(query_ui->queryTDBDirectoryName);
+}
+
+void Query::onQueryCreateTDBClicked()
+{
+    createTDBDirectory();
 }
 
 void Query::onQueryRemoveOntologyClicked()
@@ -113,6 +125,44 @@ void Query::addCatalog()
         QString directory = fileInfo.path();
         catalogPath = directory;
     }
+}
+
+void Query::queryDirectory(QLineEdit* line)
+{
+    QString directory = QFileDialog::getExistingDirectory(nullptr, "Choose Directory", QDir::homePath());
+
+    if (!directory.isEmpty()) {
+        line->setText(directory);
+    }
+}
+
+void Query::createTDBDirectory()
+{
+    if (ontology_filesMap.isEmpty())
+    {
+        QMessageBox::warning(nullptr, "Error", "You need at least one file to create a TDB directory.");
+        return;
+    }
+
+    QString command = "robot query";
+    for (QString& fileName : ontology_filesMap.keys())
+    {
+        command += " -i " + ontology_filesMap[fileName] + "/" + fileName;
+    }
+    command += " --create-tdb true";
+
+    // System call
+    int check = system(command.toUtf8());
+    if (check != 0)
+    {
+        QMessageBox::warning(nullptr, "Error", "Not able to execute command.");
+    }
+    else
+    {
+        QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
+    }
+
+    qDebug() << "String: " << command;
 }
 
 void Query::addUpdates()
@@ -183,8 +233,7 @@ void Query::resetQuery()
     query_ui->queryUpdateName->clear();
     query_ui->queryNameSave->clear();
     query_ui->querySavePath->clear();
-    query_ui->queryTBDDirectoryName->clear();
-    query_ui->querySelectTDBName->clear();
+    query_ui->queryTDBDirectoryName->clear();
 
     query_ui->queryUseGraphs->setChecked(false);
     query_ui->queryCatalog->setChecked(false);
@@ -222,7 +271,6 @@ void Query::queryFiles()
     {
         command += " --tdb-directory " + getQueryTDBDirectoryName();
     }
-    command += " \\\n";
     if (query_ui->queryUseGraphs->isChecked())
     {
         command += " --use-graphs true";
@@ -233,15 +281,15 @@ void Query::queryFiles()
     }
     for (QString& fileName : query_filesMap.keys())
     {
-        command += " --query " + query_filesMap[fileName] + "/" + fileName + " \\\n";
+        command += " --queries " + query_filesMap[fileName] + "/" + fileName;
     }
     for (QString& fileName : updates_filesMap.keys())
     {
-        command += " --update " + updates_filesMap[fileName] + "/" + fileName + " \n";
+        command += " --update " + updates_filesMap[fileName] + "/" + fileName;
     }
     if (query_ui->queryTemporaryFile->isChecked())
     {
-        command += " --temporary-file true \n";
+        command += " --temporary-file true";
     }
     command += " -o " + result;
 
@@ -274,12 +322,7 @@ QString Query::getCatalog() const
 
 QString Query::getQueryTDBDirectoryName() const
 {
-    return query_ui->queryTBDDirectoryName->text();
-}
-
-QString Query::getQuerySelectTDBName() const
-{
-    return query_ui->querySelectTDBName->text();
+    return query_ui->queryTDBDirectoryName->text();
 }
 
 QString Query::getSavePath() const

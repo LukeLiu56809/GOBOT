@@ -38,5 +38,4 @@ private:
     Ui::MainWindow *mirror_ui;
 };
 
-
 #endif // MIRROR_H

@@ -31,6 +31,8 @@ public slots:
     void addFiles(QMap<QString, QString>& filesMap, QListWidget* file);
     void addUpdates();
     void addCatalog();
+    void queryDirectory(QLineEdit* line);
+    void createTDBDirectory();
     void removeFiles(QMap<QString, QString>& filesMap, QListWidget* file);
     void saveFiles();
     void resetQuery();
@@ -45,6 +47,8 @@ private slots:
     void onQueryRemoveQueryClicked();
     void onQueryRemoveUpdateClicked();
 
+    void onQueryTDBDirectoryClicked();
+    void onQueryCreateTDBClicked();
     void onQueryCatalogSaveClicked();
     void onCatalogClicked(bool checked);
 

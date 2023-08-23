@@ -15,6 +15,7 @@ SOURCES += \
     ../Functions/Expand/expand.cpp \
     ../Functions/Export/export.cpp \
     ../Functions/Extract/extract.cpp \
+    ../Functions/Filter/filter.cpp \
     ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
@@ -22,10 +23,12 @@ SOURCES += \
     ../Functions/Reason/reason.cpp \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
+    ../Functions/Remove/remove.cpp \
     ../Functions/Repair/repair.cpp \
     ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
+    ../Startup/startup.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -36,6 +39,7 @@ HEADERS += \
     ../Functions/Expand/expand.h \
     ../Functions/Export/export.h \
     ../Functions/Extract/extract.h \
+    ../Functions/Filter/filter.h \
     ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
@@ -43,10 +47,12 @@ HEADERS += \
     ../Functions/Reason/reason.h \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
+    ../Functions/Remove/remove.h \
     ../Functions/Repair/repair.h \
     ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
+    ../Startup/startup.h \
     mainwindow.h
 
 FORMS += \

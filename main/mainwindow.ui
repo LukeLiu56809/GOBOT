@@ -4322,7 +4322,7 @@
         <property name="geometry">
          <rect>
           <x>270</x>
-          <y>480</y>
+          <y>430</y>
           <width>171</width>
           <height>32</height>
          </rect>
@@ -4413,7 +4413,7 @@
         <property name="geometry">
          <rect>
           <x>270</x>
-          <y>450</y>
+          <y>400</y>
           <width>401</width>
           <height>33</height>
          </rect>
@@ -4474,7 +4474,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>120</y>
+          <y>110</y>
           <width>212</width>
           <height>32</height>
          </rect>
@@ -4551,7 +4551,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>150</y>
+          <y>140</y>
           <width>211</width>
           <height>51</height>
          </rect>
@@ -4588,7 +4588,7 @@
          <rect>
           <x>280</x>
           <y>50</y>
-          <width>328</width>
+          <width>351</width>
           <height>33</height>
          </rect>
         </property>
@@ -4631,7 +4631,7 @@
           <x>230</x>
           <y>20</y>
           <width>20</width>
-          <height>401</height>
+          <height>351</height>
          </rect>
         </property>
         <property name="orientation">
@@ -4642,7 +4642,7 @@
         <property name="geometry">
          <rect>
           <x>260</x>
-          <y>100</y>
+          <y>90</y>
           <width>91</width>
           <height>21</height>
          </rect>
@@ -4662,7 +4662,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>210</y>
+          <y>200</y>
           <width>251</width>
           <height>18</height>
          </rect>
@@ -4693,7 +4693,7 @@
         <property name="geometry">
          <rect>
           <x>260</x>
-          <y>240</y>
+          <y>230</y>
           <width>91</width>
           <height>21</height>
          </rect>
@@ -4713,7 +4713,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>300</y>
+          <y>290</y>
           <width>391</width>
           <height>33</height>
          </rect>
@@ -4727,7 +4727,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="queryTBDDirectoryName">
+          <widget class="QLineEdit" name="queryTDBDirectoryName">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -4739,7 +4739,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>260</y>
+          <y>250</y>
           <width>141</width>
           <height>21</height>
          </rect>
@@ -4770,7 +4770,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>280</y>
+          <y>270</y>
           <width>141</width>
           <height>21</height>
          </rect>
@@ -4801,7 +4801,7 @@
         <property name="geometry">
          <rect>
           <x>260</x>
-          <y>340</y>
+          <y>330</y>
           <width>111</width>
           <height>21</height>
          </rect>
@@ -4817,43 +4817,17 @@
          <string>Create TDB Directory</string>
         </property>
        </widget>
-       <widget class="QWidget" name="layoutWidget_83">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>360</y>
-          <width>391</width>
-          <height>33</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_99">
-         <item>
-          <widget class="QPushButton" name="querySelectTDB">
-           <property name="text">
-            <string>Select Directory</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="querySelectTDBName">
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
        <widget class="QPushButton" name="queryCreateTDB">
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>390</y>
+          <y>350</y>
           <width>110</width>
           <height>32</height>
          </rect>
         </property>
         <property name="text">
-         <string>Execute</string>
+         <string>Create Directory</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="queryUseGraphs">
@@ -7540,13 +7514,13 @@
        <attribute name="title">
         <string>Remove</string>
        </attribute>
-       <widget class="QListWidget" name="extractTermFileName_2">
+       <widget class="QListWidget" name="removeGeneralFileName">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>150</y>
           <width>211</width>
-          <height>21</height>
+          <height>61</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -7567,7 +7541,7 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_307">
          <item>
-          <widget class="QPushButton" name="extractAddOntology_2">
+          <widget class="QPushButton" name="removeAddOntology">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7604,7 +7578,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="extractRemoveOntology_2">
+          <widget class="QPushButton" name="removeRemoveOntology">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7646,7 +7620,7 @@
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QListWidget" name="extractOntologyName_2">
+       <widget class="QListWidget" name="removeOntologyName">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -7686,14 +7660,14 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>180</y>
+          <y>220</y>
           <width>212</width>
           <height>32</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_311">
          <item>
-          <widget class="QPushButton" name="extractAddTerm_2">
+          <widget class="QPushButton" name="removeGeneralAddTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7730,7 +7704,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="extractRemoveTerm_2">
+          <widget class="QPushButton" name="removeGeneralRemoveTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7759,11 +7733,11 @@
          </item>
         </layout>
        </widget>
-       <widget class="QListWidget" name="extractTermName_2">
+       <widget class="QListWidget" name="removeGeneralTermName">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>210</y>
+          <y>250</y>
           <width>211</width>
           <height>61</height>
          </rect>
@@ -7775,13 +7749,13 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QListWidget" name="extractTermFileName_3">
+       <widget class="QListWidget" name="removeExcludeFileName">
         <property name="geometry">
          <rect>
           <x>240</x>
           <y>150</y>
           <width>211</width>
-          <height>21</height>
+          <height>61</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -7791,11 +7765,11 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QListWidget" name="extractTermName_3">
+       <widget class="QListWidget" name="removeExcludeTermName">
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>210</y>
+          <y>250</y>
           <width>211</width>
           <height>61</height>
          </rect>
@@ -7811,14 +7785,14 @@
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>180</y>
+          <y>220</y>
           <width>212</width>
           <height>32</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_312">
          <item>
-          <widget class="QPushButton" name="extractAddTerm_3">
+          <widget class="QPushButton" name="removeExcludeAddTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7855,7 +7829,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="extractRemoveTerm_3">
+          <widget class="QPushButton" name="removeExcludeRemoveTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7890,7 +7864,7 @@
           <x>220</x>
           <y>100</y>
           <width>20</width>
-          <height>171</height>
+          <height>211</height>
          </rect>
         </property>
         <property name="frameShadow">
@@ -7904,14 +7878,14 @@
         <property name="geometry">
          <rect>
           <x>470</x>
-          <y>180</y>
+          <y>220</y>
           <width>212</width>
           <height>32</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_315">
          <item>
-          <widget class="QPushButton" name="extractAddTerm_4">
+          <widget class="QPushButton" name="removeIncludeAddTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7948,7 +7922,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="extractRemoveTerm_4">
+          <widget class="QPushButton" name="removeIncludeRemoveTerm">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -7977,11 +7951,11 @@
          </item>
         </layout>
        </widget>
-       <widget class="QListWidget" name="extractTermName_4">
+       <widget class="QListWidget" name="removeIncludeTermName">
         <property name="geometry">
          <rect>
           <x>470</x>
-          <y>210</y>
+          <y>250</y>
           <width>211</width>
           <height>61</height>
          </rect>
@@ -7999,7 +7973,7 @@
           <x>450</x>
           <y>100</y>
           <width>20</width>
-          <height>171</height>
+          <height>211</height>
          </rect>
         </property>
         <property name="frameShadow">
@@ -8009,13 +7983,13 @@
          <enum>Qt::Vertical</enum>
         </property>
        </widget>
-       <widget class="QListWidget" name="extractTermFileName_4">
+       <widget class="QListWidget" name="removeIncludeFileName">
         <property name="geometry">
          <rect>
           <x>470</x>
           <y>150</y>
           <width>211</width>
-          <height>21</height>
+          <height>61</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -8038,192 +8012,147 @@
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QCheckBox" name="exportProperties_2">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>340</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>object-properties</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportClasses_2">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>300</y>
-          <width>61</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>classes</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_63">
+       <widget class="QWidget" name="layoutWidget_307">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>280</y>
-          <width>81</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Selectors</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportIndividuals_2">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>320</y>
-          <width>81</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>properties</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportIndividuals_3">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>380</y>
-          <width>131</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>annotation-properties</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportProperties_3">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>400</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>individuals</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportClasses_3">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>360</y>
-          <width>101</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>data-properties</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportIndividuals_4">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>420</y>
-          <width>131</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>named</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="exportProperties_4">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
           <y>440</y>
-          <width>111</width>
-          <height>31</height>
+          <width>162</width>
+          <height>32</height>
          </rect>
         </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
+        <layout class="QHBoxLayout" name="horizontalLayout_338">
+         <item>
+          <widget class="QPushButton" name="removeReset">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Remove</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_308">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>401</width>
+          <height>33</height>
+         </rect>
         </property>
-        <property name="text">
-         <string>anonymous</string>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_339">
+         <item>
+          <widget class="QPushButton" name="removeSaveAs">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Save As</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="removeNameSave">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_193">
+           <property name="text">
+            <string>To:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="removeSavePath">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>100</y>
-          <width>214</width>
+          <width>211</width>
           <height>54</height>
          </rect>
         </property>
@@ -8245,7 +8174,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_308">
            <item>
-            <widget class="QPushButton" name="extractAddTermFile_2">
+            <widget class="QPushButton" name="removeGeneralAddTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -8282,7 +8211,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="extractRemoveTermFile_2">
+            <widget class="QPushButton" name="removeGeneralRemoveTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -8318,7 +8247,7 @@
          <rect>
           <x>240</x>
           <y>100</y>
-          <width>214</width>
+          <width>211</width>
           <height>54</height>
          </rect>
         </property>
@@ -8340,7 +8269,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_313">
            <item>
-            <widget class="QPushButton" name="extractAddTermFile_3">
+            <widget class="QPushButton" name="removeExcludeAddTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -8377,7 +8306,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="extractRemoveTermFile_3">
+            <widget class="QPushButton" name="removeExcludeRemoveTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -8413,7 +8342,7 @@
          <rect>
           <x>470</x>
           <y>100</y>
-          <width>214</width>
+          <width>211</width>
           <height>54</height>
          </rect>
         </property>
@@ -8435,7 +8364,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_314">
            <item>
-            <widget class="QPushButton" name="extractAddTermFile_4">
+            <widget class="QPushButton" name="removeIncludeAddTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -8472,7 +8401,1138 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="extractRemoveTermFile_4">
+            <widget class="QPushButton" name="removeIncludeRemoveTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Remove Term File</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>134</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_99">
+         <item>
+          <widget class="QLabel" name="label_63">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Signature</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="removeSignature">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>False</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>360</y>
+          <width>111</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_161">
+         <item>
+          <widget class="QLabel" name="label_88">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Trim</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="removeTrim">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>True</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="filter">
+       <attribute name="title">
+        <string>Filter</string>
+       </attribute>
+       <widget class="QListWidget" name="filterGeneralFileName">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_232">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>54</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_216">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>General</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_364">
+           <item>
+            <widget class="QPushButton" name="filterGeneralAddTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="text">
+              <string>Add Term File</string>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="filterGeneralRemoveTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Remove Term File</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_217">
+        <property name="geometry">
+         <rect>
+          <x>73</x>
+          <y>10</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Galvji</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Import Ontology</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_49">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>671</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_328">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>220</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_365">
+         <item>
+          <widget class="QPushButton" name="filterExcludeAddTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Terms</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterExcludeRemoveTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Terms</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QListWidget" name="filterExcludeTermName">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>250</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_329">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>220</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_366">
+         <item>
+          <widget class="QPushButton" name="filterIncludeAddTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Terms</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterIncludeRemoveTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Terms</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QListWidget" name="filterGeneralTermName">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>250</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="filterOntologyName">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>211</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="filterIncludeFileName">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>150</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_233">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>100</y>
+          <width>211</width>
+          <height>54</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_17">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_218">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Exclude</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_367">
+           <item>
+            <widget class="QPushButton" name="filterExcludeAddTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="text">
+              <string>Add Term File</string>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="filterExcludeRemoveTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Remove Term File</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QListWidget" name="filterIncludeTermName">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>250</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_50">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>100</y>
+          <width>20</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_51">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>100</y>
+          <width>20</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="filterExcludeFileName">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>150</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_330">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>220</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_368">
+         <item>
+          <widget class="QPushButton" name="filterGeneralAddTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Terms</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterGeneralRemoveTerm">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Terms</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_331">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_369">
+         <item>
+          <widget class="QPushButton" name="filterAddOntology">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterRemoveOntology">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="Line" name="line_52">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>209</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_234">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>360</y>
+          <width>111</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_244">
+         <item>
+          <widget class="QLabel" name="label_134">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Trim</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="filterTrim">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>True</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_235">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>134</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_245">
+         <item>
+          <widget class="QLabel" name="label_135">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Signature</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="filterSignature">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>False</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_332">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>401</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_370">
+         <item>
+          <widget class="QPushButton" name="filterSaveAs">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Save As</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="filterNameSave">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_219">
+           <property name="text">
+            <string>To:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="filterSavePath">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_333">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>440</y>
+          <width>162</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_371">
+         <item>
+          <widget class="QPushButton" name="filterReset">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Filter</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_418">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>100</y>
+          <width>211</width>
+          <height>54</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_25">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_271">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Include</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_439">
+           <item>
+            <widget class="QPushButton" name="filterIncludeAddTermFile">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="text">
+              <string>Add Term File</string>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="filterIncludeRemoveTermFile">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
                <horstretch>0</horstretch>

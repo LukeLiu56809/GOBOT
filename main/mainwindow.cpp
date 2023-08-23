@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     exportHandler = new Export(ui, this);
     extractHandler = new Extract(ui, this);
     reasonHandler = new Reason(ui, this);
+    removeHandler = new Remove(ui, this);
+    filterHandler = new Filter(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

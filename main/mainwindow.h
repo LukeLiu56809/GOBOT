@@ -19,6 +19,9 @@
 #include "../Functions/Export/export.h"
 #include "../Functions/Extract/extract.h"
 #include "../Functions/Reason/reason.h"
+#include "../Functions/Extract/extract.h"
+#include "../Functions/Remove/remove.h"
+#include "../Functions/Filter/filter.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -53,6 +56,8 @@ private:
     Export *exportHandler;
     Extract *extractHandler;
     Reason *reasonHandler;
+    Remove *removeHandler;
+    Filter *filterHandler;
 };
 
 #endif // MAINWINDOW_H
