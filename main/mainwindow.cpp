@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "../Startup/startup.h"
 #include <QProcessEnvironment>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -7,6 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    Startup startup;
+    startup.runStartupTasks();
+
     mergeHandler = new Merge(ui, this);
     collapseHandler = new Collapse(ui, this);
     mirrorHandler = new Mirror(ui, this);

@@ -1386,7 +1386,19 @@ validate.o: ../Functions/Validate/validate.cpp ../Functions/Validate/validate.h 
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validate.o ../Functions/Validate/validate.cpp
 
-startup.o: ../Startup/startup.cpp ../Startup/startup.h
+startup.o: ../Startup/startup.cpp ../Startup/startup.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QCoreApplication \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QStandardPaths \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstandardpaths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o startup.o ../Startup/startup.cpp
 
 main.o: ../main/main.cpp ../main/mainwindow.h \
@@ -1428,7 +1440,9 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../Functions/Remove/remove.h \
 		../Functions/Filter/filter.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
-		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDir \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main/main.cpp
 
 mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
@@ -1470,6 +1484,13 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../Functions/Remove/remove.h \
 		../Functions/Filter/filter.h \
 		ui_mainwindow.h \
+		../Startup/startup.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcessEnvironment \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../main/mainwindow.cpp
