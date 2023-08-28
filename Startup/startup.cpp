@@ -35,7 +35,6 @@ void Startup::createConfigFile(const QString& directory)
         QTextStream out(&configFile);
         out << "ROBOT Directory: " << directory;
         configFile.close();
-        qDebug() << "Config File Created at Path:" << configFilePath;
     }
 }
 

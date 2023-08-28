@@ -16,6 +16,7 @@ SOURCES += \
     ../Functions/Export/export.cpp \
     ../Functions/Extract/extract.cpp \
     ../Functions/Filter/filter.cpp \
+    ../Functions/Materialize/materialize.cpp \
     ../Functions/Measure/measure.cpp \
     ../Functions/Merge/merge.cpp \
     ../Functions/Mirror/mirror.cpp \
@@ -28,6 +29,7 @@ SOURCES += \
     ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
+    ../RobotDownload/robotdownload.cpp \
     ../Startup/startup.cpp \
     main.cpp \
     mainwindow.cpp
@@ -40,6 +42,7 @@ HEADERS += \
     ../Functions/Export/export.h \
     ../Functions/Extract/extract.h \
     ../Functions/Filter/filter.h \
+    ../Functions/Materialize/materialize.h \
     ../Functions/Measure/measure.h \
     ../Functions/Merge/merge.h \
     ../Functions/Mirror/mirror.h \
@@ -52,6 +55,7 @@ HEADERS += \
     ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
+    ../RobotDownload/robotdownload.h \
     ../Startup/startup.h \
     mainwindow.h
 

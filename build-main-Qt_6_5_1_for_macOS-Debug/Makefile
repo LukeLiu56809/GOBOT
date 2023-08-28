@@ -59,6 +59,7 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Export/export.cpp \
 		../Functions/Extract/extract.cpp \
 		../Functions/Filter/filter.cpp \
+		../Functions/Materialize/materialize.cpp \
 		../Functions/Measure/measure.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
@@ -71,6 +72,7 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
+		../RobotDownload/robotdownload.cpp \
 		../Startup/startup.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp moc_collapse.cpp \
@@ -80,6 +82,7 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		moc_export.cpp \
 		moc_extract.cpp \
 		moc_filter.cpp \
+		moc_materialize.cpp \
 		moc_measure.cpp \
 		moc_merge.cpp \
 		moc_mirror.cpp \
@@ -100,6 +103,7 @@ OBJECTS       = collapse.o \
 		export.o \
 		extract.o \
 		filter.o \
+		materialize.o \
 		measure.o \
 		merge.o \
 		mirror.o \
@@ -112,6 +116,7 @@ OBJECTS       = collapse.o \
 		template.o \
 		unmerge.o \
 		validate.o \
+		robotdownload.o \
 		startup.o \
 		main.o \
 		mainwindow.o \
@@ -122,6 +127,7 @@ OBJECTS       = collapse.o \
 		moc_export.o \
 		moc_extract.o \
 		moc_filter.o \
+		moc_materialize.o \
 		moc_measure.o \
 		moc_merge.o \
 		moc_mirror.o \
@@ -298,6 +304,7 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Export/export.h \
 		../Functions/Extract/extract.h \
 		../Functions/Filter/filter.h \
+		../Functions/Materialize/materialize.h \
 		../Functions/Measure/measure.h \
 		../Functions/Merge/merge.h \
 		../Functions/Mirror/mirror.h \
@@ -310,6 +317,7 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Template/template.h \
 		../Functions/Unmerge/unmerge.h \
 		../Functions/Validate/validate.h \
+		../RobotDownload/robotdownload.h \
 		../Startup/startup.h \
 		../main/mainwindow.h ../Functions/Collapse/collapse.cpp \
 		../Functions/Convert/convert.cpp \
@@ -318,6 +326,7 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Export/export.cpp \
 		../Functions/Extract/extract.cpp \
 		../Functions/Filter/filter.cpp \
+		../Functions/Materialize/materialize.cpp \
 		../Functions/Measure/measure.cpp \
 		../Functions/Merge/merge.cpp \
 		../Functions/Mirror/mirror.cpp \
@@ -330,6 +339,7 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
+		../RobotDownload/robotdownload.cpp \
 		../Startup/startup.cpp \
 		../main/main.cpp \
 		../main/mainwindow.cpp
@@ -702,8 +712,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Export/export.h ../Functions/Extract/extract.h ../Functions/Filter/filter.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Query/query.h ../Functions/Reason/reason.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Remove/remove.h ../Functions/Repair/repair.h ../Functions/Template/template.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../Startup/startup.h ../main/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Export/export.cpp ../Functions/Extract/extract.cpp ../Functions/Filter/filter.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Query/query.cpp ../Functions/Reason/reason.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Remove/remove.cpp ../Functions/Repair/repair.cpp ../Functions/Template/template.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../Startup/startup.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Export/export.h ../Functions/Extract/extract.h ../Functions/Filter/filter.h ../Functions/Materialize/materialize.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Query/query.h ../Functions/Reason/reason.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Remove/remove.h ../Functions/Repair/repair.h ../Functions/Template/template.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../RobotDownload/robotdownload.h ../Startup/startup.h ../main/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Export/export.cpp ../Functions/Extract/extract.cpp ../Functions/Filter/filter.cpp ../Functions/Materialize/materialize.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Query/query.cpp ../Functions/Reason/reason.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Remove/remove.cpp ../Functions/Repair/repair.cpp ../Functions/Template/template.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../RobotDownload/robotdownload.cpp ../Startup/startup.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../main/mainwindow.ui $(DISTDIR)/
 
 
@@ -733,9 +743,9 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -823,6 +833,18 @@ moc_filter.cpp: ../Functions/Filter/filter.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Filter/filter.h -o moc_filter.cpp
+
+moc_materialize.cpp: ../Functions/Materialize/materialize.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Materialize/materialize.h -o moc_materialize.cpp
 
 moc_measure.cpp: ../Functions/Measure/measure.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
@@ -988,6 +1010,7 @@ moc_mainwindow.cpp: ../main/mainwindow.h \
 		../Functions/Reason/reason.h \
 		../Functions/Remove/remove.h \
 		../Functions/Filter/filter.h \
+		../Functions/Materialize/materialize.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../main/mainwindow.h -o moc_mainwindow.cpp
 
@@ -1161,6 +1184,28 @@ filter.o: ../Functions/Filter/filter.cpp ../Functions/Filter/filter.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QInputDialog \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qinputdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o filter.o ../Functions/Filter/filter.cpp
+
+materialize.o: ../Functions/Materialize/materialize.cpp ../Functions/Materialize/materialize.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		ui_mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qinputdialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o materialize.o ../Functions/Materialize/materialize.cpp
 
 measure.o: ../Functions/Measure/measure.cpp ../Functions/Measure/measure.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
@@ -1386,6 +1431,11 @@ validate.o: ../Functions/Validate/validate.cpp ../Functions/Validate/validate.h 
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validate.o ../Functions/Validate/validate.cpp
 
+robotdownload.o: ../RobotDownload/robotdownload.cpp ../RobotDownload/robotdownload.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QCoreApplication \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o robotdownload.o ../RobotDownload/robotdownload.cpp
+
 startup.o: ../Startup/startup.cpp ../Startup/startup.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
@@ -1439,6 +1489,7 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../Functions/Reason/reason.h \
 		../Functions/Remove/remove.h \
 		../Functions/Filter/filter.h \
+		../Functions/Materialize/materialize.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDir \
@@ -1483,6 +1534,7 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../Functions/Reason/reason.h \
 		../Functions/Remove/remove.h \
 		../Functions/Filter/filter.h \
+		../Functions/Materialize/materialize.h \
 		ui_mainwindow.h \
 		../Startup/startup.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
@@ -1515,6 +1567,9 @@ moc_extract.o: moc_extract.cpp
 
 moc_filter.o: moc_filter.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_filter.o moc_filter.cpp
+
+moc_materialize.o: moc_materialize.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_materialize.o moc_materialize.cpp
 
 moc_measure.o: moc_measure.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_measure.o moc_measure.cpp

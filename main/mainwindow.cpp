@@ -31,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     reasonHandler = new Reason(ui, this);
     removeHandler = new Remove(ui, this);
     filterHandler = new Filter(ui, this);
+    materializeHandler = new Materialize(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

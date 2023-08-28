@@ -603,29 +603,29 @@ public:
     QLineEdit *removeNameSave;
     QLabel *label_193;
     QLineEdit *removeSavePath;
-    QWidget *widget;
+    QWidget *layoutWidget28;
     QVBoxLayout *verticalLayout;
     QLabel *label_177;
     QHBoxLayout *horizontalLayout_308;
     QPushButton *removeGeneralAddTermFile;
     QPushButton *removeGeneralRemoveTermFile;
-    QWidget *widget1;
+    QWidget *layoutWidget29;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_175;
     QHBoxLayout *horizontalLayout_313;
     QPushButton *removeExcludeAddTermFile;
     QPushButton *removeExcludeRemoveTermFile;
-    QWidget *widget2;
+    QWidget *layoutWidget30;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_176;
     QHBoxLayout *horizontalLayout_314;
     QPushButton *removeIncludeAddTermFile;
     QPushButton *removeIncludeRemoveTermFile;
-    QWidget *widget3;
+    QWidget *layoutWidget31;
     QHBoxLayout *horizontalLayout_99;
     QLabel *label_63;
     QComboBox *removeSignature;
-    QWidget *widget4;
+    QWidget *layoutWidget32;
     QHBoxLayout *horizontalLayout_161;
     QLabel *label_88;
     QComboBox *removeTrim;
@@ -745,6 +745,42 @@ public:
     QCheckBox *EquivalentObjectProperty;
     QCheckBox *EquivalentClass;
     QLabel *label_190;
+    QWidget *Materialize;
+    QWidget *layoutWidget_144;
+    QHBoxLayout *horizontalLayout_340;
+    QLabel *label_194;
+    QComboBox *materializeOption;
+    QWidget *layoutWidget_304;
+    QHBoxLayout *horizontalLayout_345;
+    QPushButton *materializeAddTermFile;
+    QPushButton *materializeRemoveTermFile;
+    QListWidget *materializeTermFileName;
+    QListWidget *materializeTermName;
+    QLabel *label_204;
+    QFrame *line_41;
+    QListWidget *materializeOntologyName;
+    QWidget *layoutWidget_305;
+    QHBoxLayout *horizontalLayout_346;
+    QPushButton *materializeAddOntology;
+    QPushButton *materializeRemoveOntology;
+    QLabel *label_205;
+    QFrame *line_42;
+    QFrame *line_43;
+    QLabel *label_206;
+    QWidget *layoutWidget_306;
+    QHBoxLayout *horizontalLayout_347;
+    QPushButton *materializeAddTerm;
+    QPushButton *materializeRemoveTerm;
+    QWidget *layoutWidget_149;
+    QHBoxLayout *horizontalLayout_165;
+    QPushButton *materializeSaveAs;
+    QLineEdit *materializeNameSave;
+    QLabel *label_91;
+    QLineEdit *materializeSavePath;
+    QWidget *layoutWidget_150;
+    QHBoxLayout *horizontalLayout_166;
+    QPushButton *materializeReset;
+    QPushButton *materializeButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -4020,13 +4056,13 @@ public:
 
         horizontalLayout_339->addWidget(removeSavePath);
 
-        widget = new QWidget(Remove);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 100, 211, 54));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget28 = new QWidget(Remove);
+        layoutWidget28->setObjectName("layoutWidget28");
+        layoutWidget28->setGeometry(QRect(10, 100, 214, 54));
+        verticalLayout = new QVBoxLayout(layoutWidget28);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_177 = new QLabel(widget);
+        label_177 = new QLabel(layoutWidget28);
         label_177->setObjectName("label_177");
         label_177->setFont(font2);
 
@@ -4034,7 +4070,7 @@ public:
 
         horizontalLayout_308 = new QHBoxLayout();
         horizontalLayout_308->setObjectName("horizontalLayout_308");
-        removeGeneralAddTermFile = new QPushButton(widget);
+        removeGeneralAddTermFile = new QPushButton(layoutWidget28);
         removeGeneralAddTermFile->setObjectName("removeGeneralAddTermFile");
         sizePolicy.setHeightForWidth(removeGeneralAddTermFile->sizePolicy().hasHeightForWidth());
         removeGeneralAddTermFile->setSizePolicy(sizePolicy);
@@ -4046,7 +4082,7 @@ public:
 
         horizontalLayout_308->addWidget(removeGeneralAddTermFile);
 
-        removeGeneralRemoveTermFile = new QPushButton(widget);
+        removeGeneralRemoveTermFile = new QPushButton(layoutWidget28);
         removeGeneralRemoveTermFile->setObjectName("removeGeneralRemoveTermFile");
         sizePolicy.setHeightForWidth(removeGeneralRemoveTermFile->sizePolicy().hasHeightForWidth());
         removeGeneralRemoveTermFile->setSizePolicy(sizePolicy);
@@ -4059,13 +4095,13 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_308);
 
-        widget1 = new QWidget(Remove);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(240, 100, 211, 54));
-        verticalLayout_4 = new QVBoxLayout(widget1);
+        layoutWidget29 = new QWidget(Remove);
+        layoutWidget29->setObjectName("layoutWidget29");
+        layoutWidget29->setGeometry(QRect(240, 100, 214, 54));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget29);
         verticalLayout_4->setObjectName("verticalLayout_4");
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_175 = new QLabel(widget1);
+        label_175 = new QLabel(layoutWidget29);
         label_175->setObjectName("label_175");
         label_175->setFont(font2);
 
@@ -4073,7 +4109,7 @@ public:
 
         horizontalLayout_313 = new QHBoxLayout();
         horizontalLayout_313->setObjectName("horizontalLayout_313");
-        removeExcludeAddTermFile = new QPushButton(widget1);
+        removeExcludeAddTermFile = new QPushButton(layoutWidget29);
         removeExcludeAddTermFile->setObjectName("removeExcludeAddTermFile");
         sizePolicy.setHeightForWidth(removeExcludeAddTermFile->sizePolicy().hasHeightForWidth());
         removeExcludeAddTermFile->setSizePolicy(sizePolicy);
@@ -4085,7 +4121,7 @@ public:
 
         horizontalLayout_313->addWidget(removeExcludeAddTermFile);
 
-        removeExcludeRemoveTermFile = new QPushButton(widget1);
+        removeExcludeRemoveTermFile = new QPushButton(layoutWidget29);
         removeExcludeRemoveTermFile->setObjectName("removeExcludeRemoveTermFile");
         sizePolicy.setHeightForWidth(removeExcludeRemoveTermFile->sizePolicy().hasHeightForWidth());
         removeExcludeRemoveTermFile->setSizePolicy(sizePolicy);
@@ -4098,13 +4134,13 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_313);
 
-        widget2 = new QWidget(Remove);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(470, 100, 211, 54));
-        verticalLayout_5 = new QVBoxLayout(widget2);
+        layoutWidget30 = new QWidget(Remove);
+        layoutWidget30->setObjectName("layoutWidget30");
+        layoutWidget30->setGeometry(QRect(470, 100, 214, 54));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget30);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_176 = new QLabel(widget2);
+        label_176 = new QLabel(layoutWidget30);
         label_176->setObjectName("label_176");
         label_176->setFont(font2);
 
@@ -4112,7 +4148,7 @@ public:
 
         horizontalLayout_314 = new QHBoxLayout();
         horizontalLayout_314->setObjectName("horizontalLayout_314");
-        removeIncludeAddTermFile = new QPushButton(widget2);
+        removeIncludeAddTermFile = new QPushButton(layoutWidget30);
         removeIncludeAddTermFile->setObjectName("removeIncludeAddTermFile");
         sizePolicy.setHeightForWidth(removeIncludeAddTermFile->sizePolicy().hasHeightForWidth());
         removeIncludeAddTermFile->setSizePolicy(sizePolicy);
@@ -4124,7 +4160,7 @@ public:
 
         horizontalLayout_314->addWidget(removeIncludeAddTermFile);
 
-        removeIncludeRemoveTermFile = new QPushButton(widget2);
+        removeIncludeRemoveTermFile = new QPushButton(layoutWidget30);
         removeIncludeRemoveTermFile->setObjectName("removeIncludeRemoveTermFile");
         sizePolicy.setHeightForWidth(removeIncludeRemoveTermFile->sizePolicy().hasHeightForWidth());
         removeIncludeRemoveTermFile->setSizePolicy(sizePolicy);
@@ -4137,20 +4173,20 @@ public:
 
         verticalLayout_5->addLayout(horizontalLayout_314);
 
-        widget3 = new QWidget(Remove);
-        widget3->setObjectName("widget3");
-        widget3->setGeometry(QRect(10, 330, 134, 32));
-        horizontalLayout_99 = new QHBoxLayout(widget3);
+        layoutWidget31 = new QWidget(Remove);
+        layoutWidget31->setObjectName("layoutWidget31");
+        layoutWidget31->setGeometry(QRect(10, 330, 134, 32));
+        horizontalLayout_99 = new QHBoxLayout(layoutWidget31);
         horizontalLayout_99->setObjectName("horizontalLayout_99");
         horizontalLayout_99->setContentsMargins(0, 0, 0, 0);
-        label_63 = new QLabel(widget3);
+        label_63 = new QLabel(layoutWidget31);
         label_63->setObjectName("label_63");
         label_63->setFont(font2);
         label_63->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_99->addWidget(label_63);
 
-        removeSignature = new QComboBox(widget3);
+        removeSignature = new QComboBox(layoutWidget31);
         removeSignature->addItem(QString());
         removeSignature->addItem(QString());
         removeSignature->setObjectName("removeSignature");
@@ -4159,20 +4195,20 @@ public:
 
         horizontalLayout_99->addWidget(removeSignature);
 
-        widget4 = new QWidget(Remove);
-        widget4->setObjectName("widget4");
-        widget4->setGeometry(QRect(10, 360, 111, 32));
-        horizontalLayout_161 = new QHBoxLayout(widget4);
+        layoutWidget32 = new QWidget(Remove);
+        layoutWidget32->setObjectName("layoutWidget32");
+        layoutWidget32->setGeometry(QRect(10, 360, 111, 32));
+        horizontalLayout_161 = new QHBoxLayout(layoutWidget32);
         horizontalLayout_161->setObjectName("horizontalLayout_161");
         horizontalLayout_161->setContentsMargins(0, 0, 0, 0);
-        label_88 = new QLabel(widget4);
+        label_88 = new QLabel(layoutWidget32);
         label_88->setObjectName("label_88");
         label_88->setFont(font2);
         label_88->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_161->addWidget(label_88);
 
-        removeTrim = new QComboBox(widget4);
+        removeTrim = new QComboBox(layoutWidget32);
         removeTrim->addItem(QString());
         removeTrim->addItem(QString());
         removeTrim->setObjectName("removeTrim");
@@ -4191,7 +4227,7 @@ public:
         filterGeneralFileName->setFrameShadow(QFrame::Plain);
         layoutWidget_232 = new QWidget(filter);
         layoutWidget_232->setObjectName("layoutWidget_232");
-        layoutWidget_232->setGeometry(QRect(10, 100, 211, 54));
+        layoutWidget_232->setGeometry(QRect(10, 100, 214, 54));
         verticalLayout_16 = new QVBoxLayout(layoutWidget_232);
         verticalLayout_16->setObjectName("verticalLayout_16");
         verticalLayout_16->setContentsMargins(0, 0, 0, 0);
@@ -4315,7 +4351,7 @@ public:
         filterIncludeFileName->setFrameShadow(QFrame::Plain);
         layoutWidget_233 = new QWidget(filter);
         layoutWidget_233->setObjectName("layoutWidget_233");
-        layoutWidget_233->setGeometry(QRect(240, 100, 211, 54));
+        layoutWidget_233->setGeometry(QRect(240, 100, 214, 54));
         verticalLayout_17 = new QVBoxLayout(layoutWidget_233);
         verticalLayout_17->setObjectName("verticalLayout_17");
         verticalLayout_17->setContentsMargins(0, 0, 0, 0);
@@ -4540,7 +4576,7 @@ public:
 
         layoutWidget_418 = new QWidget(filter);
         layoutWidget_418->setObjectName("layoutWidget_418");
-        layoutWidget_418->setGeometry(QRect(470, 100, 211, 54));
+        layoutWidget_418->setGeometry(QRect(470, 100, 214, 54));
         verticalLayout_25 = new QVBoxLayout(layoutWidget_418);
         verticalLayout_25->setObjectName("verticalLayout_25");
         verticalLayout_25->setContentsMargins(0, 0, 0, 0);
@@ -4681,7 +4717,7 @@ public:
 
         layoutWidget_143 = new QWidget(reason);
         layoutWidget_143->setObjectName("layoutWidget_143");
-        layoutWidget_143->setGeometry(QRect(240, 20, 141, 32));
+        layoutWidget_143->setGeometry(QRect(240, 20, 156, 32));
         horizontalLayout_337 = new QHBoxLayout(layoutWidget_143);
         horizontalLayout_337->setObjectName("horizontalLayout_337");
         horizontalLayout_337->setContentsMargins(0, 0, 0, 0);
@@ -4846,6 +4882,222 @@ public:
         reasonExcludeAll->raise();
         reasonExcludeFalse->raise();
         label_188->raise();
+        Materialize = new QWidget();
+        Materialize->setObjectName("Materialize");
+        layoutWidget_144 = new QWidget(Materialize);
+        layoutWidget_144->setObjectName("layoutWidget_144");
+        layoutWidget_144->setGeometry(QRect(240, 20, 156, 32));
+        horizontalLayout_340 = new QHBoxLayout(layoutWidget_144);
+        horizontalLayout_340->setObjectName("horizontalLayout_340");
+        horizontalLayout_340->setContentsMargins(0, 0, 0, 0);
+        label_194 = new QLabel(layoutWidget_144);
+        label_194->setObjectName("label_194");
+        label_194->setFont(font2);
+
+        horizontalLayout_340->addWidget(label_194);
+
+        materializeOption = new QComboBox(layoutWidget_144);
+        materializeOption->addItem(QString());
+        materializeOption->addItem(QString());
+        materializeOption->addItem(QString());
+        materializeOption->addItem(QString());
+        materializeOption->addItem(QString());
+        materializeOption->setObjectName("materializeOption");
+
+        horizontalLayout_340->addWidget(materializeOption);
+
+        layoutWidget_304 = new QWidget(Materialize);
+        layoutWidget_304->setObjectName("layoutWidget_304");
+        layoutWidget_304->setGeometry(QRect(10, 120, 212, 32));
+        horizontalLayout_345 = new QHBoxLayout(layoutWidget_304);
+        horizontalLayout_345->setObjectName("horizontalLayout_345");
+        horizontalLayout_345->setContentsMargins(0, 0, 0, 0);
+        materializeAddTermFile = new QPushButton(layoutWidget_304);
+        materializeAddTermFile->setObjectName("materializeAddTermFile");
+        sizePolicy.setHeightForWidth(materializeAddTermFile->sizePolicy().hasHeightForWidth());
+        materializeAddTermFile->setSizePolicy(sizePolicy);
+        materializeAddTermFile->setMinimumSize(QSize(100, 0));
+        materializeAddTermFile->setMaximumSize(QSize(100, 16777215));
+        materializeAddTermFile->setFocusPolicy(Qt::NoFocus);
+        materializeAddTermFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        materializeAddTermFile->setFlat(false);
+
+        horizontalLayout_345->addWidget(materializeAddTermFile);
+
+        materializeRemoveTermFile = new QPushButton(layoutWidget_304);
+        materializeRemoveTermFile->setObjectName("materializeRemoveTermFile");
+        sizePolicy.setHeightForWidth(materializeRemoveTermFile->sizePolicy().hasHeightForWidth());
+        materializeRemoveTermFile->setSizePolicy(sizePolicy);
+        materializeRemoveTermFile->setMinimumSize(QSize(100, 0));
+        materializeRemoveTermFile->setMaximumSize(QSize(100, 16777215));
+        materializeRemoveTermFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_345->addWidget(materializeRemoveTermFile);
+
+        materializeTermFileName = new QListWidget(Materialize);
+        materializeTermFileName->setObjectName("materializeTermFileName");
+        materializeTermFileName->setGeometry(QRect(10, 160, 211, 21));
+        materializeTermFileName->setFrameShape(QFrame::Box);
+        materializeTermFileName->setFrameShadow(QFrame::Plain);
+        materializeTermName = new QListWidget(Materialize);
+        materializeTermName->setObjectName("materializeTermName");
+        materializeTermName->setGeometry(QRect(10, 250, 211, 61));
+        materializeTermName->setFrameShape(QFrame::Box);
+        materializeTermName->setFrameShadow(QFrame::Plain);
+        label_204 = new QLabel(Materialize);
+        label_204->setObjectName("label_204");
+        label_204->setGeometry(QRect(73, 10, 101, 20));
+        label_204->setFont(font2);
+        line_41 = new QFrame(Materialize);
+        line_41->setObjectName("line_41");
+        line_41->setGeometry(QRect(10, 110, 209, 16));
+        line_41->setFrameShape(QFrame::HLine);
+        line_41->setFrameShadow(QFrame::Sunken);
+        materializeOntologyName = new QListWidget(Materialize);
+        materializeOntologyName->setObjectName("materializeOntologyName");
+        materializeOntologyName->setGeometry(QRect(10, 70, 211, 21));
+        materializeOntologyName->setFrameShape(QFrame::Box);
+        materializeOntologyName->setFrameShadow(QFrame::Plain);
+        layoutWidget_305 = new QWidget(Materialize);
+        layoutWidget_305->setObjectName("layoutWidget_305");
+        layoutWidget_305->setGeometry(QRect(10, 30, 212, 32));
+        horizontalLayout_346 = new QHBoxLayout(layoutWidget_305);
+        horizontalLayout_346->setObjectName("horizontalLayout_346");
+        horizontalLayout_346->setContentsMargins(0, 0, 0, 0);
+        materializeAddOntology = new QPushButton(layoutWidget_305);
+        materializeAddOntology->setObjectName("materializeAddOntology");
+        sizePolicy.setHeightForWidth(materializeAddOntology->sizePolicy().hasHeightForWidth());
+        materializeAddOntology->setSizePolicy(sizePolicy);
+        materializeAddOntology->setMinimumSize(QSize(100, 0));
+        materializeAddOntology->setMaximumSize(QSize(100, 16777215));
+        materializeAddOntology->setFocusPolicy(Qt::NoFocus);
+        materializeAddOntology->setContextMenuPolicy(Qt::DefaultContextMenu);
+        materializeAddOntology->setFlat(false);
+
+        horizontalLayout_346->addWidget(materializeAddOntology);
+
+        materializeRemoveOntology = new QPushButton(layoutWidget_305);
+        materializeRemoveOntology->setObjectName("materializeRemoveOntology");
+        sizePolicy.setHeightForWidth(materializeRemoveOntology->sizePolicy().hasHeightForWidth());
+        materializeRemoveOntology->setSizePolicy(sizePolicy);
+        materializeRemoveOntology->setMinimumSize(QSize(100, 0));
+        materializeRemoveOntology->setMaximumSize(QSize(100, 16777215));
+        materializeRemoveOntology->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_346->addWidget(materializeRemoveOntology);
+
+        label_205 = new QLabel(Materialize);
+        label_205->setObjectName("label_205");
+        label_205->setGeometry(QRect(90, 100, 71, 20));
+        label_205->setFont(font2);
+        line_42 = new QFrame(Materialize);
+        line_42->setObjectName("line_42");
+        line_42->setGeometry(QRect(10, 200, 209, 16));
+        line_42->setFrameShape(QFrame::HLine);
+        line_42->setFrameShadow(QFrame::Sunken);
+        line_43 = new QFrame(Materialize);
+        line_43->setObjectName("line_43");
+        line_43->setGeometry(QRect(10, 20, 209, 16));
+        line_43->setFrameShape(QFrame::HLine);
+        line_43->setFrameShadow(QFrame::Sunken);
+        label_206 = new QLabel(Materialize);
+        label_206->setObjectName("label_206");
+        label_206->setGeometry(QRect(100, 191, 41, 20));
+        label_206->setFont(font2);
+        layoutWidget_306 = new QWidget(Materialize);
+        layoutWidget_306->setObjectName("layoutWidget_306");
+        layoutWidget_306->setGeometry(QRect(10, 210, 212, 32));
+        horizontalLayout_347 = new QHBoxLayout(layoutWidget_306);
+        horizontalLayout_347->setObjectName("horizontalLayout_347");
+        horizontalLayout_347->setContentsMargins(0, 0, 0, 0);
+        materializeAddTerm = new QPushButton(layoutWidget_306);
+        materializeAddTerm->setObjectName("materializeAddTerm");
+        sizePolicy.setHeightForWidth(materializeAddTerm->sizePolicy().hasHeightForWidth());
+        materializeAddTerm->setSizePolicy(sizePolicy);
+        materializeAddTerm->setMinimumSize(QSize(100, 0));
+        materializeAddTerm->setMaximumSize(QSize(100, 16777215));
+        materializeAddTerm->setFocusPolicy(Qt::NoFocus);
+        materializeAddTerm->setContextMenuPolicy(Qt::DefaultContextMenu);
+        materializeAddTerm->setFlat(false);
+
+        horizontalLayout_347->addWidget(materializeAddTerm);
+
+        materializeRemoveTerm = new QPushButton(layoutWidget_306);
+        materializeRemoveTerm->setObjectName("materializeRemoveTerm");
+        sizePolicy.setHeightForWidth(materializeRemoveTerm->sizePolicy().hasHeightForWidth());
+        materializeRemoveTerm->setSizePolicy(sizePolicy);
+        materializeRemoveTerm->setMinimumSize(QSize(100, 0));
+        materializeRemoveTerm->setMaximumSize(QSize(100, 16777215));
+        materializeRemoveTerm->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_347->addWidget(materializeRemoveTerm);
+
+        layoutWidget_149 = new QWidget(Materialize);
+        layoutWidget_149->setObjectName("layoutWidget_149");
+        layoutWidget_149->setGeometry(QRect(240, 250, 401, 33));
+        horizontalLayout_165 = new QHBoxLayout(layoutWidget_149);
+        horizontalLayout_165->setObjectName("horizontalLayout_165");
+        horizontalLayout_165->setContentsMargins(0, 0, 0, 0);
+        materializeSaveAs = new QPushButton(layoutWidget_149);
+        materializeSaveAs->setObjectName("materializeSaveAs");
+        materializeSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_165->addWidget(materializeSaveAs);
+
+        materializeNameSave = new QLineEdit(layoutWidget_149);
+        materializeNameSave->setObjectName("materializeNameSave");
+        materializeNameSave->setFocusPolicy(Qt::NoFocus);
+        materializeNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        materializeNameSave->setDragEnabled(false);
+        materializeNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_165->addWidget(materializeNameSave);
+
+        label_91 = new QLabel(layoutWidget_149);
+        label_91->setObjectName("label_91");
+        label_91->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_165->addWidget(label_91);
+
+        materializeSavePath = new QLineEdit(layoutWidget_149);
+        materializeSavePath->setObjectName("materializeSavePath");
+        materializeSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_165->addWidget(materializeSavePath);
+
+        layoutWidget_150 = new QWidget(Materialize);
+        layoutWidget_150->setObjectName("layoutWidget_150");
+        layoutWidget_150->setGeometry(QRect(240, 280, 175, 32));
+        horizontalLayout_166 = new QHBoxLayout(layoutWidget_150);
+        horizontalLayout_166->setObjectName("horizontalLayout_166");
+        horizontalLayout_166->setContentsMargins(0, 0, 0, 0);
+        materializeReset = new QPushButton(layoutWidget_150);
+        materializeReset->setObjectName("materializeReset");
+        sizePolicy1.setHeightForWidth(materializeReset->sizePolicy().hasHeightForWidth());
+        materializeReset->setSizePolicy(sizePolicy1);
+        materializeReset->setMaximumSize(QSize(150, 16777215));
+        materializeReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_166->addWidget(materializeReset);
+
+        materializeButton = new QPushButton(layoutWidget_150);
+        materializeButton->setObjectName("materializeButton");
+        sizePolicy1.setHeightForWidth(materializeButton->sizePolicy().hasHeightForWidth());
+        materializeButton->setSizePolicy(sizePolicy1);
+        materializeButton->setMinimumSize(QSize(0, 0));
+        materializeButton->setMaximumSize(QSize(150, 16777215));
+        materializeButton->setFont(font3);
+        materializeButton->setFocusPolicy(Qt::NoFocus);
+        materializeButton->setAutoFillBackground(false);
+        materializeButton->setCheckable(false);
+        materializeButton->setChecked(false);
+        materializeButton->setAutoExclusive(false);
+        materializeButton->setAutoDefault(false);
+        materializeButton->setFlat(false);
+
+        horizontalLayout_166->addWidget(materializeButton);
+
+        tabWidget->addTab(Materialize, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -4853,7 +5105,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(17);
+        tabWidget->setCurrentIndex(15);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -4909,6 +5161,10 @@ public:
         filterIncludeAddTermFile->setDefault(false);
         reasonAddFile->setDefault(false);
         reasonButton->setDefault(true);
+        materializeAddTermFile->setDefault(false);
+        materializeAddOntology->setDefault(false);
+        materializeAddTerm->setDefault(false);
+        materializeButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -5356,6 +5612,29 @@ public:
         EquivalentClass->setText(QCoreApplication::translate("MainWindow", "EquivalentClass", nullptr));
         label_190->setText(QCoreApplication::translate("MainWindow", "Data property axiom generators", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(reason), QCoreApplication::translate("MainWindow", "Reason", nullptr));
+        label_194->setText(QCoreApplication::translate("MainWindow", "Reasoner", nullptr));
+        materializeOption->setItemText(0, QCoreApplication::translate("MainWindow", "ELK", nullptr));
+        materializeOption->setItemText(1, QCoreApplication::translate("MainWindow", "hermit", nullptr));
+        materializeOption->setItemText(2, QCoreApplication::translate("MainWindow", "jfact", nullptr));
+        materializeOption->setItemText(3, QCoreApplication::translate("MainWindow", "whelk", nullptr));
+        materializeOption->setItemText(4, QCoreApplication::translate("MainWindow", "structural", nullptr));
+
+        materializeAddTermFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        materializeRemoveTermFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        label_204->setText(QCoreApplication::translate("MainWindow", "Import Ontology", nullptr));
+        materializeAddOntology->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        materializeRemoveOntology->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        label_205->setText(QCoreApplication::translate("MainWindow", "Term File", nullptr));
+        label_206->setText(QCoreApplication::translate("MainWindow", "Terms", nullptr));
+        materializeAddTerm->setText(QCoreApplication::translate("MainWindow", "Add Terms", nullptr));
+        materializeRemoveTerm->setText(QCoreApplication::translate("MainWindow", "Remove Terms", nullptr));
+        materializeSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        materializeNameSave->setText(QString());
+        materializeNameSave->setPlaceholderText(QString());
+        label_91->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        materializeReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        materializeButton->setText(QCoreApplication::translate("MainWindow", "Materialize File", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Materialize), QCoreApplication::translate("MainWindow", "Materialize", nullptr));
     } // retranslateUi
 
 };

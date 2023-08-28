@@ -22,6 +22,7 @@
 #include "../Functions/Extract/extract.h"
 #include "../Functions/Remove/remove.h"
 #include "../Functions/Filter/filter.h"
+#include "../Functions/Materialize/materialize.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -58,6 +59,7 @@ private:
     Reason *reasonHandler;
     Remove *removeHandler;
     Filter *filterHandler;
+    Materialize *materializeHandler;
 };
 
 #endif // MAINWINDOW_H
