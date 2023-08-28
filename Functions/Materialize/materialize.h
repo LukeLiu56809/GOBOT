@@ -50,4 +50,5 @@ private:
     QStringList materializeTerms;
     Ui::MainWindow *materialize_ui;
 };
+
 #endif // MATERIALIZE_H

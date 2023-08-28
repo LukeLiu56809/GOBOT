@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     removeHandler = new Remove(ui, this);
     filterHandler = new Filter(ui, this);
     materializeHandler = new Materialize(ui, this);
+    renameHandler = new Rename(ui, this);
 
     //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
     //ui->systemPath->setText(systemPath);

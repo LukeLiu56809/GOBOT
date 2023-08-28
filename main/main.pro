@@ -25,6 +25,7 @@ SOURCES += \
     ../Functions/Reduce/reduce.cpp \
     ../Functions/Relax/relax.cpp \
     ../Functions/Remove/remove.cpp \
+    ../Functions/Rename/rename.cpp \
     ../Functions/Repair/repair.cpp \
     ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
@@ -51,6 +52,7 @@ HEADERS += \
     ../Functions/Reduce/reduce.h \
     ../Functions/Relax/relax.h \
     ../Functions/Remove/remove.h \
+    ../Functions/Rename/rename.h \
     ../Functions/Repair/repair.h \
     ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \

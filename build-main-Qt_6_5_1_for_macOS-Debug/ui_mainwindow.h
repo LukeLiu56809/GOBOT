@@ -781,6 +781,49 @@ public:
     QHBoxLayout *horizontalLayout_166;
     QPushButton *materializeReset;
     QPushButton *materializeButton;
+    QWidget *Rename;
+    QWidget *layoutWidget_311;
+    QHBoxLayout *horizontalLayout_348;
+    QPushButton *renameAddMappingFile;
+    QPushButton *renameRemoveMappingFile;
+    QListWidget *renameMappingFileName;
+    QListWidget *renameTermName;
+    QLabel *label_207;
+    QFrame *line_44;
+    QListWidget *renameOntologyName;
+    QWidget *layoutWidget_312;
+    QHBoxLayout *horizontalLayout_349;
+    QPushButton *renameAddOntology;
+    QPushButton *renameRemoveOntology;
+    QLabel *label_208;
+    QFrame *line_45;
+    QFrame *line_46;
+    QLabel *label_209;
+    QWidget *layoutWidget_313;
+    QHBoxLayout *horizontalLayout_350;
+    QPushButton *renameAddTerm;
+    QPushButton *renameRemoveTerm;
+    QWidget *layoutWidget_151;
+    QHBoxLayout *horizontalLayout_167;
+    QPushButton *renameSaveAs;
+    QLineEdit *renameNameSave;
+    QLabel *label_92;
+    QLineEdit *renameSavePath;
+    QWidget *layoutWidget_152;
+    QHBoxLayout *horizontalLayout_168;
+    QPushButton *renameReset;
+    QPushButton *renameButton;
+    QCheckBox *renameMissingEntities;
+    QCheckBox *renameDuplicates;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_169;
+    QCheckBox *renamePrefix;
+    QLineEdit *renamePrefixName;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_170;
+    QCheckBox *renamePrefixMappings;
+    QPushButton *renamePrefixMappingsSave;
+    QLineEdit *renamePrefixMappingsName;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -5098,6 +5141,273 @@ public:
         horizontalLayout_166->addWidget(materializeButton);
 
         tabWidget->addTab(Materialize, QString());
+        Rename = new QWidget();
+        Rename->setObjectName("Rename");
+        layoutWidget_311 = new QWidget(Rename);
+        layoutWidget_311->setObjectName("layoutWidget_311");
+        layoutWidget_311->setGeometry(QRect(10, 120, 212, 32));
+        horizontalLayout_348 = new QHBoxLayout(layoutWidget_311);
+        horizontalLayout_348->setObjectName("horizontalLayout_348");
+        horizontalLayout_348->setContentsMargins(0, 0, 0, 0);
+        renameAddMappingFile = new QPushButton(layoutWidget_311);
+        renameAddMappingFile->setObjectName("renameAddMappingFile");
+        sizePolicy.setHeightForWidth(renameAddMappingFile->sizePolicy().hasHeightForWidth());
+        renameAddMappingFile->setSizePolicy(sizePolicy);
+        renameAddMappingFile->setMinimumSize(QSize(100, 0));
+        renameAddMappingFile->setMaximumSize(QSize(100, 16777215));
+        renameAddMappingFile->setFocusPolicy(Qt::NoFocus);
+        renameAddMappingFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        renameAddMappingFile->setFlat(false);
+
+        horizontalLayout_348->addWidget(renameAddMappingFile);
+
+        renameRemoveMappingFile = new QPushButton(layoutWidget_311);
+        renameRemoveMappingFile->setObjectName("renameRemoveMappingFile");
+        sizePolicy.setHeightForWidth(renameRemoveMappingFile->sizePolicy().hasHeightForWidth());
+        renameRemoveMappingFile->setSizePolicy(sizePolicy);
+        renameRemoveMappingFile->setMinimumSize(QSize(100, 0));
+        renameRemoveMappingFile->setMaximumSize(QSize(100, 16777215));
+        renameRemoveMappingFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_348->addWidget(renameRemoveMappingFile);
+
+        renameMappingFileName = new QListWidget(Rename);
+        renameMappingFileName->setObjectName("renameMappingFileName");
+        renameMappingFileName->setGeometry(QRect(10, 160, 211, 21));
+        renameMappingFileName->setFrameShape(QFrame::Box);
+        renameMappingFileName->setFrameShadow(QFrame::Plain);
+        renameTermName = new QListWidget(Rename);
+        renameTermName->setObjectName("renameTermName");
+        renameTermName->setGeometry(QRect(10, 250, 211, 61));
+        renameTermName->setFrameShape(QFrame::Box);
+        renameTermName->setFrameShadow(QFrame::Plain);
+        label_207 = new QLabel(Rename);
+        label_207->setObjectName("label_207");
+        label_207->setGeometry(QRect(73, 10, 101, 20));
+        label_207->setFont(font2);
+        line_44 = new QFrame(Rename);
+        line_44->setObjectName("line_44");
+        line_44->setGeometry(QRect(10, 110, 209, 16));
+        line_44->setFrameShape(QFrame::HLine);
+        line_44->setFrameShadow(QFrame::Sunken);
+        renameOntologyName = new QListWidget(Rename);
+        renameOntologyName->setObjectName("renameOntologyName");
+        renameOntologyName->setGeometry(QRect(10, 70, 211, 21));
+        renameOntologyName->setFrameShape(QFrame::Box);
+        renameOntologyName->setFrameShadow(QFrame::Plain);
+        layoutWidget_312 = new QWidget(Rename);
+        layoutWidget_312->setObjectName("layoutWidget_312");
+        layoutWidget_312->setGeometry(QRect(10, 30, 212, 32));
+        horizontalLayout_349 = new QHBoxLayout(layoutWidget_312);
+        horizontalLayout_349->setObjectName("horizontalLayout_349");
+        horizontalLayout_349->setContentsMargins(0, 0, 0, 0);
+        renameAddOntology = new QPushButton(layoutWidget_312);
+        renameAddOntology->setObjectName("renameAddOntology");
+        sizePolicy.setHeightForWidth(renameAddOntology->sizePolicy().hasHeightForWidth());
+        renameAddOntology->setSizePolicy(sizePolicy);
+        renameAddOntology->setMinimumSize(QSize(100, 0));
+        renameAddOntology->setMaximumSize(QSize(100, 16777215));
+        renameAddOntology->setFocusPolicy(Qt::NoFocus);
+        renameAddOntology->setContextMenuPolicy(Qt::DefaultContextMenu);
+        renameAddOntology->setFlat(false);
+
+        horizontalLayout_349->addWidget(renameAddOntology);
+
+        renameRemoveOntology = new QPushButton(layoutWidget_312);
+        renameRemoveOntology->setObjectName("renameRemoveOntology");
+        sizePolicy.setHeightForWidth(renameRemoveOntology->sizePolicy().hasHeightForWidth());
+        renameRemoveOntology->setSizePolicy(sizePolicy);
+        renameRemoveOntology->setMinimumSize(QSize(100, 0));
+        renameRemoveOntology->setMaximumSize(QSize(100, 16777215));
+        renameRemoveOntology->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_349->addWidget(renameRemoveOntology);
+
+        label_208 = new QLabel(Rename);
+        label_208->setObjectName("label_208");
+        label_208->setGeometry(QRect(80, 100, 71, 20));
+        label_208->setFont(font2);
+        line_45 = new QFrame(Rename);
+        line_45->setObjectName("line_45");
+        line_45->setGeometry(QRect(10, 200, 209, 16));
+        line_45->setFrameShape(QFrame::HLine);
+        line_45->setFrameShadow(QFrame::Sunken);
+        line_46 = new QFrame(Rename);
+        line_46->setObjectName("line_46");
+        line_46->setGeometry(QRect(10, 20, 209, 16));
+        line_46->setFrameShape(QFrame::HLine);
+        line_46->setFrameShadow(QFrame::Sunken);
+        label_209 = new QLabel(Rename);
+        label_209->setObjectName("label_209");
+        label_209->setGeometry(QRect(110, 191, 21, 20));
+        label_209->setFont(font2);
+        layoutWidget_313 = new QWidget(Rename);
+        layoutWidget_313->setObjectName("layoutWidget_313");
+        layoutWidget_313->setGeometry(QRect(10, 210, 212, 32));
+        horizontalLayout_350 = new QHBoxLayout(layoutWidget_313);
+        horizontalLayout_350->setObjectName("horizontalLayout_350");
+        horizontalLayout_350->setContentsMargins(0, 0, 0, 0);
+        renameAddTerm = new QPushButton(layoutWidget_313);
+        renameAddTerm->setObjectName("renameAddTerm");
+        sizePolicy.setHeightForWidth(renameAddTerm->sizePolicy().hasHeightForWidth());
+        renameAddTerm->setSizePolicy(sizePolicy);
+        renameAddTerm->setMinimumSize(QSize(100, 0));
+        renameAddTerm->setMaximumSize(QSize(100, 16777215));
+        renameAddTerm->setFocusPolicy(Qt::NoFocus);
+        renameAddTerm->setContextMenuPolicy(Qt::DefaultContextMenu);
+        renameAddTerm->setFlat(false);
+
+        horizontalLayout_350->addWidget(renameAddTerm);
+
+        renameRemoveTerm = new QPushButton(layoutWidget_313);
+        renameRemoveTerm->setObjectName("renameRemoveTerm");
+        sizePolicy.setHeightForWidth(renameRemoveTerm->sizePolicy().hasHeightForWidth());
+        renameRemoveTerm->setSizePolicy(sizePolicy);
+        renameRemoveTerm->setMinimumSize(QSize(100, 0));
+        renameRemoveTerm->setMaximumSize(QSize(100, 16777215));
+        renameRemoveTerm->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_350->addWidget(renameRemoveTerm);
+
+        layoutWidget_151 = new QWidget(Rename);
+        layoutWidget_151->setObjectName("layoutWidget_151");
+        layoutWidget_151->setGeometry(QRect(240, 250, 401, 33));
+        horizontalLayout_167 = new QHBoxLayout(layoutWidget_151);
+        horizontalLayout_167->setObjectName("horizontalLayout_167");
+        horizontalLayout_167->setContentsMargins(0, 0, 0, 0);
+        renameSaveAs = new QPushButton(layoutWidget_151);
+        renameSaveAs->setObjectName("renameSaveAs");
+        renameSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_167->addWidget(renameSaveAs);
+
+        renameNameSave = new QLineEdit(layoutWidget_151);
+        renameNameSave->setObjectName("renameNameSave");
+        renameNameSave->setFocusPolicy(Qt::NoFocus);
+        renameNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        renameNameSave->setDragEnabled(false);
+        renameNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_167->addWidget(renameNameSave);
+
+        label_92 = new QLabel(layoutWidget_151);
+        label_92->setObjectName("label_92");
+        label_92->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_167->addWidget(label_92);
+
+        renameSavePath = new QLineEdit(layoutWidget_151);
+        renameSavePath->setObjectName("renameSavePath");
+        renameSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_167->addWidget(renameSavePath);
+
+        layoutWidget_152 = new QWidget(Rename);
+        layoutWidget_152->setObjectName("layoutWidget_152");
+        layoutWidget_152->setGeometry(QRect(240, 280, 175, 32));
+        horizontalLayout_168 = new QHBoxLayout(layoutWidget_152);
+        horizontalLayout_168->setObjectName("horizontalLayout_168");
+        horizontalLayout_168->setContentsMargins(0, 0, 0, 0);
+        renameReset = new QPushButton(layoutWidget_152);
+        renameReset->setObjectName("renameReset");
+        sizePolicy1.setHeightForWidth(renameReset->sizePolicy().hasHeightForWidth());
+        renameReset->setSizePolicy(sizePolicy1);
+        renameReset->setMaximumSize(QSize(150, 16777215));
+        renameReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_168->addWidget(renameReset);
+
+        renameButton = new QPushButton(layoutWidget_152);
+        renameButton->setObjectName("renameButton");
+        sizePolicy1.setHeightForWidth(renameButton->sizePolicy().hasHeightForWidth());
+        renameButton->setSizePolicy(sizePolicy1);
+        renameButton->setMinimumSize(QSize(0, 0));
+        renameButton->setMaximumSize(QSize(150, 16777215));
+        renameButton->setFont(font3);
+        renameButton->setFocusPolicy(Qt::NoFocus);
+        renameButton->setAutoFillBackground(false);
+        renameButton->setCheckable(false);
+        renameButton->setChecked(false);
+        renameButton->setAutoExclusive(false);
+        renameButton->setAutoDefault(false);
+        renameButton->setFlat(false);
+
+        horizontalLayout_168->addWidget(renameButton);
+
+        renameMissingEntities = new QCheckBox(Rename);
+        renameMissingEntities->setObjectName("renameMissingEntities");
+        renameMissingEntities->setGeometry(QRect(240, 80, 141, 31));
+        renameMissingEntities->setFont(font2);
+        renameMissingEntities->setFocusPolicy(Qt::ClickFocus);
+        renameMissingEntities->setCheckable(true);
+        renameMissingEntities->setChecked(false);
+        renameMissingEntities->setAutoRepeat(false);
+        renameMissingEntities->setAutoExclusive(false);
+        renameMissingEntities->setTristate(false);
+        renameDuplicates = new QCheckBox(Rename);
+        renameDuplicates->setObjectName("renameDuplicates");
+        renameDuplicates->setGeometry(QRect(240, 110, 131, 31));
+        renameDuplicates->setFont(font2);
+        renameDuplicates->setFocusPolicy(Qt::ClickFocus);
+        renameDuplicates->setCheckable(true);
+        renameDuplicates->setChecked(false);
+        renameDuplicates->setAutoRepeat(false);
+        renameDuplicates->setAutoExclusive(false);
+        renameDuplicates->setTristate(false);
+        widget = new QWidget(Rename);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(240, 20, 221, 31));
+        horizontalLayout_169 = new QHBoxLayout(widget);
+        horizontalLayout_169->setObjectName("horizontalLayout_169");
+        horizontalLayout_169->setContentsMargins(0, 0, 0, 0);
+        renamePrefix = new QCheckBox(widget);
+        renamePrefix->setObjectName("renamePrefix");
+        renamePrefix->setFont(font2);
+        renamePrefix->setFocusPolicy(Qt::ClickFocus);
+        renamePrefix->setCheckable(true);
+        renamePrefix->setChecked(false);
+        renamePrefix->setAutoRepeat(false);
+        renamePrefix->setAutoExclusive(false);
+        renamePrefix->setTristate(false);
+
+        horizontalLayout_169->addWidget(renamePrefix);
+
+        renamePrefixName = new QLineEdit(widget);
+        renamePrefixName->setObjectName("renamePrefixName");
+        renamePrefixName->setFocusPolicy(Qt::ClickFocus);
+
+        horizontalLayout_169->addWidget(renamePrefixName);
+
+        widget1 = new QWidget(Rename);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(240, 50, 321, 33));
+        horizontalLayout_170 = new QHBoxLayout(widget1);
+        horizontalLayout_170->setObjectName("horizontalLayout_170");
+        horizontalLayout_170->setContentsMargins(0, 0, 0, 0);
+        renamePrefixMappings = new QCheckBox(widget1);
+        renamePrefixMappings->setObjectName("renamePrefixMappings");
+        renamePrefixMappings->setFont(font2);
+        renamePrefixMappings->setFocusPolicy(Qt::ClickFocus);
+        renamePrefixMappings->setCheckable(true);
+        renamePrefixMappings->setChecked(false);
+        renamePrefixMappings->setAutoRepeat(false);
+        renamePrefixMappings->setAutoExclusive(false);
+        renamePrefixMappings->setTristate(false);
+
+        horizontalLayout_170->addWidget(renamePrefixMappings);
+
+        renamePrefixMappingsSave = new QPushButton(widget1);
+        renamePrefixMappingsSave->setObjectName("renamePrefixMappingsSave");
+
+        horizontalLayout_170->addWidget(renamePrefixMappingsSave);
+
+        renamePrefixMappingsName = new QLineEdit(widget1);
+        renamePrefixMappingsName->setObjectName("renamePrefixMappingsName");
+        renamePrefixMappingsName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_170->addWidget(renamePrefixMappingsName);
+
+        tabWidget->addTab(Rename, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -5105,7 +5415,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(15);
+        tabWidget->setCurrentIndex(20);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -5165,6 +5475,10 @@ public:
         materializeAddOntology->setDefault(false);
         materializeAddTerm->setDefault(false);
         materializeButton->setDefault(true);
+        renameAddMappingFile->setDefault(false);
+        renameAddOntology->setDefault(false);
+        renameAddTerm->setDefault(false);
+        renameButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -5619,8 +5933,8 @@ public:
         materializeOption->setItemText(3, QCoreApplication::translate("MainWindow", "whelk", nullptr));
         materializeOption->setItemText(4, QCoreApplication::translate("MainWindow", "structural", nullptr));
 
-        materializeAddTermFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
-        materializeRemoveTermFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        materializeAddTermFile->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        materializeRemoveTermFile->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
         label_204->setText(QCoreApplication::translate("MainWindow", "Import Ontology", nullptr));
         materializeAddOntology->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
         materializeRemoveOntology->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
@@ -5635,6 +5949,27 @@ public:
         materializeReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         materializeButton->setText(QCoreApplication::translate("MainWindow", "Materialize File", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Materialize), QCoreApplication::translate("MainWindow", "Materialize", nullptr));
+        renameAddMappingFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        renameRemoveMappingFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        label_207->setText(QCoreApplication::translate("MainWindow", "Import Ontology", nullptr));
+        renameAddOntology->setText(QCoreApplication::translate("MainWindow", "Add File", nullptr));
+        renameRemoveOntology->setText(QCoreApplication::translate("MainWindow", "Remove File", nullptr));
+        label_208->setText(QCoreApplication::translate("MainWindow", "Mappings File", nullptr));
+        label_209->setText(QCoreApplication::translate("MainWindow", "IRI", nullptr));
+        renameAddTerm->setText(QCoreApplication::translate("MainWindow", "Add IRI", nullptr));
+        renameRemoveTerm->setText(QCoreApplication::translate("MainWindow", "Remove IRI", nullptr));
+        renameSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        renameNameSave->setText(QString());
+        renameNameSave->setPlaceholderText(QString());
+        label_92->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        renameReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        renameButton->setText(QCoreApplication::translate("MainWindow", "Rename File", nullptr));
+        renameMissingEntities->setText(QCoreApplication::translate("MainWindow", "Allow Missing Entities", nullptr));
+        renameDuplicates->setText(QCoreApplication::translate("MainWindow", "Allow Duplicates", nullptr));
+        renamePrefix->setText(QCoreApplication::translate("MainWindow", "Add Prefix", nullptr));
+        renamePrefixMappings->setText(QCoreApplication::translate("MainWindow", "Prefix Mappings", nullptr));
+        renamePrefixMappingsSave->setText(QCoreApplication::translate("MainWindow", "Select file", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Rename), QCoreApplication::translate("MainWindow", "Rename", nullptr));
     } // retranslateUi
 
 };
