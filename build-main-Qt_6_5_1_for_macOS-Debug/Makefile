@@ -97,6 +97,7 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		moc_template.cpp \
 		moc_unmerge.cpp \
 		moc_validate.cpp \
+		moc_robotdownload.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = collapse.o \
 		convert.o \
@@ -144,6 +145,7 @@ OBJECTS       = collapse.o \
 		moc_template.o \
 		moc_unmerge.o \
 		moc_validate.o \
+		moc_robotdownload.o \
 		moc_mainwindow.o
 DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../../Qt/6.5.1/macos/mkspecs/features/device_config.prf \
@@ -749,9 +751,9 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_robotdownload.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_robotdownload.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -989,6 +991,12 @@ moc_validate.cpp: ../Functions/Validate/validate.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Validate/validate.h -o moc_validate.cpp
+
+moc_robotdownload.cpp: ../RobotDownload/robotdownload.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../RobotDownload/robotdownload.h -o moc_robotdownload.cpp
 
 moc_mainwindow.cpp: ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -1473,8 +1481,20 @@ validate.o: ../Functions/Validate/validate.cpp ../Functions/Validate/validate.h 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validate.o ../Functions/Validate/validate.cpp
 
 robotdownload.o: ../RobotDownload/robotdownload.cpp ../RobotDownload/robotdownload.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QCoreApplication \
-		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDebug \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcess \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QStandardPaths \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstandardpaths.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o robotdownload.o ../RobotDownload/robotdownload.cpp
 
 startup.o: ../Startup/startup.cpp ../Startup/startup.h \
@@ -1586,6 +1606,7 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfile.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTextStream \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+		../RobotDownload/robotdownload.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcessEnvironment \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../main/mainwindow.cpp
@@ -1652,6 +1673,9 @@ moc_unmerge.o: moc_unmerge.cpp
 
 moc_validate.o: moc_validate.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_validate.o moc_validate.cpp
+
+moc_robotdownload.o: moc_robotdownload.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_robotdownload.o moc_robotdownload.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

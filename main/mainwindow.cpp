@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "../Startup/startup.h"
+#include "../RobotDownload/robotdownload.h"
 #include <QProcessEnvironment>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -11,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     Startup startup;
     startup.runStartupTasks();
+
+    RobotDownload robotDownload;
+    robotDownload.downloadFiles();
 
     mergeHandler = new Merge(ui, this);
     collapseHandler = new Collapse(ui, this);
@@ -34,8 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
     materializeHandler = new Materialize(ui, this);
     renameHandler = new Rename(ui, this);
 
-    //QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
-    //ui->systemPath->setText(systemPath);
+//    QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
+//    qDebug() << "String: " << systemPath;
 }
 
 MainWindow::~MainWindow()
