@@ -37,6 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
     filterHandler = new Filter(ui, this);
     materializeHandler = new Materialize(ui, this);
     renameHandler = new Rename(ui, this);
+    reportHandler = new Report(ui, this);
 
 //    QString systemPath = QProcessEnvironment::systemEnvironment().value("PATH");
 //    qDebug() << "String: " << systemPath;

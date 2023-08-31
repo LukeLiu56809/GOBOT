@@ -24,6 +24,7 @@
 #include "../Functions/Filter/filter.h"
 #include "../Functions/Materialize/materialize.h"
 #include "../Functions/Rename/rename.h"
+#include "../Functions/Report/report.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -62,6 +63,7 @@ private:
     Filter *filterHandler;
     Materialize *materializeHandler;
     Rename *renameHandler;
+    Report *reportHandler;
 };
 
 #endif // MAINWINDOW_H

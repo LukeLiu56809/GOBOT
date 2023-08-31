@@ -27,6 +27,7 @@ SOURCES += \
     ../Functions/Remove/remove.cpp \
     ../Functions/Rename/rename.cpp \
     ../Functions/Repair/repair.cpp \
+    ../Functions/Report/report.cpp \
     ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     ../Functions/Remove/remove.h \
     ../Functions/Rename/rename.h \
     ../Functions/Repair/repair.h \
+    ../Functions/Report/report.h \
     ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \

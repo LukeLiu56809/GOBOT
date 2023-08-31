@@ -824,6 +824,61 @@ public:
     QCheckBox *renamePrefixMappings;
     QPushButton *renamePrefixMappingsSave;
     QLineEdit *renamePrefixMappingsName;
+    QWidget *Report;
+    QWidget *layoutWidget_153;
+    QHBoxLayout *horizontalLayout_171;
+    QPushButton *reportSaveAs;
+    QLineEdit *reportNameSave;
+    QLabel *label_93;
+    QLineEdit *reportSavePath;
+    QWidget *layoutWidget_154;
+    QHBoxLayout *horizontalLayout_172;
+    QLabel *label_94;
+    QComboBox *reportFormat;
+    QListWidget *reportFileNames;
+    QWidget *layoutWidget_155;
+    QHBoxLayout *horizontalLayout_173;
+    QPushButton *reportAddFile;
+    QPushButton *reportRemoveFile;
+    QWidget *layoutWidget_156;
+    QHBoxLayout *horizontalLayout_174;
+    QPushButton *reportReset;
+    QPushButton *reportButton;
+    QLabel *label_95;
+    QLabel *label_96;
+    QLabel *label_97;
+    QWidget *layoutWidget_157;
+    QHBoxLayout *horizontalLayout_176;
+    QCheckBox *failOn;
+    QComboBox *failOnType;
+    QLabel *label_98;
+    QWidget *layoutWidget_158;
+    QHBoxLayout *horizontalLayout_177;
+    QCheckBox *defineProfile;
+    QPushButton *defineProfileSave;
+    QLineEdit *defineProfileName;
+    QWidget *layoutWidget_159;
+    QHBoxLayout *horizontalLayout_178;
+    QPushButton *reportTDBDirectory;
+    QLineEdit *reportTDBDirectoryName;
+    QLabel *label_99;
+    QCheckBox *reportTDB;
+    QCheckBox *reportKeepTDB;
+    QLabel *label_100;
+    QWidget *layoutWidget_314;
+    QHBoxLayout *horizontalLayout_351;
+    QPushButton *reportAddURI;
+    QPushButton *reportRemoveURI;
+    QListWidget *reportURIName;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_175;
+    QCheckBox *violations;
+    QSpinBox *violationsNumber;
+    QCheckBox *includeLabels;
+    QWidget *widget3;
+    QHBoxLayout *horizontalLayout_179;
+    QCheckBox *limit;
+    QSpinBox *limitNumber;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -2797,6 +2852,7 @@ public:
         queryTDBDirectoryName = new QLineEdit(layoutWidget_82);
         queryTDBDirectoryName->setObjectName("queryTDBDirectoryName");
         queryTDBDirectoryName->setFocusPolicy(Qt::NoFocus);
+        queryTDBDirectoryName->setClearButtonEnabled(true);
 
         horizontalLayout_98->addWidget(queryTDBDirectoryName);
 
@@ -5375,6 +5431,7 @@ public:
         renamePrefixName = new QLineEdit(widget);
         renamePrefixName->setObjectName("renamePrefixName");
         renamePrefixName->setFocusPolicy(Qt::ClickFocus);
+        renamePrefixName->setClearButtonEnabled(false);
 
         horizontalLayout_169->addWidget(renamePrefixName);
 
@@ -5408,6 +5465,314 @@ public:
         horizontalLayout_170->addWidget(renamePrefixMappingsName);
 
         tabWidget->addTab(Rename, QString());
+        Report = new QWidget();
+        Report->setObjectName("Report");
+        layoutWidget_153 = new QWidget(Report);
+        layoutWidget_153->setObjectName("layoutWidget_153");
+        layoutWidget_153->setGeometry(QRect(240, 500, 401, 33));
+        horizontalLayout_171 = new QHBoxLayout(layoutWidget_153);
+        horizontalLayout_171->setObjectName("horizontalLayout_171");
+        horizontalLayout_171->setContentsMargins(0, 0, 0, 0);
+        reportSaveAs = new QPushButton(layoutWidget_153);
+        reportSaveAs->setObjectName("reportSaveAs");
+        reportSaveAs->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_171->addWidget(reportSaveAs);
+
+        reportNameSave = new QLineEdit(layoutWidget_153);
+        reportNameSave->setObjectName("reportNameSave");
+        reportNameSave->setFocusPolicy(Qt::NoFocus);
+        reportNameSave->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        reportNameSave->setDragEnabled(false);
+        reportNameSave->setClearButtonEnabled(false);
+
+        horizontalLayout_171->addWidget(reportNameSave);
+
+        label_93 = new QLabel(layoutWidget_153);
+        label_93->setObjectName("label_93");
+        label_93->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_171->addWidget(label_93);
+
+        reportSavePath = new QLineEdit(layoutWidget_153);
+        reportSavePath->setObjectName("reportSavePath");
+        reportSavePath->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_171->addWidget(reportSavePath);
+
+        layoutWidget_154 = new QWidget(Report);
+        layoutWidget_154->setObjectName("layoutWidget_154");
+        layoutWidget_154->setGeometry(QRect(260, 70, 117, 31));
+        horizontalLayout_172 = new QHBoxLayout(layoutWidget_154);
+        horizontalLayout_172->setObjectName("horizontalLayout_172");
+        horizontalLayout_172->setContentsMargins(0, 0, 0, 0);
+        label_94 = new QLabel(layoutWidget_154);
+        label_94->setObjectName("label_94");
+        label_94->setFont(font1);
+
+        horizontalLayout_172->addWidget(label_94);
+
+        reportFormat = new QComboBox(layoutWidget_154);
+        reportFormat->addItem(QString());
+        reportFormat->addItem(QString());
+        reportFormat->addItem(QString());
+        reportFormat->addItem(QString());
+        reportFormat->addItem(QString());
+        reportFormat->addItem(QString());
+        reportFormat->setObjectName("reportFormat");
+
+        horizontalLayout_172->addWidget(reportFormat);
+
+        reportFileNames = new QListWidget(Report);
+        reportFileNames->setObjectName("reportFileNames");
+        reportFileNames->setGeometry(QRect(10, 60, 211, 201));
+        reportFileNames->setFocusPolicy(Qt::ClickFocus);
+        reportFileNames->setFrameShape(QFrame::Box);
+        reportFileNames->setFrameShadow(QFrame::Plain);
+        layoutWidget_155 = new QWidget(Report);
+        layoutWidget_155->setObjectName("layoutWidget_155");
+        layoutWidget_155->setGeometry(QRect(10, 20, 212, 41));
+        horizontalLayout_173 = new QHBoxLayout(layoutWidget_155);
+        horizontalLayout_173->setObjectName("horizontalLayout_173");
+        horizontalLayout_173->setContentsMargins(0, 0, 0, 0);
+        reportAddFile = new QPushButton(layoutWidget_155);
+        reportAddFile->setObjectName("reportAddFile");
+        sizePolicy.setHeightForWidth(reportAddFile->sizePolicy().hasHeightForWidth());
+        reportAddFile->setSizePolicy(sizePolicy);
+        reportAddFile->setMinimumSize(QSize(100, 0));
+        reportAddFile->setMaximumSize(QSize(100, 16777215));
+        reportAddFile->setFocusPolicy(Qt::NoFocus);
+        reportAddFile->setContextMenuPolicy(Qt::DefaultContextMenu);
+        reportAddFile->setFlat(false);
+
+        horizontalLayout_173->addWidget(reportAddFile);
+
+        reportRemoveFile = new QPushButton(layoutWidget_155);
+        reportRemoveFile->setObjectName("reportRemoveFile");
+        sizePolicy.setHeightForWidth(reportRemoveFile->sizePolicy().hasHeightForWidth());
+        reportRemoveFile->setSizePolicy(sizePolicy);
+        reportRemoveFile->setMinimumSize(QSize(100, 0));
+        reportRemoveFile->setMaximumSize(QSize(100, 16777215));
+        reportRemoveFile->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_173->addWidget(reportRemoveFile);
+
+        layoutWidget_156 = new QWidget(Report);
+        layoutWidget_156->setObjectName("layoutWidget_156");
+        layoutWidget_156->setGeometry(QRect(240, 530, 162, 32));
+        horizontalLayout_174 = new QHBoxLayout(layoutWidget_156);
+        horizontalLayout_174->setObjectName("horizontalLayout_174");
+        horizontalLayout_174->setContentsMargins(0, 0, 0, 0);
+        reportReset = new QPushButton(layoutWidget_156);
+        reportReset->setObjectName("reportReset");
+        sizePolicy1.setHeightForWidth(reportReset->sizePolicy().hasHeightForWidth());
+        reportReset->setSizePolicy(sizePolicy1);
+        reportReset->setMaximumSize(QSize(150, 16777215));
+        reportReset->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_174->addWidget(reportReset);
+
+        reportButton = new QPushButton(layoutWidget_156);
+        reportButton->setObjectName("reportButton");
+        sizePolicy1.setHeightForWidth(reportButton->sizePolicy().hasHeightForWidth());
+        reportButton->setSizePolicy(sizePolicy1);
+        reportButton->setMinimumSize(QSize(0, 0));
+        reportButton->setMaximumSize(QSize(150, 16777215));
+        reportButton->setFocusPolicy(Qt::NoFocus);
+        reportButton->setAutoFillBackground(false);
+        reportButton->setAutoDefault(false);
+        reportButton->setFlat(false);
+
+        horizontalLayout_174->addWidget(reportButton);
+
+        label_95 = new QLabel(Report);
+        label_95->setObjectName("label_95");
+        label_95->setGeometry(QRect(240, 50, 58, 31));
+        label_95->setFont(font2);
+        label_96 = new QLabel(Report);
+        label_96->setObjectName("label_96");
+        label_96->setGeometry(QRect(240, 120, 58, 31));
+        label_96->setFont(font2);
+        label_97 = new QLabel(Report);
+        label_97->setObjectName("label_97");
+        label_97->setGeometry(QRect(240, 160, 58, 31));
+        label_97->setFont(font2);
+        layoutWidget_157 = new QWidget(Report);
+        layoutWidget_157->setObjectName("layoutWidget_157");
+        layoutWidget_157->setGeometry(QRect(260, 180, 142, 33));
+        horizontalLayout_176 = new QHBoxLayout(layoutWidget_157);
+        horizontalLayout_176->setObjectName("horizontalLayout_176");
+        horizontalLayout_176->setContentsMargins(0, 0, 0, 0);
+        failOn = new QCheckBox(layoutWidget_157);
+        failOn->setObjectName("failOn");
+
+        horizontalLayout_176->addWidget(failOn);
+
+        failOnType = new QComboBox(layoutWidget_157);
+        failOnType->addItem(QString());
+        failOnType->addItem(QString());
+        failOnType->addItem(QString());
+        failOnType->setObjectName("failOnType");
+        failOnType->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_176->addWidget(failOnType);
+
+        label_98 = new QLabel(Report);
+        label_98->setObjectName("label_98");
+        label_98->setGeometry(QRect(240, 200, 58, 31));
+        label_98->setFont(font2);
+        layoutWidget_158 = new QWidget(Report);
+        layoutWidget_158->setObjectName("layoutWidget_158");
+        layoutWidget_158->setGeometry(QRect(260, 220, 321, 33));
+        horizontalLayout_177 = new QHBoxLayout(layoutWidget_158);
+        horizontalLayout_177->setObjectName("horizontalLayout_177");
+        horizontalLayout_177->setContentsMargins(0, 0, 0, 0);
+        defineProfile = new QCheckBox(layoutWidget_158);
+        defineProfile->setObjectName("defineProfile");
+        defineProfile->setFont(font1);
+        defineProfile->setFocusPolicy(Qt::ClickFocus);
+        defineProfile->setCheckable(true);
+        defineProfile->setChecked(false);
+        defineProfile->setAutoRepeat(false);
+        defineProfile->setAutoExclusive(false);
+        defineProfile->setTristate(false);
+
+        horizontalLayout_177->addWidget(defineProfile);
+
+        defineProfileSave = new QPushButton(layoutWidget_158);
+        defineProfileSave->setObjectName("defineProfileSave");
+
+        horizontalLayout_177->addWidget(defineProfileSave);
+
+        defineProfileName = new QLineEdit(layoutWidget_158);
+        defineProfileName->setObjectName("defineProfileName");
+        defineProfileName->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_177->addWidget(defineProfileName);
+
+        layoutWidget_159 = new QWidget(Report);
+        layoutWidget_159->setObjectName("layoutWidget_159");
+        layoutWidget_159->setGeometry(QRect(260, 310, 391, 33));
+        horizontalLayout_178 = new QHBoxLayout(layoutWidget_159);
+        horizontalLayout_178->setObjectName("horizontalLayout_178");
+        horizontalLayout_178->setContentsMargins(0, 0, 0, 0);
+        reportTDBDirectory = new QPushButton(layoutWidget_159);
+        reportTDBDirectory->setObjectName("reportTDBDirectory");
+
+        horizontalLayout_178->addWidget(reportTDBDirectory);
+
+        reportTDBDirectoryName = new QLineEdit(layoutWidget_159);
+        reportTDBDirectoryName->setObjectName("reportTDBDirectoryName");
+        reportTDBDirectoryName->setFocusPolicy(Qt::NoFocus);
+        reportTDBDirectoryName->setClearButtonEnabled(true);
+
+        horizontalLayout_178->addWidget(reportTDBDirectoryName);
+
+        label_99 = new QLabel(Report);
+        label_99->setObjectName("label_99");
+        label_99->setGeometry(QRect(240, 240, 91, 31));
+        label_99->setFont(font2);
+        reportTDB = new QCheckBox(Report);
+        reportTDB->setObjectName("reportTDB");
+        reportTDB->setGeometry(QRect(260, 260, 141, 31));
+        reportTDB->setFocusPolicy(Qt::ClickFocus);
+        reportTDB->setCheckable(true);
+        reportTDB->setChecked(false);
+        reportTDB->setAutoRepeat(false);
+        reportTDB->setAutoExclusive(false);
+        reportTDB->setTristate(false);
+        reportKeepTDB = new QCheckBox(Report);
+        reportKeepTDB->setObjectName("reportKeepTDB");
+        reportKeepTDB->setGeometry(QRect(260, 280, 141, 31));
+        reportKeepTDB->setFocusPolicy(Qt::ClickFocus);
+        reportKeepTDB->setCheckable(true);
+        reportKeepTDB->setChecked(false);
+        reportKeepTDB->setAutoRepeat(false);
+        reportKeepTDB->setAutoExclusive(false);
+        reportKeepTDB->setTristate(false);
+        label_100 = new QLabel(Report);
+        label_100->setObjectName("label_100");
+        label_100->setGeometry(QRect(240, 330, 91, 31));
+        label_100->setFont(font2);
+        layoutWidget_314 = new QWidget(Report);
+        layoutWidget_314->setObjectName("layoutWidget_314");
+        layoutWidget_314->setGeometry(QRect(260, 380, 232, 32));
+        horizontalLayout_351 = new QHBoxLayout(layoutWidget_314);
+        horizontalLayout_351->setObjectName("horizontalLayout_351");
+        horizontalLayout_351->setContentsMargins(0, 0, 0, 0);
+        reportAddURI = new QPushButton(layoutWidget_314);
+        reportAddURI->setObjectName("reportAddURI");
+        sizePolicy.setHeightForWidth(reportAddURI->sizePolicy().hasHeightForWidth());
+        reportAddURI->setSizePolicy(sizePolicy);
+        reportAddURI->setMinimumSize(QSize(110, 0));
+        reportAddURI->setMaximumSize(QSize(110, 16777215));
+        reportAddURI->setFocusPolicy(Qt::NoFocus);
+        reportAddURI->setContextMenuPolicy(Qt::DefaultContextMenu);
+        reportAddURI->setFlat(false);
+
+        horizontalLayout_351->addWidget(reportAddURI);
+
+        reportRemoveURI = new QPushButton(layoutWidget_314);
+        reportRemoveURI->setObjectName("reportRemoveURI");
+        sizePolicy.setHeightForWidth(reportRemoveURI->sizePolicy().hasHeightForWidth());
+        reportRemoveURI->setSizePolicy(sizePolicy);
+        reportRemoveURI->setMinimumSize(QSize(110, 0));
+        reportRemoveURI->setMaximumSize(QSize(110, 16777215));
+        reportRemoveURI->setFocusPolicy(Qt::NoFocus);
+
+        horizontalLayout_351->addWidget(reportRemoveURI);
+
+        reportURIName = new QListWidget(Report);
+        reportURIName->setObjectName("reportURIName");
+        reportURIName->setGeometry(QRect(260, 410, 231, 61));
+        reportURIName->setFrameShape(QFrame::Box);
+        reportURIName->setFrameShadow(QFrame::Plain);
+        widget2 = new QWidget(Report);
+        widget2->setObjectName("widget2");
+        widget2->setGeometry(QRect(260, 100, 223, 31));
+        horizontalLayout_175 = new QHBoxLayout(widget2);
+        horizontalLayout_175->setObjectName("horizontalLayout_175");
+        horizontalLayout_175->setContentsMargins(0, 0, 0, 0);
+        violations = new QCheckBox(widget2);
+        violations->setObjectName("violations");
+
+        horizontalLayout_175->addWidget(violations);
+
+        violationsNumber = new QSpinBox(widget2);
+        violationsNumber->setObjectName("violationsNumber");
+        violationsNumber->setFocusPolicy(Qt::ClickFocus);
+        violationsNumber->setMaximum(99999999);
+
+        horizontalLayout_175->addWidget(violationsNumber);
+
+        includeLabels = new QCheckBox(Report);
+        includeLabels->setObjectName("includeLabels");
+        includeLabels->setGeometry(QRect(260, 140, 131, 31));
+        widget3 = new QWidget(Report);
+        widget3->setObjectName("widget3");
+        widget3->setGeometry(QRect(260, 350, 231, 33));
+        horizontalLayout_179 = new QHBoxLayout(widget3);
+        horizontalLayout_179->setObjectName("horizontalLayout_179");
+        horizontalLayout_179->setContentsMargins(0, 0, 0, 0);
+        limit = new QCheckBox(widget3);
+        limit->setObjectName("limit");
+        limit->setFocusPolicy(Qt::ClickFocus);
+        limit->setCheckable(true);
+        limit->setChecked(false);
+        limit->setAutoRepeat(false);
+        limit->setAutoExclusive(false);
+        limit->setTristate(false);
+
+        horizontalLayout_179->addWidget(limit);
+
+        limitNumber = new QSpinBox(widget3);
+        limitNumber->setObjectName("limitNumber");
+        limitNumber->setFocusPolicy(Qt::ClickFocus);
+        limitNumber->setMaximum(99999999);
+
+        horizontalLayout_179->addWidget(limitNumber);
+
+        tabWidget->addTab(Report, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -5415,7 +5780,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(20);
+        tabWidget->setCurrentIndex(21);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -5479,6 +5844,9 @@ public:
         renameAddOntology->setDefault(false);
         renameAddTerm->setDefault(false);
         renameButton->setDefault(true);
+        reportAddFile->setDefault(false);
+        reportButton->setDefault(true);
+        reportAddURI->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -5970,6 +6338,44 @@ public:
         renamePrefixMappings->setText(QCoreApplication::translate("MainWindow", "Prefix Mappings", nullptr));
         renamePrefixMappingsSave->setText(QCoreApplication::translate("MainWindow", "Select file", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Rename), QCoreApplication::translate("MainWindow", "Rename", nullptr));
+        reportSaveAs->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+        reportNameSave->setText(QString());
+        reportNameSave->setPlaceholderText(QString());
+        label_93->setText(QCoreApplication::translate("MainWindow", "To:", nullptr));
+        label_94->setText(QCoreApplication::translate("MainWindow", "Format", nullptr));
+        reportFormat->setItemText(0, QCoreApplication::translate("MainWindow", "tsv", nullptr));
+        reportFormat->setItemText(1, QCoreApplication::translate("MainWindow", "csv", nullptr));
+        reportFormat->setItemText(2, QCoreApplication::translate("MainWindow", "html", nullptr));
+        reportFormat->setItemText(3, QCoreApplication::translate("MainWindow", "yaml", nullptr));
+        reportFormat->setItemText(4, QCoreApplication::translate("MainWindow", "json", nullptr));
+        reportFormat->setItemText(5, QCoreApplication::translate("MainWindow", "xslx", nullptr));
+
+        reportAddFile->setText(QCoreApplication::translate("MainWindow", "Add Files", nullptr));
+        reportRemoveFile->setText(QCoreApplication::translate("MainWindow", "Remove Files", nullptr));
+        reportReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        reportButton->setText(QCoreApplication::translate("MainWindow", "Report File", nullptr));
+        label_95->setText(QCoreApplication::translate("MainWindow", "Formats", nullptr));
+        label_96->setText(QCoreApplication::translate("MainWindow", "Labels", nullptr));
+        label_97->setText(QCoreApplication::translate("MainWindow", "Failing", nullptr));
+        failOn->setText(QCoreApplication::translate("MainWindow", "--fail-on", nullptr));
+        failOnType->setItemText(0, QCoreApplication::translate("MainWindow", "info", nullptr));
+        failOnType->setItemText(1, QCoreApplication::translate("MainWindow", "warn", nullptr));
+        failOnType->setItemText(2, QCoreApplication::translate("MainWindow", "none", nullptr));
+
+        label_98->setText(QCoreApplication::translate("MainWindow", "Profiles", nullptr));
+        defineProfile->setText(QCoreApplication::translate("MainWindow", "Define Profile", nullptr));
+        defineProfileSave->setText(QCoreApplication::translate("MainWindow", "Select file", nullptr));
+        reportTDBDirectory->setText(QCoreApplication::translate("MainWindow", "Change TDB Directory", nullptr));
+        label_99->setText(QCoreApplication::translate("MainWindow", "Executing On Disk", nullptr));
+        reportTDB->setText(QCoreApplication::translate("MainWindow", "Load ontology onto disk", nullptr));
+        reportKeepTDB->setText(QCoreApplication::translate("MainWindow", "Keep TDB directory", nullptr));
+        label_100->setText(QCoreApplication::translate("MainWindow", "Limiting Results", nullptr));
+        reportAddURI->setText(QCoreApplication::translate("MainWindow", "Add URI Prefix", nullptr));
+        reportRemoveURI->setText(QCoreApplication::translate("MainWindow", "Remove URI Prefix", nullptr));
+        violations->setText(QCoreApplication::translate("MainWindow", "Print Violations <Integer>", nullptr));
+        includeLabels->setText(QCoreApplication::translate("MainWindow", "Include Entity Labels", nullptr));
+        limit->setText(QCoreApplication::translate("MainWindow", "Limit # of Results <Integer>", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Report), QCoreApplication::translate("MainWindow", "Report", nullptr));
     } // retranslateUi
 
 };
