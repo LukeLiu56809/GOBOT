@@ -32,6 +32,7 @@ SOURCES += \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
     ../RobotDownload/robotdownload.cpp \
+    ../SplashScreen/splashscreen.cpp \
     ../Startup/startup.cpp \
     main.cpp \
     mainwindow.cpp
@@ -60,6 +61,7 @@ HEADERS += \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
     ../RobotDownload/robotdownload.h \
+    ../SplashScreen/splashscreen.h \
     ../Startup/startup.h \
     mainwindow.h
 
@@ -70,3 +72,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    ../SplashScreen/SplashImage.qrc

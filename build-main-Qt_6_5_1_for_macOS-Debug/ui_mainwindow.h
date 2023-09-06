@@ -879,12 +879,13 @@ public:
     QHBoxLayout *horizontalLayout_179;
     QCheckBox *limit;
     QSpinBox *limitNumber;
+    QWidget *explain;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(720, 625);
+        MainWindow->resize(1136, 625);
         QFont font;
         font.setFamilies({QString::fromUtf8("Futura")});
         font.setPointSize(13);
@@ -1880,7 +1881,7 @@ public:
         label_22->setFont(font2);
         label_23 = new QLabel(diff);
         label_23->setObjectName("label_23");
-        label_23->setGeometry(QRect(390, 20, 31, 21));
+        label_23->setGeometry(QRect(380, 20, 31, 21));
         label_23->setFont(font2);
         layoutWidget16 = new QWidget(diff);
         layoutWidget16->setObjectName("layoutWidget16");
@@ -5773,6 +5774,9 @@ public:
         horizontalLayout_179->addWidget(limitNumber);
 
         tabWidget->addTab(Report, QString());
+        explain = new QWidget();
+        explain->setObjectName("explain");
+        tabWidget->addTab(explain, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -5780,7 +5784,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(21);
+        tabWidget->setCurrentIndex(0);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -6376,6 +6380,7 @@ public:
         includeLabels->setText(QCoreApplication::translate("MainWindow", "Include Entity Labels", nullptr));
         limit->setText(QCoreApplication::translate("MainWindow", "Limit # of Results <Integer>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Report), QCoreApplication::translate("MainWindow", "Report", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(explain), QCoreApplication::translate("MainWindow", "Explain", nullptr));
     } // retranslateUi
 
 };

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
+    <width>1136</width>
     <height>625</height>
    </rect>
   </property>
@@ -37,7 +37,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>21</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideRight</enum>
@@ -2448,7 +2448,7 @@
        <widget class="QLabel" name="label_23">
         <property name="geometry">
          <rect>
-          <x>390</x>
+          <x>380</x>
           <y>20</y>
           <width>31</width>
           <height>21</height>
@@ -12614,6 +12614,11 @@
          </item>
         </layout>
        </widget>
+      </widget>
+      <widget class="QWidget" name="explain">
+       <attribute name="title">
+        <string>Explain</string>
+       </attribute>
       </widget>
      </widget>
     </item>

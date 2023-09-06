@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSplashScreen>
 #include "../Functions/Merge/merge.h"
 #include "../Functions/Collapse/collapse.h"
 #include "../Functions/Mirror/mirror.h"
@@ -41,6 +42,7 @@ public:
 private slots:
 
 private:
+    QSplashScreen *splashScreen;
     Ui::MainWindow *ui;
     Merge *mergeHandler;
     Collapse *collapseHandler;

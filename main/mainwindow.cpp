@@ -2,7 +2,10 @@
 #include "./ui_mainwindow.h"
 #include "../Startup/startup.h"
 #include "../RobotDownload/robotdownload.h"
+#include <QSplashScreen>
+#include <QTimer>
 #include <QProcessEnvironment>
+#include <QPixmap>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,11 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    Startup startup;
-    startup.runStartupTasks();
 
-    RobotDownload robotDownload;
-    robotDownload.downloadFiles();
 
     mergeHandler = new Merge(ui, this);
     collapseHandler = new Collapse(ui, this);
