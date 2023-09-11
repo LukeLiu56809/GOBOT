@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1136</width>
+    <width>1098</width>
     <height>625</height>
    </rect>
   </property>
@@ -37,7 +37,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideRight</enum>
@@ -11714,7 +11714,7 @@
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -11768,7 +11768,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -11897,8 +11897,8 @@
          <rect>
           <x>260</x>
           <y>70</y>
-          <width>117</width>
-          <height>31</height>
+          <width>119</width>
+          <height>32</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_172">
@@ -12187,7 +12187,7 @@
          <rect>
           <x>260</x>
           <y>180</y>
-          <width>142</width>
+          <width>143</width>
           <height>33</height>
          </rect>
         </property>
@@ -12525,7 +12525,7 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>260</x>
@@ -12567,12 +12567,12 @@
          <string>Include Entity Labels</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>260</x>
           <y>350</y>
-          <width>231</width>
+          <width>233</width>
           <height>33</height>
          </rect>
         </property>
@@ -12614,11 +12614,6 @@
          </item>
         </layout>
        </widget>
-      </widget>
-      <widget class="QWidget" name="explain">
-       <attribute name="title">
-        <string>Explain</string>
-       </attribute>
       </widget>
      </widget>
     </item>

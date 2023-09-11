@@ -74,6 +74,10 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
+		../Menu/Edit/edit.cpp \
+		../Menu/Help/help.cpp \
+		../Menu/View/view.cpp \
+		../Menu/Window/window.cpp \
 		../RobotDownload/robotdownload.cpp \
 		../SplashScreen/splashscreen.cpp \
 		../Startup/startup.cpp \
@@ -101,6 +105,10 @@ SOURCES       = ../Functions/Collapse/collapse.cpp \
 		moc_template.cpp \
 		moc_unmerge.cpp \
 		moc_validate.cpp \
+		moc_edit.cpp \
+		moc_help.cpp \
+		moc_view.cpp \
+		moc_window.cpp \
 		moc_robotdownload.cpp \
 		moc_splashscreen.cpp \
 		moc_mainwindow.cpp
@@ -126,6 +134,10 @@ OBJECTS       = collapse.o \
 		template.o \
 		unmerge.o \
 		validate.o \
+		edit.o \
+		help.o \
+		view.o \
+		window.o \
 		robotdownload.o \
 		splashscreen.o \
 		startup.o \
@@ -154,6 +166,10 @@ OBJECTS       = collapse.o \
 		moc_template.o \
 		moc_unmerge.o \
 		moc_validate.o \
+		moc_edit.o \
+		moc_help.o \
+		moc_view.o \
+		moc_window.o \
 		moc_robotdownload.o \
 		moc_splashscreen.o \
 		moc_mainwindow.o
@@ -335,6 +351,10 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Template/template.h \
 		../Functions/Unmerge/unmerge.h \
 		../Functions/Validate/validate.h \
+		../Menu/Edit/edit.h \
+		../Menu/Help/help.h \
+		../Menu/View/view.h \
+		../Menu/Window/window.h \
 		../RobotDownload/robotdownload.h \
 		../SplashScreen/splashscreen.h \
 		../Startup/startup.h \
@@ -360,6 +380,10 @@ DIST          = ../../Qt/6.5.1/macos/mkspecs/features/spec_pre.prf \
 		../Functions/Template/template.cpp \
 		../Functions/Unmerge/unmerge.cpp \
 		../Functions/Validate/validate.cpp \
+		../Menu/Edit/edit.cpp \
+		../Menu/Help/help.cpp \
+		../Menu/View/view.cpp \
+		../Menu/Window/window.cpp \
 		../RobotDownload/robotdownload.cpp \
 		../SplashScreen/splashscreen.cpp \
 		../Startup/startup.cpp \
@@ -737,8 +761,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../SplashScreen/SplashImage.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Export/export.h ../Functions/Extract/extract.h ../Functions/Filter/filter.h ../Functions/Materialize/materialize.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Query/query.h ../Functions/Reason/reason.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Remove/remove.h ../Functions/Rename/rename.h ../Functions/Repair/repair.h ../Functions/Report/report.h ../Functions/Template/template.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../RobotDownload/robotdownload.h ../SplashScreen/splashscreen.h ../Startup/startup.h ../main/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Export/export.cpp ../Functions/Extract/extract.cpp ../Functions/Filter/filter.cpp ../Functions/Materialize/materialize.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Query/query.cpp ../Functions/Reason/reason.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Remove/remove.cpp ../Functions/Rename/rename.cpp ../Functions/Repair/repair.cpp ../Functions/Report/report.cpp ../Functions/Template/template.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../RobotDownload/robotdownload.cpp ../SplashScreen/splashscreen.cpp ../Startup/startup.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.h ../Functions/Convert/convert.h ../Functions/Diff/diff.h ../Functions/Expand/expand.h ../Functions/Export/export.h ../Functions/Extract/extract.h ../Functions/Filter/filter.h ../Functions/Materialize/materialize.h ../Functions/Measure/measure.h ../Functions/Merge/merge.h ../Functions/Mirror/mirror.h ../Functions/Query/query.h ../Functions/Reason/reason.h ../Functions/Reduce/reduce.h ../Functions/Relax/relax.h ../Functions/Remove/remove.h ../Functions/Rename/rename.h ../Functions/Repair/repair.h ../Functions/Report/report.h ../Functions/Template/template.h ../Functions/Unmerge/unmerge.h ../Functions/Validate/validate.h ../Menu/Edit/edit.h ../Menu/Help/help.h ../Menu/View/view.h ../Menu/Window/window.h ../RobotDownload/robotdownload.h ../SplashScreen/splashscreen.h ../Startup/startup.h ../main/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Functions/Collapse/collapse.cpp ../Functions/Convert/convert.cpp ../Functions/Diff/diff.cpp ../Functions/Expand/expand.cpp ../Functions/Export/export.cpp ../Functions/Extract/extract.cpp ../Functions/Filter/filter.cpp ../Functions/Materialize/materialize.cpp ../Functions/Measure/measure.cpp ../Functions/Merge/merge.cpp ../Functions/Mirror/mirror.cpp ../Functions/Query/query.cpp ../Functions/Reason/reason.cpp ../Functions/Reduce/reduce.cpp ../Functions/Relax/relax.cpp ../Functions/Remove/remove.cpp ../Functions/Rename/rename.cpp ../Functions/Repair/repair.cpp ../Functions/Report/report.cpp ../Functions/Template/template.cpp ../Functions/Unmerge/unmerge.cpp ../Functions/Validate/validate.cpp ../Menu/Edit/edit.cpp ../Menu/Help/help.cpp ../Menu/View/view.cpp ../Menu/Window/window.cpp ../RobotDownload/robotdownload.cpp ../SplashScreen/splashscreen.cpp ../Startup/startup.cpp ../main/main.cpp ../main/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../main/mainwindow.ui $(DISTDIR)/
 
 
@@ -774,9 +798,9 @@ qrc_SplashImage.cpp: ../SplashScreen/SplashImage.qrc \
 		../SplashScreen/SplashScreen.png
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/rcc -name SplashImage --no-zstd ../SplashScreen/SplashImage.qrc -o qrc_SplashImage.cpp
 
-compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_report.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_robotdownload.cpp moc_splashscreen.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_report.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_edit.cpp moc_help.cpp moc_view.cpp moc_window.cpp moc_robotdownload.cpp moc_splashscreen.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_report.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_robotdownload.cpp moc_splashscreen.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_collapse.cpp moc_convert.cpp moc_diff.cpp moc_expand.cpp moc_export.cpp moc_extract.cpp moc_filter.cpp moc_materialize.cpp moc_measure.cpp moc_merge.cpp moc_mirror.cpp moc_query.cpp moc_reason.cpp moc_reduce.cpp moc_relax.cpp moc_remove.cpp moc_rename.cpp moc_repair.cpp moc_report.cpp moc_template.cpp moc_unmerge.cpp moc_validate.cpp moc_edit.cpp moc_help.cpp moc_view.cpp moc_window.cpp moc_robotdownload.cpp moc_splashscreen.cpp moc_mainwindow.cpp
 moc_collapse.cpp: ../Functions/Collapse/collapse.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -1029,6 +1053,48 @@ moc_validate.cpp: ../Functions/Validate/validate.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Functions/Validate/validate.h -o moc_validate.cpp
 
+moc_edit.cpp: ../Menu/Edit/edit.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Menu/Edit/edit.h -o moc_edit.cpp
+
+moc_help.cpp: ../Menu/Help/help.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Menu/Help/help.h -o moc_help.cpp
+
+moc_view.cpp: ../Menu/View/view.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Menu/View/view.h -o moc_view.cpp
+
+moc_window.cpp: ../Menu/Window/window.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../../Qt/6.5.1/macos/libexec/moc
+	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../Menu/Window/window.h -o moc_window.cpp
+
 moc_robotdownload.cpp: ../RobotDownload/robotdownload.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -1038,6 +1104,8 @@ moc_robotdownload.cpp: ../RobotDownload/robotdownload.h \
 moc_splashscreen.cpp: ../SplashScreen/splashscreen.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSplashScreen \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qsplashscreen.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../SplashScreen/splashscreen.h -o moc_splashscreen.cpp
 
@@ -1084,6 +1152,14 @@ moc_mainwindow.cpp: ../main/mainwindow.h \
 		../Functions/Materialize/materialize.h \
 		../Functions/Rename/rename.h \
 		../Functions/Report/report.h \
+		../Menu/View/view.h \
+		../Menu/Window/window.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../Menu/Edit/edit.h \
+		../Menu/Help/help.h \
 		../../Qt/6.5.1/macos/libexec/moc
 	/Users/lukeliu/Qt/6.5.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/lukeliu/Qt/6.5.1/macos/mkspecs/macx-clang -I/Users/lukeliu/GOBOT/main -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtWidgets.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtGui.framework/Headers -I/Users/lukeliu/Qt/6.5.1/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/lukeliu/Qt/6.5.1/macos/lib ../main/mainwindow.h -o moc_mainwindow.cpp
 
@@ -1550,6 +1626,110 @@ validate.o: ../Functions/Validate/validate.cpp ../Functions/Validate/validate.h 
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validate.o ../Functions/Validate/validate.cpp
 
+edit.o: ../Menu/Edit/edit.cpp ../Menu/Edit/edit.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenuBar \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenubar.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qinputdialog.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o edit.o ../Menu/Edit/edit.cpp
+
+help.o: ../Menu/Help/help.cpp ../Menu/Help/help.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenuBar \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenubar.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QDesktopServices \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qdesktopservices.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QUrl \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qurl.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o help.o ../Menu/Help/help.cpp
+
+view.o: ../Menu/View/view.cpp ../Menu/View/view.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenuBar \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenubar.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QKeySequence \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qkeysequence.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o view.o ../Menu/View/view.cpp
+
+window.o: ../Menu/Window/window.cpp ../Menu/Window/window.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../main/mainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSplashScreen \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qsplashscreen.h \
+		../Functions/Merge/merge.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qmap.h \
+		../Functions/Collapse/collapse.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSpinBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qspinbox.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QString \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../Functions/Mirror/mirror.h \
+		../Functions/Relax/relax.h \
+		../Functions/Reduce/reduce.h \
+		../Functions/Convert/convert.h \
+		../Functions/Validate/validate.h \
+		../Functions/Repair/repair.h \
+		../Functions/Unmerge/unmerge.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QListWidget \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+		../Functions/Measure/measure.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../Functions/Expand/expand.h \
+		../Functions/Diff/diff.h \
+		../Functions/Query/query.h \
+		../Functions/Template/template.h \
+		../Functions/Export/export.h \
+		../Functions/Extract/extract.h \
+		../Functions/Reason/reason.h \
+		../Functions/Remove/remove.h \
+		../Functions/Filter/filter.h \
+		../Functions/Materialize/materialize.h \
+		../Functions/Rename/rename.h \
+		../Functions/Report/report.h \
+		../Menu/View/view.h \
+		../Menu/Edit/edit.h \
+		../Menu/Help/help.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenuBar \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenubar.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QKeySequence \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qkeysequence.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o window.o ../Menu/Window/window.cpp
+
 robotdownload.o: ../RobotDownload/robotdownload.cpp ../RobotDownload/robotdownload.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -1569,7 +1749,11 @@ robotdownload.o: ../RobotDownload/robotdownload.cpp ../RobotDownload/robotdownlo
 
 splashscreen.o: ../SplashScreen/splashscreen.cpp ../SplashScreen/splashscreen.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QSplashScreen \
-		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qsplashscreen.h
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qsplashscreen.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QResizeEvent \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qevent.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o splashscreen.o ../SplashScreen/splashscreen.cpp
 
 startup.o: ../Startup/startup.cpp ../Startup/startup.h \
@@ -1630,10 +1814,28 @@ main.o: ../main/main.cpp ../main/mainwindow.h \
 		../Functions/Materialize/materialize.h \
 		../Functions/Rename/rename.h \
 		../Functions/Report/report.h \
+		../Menu/View/view.h \
+		../Menu/Window/window.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../Menu/Edit/edit.h \
+		../Menu/Help/help.h \
+		../Startup/startup.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qfiledialog.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+		../RobotDownload/robotdownload.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDir \
-		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdir.h
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdir.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTimer \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main/main.cpp
 
 mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
@@ -1679,6 +1881,14 @@ mainwindow.o: ../main/mainwindow.cpp ../main/mainwindow.h \
 		../Functions/Materialize/materialize.h \
 		../Functions/Rename/rename.h \
 		../Functions/Report/report.h \
+		../Menu/View/view.h \
+		../Menu/Window/window.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenu \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenu.h \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QAction \
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qaction.h \
+		../Menu/Edit/edit.h \
+		../Menu/Help/help.h \
 		ui_mainwindow.h \
 		../Startup/startup.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
@@ -1764,6 +1974,18 @@ moc_unmerge.o: moc_unmerge.cpp
 
 moc_validate.o: moc_validate.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_validate.o moc_validate.cpp
+
+moc_edit.o: moc_edit.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_edit.o moc_edit.cpp
+
+moc_help.o: moc_help.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_help.o moc_help.cpp
+
+moc_view.o: moc_view.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_view.o moc_view.cpp
+
+moc_window.o: moc_window.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_window.o moc_window.cpp
 
 moc_robotdownload.o: moc_robotdownload.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_robotdownload.o moc_robotdownload.cpp

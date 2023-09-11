@@ -31,6 +31,10 @@ SOURCES += \
     ../Functions/Template/template.cpp \
     ../Functions/Unmerge/unmerge.cpp \
     ../Functions/Validate/validate.cpp \
+    ../Menu/Edit/edit.cpp \
+    ../Menu/Help/help.cpp \
+    ../Menu/View/view.cpp \
+    ../Menu/Window/window.cpp \
     ../RobotDownload/robotdownload.cpp \
     ../SplashScreen/splashscreen.cpp \
     ../Startup/startup.cpp \
@@ -60,6 +64,10 @@ HEADERS += \
     ../Functions/Template/template.h \
     ../Functions/Unmerge/unmerge.h \
     ../Functions/Validate/validate.h \
+    ../Menu/Edit/edit.h \
+    ../Menu/Help/help.h \
+    ../Menu/View/view.h \
+    ../Menu/Window/window.h \
     ../RobotDownload/robotdownload.h \
     ../SplashScreen/splashscreen.h \
     ../Startup/startup.h \

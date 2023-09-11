@@ -815,11 +815,11 @@ public:
     QPushButton *renameButton;
     QCheckBox *renameMissingEntities;
     QCheckBox *renameDuplicates;
-    QWidget *widget;
+    QWidget *layoutWidget33;
     QHBoxLayout *horizontalLayout_169;
     QCheckBox *renamePrefix;
     QLineEdit *renamePrefixName;
-    QWidget *widget1;
+    QWidget *layoutWidget34;
     QHBoxLayout *horizontalLayout_170;
     QCheckBox *renamePrefixMappings;
     QPushButton *renamePrefixMappingsSave;
@@ -870,22 +870,21 @@ public:
     QPushButton *reportAddURI;
     QPushButton *reportRemoveURI;
     QListWidget *reportURIName;
-    QWidget *widget2;
+    QWidget *layoutWidget35;
     QHBoxLayout *horizontalLayout_175;
     QCheckBox *violations;
     QSpinBox *violationsNumber;
     QCheckBox *includeLabels;
-    QWidget *widget3;
+    QWidget *layoutWidget36;
     QHBoxLayout *horizontalLayout_179;
     QCheckBox *limit;
     QSpinBox *limitNumber;
-    QWidget *explain;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1136, 625);
+        MainWindow->resize(1098, 625);
         QFont font;
         font.setFamilies({QString::fromUtf8("Futura")});
         font.setPointSize(13);
@@ -5411,13 +5410,13 @@ public:
         renameDuplicates->setAutoRepeat(false);
         renameDuplicates->setAutoExclusive(false);
         renameDuplicates->setTristate(false);
-        widget = new QWidget(Rename);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(240, 20, 221, 31));
-        horizontalLayout_169 = new QHBoxLayout(widget);
+        layoutWidget33 = new QWidget(Rename);
+        layoutWidget33->setObjectName("layoutWidget33");
+        layoutWidget33->setGeometry(QRect(240, 20, 221, 31));
+        horizontalLayout_169 = new QHBoxLayout(layoutWidget33);
         horizontalLayout_169->setObjectName("horizontalLayout_169");
         horizontalLayout_169->setContentsMargins(0, 0, 0, 0);
-        renamePrefix = new QCheckBox(widget);
+        renamePrefix = new QCheckBox(layoutWidget33);
         renamePrefix->setObjectName("renamePrefix");
         renamePrefix->setFont(font2);
         renamePrefix->setFocusPolicy(Qt::ClickFocus);
@@ -5429,20 +5428,20 @@ public:
 
         horizontalLayout_169->addWidget(renamePrefix);
 
-        renamePrefixName = new QLineEdit(widget);
+        renamePrefixName = new QLineEdit(layoutWidget33);
         renamePrefixName->setObjectName("renamePrefixName");
         renamePrefixName->setFocusPolicy(Qt::ClickFocus);
         renamePrefixName->setClearButtonEnabled(false);
 
         horizontalLayout_169->addWidget(renamePrefixName);
 
-        widget1 = new QWidget(Rename);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(240, 50, 321, 33));
-        horizontalLayout_170 = new QHBoxLayout(widget1);
+        layoutWidget34 = new QWidget(Rename);
+        layoutWidget34->setObjectName("layoutWidget34");
+        layoutWidget34->setGeometry(QRect(240, 50, 321, 33));
+        horizontalLayout_170 = new QHBoxLayout(layoutWidget34);
         horizontalLayout_170->setObjectName("horizontalLayout_170");
         horizontalLayout_170->setContentsMargins(0, 0, 0, 0);
-        renamePrefixMappings = new QCheckBox(widget1);
+        renamePrefixMappings = new QCheckBox(layoutWidget34);
         renamePrefixMappings->setObjectName("renamePrefixMappings");
         renamePrefixMappings->setFont(font2);
         renamePrefixMappings->setFocusPolicy(Qt::ClickFocus);
@@ -5454,12 +5453,12 @@ public:
 
         horizontalLayout_170->addWidget(renamePrefixMappings);
 
-        renamePrefixMappingsSave = new QPushButton(widget1);
+        renamePrefixMappingsSave = new QPushButton(layoutWidget34);
         renamePrefixMappingsSave->setObjectName("renamePrefixMappingsSave");
 
         horizontalLayout_170->addWidget(renamePrefixMappingsSave);
 
-        renamePrefixMappingsName = new QLineEdit(widget1);
+        renamePrefixMappingsName = new QLineEdit(layoutWidget34);
         renamePrefixMappingsName->setObjectName("renamePrefixMappingsName");
         renamePrefixMappingsName->setFocusPolicy(Qt::NoFocus);
 
@@ -5503,7 +5502,7 @@ public:
 
         layoutWidget_154 = new QWidget(Report);
         layoutWidget_154->setObjectName("layoutWidget_154");
-        layoutWidget_154->setGeometry(QRect(260, 70, 117, 31));
+        layoutWidget_154->setGeometry(QRect(260, 70, 119, 32));
         horizontalLayout_172 = new QHBoxLayout(layoutWidget_154);
         horizontalLayout_172->setObjectName("horizontalLayout_172");
         horizontalLayout_172->setContentsMargins(0, 0, 0, 0);
@@ -5600,7 +5599,7 @@ public:
         label_97->setFont(font2);
         layoutWidget_157 = new QWidget(Report);
         layoutWidget_157->setObjectName("layoutWidget_157");
-        layoutWidget_157->setGeometry(QRect(260, 180, 142, 33));
+        layoutWidget_157->setGeometry(QRect(260, 180, 143, 33));
         horizontalLayout_176 = new QHBoxLayout(layoutWidget_157);
         horizontalLayout_176->setObjectName("horizontalLayout_176");
         horizontalLayout_176->setContentsMargins(0, 0, 0, 0);
@@ -5728,18 +5727,18 @@ public:
         reportURIName->setGeometry(QRect(260, 410, 231, 61));
         reportURIName->setFrameShape(QFrame::Box);
         reportURIName->setFrameShadow(QFrame::Plain);
-        widget2 = new QWidget(Report);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(260, 100, 223, 31));
-        horizontalLayout_175 = new QHBoxLayout(widget2);
+        layoutWidget35 = new QWidget(Report);
+        layoutWidget35->setObjectName("layoutWidget35");
+        layoutWidget35->setGeometry(QRect(260, 100, 223, 31));
+        horizontalLayout_175 = new QHBoxLayout(layoutWidget35);
         horizontalLayout_175->setObjectName("horizontalLayout_175");
         horizontalLayout_175->setContentsMargins(0, 0, 0, 0);
-        violations = new QCheckBox(widget2);
+        violations = new QCheckBox(layoutWidget35);
         violations->setObjectName("violations");
 
         horizontalLayout_175->addWidget(violations);
 
-        violationsNumber = new QSpinBox(widget2);
+        violationsNumber = new QSpinBox(layoutWidget35);
         violationsNumber->setObjectName("violationsNumber");
         violationsNumber->setFocusPolicy(Qt::ClickFocus);
         violationsNumber->setMaximum(99999999);
@@ -5749,13 +5748,13 @@ public:
         includeLabels = new QCheckBox(Report);
         includeLabels->setObjectName("includeLabels");
         includeLabels->setGeometry(QRect(260, 140, 131, 31));
-        widget3 = new QWidget(Report);
-        widget3->setObjectName("widget3");
-        widget3->setGeometry(QRect(260, 350, 231, 33));
-        horizontalLayout_179 = new QHBoxLayout(widget3);
+        layoutWidget36 = new QWidget(Report);
+        layoutWidget36->setObjectName("layoutWidget36");
+        layoutWidget36->setGeometry(QRect(260, 350, 233, 33));
+        horizontalLayout_179 = new QHBoxLayout(layoutWidget36);
         horizontalLayout_179->setObjectName("horizontalLayout_179");
         horizontalLayout_179->setContentsMargins(0, 0, 0, 0);
-        limit = new QCheckBox(widget3);
+        limit = new QCheckBox(layoutWidget36);
         limit->setObjectName("limit");
         limit->setFocusPolicy(Qt::ClickFocus);
         limit->setCheckable(true);
@@ -5766,7 +5765,7 @@ public:
 
         horizontalLayout_179->addWidget(limit);
 
-        limitNumber = new QSpinBox(widget3);
+        limitNumber = new QSpinBox(layoutWidget36);
         limitNumber->setObjectName("limitNumber");
         limitNumber->setFocusPolicy(Qt::ClickFocus);
         limitNumber->setMaximum(99999999);
@@ -5774,9 +5773,6 @@ public:
         horizontalLayout_179->addWidget(limitNumber);
 
         tabWidget->addTab(Report, QString());
-        explain = new QWidget();
-        explain->setObjectName("explain");
-        tabWidget->addTab(explain, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -5784,7 +5780,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
         mergeAddFile->setDefault(false);
         mergeButton->setDefault(true);
         unmergeAddMoreFiles->setDefault(false);
@@ -6380,7 +6376,6 @@ public:
         includeLabels->setText(QCoreApplication::translate("MainWindow", "Include Entity Labels", nullptr));
         limit->setText(QCoreApplication::translate("MainWindow", "Limit # of Results <Integer>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Report), QCoreApplication::translate("MainWindow", "Report", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(explain), QCoreApplication::translate("MainWindow", "Explain", nullptr));
     } // retranslateUi
 
 };

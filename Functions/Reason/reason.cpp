@@ -107,6 +107,30 @@ void Reason::resetReason()
     reason_ui->reasonNameSave->clear();
     reason_ui->reasonSavePath->clear();
     reason_ui->reasonOption->setCurrentIndex(0);
+    reason_ui->reasonCreateOntology->setChecked(false);
+    reason_ui->reasonCreateOntologyAnnotation->setChecked(false);
+    reason_ui->reasonExcludeAxioms->setChecked(false);
+    reason_ui->reasonRemoveAxioms->setChecked(false);
+    reason_ui->reasonEquivalentAll->setChecked(false);
+    reason_ui->reasonEquivalentNone->setChecked(false);
+    reason_ui->reasonEquivalentAsserted->setChecked(false);
+    reason_ui->reasonExcludeFalse->setChecked(false);
+    reason_ui->reasonExcludeAll->setChecked(false);
+    reason_ui->reasonExcludeStructural->setChecked(false);
+    reason_ui->SubClass->setChecked(false);
+    reason_ui->EquivalentClass->setChecked(false);
+    reason_ui->DisjointClasses->setChecked(false);
+    reason_ui->DataPropertyCharacteristic->setChecked(false);
+    reason_ui->EquivalentDataProperties->setChecked(false);
+    reason_ui->SubDataProperty->setChecked(false);
+    reason_ui->ClassAssertion->setChecked(false);
+    reason_ui->PropertyAssertion->setChecked(false);
+    reason_ui->EquivalentObjectProperty->setChecked(false);
+    reason_ui->InverseObjectProperties->setChecked(false);
+    reason_ui->ObjectPropertyCharacteristic->setChecked(false);
+    reason_ui->SubObjectProperty->setChecked(false);
+    reason_ui->ObjectPropertyRange->setChecked(false);
+    reason_ui->ObjectPropertyDomain->setChecked(false);
 }
 
 void Reason::reasonFiles()

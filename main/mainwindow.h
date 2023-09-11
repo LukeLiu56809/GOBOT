@@ -26,6 +26,10 @@
 #include "../Functions/Materialize/materialize.h"
 #include "../Functions/Rename/rename.h"
 #include "../Functions/Report/report.h"
+#include "../Menu/View/view.h"
+#include "../Menu/Window/window.h"
+#include "../Menu/Edit/edit.h"
+#include "../Menu/Help/help.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

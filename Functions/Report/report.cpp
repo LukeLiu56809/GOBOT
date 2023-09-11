@@ -200,6 +200,16 @@ void Report::resetReport()
     report_ui->reportNameSave->clear();
     report_ui->reportSavePath->clear();
     report_ui->reportFormat->setCurrentIndex(0);
+    report_ui->violations->setChecked(false);
+    report_ui->includeLabels->setChecked(false);
+    report_ui->failOn->setChecked(false);
+    report_ui->defineProfile->setChecked(false);
+    report_ui->reportTDB->setChecked(false);
+    report_ui->reportKeepTDB->setChecked(false);
+    report_ui->reportTDBDirectoryName->clear();
+    report_ui->limit->setChecked(false);
+    report_ui->reportURIName->clear();
+    URITerms.clear();
 }
 
 void Report::reportFiles()

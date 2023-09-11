@@ -13,7 +13,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
+    Edit *editMenu = new Edit(this);
+    View *viewMenu = new View(this);
+    Window *windowMenu = new Window(this);
+    Help *helpMenu = new Help(this);
 
     mergeHandler = new Merge(ui, this);
     collapseHandler = new Collapse(ui, this);
