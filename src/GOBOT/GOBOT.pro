@@ -36,7 +36,6 @@ SOURCES += \
     ../Menu/View/view.cpp \
     ../Menu/Window/window.cpp \
     ../RobotDownload/robotdownload.cpp \
-    ../SplashScreen/splashscreen.cpp \
     ../Startup/startup.cpp \
     GOBOT.cpp \
     mainwindow.cpp
@@ -69,7 +68,6 @@ HEADERS += \
     ../Menu/View/view.h \
     ../Menu/Window/window.h \
     ../RobotDownload/robotdownload.h \
-    ../SplashScreen/splashscreen.h \
     ../Startup/startup.h \
     mainwindow.h
 

@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Functions/Remove/remove.h"
+#include "../src/Functions/Remove/remove.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>

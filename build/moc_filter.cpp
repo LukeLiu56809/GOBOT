@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Functions/Filter/filter.h"
+#include "../src/Functions/Filter/filter.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>

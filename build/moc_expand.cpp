@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Functions/Expand/expand.h"
+#include "../src/Functions/Expand/expand.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 

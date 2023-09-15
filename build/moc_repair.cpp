@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Functions/Repair/repair.h"
+#include "../src/Functions/Repair/repair.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 

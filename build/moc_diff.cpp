@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../Functions/Diff/diff.h"
+#include "../src/Functions/Diff/diff.h"
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
