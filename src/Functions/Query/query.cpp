@@ -9,7 +9,6 @@ Query::Query(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     query_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(query_ui->querySaveAs, &QPushButton::clicked, this, &Query::onQuerySaveAsClicked);
     connect(query_ui->queryReset, &QPushButton::clicked, this, &Query::onQueryResetClicked);
     connect(query_ui->queryButton, &QPushButton::clicked, this, &Query::onQueryButtonClicked);
@@ -98,18 +97,11 @@ void Query::addFiles(QMap<QString, QString>& filesMap, QListWidget* file)
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         file->clear();
         filesMap.clear();
-
-        // Append the file name to the list view box
         file->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         filesMap[fileName] = fileInfo.path();
     }
 }
@@ -151,7 +143,6 @@ void Query::createTDBDirectory()
     }
     command += " --create-tdb true";
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -171,14 +162,9 @@ void Query::addUpdates()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             query_ui->queryUpdateName->addItem(fileName);
-
-            // Add the file name and its corresponding parent directory path to the QMap
             updates_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -193,13 +179,10 @@ void Query::removeFiles(QMap<QString, QString>& filesMap, QListWidget* file)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     file->takeItem(file->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     filesMap.remove(selectedFileName);
 }
 
@@ -208,17 +191,10 @@ void Query::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         query_ui->queryNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         query_ui->querySavePath->setText(directory);
     }
 }
@@ -253,7 +229,6 @@ void Query::queryFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot query";
     for (QString& fileName : ontology_filesMap.keys())
     {
@@ -293,7 +268,6 @@ void Query::queryFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -303,8 +277,6 @@ void Query::queryFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String: " << command;
 }
 
 void Query::onCatalogClicked(bool checked)

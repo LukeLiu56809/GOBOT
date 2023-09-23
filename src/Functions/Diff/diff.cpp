@@ -9,7 +9,6 @@ Diff::Diff(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     diff_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(diff_ui->diffSaveAs, &QPushButton::clicked, this, &Diff::onDiffSaveAsClicked);
     connect(diff_ui->diffReset, &QPushButton::clicked, this, &Diff::onDiffResetClicked);
     connect(diff_ui->diffButton, &QPushButton::clicked, this, &Diff::onDiffButtonClicked);
@@ -89,14 +88,9 @@ void Diff::addFiles(QMap<QString, QString>& filesMap, QLineEdit* fileNameLineEdi
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Add the file name and its corresponding file path to the QMap
         filesMap[fileName] = fileInfo.path();
-
-        // Set the file name in the corresponding QLineEdit widget
         fileNameLineEdit->setText(fileName);
     }
 }
@@ -108,7 +102,6 @@ void Diff::addCatalog(QLineEdit* catalogFile, QString& termPath)
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         catalogFile->setText(fileName);
-
         QString directory = fileInfo.path();
         termPath = directory;
     }
@@ -119,17 +112,10 @@ void Diff::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.txt);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         diff_ui->diffNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         diff_ui->diffSavePath->setText(directory);
     }
 }
@@ -168,7 +154,6 @@ void Diff::diffFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot diff";
     if (!getLeftOntology().isEmpty())
     {
@@ -196,7 +181,6 @@ void Diff::diffFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -213,7 +197,6 @@ void Diff::onLeftOntologyClicked(bool checked)
     leftOntologySave->setVisible(checked);
     leftOntologySaveName->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         diff_ui->leftIRI->setChecked(false);
         diff_ui->leftIRIName->clear();
@@ -226,7 +209,6 @@ void Diff::onLeftIRIClicked(bool checked)
 {
     leftIRIName->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         diff_ui->leftOntology->setChecked(false);
         diff_ui->leftOntologySaveName->clear();
@@ -247,7 +229,6 @@ void Diff::onRightOntologyClicked(bool checked)
     rightOntologySave->setVisible(checked);
     rightOntologySaveName->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         diff_ui->rightIRI->setChecked(false);
         diff_ui->rightIRIName->clear();
@@ -260,7 +241,6 @@ void Diff::onRightIRIClicked(bool checked)
 {
     rightIRIName->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         diff_ui->rightOntology->setChecked(false);
         diff_ui->rightOntologySaveName->clear();

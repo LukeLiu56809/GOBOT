@@ -12,12 +12,12 @@
   </property>
   <property name="font">
    <font>
-    <family>Futura</family>
+    <family>Arial</family>
     <pointsize>13</pointsize>
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>GOBOT</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -25,10 +25,13 @@
      <widget class="QTabWidget" name="tabWidget">
       <property name="font">
        <font>
-        <family>Galvji</family>
+        <family>Arial</family>
         <pointsize>10</pointsize>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
@@ -82,7 +85,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -153,55 +156,6 @@
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QSplitter" name="splitter_3">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>50</y>
-          <width>192</width>
-          <height>32</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_7">
-         <property name="font">
-          <font>
-           <family>Galvji</family>
-           <pointsize>10</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string> Ontology Annotations</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="mergeOntologyAnnotations">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="editable">
-          <bool>false</bool>
-         </property>
-         <property name="currentText">
-          <string>False</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>False</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>True</string>
-          </property>
-         </item>
-        </widget>
        </widget>
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
@@ -318,7 +272,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -355,54 +309,110 @@
          </item>
         </layout>
        </widget>
-       <widget class="QSplitter" name="splitter_2">
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>50</y>
+          <width>198</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_24">
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ontology Annotations</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="mergeOntologyAnnotations">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>False</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>240</x>
           <y>80</y>
-          <width>211</width>
+          <width>206</width>
           <height>32</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QLabel" name="label_6">
-         <property name="font">
-          <font>
-           <family>Galvji</family>
-           <pointsize>10</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Collapse Import Closure</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="mergeImportClosure">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="editable">
-          <bool>false</bool>
-         </property>
-         <property name="currentText">
-          <string>True</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>True</string>
-          </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_25">
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Collapse Import Closure</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </item>
          <item>
-          <property name="text">
-           <string>False</string>
-          </property>
+          <widget class="QComboBox" name="mergeImportClosure">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string>True</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+          </widget>
          </item>
-        </widget>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="unmerge">
@@ -420,7 +430,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -453,7 +463,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -667,7 +677,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -848,7 +858,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -862,7 +872,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -879,6 +889,12 @@
             <size>
              <width>100</width>
              <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -907,6 +923,12 @@
             <size>
              <width>100</width>
              <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -1068,13 +1090,13 @@
           <widget class="QCheckBox" name="collapseThreshold">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Threshold</string>
@@ -1106,7 +1128,7 @@
          <item>
           <widget class="QCheckBox" name="collapsePreciousClasses">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Classes &lt;IRI/CURIE&gt;</string>
@@ -1150,7 +1172,7 @@
          <item>
           <widget class="QCheckBox" name="collapsePreciousTerms">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Terms &lt;term file&gt;</string>
@@ -1189,7 +1211,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1444,7 +1466,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1796,7 +1818,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1898,10 +1920,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Preserve Annotated Axioms</string>
@@ -1918,10 +1943,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Ignore Anonymous Classes</string>
@@ -1937,7 +1965,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -2020,10 +2048,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Compress File (.gz)</string>
@@ -2194,10 +2225,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Ignore checks</string>
@@ -2217,7 +2251,7 @@
           <widget class="QLabel" name="label_18">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -2229,6 +2263,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="convertFormat">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>json</string>
@@ -2327,7 +2364,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -2436,7 +2473,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -2456,7 +2493,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -2477,6 +2514,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_46">
          <item>
           <widget class="QCheckBox" name="leftIRI">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>IRI</string>
            </property>
@@ -2503,6 +2543,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_48">
          <item>
           <widget class="QCheckBox" name="leftOntology">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Ontology</string>
            </property>
@@ -2539,6 +2582,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_137">
          <item>
           <widget class="QCheckBox" name="leftCatalog">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Catalog FIle</string>
            </property>
@@ -2572,6 +2618,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_138">
          <item>
           <widget class="QCheckBox" name="rightIRI">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>IRI</string>
            </property>
@@ -2601,6 +2650,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_139">
          <item>
           <widget class="QCheckBox" name="rightOntology">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Ontology</string>
            </property>
@@ -2637,6 +2689,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_140">
          <item>
           <widget class="QCheckBox" name="rightCatalog">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Catalog FIle</string>
            </property>
@@ -2681,7 +2736,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -2921,7 +2976,7 @@
           <widget class="QLabel" name="label_25">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -2933,6 +2988,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="validateProfile">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>EL</string>
@@ -2980,7 +3038,7 @@
          <item>
           <widget class="QCheckBox" name="repairClasses">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Classes &lt;IRI/CURIE&gt;</string>
@@ -3104,7 +3162,7 @@
          <item>
           <widget class="QCheckBox" name="repairTerms">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Terms &lt;term file&gt;</string>
@@ -3218,7 +3276,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -3251,6 +3309,12 @@
              <height>0</height>
             </size>
            </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -3279,6 +3343,12 @@
              <height>0</height>
             </size>
            </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -3299,7 +3369,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -3539,7 +3609,7 @@
           <widget class="QLabel" name="label_40">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -3551,6 +3621,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="measureFormat">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>tsv</string>
@@ -3591,7 +3664,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -3609,6 +3682,9 @@
           <height>18</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="text">
          <string>All</string>
         </property>
@@ -3622,6 +3698,9 @@
           <height>18</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="text">
          <string>Extended</string>
         </property>
@@ -3634,6 +3713,9 @@
           <width>121</width>
           <height>18</height>
          </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Essential &lt;Default&gt;</string>
@@ -3654,6 +3736,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_79">
          <item>
           <widget class="QCheckBox" name="reasoner">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Reasoner</string>
            </property>
@@ -3661,6 +3746,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="reasonerMetrics">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>essential</string>
@@ -3831,10 +3919,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Annotate Expansion Axioms</string>
@@ -3845,7 +3936,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -3947,7 +4038,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4007,6 +4098,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_131">
          <item>
           <widget class="QCheckBox" name="expandTermFile">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>expand-term-file</string>
            </property>
@@ -4040,6 +4134,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_132">
          <item>
           <widget class="QCheckBox" name="expandNoTermFile">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>no-expand-term-file</string>
            </property>
@@ -4183,7 +4280,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4309,7 +4406,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4372,7 +4469,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -4574,7 +4671,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4596,7 +4693,7 @@
          <item>
           <widget class="QCheckBox" name="queryCatalog">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Catalog file</string>
@@ -4649,7 +4746,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4668,7 +4765,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Store intermediate results to a temporary file</string>
@@ -4700,7 +4797,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4748,7 +4845,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Load ontology onto disk</string>
@@ -4779,7 +4876,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Keep TDB directory</string>
@@ -4811,7 +4908,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -4843,7 +4940,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Include all imports as named graphs</string>
@@ -5164,7 +5261,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -5228,7 +5325,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -5248,7 +5345,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -5287,13 +5384,13 @@
           <widget class="QCheckBox" name="templatePrefix">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Prefix</string>
@@ -5338,13 +5435,13 @@
           <widget class="QCheckBox" name="templateIRI">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Ontology IRI</string>
@@ -5386,13 +5483,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Proceeed with errors</string>
@@ -5424,13 +5521,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Ancestors</string>
@@ -5461,11 +5558,11 @@
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_105">
-         <item>
+         <item alignment="Qt::AlignLeft">
           <widget class="QLabel" name="label_60">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -5522,7 +5619,7 @@
           <widget class="QLabel" name="label_58">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -5574,13 +5671,13 @@
           <widget class="QCheckBox" name="templateError">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Write errors to file</string>
@@ -5637,7 +5734,7 @@
           <widget class="QLabel" name="label_59">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -5649,6 +5746,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="exportFormat">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>tsv</string>
@@ -5768,7 +5868,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -5928,10 +6028,13 @@
           <widget class="QCheckBox" name="exportHeader">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Header</string>
@@ -5964,10 +6067,13 @@
           <widget class="QCheckBox" name="exportSort">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Sort Header</string>
@@ -6000,10 +6106,13 @@
           <widget class="QCheckBox" name="exportSplit">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Split</string>
@@ -6033,7 +6142,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6053,10 +6162,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>individuals</string>
@@ -6073,10 +6185,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>classes</string>
@@ -6093,10 +6208,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>properties</string>
@@ -6113,7 +6231,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6133,10 +6251,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>ANONYMOUS</string>
@@ -6153,10 +6274,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>ANY</string>
@@ -6173,10 +6297,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>NAMED</string>
@@ -6193,10 +6320,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>IRI</string>
@@ -6213,10 +6343,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>ID</string>
@@ -6233,7 +6366,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6253,10 +6386,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>NAME</string>
@@ -6273,10 +6409,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>LABEL</string>
@@ -6501,7 +6640,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6518,6 +6657,13 @@
           <width>209</width>
           <height>16</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -6563,7 +6709,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6683,16 +6829,19 @@
          <rect>
           <x>260</x>
           <y>410</y>
-          <width>101</width>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Override Error</string>
@@ -6709,7 +6858,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6731,7 +6880,7 @@
          <item>
           <widget class="QCheckBox" name="extractIndividualsMinimal">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>minimal</string>
@@ -6756,7 +6905,7 @@
          <item>
           <widget class="QCheckBox" name="extractIndividualsDefinitions">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>definitions</string>
@@ -6781,7 +6930,7 @@
          <item>
           <widget class="QCheckBox" name="extractIndividualsExclude">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>exclude</string>
@@ -6816,7 +6965,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -6838,7 +6987,7 @@
          <item>
           <widget class="QCheckBox" name="extractLowerTermFile">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Lower Term File</string>
@@ -6880,7 +7029,7 @@
          <item>
           <widget class="QCheckBox" name="extractUpperTermFile">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Upper Term File</string>
@@ -6921,6 +7070,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_302">
          <item>
           <widget class="QCheckBox" name="extractBranchTerm">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Branch From Term</string>
            </property>
@@ -6944,7 +7096,7 @@
          <item>
           <widget class="QCheckBox" name="extractBranchTermFile">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Branch From Term File</string>
@@ -6986,7 +7138,7 @@
          <item>
           <widget class="QCheckBox" name="extractIntermediatesMinimal">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>minimal</string>
@@ -7011,7 +7163,7 @@
          <item>
           <widget class="QCheckBox" name="extractIntermediatesNone">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>none</string>
@@ -7046,7 +7198,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -7066,13 +7218,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Exclude Imported Ontologies</string>
@@ -7098,19 +7250,19 @@
          <rect>
           <x>260</x>
           <y>370</y>
-          <width>231</width>
+          <width>261</width>
           <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Incude Ontology Annotations (from input)</string>
@@ -7136,19 +7288,19 @@
          <rect>
           <x>260</x>
           <y>390</y>
-          <width>161</width>
+          <width>191</width>
           <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Annotate Extracted Terms</string>
@@ -7183,13 +7335,13 @@
           <widget class="QCheckBox" name="extractPrefix">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Prefix</string>
@@ -7234,13 +7386,13 @@
           <widget class="QCheckBox" name="extractSourceMap">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Source Map</string>
@@ -7427,7 +7579,7 @@
           <widget class="QLabel" name="label_162">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -7439,6 +7591,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="extractMethods">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>star</string>
@@ -7480,6 +7635,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_299">
          <item>
           <widget class="QCheckBox" name="extractUpperTerm">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Upper Term</string>
            </property>
@@ -7502,6 +7660,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_298">
          <item>
           <widget class="QCheckBox" name="extractLowerTerm">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Lower Term</string>
            </property>
@@ -7650,7 +7811,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -8154,291 +8315,6 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_177">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>General</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_308">
-           <item>
-            <widget class="QPushButton" name="removeGeneralAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeGeneralRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_175">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Exclude</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_313">
-           <item>
-            <widget class="QPushButton" name="removeExcludeAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeExcludeRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>470</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_176">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Include</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_314">
-           <item>
-            <widget class="QPushButton" name="removeIncludeAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeIncludeRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
           <y>330</y>
           <width>134</width>
           <height>32</height>
@@ -8449,7 +8325,7 @@
           <widget class="QLabel" name="label_63">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -8501,7 +8377,7 @@
           <widget class="QLabel" name="label_88">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -8539,6 +8415,297 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_308">
+         <item>
+          <widget class="QPushButton" name="removeGeneralAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeGeneralRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_177">
+        <property name="geometry">
+         <rect>
+          <x>98</x>
+          <y>101</y>
+          <width>38</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>General</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_313">
+         <item>
+          <widget class="QPushButton" name="removeExcludeAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeExcludeRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_175">
+        <property name="geometry">
+         <rect>
+          <x>327</x>
+          <y>101</y>
+          <width>39</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Exclude</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_314">
+         <item>
+          <widget class="QPushButton" name="removeIncludeAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeIncludeRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_176">
+        <property name="geometry">
+         <rect>
+          <x>559</x>
+          <y>101</y>
+          <width>35</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Include</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="filter">
        <attribute name="title">
@@ -8560,101 +8727,6 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QWidget" name="layoutWidget_232">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_16">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_216">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>General</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_364">
-           <item>
-            <widget class="QPushButton" name="filterGeneralAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="filterGeneralRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
        <widget class="QLabel" name="label_217">
         <property name="geometry">
          <rect>
@@ -8666,7 +8738,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -8905,101 +8977,6 @@
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
         </property>
-       </widget>
-       <widget class="QWidget" name="layoutWidget_233">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_17">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_218">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Exclude</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_367">
-           <item>
-            <widget class="QPushButton" name="filterExcludeAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="filterExcludeRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
        </widget>
        <widget class="QListWidget" name="filterIncludeTermName">
         <property name="geometry">
@@ -9246,7 +9223,7 @@
           <widget class="QLabel" name="label_134">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -9298,7 +9275,7 @@
           <widget class="QLabel" name="label_135">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -9471,100 +9448,296 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="layoutWidget_418">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>470</x>
-          <y>100</y>
-          <width>214</width>
-          <height>54</height>
+          <x>240</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_25">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_271">
-           <property name="font">
-            <font>
-             <family>Galvji</family>
-             <pointsize>10</pointsize>
-             <bold>true</bold>
-            </font>
+        <layout class="QHBoxLayout" name="horizontalLayout_367">
+         <item>
+          <widget class="QPushButton" name="filterExcludeAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
            </property>
            <property name="text">
-            <string>Include</string>
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_439">
-           <item>
-            <widget class="QPushButton" name="filterIncludeAddTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::DefaultContextMenu</enum>
-             </property>
-             <property name="text">
-              <string>Add Term File</string>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="filterIncludeRemoveTermFile">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="text">
-              <string>Remove Term File</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QPushButton" name="filterExcludeRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_218">
+        <property name="geometry">
+         <rect>
+          <x>327</x>
+          <y>101</y>
+          <width>39</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Exclude</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_364">
+         <item>
+          <widget class="QPushButton" name="filterGeneralAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterGeneralRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_216">
+        <property name="geometry">
+         <rect>
+          <x>98</x>
+          <y>101</y>
+          <width>38</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>General</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>120</y>
+          <width>212</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_439">
+         <item>
+          <widget class="QPushButton" name="filterIncludeAddTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Add Term File</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filterIncludeRemoveTermFile">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Remove Term File</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_271">
+        <property name="geometry">
+         <rect>
+          <x>559</x>
+          <y>101</y>
+          <width>35</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Include</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="reason">
@@ -9782,7 +9955,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -9833,7 +10006,7 @@
           <widget class="QLabel" name="label_186">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -9845,6 +10018,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="reasonOption">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>ELK</string>
@@ -9890,10 +10066,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>--create-new-ontology</string>
@@ -9910,10 +10089,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>--create-new-ontology-with-annotations</string>
@@ -9930,10 +10112,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>--remove-redundant-subclass-axioms</string>
@@ -9950,10 +10135,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>--exclude-duplicate-axioms</string>
@@ -9970,10 +10158,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>all</string>
@@ -9990,10 +10181,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>none</string>
@@ -10010,10 +10204,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>asserted-only</string>
@@ -10030,7 +10227,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -10050,10 +10247,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>structural</string>
@@ -10070,10 +10270,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>all</string>
@@ -10090,10 +10293,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>false</string>
@@ -10110,7 +10316,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -10139,16 +10345,19 @@
           <rect>
            <x>220</x>
            <y>210</y>
-           <width>141</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>ObjectPropertyDomain</string>
@@ -10159,16 +10368,19 @@
           <rect>
            <x>220</x>
            <y>130</y>
-           <width>151</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>InverseObjectProperties</string>
@@ -10179,19 +10391,19 @@
           <rect>
            <x>10</x>
            <y>90</y>
-           <width>141</width>
+           <width>171</width>
            <height>26</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>Individual axiom generators</string>
+          <string>Individual Axiom Generators</string>
          </property>
         </widget>
         <widget class="QCheckBox" name="EquivalentDataProperties">
@@ -10199,16 +10411,19 @@
           <rect>
            <x>220</x>
            <y>40</y>
-           <width>151</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>EquivalentDataProperties</string>
@@ -10219,16 +10434,19 @@
           <rect>
            <x>220</x>
            <y>170</y>
-           <width>151</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>SubObjectProperty</string>
@@ -10239,16 +10457,19 @@
           <rect>
            <x>220</x>
            <y>60</y>
-           <width>111</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>SubDataProperty</string>
@@ -10265,10 +10486,13 @@
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>SubClass</string>
@@ -10285,10 +10509,13 @@
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>ClassAssertion</string>
@@ -10305,10 +10532,13 @@
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>PropertyAssertion</string>
@@ -10319,19 +10549,19 @@
           <rect>
            <x>200</x>
            <y>90</y>
-           <width>161</width>
+           <width>201</width>
            <height>26</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>Data property axiom generators</string>
+          <string>Data Property Axiom Generators</string>
          </property>
         </widget>
         <widget class="QCheckBox" name="DisjointClasses">
@@ -10345,10 +10575,13 @@
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>DisjointClasses</string>
@@ -10359,16 +10592,19 @@
           <rect>
            <x>220</x>
            <y>190</y>
-           <width>131</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>ObjectPropertyRange</string>
@@ -10379,13 +10615,13 @@
           <rect>
            <x>10</x>
            <y>0</y>
-           <width>121</width>
+           <width>161</width>
            <height>26</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
@@ -10399,16 +10635,19 @@
           <rect>
            <x>220</x>
            <y>20</y>
-           <width>161</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>DataPropertyCharacteristic</string>
@@ -10419,16 +10658,19 @@
           <rect>
            <x>220</x>
            <y>150</y>
-           <width>171</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>ObjectPropertyCharacteristic</string>
@@ -10439,16 +10681,19 @@
           <rect>
            <x>220</x>
            <y>110</y>
-           <width>161</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>EquivalentObjectProperty</string>
@@ -10465,10 +10710,13 @@
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>EquivalentClass</string>
@@ -10479,19 +10727,19 @@
           <rect>
            <x>200</x>
            <y>0</y>
-           <width>161</width>
+           <width>201</width>
            <height>26</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Galvji</family>
+           <family>Arial</family>
            <pointsize>10</pointsize>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>Data property axiom generators</string>
+          <string>Data Property Axiom Generators</string>
          </property>
         </widget>
        </widget>
@@ -10532,7 +10780,7 @@
           <widget class="QLabel" name="label_194">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
@@ -10544,6 +10792,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="materializeOption">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>ELK</string>
@@ -10693,7 +10944,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -10819,7 +11070,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -10865,7 +11116,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -11066,7 +11317,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -11354,7 +11605,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -11385,6 +11636,13 @@
           <height>16</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -11400,7 +11658,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -11601,7 +11859,7 @@
            </property>
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
@@ -11649,13 +11907,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Allow Missing Entities</string>
@@ -11687,13 +11945,13 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Allow Duplicates</string>
@@ -11728,13 +11986,13 @@
           <widget class="QCheckBox" name="renamePrefix">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Add Prefix</string>
@@ -11782,13 +12040,13 @@
           <widget class="QCheckBox" name="renamePrefixMappings">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Prefix Mappings</string>
@@ -11906,7 +12164,7 @@
           <widget class="QLabel" name="label_94">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
             </font>
@@ -11918,6 +12176,9 @@
          </item>
          <item>
           <widget class="QComboBox" name="reportFormat">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <item>
             <property name="text">
              <string>tsv</string>
@@ -12133,7 +12394,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12153,7 +12414,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12173,7 +12434,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12194,6 +12455,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_176">
          <item>
           <widget class="QCheckBox" name="failOn">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>--fail-on</string>
            </property>
@@ -12234,7 +12498,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12257,13 +12521,13 @@
           <widget class="QCheckBox" name="defineProfile">
            <property name="font">
             <font>
-             <family>Galvji</family>
+             <family>Arial</family>
              <pointsize>10</pointsize>
              <bold>false</bold>
             </font>
            </property>
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Define Profile</string>
@@ -12341,7 +12605,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12360,7 +12624,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Load ontology onto disk</string>
@@ -12391,7 +12655,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="text">
          <string>Keep TDB directory</string>
@@ -12423,7 +12687,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Galvji</family>
+          <family>Arial</family>
           <pointsize>10</pointsize>
           <bold>true</bold>
          </font>
@@ -12537,6 +12801,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_175">
          <item>
           <widget class="QCheckBox" name="violations">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>Print Violations &lt;Integer&gt;</string>
            </property>
@@ -12563,6 +12830,9 @@
           <height>31</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="text">
          <string>Include Entity Labels</string>
         </property>
@@ -12580,7 +12850,7 @@
          <item>
           <widget class="QCheckBox" name="limit">
            <property name="focusPolicy">
-            <enum>Qt::ClickFocus</enum>
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>Limit # of Results &lt;Integer&gt;</string>

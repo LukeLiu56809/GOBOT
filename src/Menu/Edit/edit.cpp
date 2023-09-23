@@ -133,3 +133,4 @@ void Edit::replaceActionTriggered()
         }
     }
 }
+

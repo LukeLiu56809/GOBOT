@@ -2,7 +2,7 @@
 #include "../Startup/startup.h"
 #include "../RobotDownload/robotdownload.h"
 #include <QApplication>
-#include <QDir>
+#include <QCoreApplication>
 #include <QTimer>
 
 int main(int argc, char *argv[])

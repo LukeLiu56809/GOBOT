@@ -9,7 +9,6 @@ Export::Export(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     export_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(export_ui->exportAddFile, &QPushButton::clicked, this, &Export::onExportAddFileClicked);
     connect(export_ui->exportRemoveFile, &QPushButton::clicked, this, &Export::onExportRemoveFileClicked);
     connect(export_ui->exportSaveAs, &QPushButton::clicked, this, &Export::onExportSaveAsClicked);
@@ -55,14 +54,9 @@ void Export::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             export_ui->exportFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             export_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -77,13 +71,10 @@ void Export::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     export_ui->exportFileNames->takeItem(export_ui->exportFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     export_filesMap.remove(selectedFileName);
 }
 
@@ -93,17 +84,10 @@ void Export::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         export_ui->exportNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         export_ui->exportSavePath->setText(directory);
     }
 }
@@ -156,7 +140,6 @@ void Export::exportFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot export -i " +
                       getSelectedFileName() + " --format " + getFormat() +
                       " --header \"" + getHeader() + "\"";
@@ -211,7 +194,6 @@ void Export::exportFiles()
     }
     command += " --export " + result;
 
-    // System Call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -221,8 +203,6 @@ void Export::exportFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String: " << command;
 }
 
 void Export::onExportHeaderClicked(bool checked)

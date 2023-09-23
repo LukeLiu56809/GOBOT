@@ -9,7 +9,6 @@ Collapse::Collapse(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     collapse_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(collapse_ui->collapseAddFile, &QPushButton::clicked, this, &Collapse::onCollapseAddFileClicked);
     connect(collapse_ui->collapseRemoveFile, &QPushButton::clicked, this, &Collapse::onCollapseRemoveFileClicked);
     connect(collapse_ui->collapseSaveAs, &QPushButton::clicked, this, &Collapse::onCollapseSaveAsClicked);
@@ -64,14 +63,9 @@ void Collapse::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             collapse_ui->collapseFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             collapse_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -86,13 +80,10 @@ void Collapse::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     collapse_ui->collapseFileNames->takeItem(collapse_ui->collapseFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     collapse_filesMap.remove(selectedFileName);
 }
 
@@ -101,33 +92,23 @@ void Collapse::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         collapse_ui->collapseNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         collapse_ui->collapseSavePath->setText(directory);
     }
 }
 
 void Collapse::resetCollapse()
 {
-    // Uncheck the checkboxes
     collapse_ui->collapseThreshold->setChecked(false);
     collapse_ui->collapsePreciousClasses->setChecked(false);
     collapse_ui->collapsePreciousTerms->setChecked(false);
 
-    // Clear the QMap and clear the list view box
     collapse_filesMap.clear();
     collapse_ui->collapseFileNames->clear();
 
-    // Clear the QLineEdit widgets
     collapse_ui->collapseNameSave->clear();
     collapse_ui->collapseSavePath->clear();
     collapse_ui->collapseThresholdEdit->setValue(0);
@@ -160,7 +141,6 @@ void Collapse::collapseFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot collapse \\\n"
                                                  " -i " + getSelectedFileName() + " \\\n"
                                                  " --threshold " + getThreshold() + " \\\n ";
@@ -174,7 +154,6 @@ void Collapse::collapseFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -195,7 +174,6 @@ void Collapse::onCollapsePreciousClassesClicked(bool checked)
 {
     collapse_ui->collapsePreciousClassesEdit->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         collapse_ui->collapsePreciousTerms->setChecked(false);
         collapse_ui->collapsePreciousTermsEdit->clear();
@@ -209,7 +187,6 @@ void Collapse::onCollapsePreciousTermsClicked(bool checked)
     collapse_ui->collapsePreciousTermsFile->setVisible(checked);
     collapse_ui->collapsePreciousTermsEdit->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         collapse_ui->collapsePreciousClasses->setChecked(false);
         collapse_ui->collapsePreciousClassesEdit->clear();
@@ -225,7 +202,6 @@ void Collapse::onCollapsePreciousTermsFileClicked()
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         collapse_ui->collapsePreciousTermsEdit->setText(fileName);
-
         QString directory = fileInfo.path();
         termPath = directory;
     }

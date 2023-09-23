@@ -10,7 +10,6 @@ Report::Report(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     report_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(report_ui->reportAddFile, &QPushButton::clicked, this, &Report::onReportAddFileClicked);
     connect(report_ui->reportAddURI, &QPushButton::clicked, this, &Report::onReportAddURIClicked);
     connect(report_ui->reportTDBDirectory, &QPushButton::clicked, this, &Report::onAddTDBDirectoryClicked);
@@ -91,14 +90,9 @@ void Report::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             report_ui->reportFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             report_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -131,7 +125,6 @@ void Report::addProfile()
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         report_ui->defineProfileName->setText(fileName);
-
         QString directory = fileInfo.path();
         profilePath = directory;
     }
@@ -146,13 +139,10 @@ void Report::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     report_ui->reportFileNames->takeItem(report_ui->reportFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     report_filesMap.remove(selectedFileName);
 }
 
@@ -178,17 +168,10 @@ void Report::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         report_ui->reportNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         report_ui->reportSavePath->setText(directory);
     }
 }
@@ -233,7 +216,6 @@ void Report::reportFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot report -i " +
                       selectedFilePath + "/" + getSelectedFileName() +
                       " --format " + getFormat();
@@ -275,7 +257,6 @@ void Report::reportFiles()
     }
     command += " -o " + result;
 
-    // System Call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -285,7 +266,6 @@ void Report::reportFiles()
     {
         QMessageBox::warning(nullptr, "Error", "No violations found.");
     }
-    qDebug() << "String: " << command;
 }
 
 void Report::onViolationsClicked(bool checked)

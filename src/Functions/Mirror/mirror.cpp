@@ -9,7 +9,6 @@ Mirror::Mirror(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     mirror_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(mirror_ui->mirrorAddFile, &QPushButton::clicked, this, &Mirror::onMirrorAddFileClicked);
     connect(mirror_ui->mirrorRemoveFile, &QPushButton::clicked, this, &Mirror::onMirrorRemoveFileClicked);
     connect(mirror_ui->mirrorSaveAs, &QPushButton::clicked, this, &Mirror::onMirrorSaveAsClicked);
@@ -48,14 +47,9 @@ void Mirror::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             mirror_ui->mirrorFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             mirror_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -70,13 +64,10 @@ void Mirror::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     mirror_ui->mirrorFileNames->takeItem(mirror_ui->mirrorFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     mirror_filesMap.remove(selectedFileName);
 }
 
@@ -85,17 +76,10 @@ void Mirror::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         mirror_ui->mirrorNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         mirror_ui->mirrorSavePath->setText(directory);
     }
 }
@@ -128,12 +112,10 @@ void Mirror::mirrorFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot mirror -i " + getSelectedFileName() + " \\\n"
                                                  " --directory " + getSavePath() + " \\\n"
                                                  " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {

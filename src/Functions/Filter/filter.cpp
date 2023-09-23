@@ -10,7 +10,6 @@ Filter::Filter(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     filter_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(filter_ui->filterAddOntology, &QPushButton::clicked, this, &Filter::onFilterAddOntologyClicked);
     connect(filter_ui->filterGeneralAddTerm, &QPushButton::clicked, this, &Filter::onFilterGeneralAddTermClicked);
     connect(filter_ui->filterExcludeAddTerm, &QPushButton::clicked, this, &Filter::onFilterExcludeAddTermClicked);
@@ -122,18 +121,11 @@ void Filter::addImport()
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Filter the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         filter_ui->filterOntologyName->clear();
         filter_filesMap.clear();
-
-        // Append the file name to the list view box
         filter_ui->filterOntologyName->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         filter_filesMap[fileName] = fileInfo.path();
     }
 }
@@ -155,14 +147,9 @@ void Filter::addTermFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             files->addItem(fileName);
-
-            // Add the file name and its corresponding parent directory path to the QMap
             filesMap[fileName] = fileInfo.path();
         }
     }
@@ -177,13 +164,10 @@ void Filter::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Filter the selected item from the list view widget
     files->takeItem(files->row(selectedItem));
 
-    // Filter the selected file name from the QMap
     filesMap.remove(selectedFileName);
 }
 
@@ -208,17 +192,10 @@ void Filter::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Filter the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         filter_ui->filterNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         filter_ui->filterSavePath->setText(directory);
     }
 }
@@ -262,7 +239,6 @@ void Filter::filterFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot filter";
     for (QString& fileName : filter_filesMap.keys())
     {
@@ -320,7 +296,6 @@ void Filter::filterFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -330,7 +305,6 @@ void Filter::filterFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-    qDebug() << "String: " << command;
 }
 //------------------------------- Getter methods---------------------------------
 QString Filter::getSavePath() const

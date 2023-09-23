@@ -9,7 +9,6 @@ Repair::Repair(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     repair_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(repair_ui->repairAddFile, &QPushButton::clicked, this, &Repair::onRepairAddFileClicked);
     connect(repair_ui->repairRemoveFile, &QPushButton::clicked, this, &Repair::onRepairRemoveFileClicked);
     connect(repair_ui->repairSaveAs, &QPushButton::clicked, this, &Repair::onRepairSaveAsClicked);
@@ -59,14 +58,9 @@ void Repair::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             repair_ui->repairFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             repair_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -81,13 +75,10 @@ void Repair::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     repair_ui->repairFileNames->takeItem(repair_ui->repairFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     repair_filesMap.remove(selectedFileName);
 }
 
@@ -96,32 +87,22 @@ void Repair::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         repair_ui->repairNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         repair_ui->repairSavePath->setText(directory);
     }
 }
 
 void Repair::resetRepair()
 {
-    // Uncheck the checkboxes
     repair_ui->repairClasses->setChecked(false);
     repair_ui->repairTerms->setChecked(false);
 
-    // Clear the QMap and clear the list view box
     repair_filesMap.clear();
     repair_ui->repairFileNames->clear();
 
-    // Clear the QLineEdit widgets
     repair_ui->repairNameSave->clear();
     repair_ui->repairSavePath->clear();
     repair_ui->repairClassesEdit->clear();
@@ -149,7 +130,6 @@ void Repair::repairFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot repair \\\n"
                                                  " -i " + getSelectedFileName() + " \\\n";
     if (!getClasses().isEmpty())
@@ -162,7 +142,6 @@ void Repair::repairFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -178,7 +157,6 @@ void Repair::onRepairClassesClicked(bool checked)
 {
     repair_ui->repairClassesEdit->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         repair_ui->repairTerms->setChecked(false);
         repair_ui->repairTermsEdit->clear();
@@ -192,7 +170,6 @@ void Repair::onRepairTermsClicked(bool checked)
     repair_ui->repairTermsFile->setVisible(checked);
     repair_ui->repairTermsEdit->setVisible(checked);
 
-    // Uncheck the other checkbox
     if (checked) {
         repair_ui->repairClasses->setChecked(false);
         repair_ui->repairClassesEdit->clear();
@@ -208,7 +185,6 @@ void Repair::onRepairTermsFileClicked()
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         repair_ui->repairTermsEdit->setText(fileName);
-
         QString directory = fileInfo.path();
         termPath = directory;
     }

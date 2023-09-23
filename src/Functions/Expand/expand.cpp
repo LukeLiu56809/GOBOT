@@ -9,7 +9,6 @@ Expand::Expand(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     expand_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(expand_ui->expandAddFile, &QPushButton::clicked, this, &Expand::onExpandAddFileClicked);
     connect(expand_ui->expandRemoveFile, &QPushButton::clicked, this, &Expand::onExpandRemoveFileClicked);
     connect(expand_ui->expandSaveAs, &QPushButton::clicked, this, &Expand::onExpandSaveAsClicked);
@@ -64,14 +63,9 @@ void Expand::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             expand_ui->expandFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             expand_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -86,13 +80,10 @@ void Expand::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     expand_ui->expandFileNames->takeItem(expand_ui->expandFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     expand_filesMap.remove(selectedFileName);
 }
 
@@ -101,33 +92,23 @@ void Expand::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         expand_ui->expandNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         expand_ui->expandSavePath->setText(directory);
     }
 }
 
 void Expand::resetExpand()
 {
-    // Uncheck the checkboxes
     expand_ui->expandTermFile->setChecked(false);
     expand_ui->expandNoTermFile->setChecked(false);
     expand_ui->expandAnnotateExpansion->setChecked(false);
 
-    // Clear the QMap and clear the list view box
     expand_filesMap.clear();
     expand_ui->expandFileNames->clear();
 
-    // Clear the QLineEdit widgets
     expand_ui->expandNameSave->clear();
     expand_ui->expandSavePath->clear();
     expand_ui->expandTermSaveName->clear();
@@ -156,7 +137,6 @@ void Expand::expandFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot expand -i " + getSelectedFileName();
     if (!getTerm().isEmpty())
     {
@@ -176,7 +156,6 @@ void Expand::expandFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -209,7 +188,6 @@ void Expand::onExpandTermFileSaveClicked()
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         expand_ui->expandTermSaveName->setText(fileName);
-
         QString directory = fileInfo.path();
         termPath = directory;
     }
@@ -222,7 +200,6 @@ void Expand::onExpandNoTermFileSaveClicked()
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         expand_ui->expandNoTermSaveName->setText(fileName);
-
         QString directory = fileInfo.path();
         noTermPath = directory;
     }

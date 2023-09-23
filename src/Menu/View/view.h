@@ -14,12 +14,10 @@ public:
     View(QMainWindow *parent = nullptr);
 
 private slots:
-    void exitFullScreenActionTriggered();
     void minimizeActionTriggered();
 
 private:
     void createViewMenu(QMainWindow *parent);
-    QAction *exitFullScreenAction;
     QAction *minimizeAction;
 };
 

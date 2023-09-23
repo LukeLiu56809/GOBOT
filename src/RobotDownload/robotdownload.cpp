@@ -6,68 +6,91 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QSysInfo>
+#include <QDir>
 
 RobotDownload::RobotDownload(QObject *parent)
     : QObject(parent)
 {
-    appDir = QCoreApplication::applicationDirPath();
-    appDir = QFileInfo(appDir).path();
-    appDir = QFileInfo(appDir).path();
-    appDir = QFileInfo(appDir).path();
+    macAppDir = QCoreApplication::applicationDirPath();
+    macAppDir = QFileInfo(macAppDir).path();
+    macAppDir = QFileInfo(macAppDir).path();
+    macAppDir = QFileInfo(macAppDir).path();
+
+    winAppDir = QCoreApplication::applicationDirPath();
 }
 
 void RobotDownload::downloadFiles()
 {
     downloadRobotJar();
     downloadRobotScript();
+    createBatchScript();
     makeScriptExecutable();
     addToPath();
 }
 
 void RobotDownload::downloadRobotJar()
 {
-    QString jarFilePath = appDir + "/robot.jar";
+    QString jarFilePath;
 
-    if (!QFile::exists(jarFilePath))
-    {
-        QString downloadCommand;
-
-        if (QSysInfo::productType() == "macos") {
-            // macOS
-            downloadCommand = QString("curl -L -o \"%1\" https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar").arg(jarFilePath);
-        } else if (QSysInfo::productType() == "windows") {
-            // Windows
-            downloadCommand = QString("powershell -Command \"Invoke-WebRequest -Uri 'https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar' -OutFile '%1'\"").arg(jarFilePath);
+    if (QSysInfo::productType() == "macos") {
+        jarFilePath = macAppDir + "/robot.jar";
+        if (!QFile::exists(jarFilePath))
+        {
+            QString downloadCommand = QString("curl -L -o \"%1\" https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar").arg(jarFilePath);
+            system(downloadCommand.toUtf8());
         }
-
-        system(downloadCommand.toUtf8());
+    } else if (QSysInfo::productType() == "windows") {
+        jarFilePath = winAppDir + "\\robot.jar";
+        if (!QFile::exists(jarFilePath))
+        {
+            QString downloadCommand = QString("powershell -ExecutionPolicy Unrestricted -Command \"Invoke-WebRequest -Uri 'https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar' -OutFile '%1\\robot.jar'\"").arg(jarFilePath);
+            system(downloadCommand.toUtf8());
+        }
     }
 }
 
 void RobotDownload::downloadRobotScript()
 {
-    QString scriptFilePath = appDir + "/robot";
+    if (QSysInfo::productType() == "macos") {
+        QString scriptFilePath = macAppDir + "/robot";
 
-    if (!QFile::exists(scriptFilePath))
-    {
-        QString downloadCommand;
-
-        if (QSysInfo::productType() == "macos") {
-            downloadCommand = QString("curl -L https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > \"%1\"").arg(scriptFilePath);
-        } else if (QSysInfo::productType() == "windows") {
-            downloadCommand = QString("powershell -Command \"Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ontodev/robot/master/bin/robot' -OutFile '%1'\"").arg(scriptFilePath);
+        if (!QFile::exists(scriptFilePath))
+        {
+            QString downloadCommand = QString("curl -L https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > \"%1\"").arg(scriptFilePath);
+            system(downloadCommand.toUtf8());
         }
+    }
+}
 
-        system(downloadCommand.toUtf8());
+void RobotDownload::createBatchScript()
+{
+    if (QSysInfo::productType() == "windows")
+    {
+        QString scriptFilePath = winAppDir + "\\robot.bat";
+
+        if (!QFile::exists(scriptFilePath))
+        {
+            QString batchScript = "java %ROBOT_JAVA_ARGS% -jar %~dp0robot.jar %*";
+
+            QFile scriptFile(scriptFilePath);
+            if (scriptFile.open(QIODevice::WriteOnly | QIODevice::Text))
+            {
+                QTextStream out(&scriptFile);
+                out << batchScript;
+                scriptFile.close();
+            }
+        }
     }
 }
 
 void RobotDownload::makeScriptExecutable()
 {
-    QString scriptFilePath = appDir + "/robot";
-
     if (QSysInfo::productType() == "macos") {
+        QString scriptFilePath = macAppDir + "/robot";
         system(QString("chmod +x \"%1\"").arg(scriptFilePath).toUtf8());
+    } else if (QSysInfo::productType() == "windows") {
+        QString icaclsCommand = QString("icacls \"%1\\robot.bat\" /grant Users:RX /T").arg(winAppDir);
+        system(icaclsCommand.toUtf8());
     }
 }
 
@@ -83,10 +106,9 @@ void RobotDownload::addToPath()
         pathSeparator = ":";
     }
 
-    if (!path.contains(appDir)) {
-        path.prepend(appDir + pathSeparator);
+    if (!path.contains(winAppDir) && QSysInfo::productType() == "windows") {
+        path.prepend(winAppDir + pathSeparator);
         QProcessEnvironment::systemEnvironment().insert("PATH", path);
         qputenv("PATH", path.toUtf8());
     }
 }
-

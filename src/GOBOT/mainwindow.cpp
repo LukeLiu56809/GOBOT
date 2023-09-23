@@ -6,6 +6,7 @@
 #include <QTimer>
 #include <QProcessEnvironment>
 #include <QPixmap>
+#include <QMenuBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

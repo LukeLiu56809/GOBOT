@@ -12,10 +12,12 @@ public:
     void downloadFiles();
 
 private:
-    QString appDir;
+    QString macAppDir;
+    QString winAppDir;
 
     void downloadRobotJar();
     void downloadRobotScript();
+    void createBatchScript();
     void makeScriptExecutable();
     void addToPath();
 };

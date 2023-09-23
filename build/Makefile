@@ -1466,7 +1466,7 @@ relax.o: ../src/Functions/Relax/relax.cpp ../src/Functions/Relax/relax.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o relax.o ../src/Functions/Relax/relax.cpp
 
-remove.o: ../src/Functions/Remove/remove.cpp ../src/Functions/Remove/Remove.h \
+remove.o: ../src/Functions/Remove/remove.cpp ../src/Functions/Remove/remove.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qobject.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QMap \
@@ -1732,7 +1732,9 @@ robotdownload.o: ../src/RobotDownload/robotdownload.cpp ../src/RobotDownload/rob
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QFileInfo \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qfileinfo.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QSysInfo \
-		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qsysinfo.h
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qsysinfo.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDir \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o robotdownload.o ../src/RobotDownload/robotdownload.cpp
 
 startup.o: ../src/Startup/startup.cpp ../src/Startup/startup.h \
@@ -1811,8 +1813,8 @@ GOBOT.o: ../src/GOBOT/GOBOT.cpp ../src/GOBOT/mainwindow.h \
 		../src/RobotDownload/robotdownload.h \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QDir \
-		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qdir.h \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QCoreApplication \
+		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QTimer \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qtimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o GOBOT.o ../src/GOBOT/GOBOT.cpp
@@ -1882,7 +1884,9 @@ mainwindow.o: ../src/GOBOT/mainwindow.cpp ../src/GOBOT/mainwindow.h \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/QProcessEnvironment \
 		../../Qt/6.5.1/macos/lib/QtCore.framework/Headers/qprocess.h \
 		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/QPixmap \
-		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qpixmap.h
+		../../Qt/6.5.1/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/QMenuBar \
+		../../Qt/6.5.1/macos/lib/QtWidgets.framework/Headers/qmenubar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../src/GOBOT/mainwindow.cpp
 
 qrc_SplashImage.o: qrc_SplashImage.cpp 

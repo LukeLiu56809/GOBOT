@@ -9,7 +9,6 @@ Relax::Relax(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     relax_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(relax_ui->relaxAddFile, &QPushButton::clicked, this, &Relax::onRelaxAddFileClicked);
     connect(relax_ui->relaxRemoveFile, &QPushButton::clicked, this, &Relax::onRelaxRemoveFileClicked);
     connect(relax_ui->relaxSaveAs, &QPushButton::clicked, this, &Relax::onRelaxSaveAsClicked);
@@ -48,14 +47,9 @@ void Relax::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             relax_ui->relaxFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             relax_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -70,13 +64,10 @@ void Relax::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     relax_ui->relaxFileNames->takeItem(relax_ui->relaxFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     relax_filesMap.remove(selectedFileName);
 }
 
@@ -85,17 +76,10 @@ void Relax::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         relax_ui->relaxNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         relax_ui->relaxSavePath->setText(directory);
     }
 }
@@ -128,12 +112,10 @@ void Relax::relaxFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot relax -i " +
                       getSelectedFileName() +
                       " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {

@@ -9,7 +9,6 @@ Template::Template(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     template_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(template_ui->templateAddFirstFile, &QPushButton::clicked, this, &Template::onTemplateAddFirstFileClicked);
     connect(template_ui->templateAddMoreFiles, &QPushButton::clicked, this, &Template::onTemplateAddMoreFilesClicked);
     connect(template_ui->templateRemoveFirstFile, &QPushButton::clicked, this, &Template::onTemplateRemoveFirstFileClicked);
@@ -80,18 +79,11 @@ void Template::addFirstFile()
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         template_ui->templateFirstFile->clear();
         template_firstMap.clear();
-
-        // Append the file name to the list view box
         template_ui->templateFirstFile->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         template_firstMap[fileName] = fileInfo.path();
     }
 }
@@ -102,14 +94,9 @@ void Template::addMoreFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             template_ui->templateMoreFiles->addItem(fileName);
-
-            // Add the file name and its corresponding parent directory path to the QMap
             template_moreMap[fileName] = fileInfo.path();
         }
     }
@@ -132,13 +119,10 @@ void Template::removeFiles(QListWidget* files, QMap<QString, QString> map)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     files->takeItem(files->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     map.remove(selectedFileName);
 }
 
@@ -147,17 +131,10 @@ void Template::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         template_ui->templateNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         template_ui->templateSavePath->setText(directory);
     }
 }
@@ -201,7 +178,6 @@ void Template::templateFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot Template";
     for (QString& fileName : template_firstMap.keys())
     {
@@ -245,7 +221,6 @@ void Template::templateFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -255,8 +230,6 @@ void Template::templateFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String: " << command;
 }
 
 void Template::onTemplatePrefixClicked(bool checked)

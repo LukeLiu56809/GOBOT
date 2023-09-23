@@ -10,7 +10,6 @@ Extract::Extract(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     extract_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(extract_ui->extractAddOntology, &QPushButton::clicked, this, &Extract::onExtractAddOntologyClicked);
     connect(extract_ui->extractAddTerm, &QPushButton::clicked, this, &Extract::onExtractAddTermClicked);
     connect(extract_ui->extractAddTermFile, &QPushButton::clicked, this, &Extract::onExtractAddTermFileClicked);
@@ -133,18 +132,11 @@ void Extract::addFiles(QMap<QString, QString>& filesMap, QListWidget* files)
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         files->clear();
         filesMap.clear();
-
-        // Append the file name to the list view box
         files->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         filesMap[fileName] = fileInfo.path();
     }
 }
@@ -157,6 +149,7 @@ void Extract::addTerms()
     if (ok && !term.isEmpty()) {
         extract_ui->extractTermName->addItem(term);
     }
+
     extractTerms.append(term);
 }
 
@@ -182,13 +175,10 @@ void Extract::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     files->takeItem(files->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     filesMap.remove(selectedFileName);
 }
 
@@ -213,17 +203,10 @@ void Extract::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         extract_ui->extractNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         extract_ui->extractSavePath->setText(directory);
     }
 }
@@ -276,7 +259,6 @@ void Extract::extractFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot extract";
     command += " --method " + getMethod();
     if (!getPrefix().isEmpty())
@@ -361,7 +343,6 @@ void Extract::extractFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
@@ -371,7 +352,6 @@ void Extract::extractFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-    qDebug() << "String: " << command;
 }
 
 void Extract::onUpperTermClicked(bool checked)

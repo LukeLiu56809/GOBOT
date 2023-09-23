@@ -10,7 +10,6 @@ Materialize::Materialize(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     materialize_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(materialize_ui->materializeAddOntology, &QPushButton::clicked, this, &Materialize::onMaterializeAddOntologyClicked);
     connect(materialize_ui->materializeAddTerm, &QPushButton::clicked, this, &Materialize::onMaterializeAddTermClicked);
     connect(materialize_ui->materializeAddTermFile, &QPushButton::clicked, this, &Materialize::onMaterializeAddTermFileClicked);
@@ -74,18 +73,11 @@ void Materialize::addFiles(QMap<QString, QString>& filesMap, QListWidget* files)
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Materialize the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         files->clear();
         filesMap.clear();
-
-        // Append the file name to the list view box
         files->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         filesMap[fileName] = fileInfo.path();
     }
 }
@@ -123,13 +115,10 @@ void Materialize::removeFiles(QMap<QString, QString>& filesMap, QListWidget* fil
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     files->takeItem(files->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     filesMap.remove(selectedFileName);
 }
 
@@ -154,17 +143,10 @@ void Materialize::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Materialize the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         materialize_ui->materializeNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         materialize_ui->materializeSavePath->setText(directory);
     }
 }
@@ -199,7 +181,6 @@ void Materialize::materializeFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot materialize";
     command += " --reasoner " + getReason();
     for (QString& fileName : materialize_ontologyMap.keys())
@@ -216,7 +197,6 @@ void Materialize::materializeFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {

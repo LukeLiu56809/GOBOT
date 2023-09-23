@@ -9,7 +9,6 @@ Measure::Measure(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     measure_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(measure_ui->measureAddFile, &QPushButton::clicked, this, &Measure::onMeasureAddFileClicked);
     connect(measure_ui->measureRemoveFile, &QPushButton::clicked, this, &Measure::onMeasureRemoveFileClicked);
     connect(measure_ui->measureSaveAs, &QPushButton::clicked, this, &Measure::onMeasureSaveAsClicked);
@@ -52,14 +51,9 @@ void Measure::addFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             measure_ui->measureFileNames->addItem(fileName);
-
-            // Add the file name and its corresponding file path to the QMap
             measure_filesMap[fileName] = fileInfo.path();
         }
     }
@@ -74,13 +68,10 @@ void Measure::removeFiles()
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     measure_ui->measureFileNames->takeItem(measure_ui->measureFileNames->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     measure_filesMap.remove(selectedFileName);
 }
 
@@ -90,17 +81,10 @@ void Measure::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         measure_ui->measureNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         measure_ui->measureSavePath->setText(directory);
     }
 }
@@ -140,7 +124,6 @@ void Measure::measureFiles()
         return;
     }
 
-    // Construct system command
     QString command = "cd " + selectedFilePath + " && robot measure -i " +
                       getSelectedFileName() +
                       " --format " + getFormat();
@@ -163,7 +146,6 @@ void Measure::measureFiles()
     }
     command += " -o " + result;
 
-    // System Call
     int check = system(command.toUtf8());
     if (check != 0)
     {

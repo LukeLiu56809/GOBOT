@@ -1,4 +1,4 @@
-#include "Remove.h"
+#include "remove.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QMessageBox>
@@ -10,7 +10,6 @@ Remove::Remove(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     remove_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(remove_ui->removeAddOntology, &QPushButton::clicked, this, &Remove::onRemoveAddOntologyClicked);
     connect(remove_ui->removeGeneralAddTerm, &QPushButton::clicked, this, &Remove::onRemoveGeneralAddTermClicked);
     connect(remove_ui->removeExcludeAddTerm, &QPushButton::clicked, this, &Remove::onRemoveExcludeAddTermClicked);
@@ -122,18 +121,11 @@ void Remove::addImport()
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Remove the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         remove_ui->removeOntologyName->clear();
         remove_filesMap.clear();
-
-        // Append the file name to the list view box
         remove_ui->removeOntologyName->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         remove_filesMap[fileName] = fileInfo.path();
     }
 }
@@ -155,14 +147,9 @@ void Remove::addTermFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             files->addItem(fileName);
-
-            // Add the file name and its corresponding parent directory path to the QMap
             filesMap[fileName] = fileInfo.path();
         }
     }
@@ -177,13 +164,10 @@ void Remove::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     files->takeItem(files->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     filesMap.remove(selectedFileName);
 }
 
@@ -208,17 +192,10 @@ void Remove::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Remove the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         remove_ui->removeNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         remove_ui->removeSavePath->setText(directory);
     }
 }
@@ -262,7 +239,6 @@ void Remove::removeFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot remove";
     for (QString& fileName : remove_filesMap.keys())
     {
@@ -320,7 +296,6 @@ void Remove::removeFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {

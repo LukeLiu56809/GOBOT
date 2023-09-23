@@ -9,7 +9,6 @@ Unmerge::Unmerge(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     unmerge_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(unmerge_ui->unmergeAddFirstFile, &QPushButton::clicked, this, &Unmerge::onUnmergeAddFirstFileClicked);
     connect(unmerge_ui->unmergeAddMoreFiles, &QPushButton::clicked, this, &Unmerge::onUnmergeAddMoreFilesClicked);
     connect(unmerge_ui->unmergeRemoveFirstFile, &QPushButton::clicked, this, &Unmerge::onUnmergeRemoveFirstFileClicked);
@@ -59,18 +58,11 @@ void Unmerge::addFirstFile()
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
     if (!filePath.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
-
-        // Clear the existing content in firstFile
         unmerge_ui->firstFile->clear();
         unmerge_firstMap.clear();
-
-        // Append the file name to the list view box
         unmerge_ui->firstFile->addItem(fileName);
-
-        // Add the file name and its corresponding parent directory path to the QMap
         unmerge_firstMap[fileName] = fileInfo.path();
     }
 }
@@ -81,14 +73,9 @@ void Unmerge::addMoreFiles()
 
     if (!filePaths.isEmpty()) {
         for (const QString& filePath : filePaths) {
-            // Extract the file name from the full path
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
-
-            // Append the file name to the list view box
             unmerge_ui->moreFiles->addItem(fileName);
-
-            // Add the file name and its corresponding parent directory path to the QMap
             unmerge_moreMap[fileName] = fileInfo.path();
         }
     }
@@ -103,13 +90,10 @@ void Unmerge::removeFiles(QListWidget* list, QMap<QString, QString> map)
         return;
     }
 
-    // Get the text of the selected item (file name)
     QString selectedFileName = selectedItem->text();
 
-    // Remove the selected item from the list view widget
     list->takeItem(list->row(selectedItem));
 
-    // Remove the selected file name from the QMap
     map.remove(selectedFileName);
 }
 
@@ -118,17 +102,10 @@ void Unmerge::saveFiles()
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
-        // Extract the file name from the full path
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
-
-        // Save file path
         QString directory = fileInfo.path();
-
-        // Set the text of the QLineEdit widget to the selected save file name
         unmerge_ui->unmergeNameSave->setText(fileName);
-
-        // Set the text of the QLineEdit widget to the selected save file path
         unmerge_ui->unmergeSavePath->setText(directory);
     }
 }
@@ -163,7 +140,6 @@ void Unmerge::unmergeFiles()
         return;
     }
 
-    // Construct system command
     QString command = "robot unmerge";
     for (QString& fileName : unmerge_firstMap.keys())
     {
@@ -175,7 +151,6 @@ void Unmerge::unmergeFiles()
     }
     command += " -o " + result;
 
-    // System call
     int check = system(command.toUtf8());
     if (check != 0)
     {
