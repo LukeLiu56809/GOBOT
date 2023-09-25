@@ -43,7 +43,7 @@ void RobotDownload::downloadRobotJar()
         jarFilePath = winAppDir + "\\robot.jar";
         if (!QFile::exists(jarFilePath))
         {
-            QString downloadCommand = QString("powershell -ExecutionPolicy Unrestricted -Command \"Invoke-WebRequest -Uri 'https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar' -OutFile '%1\\robot.jar'\"").arg(jarFilePath);
+            QString downloadCommand = QString("powershell -ExecutionPolicy Unrestricted -Command \"Invoke-WebRequest -Uri 'https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar' -OutFile '%1\\robot.jar'\"").arg(winAppDir);
             system(downloadCommand.toUtf8());
         }
     }
