@@ -1,4 +1,5 @@
 #include "startup.h"
+#include "../RobotDownload/robotdownload.h"
 #include <QCoreApplication>
 #include <QStandardPaths>
 #include <QFile>
@@ -14,6 +15,8 @@ void Startup::runStartupTasks()
     {
         createConfigFile();
     }
+    RobotDownload robotDownload;
+    robotDownload.downloadFiles();
 }
 
 bool Startup::checkConfigFile()

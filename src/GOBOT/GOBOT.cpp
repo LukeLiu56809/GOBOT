@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "../Startup/startup.h"
-#include "../RobotDownload/robotdownload.h"
 #include <QApplication>
 #include <QCoreApplication>
 #include <QTimer>
@@ -8,14 +7,13 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QApplication::setStyle("Fusion");
 
     QPixmap pixmap(":/images/SplashScreen.png");
     QSplashScreen splash(pixmap);
     splash.show();
     Startup startup;
     startup.runStartupTasks();
-    RobotDownload robotDownload;
-    robotDownload.downloadFiles();
     QTimer::singleShot(3000, &splash, &QSplashScreen::close);
 
     MainWindow w;

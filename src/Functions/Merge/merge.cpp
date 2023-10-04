@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QProcess>
 
 Merge::Merge(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
