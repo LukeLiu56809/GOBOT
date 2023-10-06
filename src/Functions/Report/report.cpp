@@ -164,7 +164,7 @@ void Report::removeURI()
 
 void Report::saveFiles()
 {
-    QString saveFilter = "Resultant Files (*." + getFormat() + ");;All Files (*)";
+    QString saveFilter = "Ontology File (*." + getFormat() + ");;All Files (*)";
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
     if (!saveFileName.isEmpty()) {

@@ -152,8 +152,6 @@ void Query::createTDBDirectory()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-
-    qDebug() << "String: " << command;
 }
 
 void Query::addUpdates()
@@ -188,7 +186,7 @@ void Query::removeFiles(QMap<QString, QString>& filesMap, QListWidget* file)
 
 void Query::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         QFileInfo fileInfo(saveFileName);

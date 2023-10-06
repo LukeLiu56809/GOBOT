@@ -140,7 +140,7 @@ void Materialize::removeTerms()
 
 void Materialize::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         QFileInfo fileInfo(saveFileName);

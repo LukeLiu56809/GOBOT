@@ -109,7 +109,7 @@ void Diff::addCatalog(QLineEdit* catalogFile, QString& termPath)
 
 void Diff::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.txt);;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Text File (*.txt);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         QFileInfo fileInfo(saveFileName);

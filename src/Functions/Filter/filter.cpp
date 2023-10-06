@@ -189,7 +189,7 @@ void Filter::removeTerms(QListWidget *listWidget, QList<QString> &termsList)
 
 void Filter::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "(*.owl);;(*.xml);;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         QFileInfo fileInfo(saveFileName);

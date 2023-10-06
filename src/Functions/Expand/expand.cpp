@@ -89,7 +89,7 @@ void Expand::removeFiles()
 
 void Expand::saveFiles()
 {
-    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Resultant Files (*.owl);;All Files (*)");
+    QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
     if (!saveFileName.isEmpty()) {
         QFileInfo fileInfo(saveFileName);
