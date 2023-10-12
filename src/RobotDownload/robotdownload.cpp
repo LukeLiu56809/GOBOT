@@ -36,15 +36,17 @@ void RobotDownload::downloadRobotJar()
         jarFilePath = macAppDir + "/robot.jar";
         if (!QFile::exists(jarFilePath))
         {
-            QString downloadCommand = QString("curl -L -o \"%1\" https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar").arg(jarFilePath);
+            QString downloadCommand = QString("curl -L -o \"%1\" https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar").arg(jarFilePath);
             system(downloadCommand.toUtf8());
         }
     } else if (QSysInfo::productType() == "windows") {
         jarFilePath = winAppDir + "\\robot.jar";
         if (!QFile::exists(jarFilePath))
         {
-            QString downloadCommand = QString("powershell -ExecutionPolicy Unrestricted -Command \"Invoke-WebRequest -Uri 'https://github.com/ontodev/robot/releases/download/v1.9.4/robot.jar' -OutFile '%1\\robot.jar'\"").arg(winAppDir);
-            system(downloadCommand.toUtf8());
+            QProcess process;
+            process.start("powershell", QStringList() << "-ExecutionPolicy" << "Unrestricted" << "-Command" << "Invoke-WebRequest" << "-Uri" <<
+                                            "https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar" << "-OutFile" << jarFilePath);
+            process.waitForFinished();
         }
     }
 }
