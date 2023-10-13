@@ -26,7 +26,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>10</pointsize>
+        <pointsize>9</pointsize>
         <bold>false</bold>
        </font>
       </property>
@@ -85,7 +85,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -273,7 +273,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -309,40 +309,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_74">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_12">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -357,7 +324,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
              <kerning>true</kerning>
             </font>
@@ -395,7 +362,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -410,7 +377,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -447,6 +414,39 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_74">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_12">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="unmerge">
        <attribute name="title">
@@ -464,7 +464,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -490,14 +490,14 @@
          <rect>
           <x>60</x>
           <y>110</y>
-          <width>161</width>
+          <width>121</width>
           <height>16</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -711,7 +711,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -892,7 +892,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -905,7 +905,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1124,7 +1124,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -1234,38 +1234,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_75">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_13">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_75">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_13">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="mirror">
@@ -1277,7 +1277,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1503,38 +1503,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_76">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_14">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_76">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_14">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="relax">
@@ -1565,7 +1565,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -1772,38 +1772,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_77">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_15">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_77">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_15">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="reduce">
@@ -1950,7 +1950,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -2053,7 +2053,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2076,7 +2076,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2087,38 +2087,38 @@
          <string>Ignore Anonymous Classes</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_86">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_24">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_86">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_24">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="convert">
@@ -2130,7 +2130,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -2214,7 +2214,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2391,7 +2391,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2417,7 +2417,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -2470,38 +2470,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_78">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_16">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_78">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_16">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="diff">
@@ -2563,7 +2563,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -2665,14 +2665,14 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>21</width>
+          <width>41</width>
           <height>21</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2685,14 +2685,14 @@
          <rect>
           <x>380</x>
           <y>20</y>
-          <width>31</width>
+          <width>41</width>
           <height>21</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -2934,7 +2934,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -3175,7 +3175,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -3218,38 +3218,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_79">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_17">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_79">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_17">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="repair">
@@ -3508,7 +3508,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -3521,7 +3521,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -3590,38 +3590,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_80">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_18">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_80">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_18">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="measure">
@@ -3633,7 +3633,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -3874,7 +3874,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -3929,7 +3929,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -4032,38 +4032,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_81">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_19">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_81">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_19">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="expand">
@@ -4217,7 +4217,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -4233,7 +4233,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -4336,7 +4336,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -4455,38 +4455,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_82">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_20">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_82">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_20">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="query">
@@ -4498,7 +4498,7 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -4586,39 +4586,6 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="Line" name="line_7">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_71">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
        <widget class="QListWidget" name="queryQueryName">
         <property name="geometry">
          <rect>
@@ -4635,25 +4602,12 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="Line" name="line_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>110</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_114">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -4725,26 +4679,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_72">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>100</y>
-          <width>71</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Query File</string>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_115">
         <property name="geometry">
          <rect>
@@ -4800,7 +4734,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -5002,7 +4936,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5077,7 +5011,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5128,7 +5062,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5239,7 +5173,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5291,6 +5225,72 @@
          <bool>false</bool>
         </property>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_71">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_72">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Query File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="Template">
        <attribute name="title">
@@ -5301,7 +5301,7 @@
          <rect>
           <x>10</x>
           <y>130</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -5372,19 +5372,6 @@
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="Line" name="line_6">
-        <property name="geometry">
-         <rect>
-          <x>11</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
        </widget>
        <widget class="QWidget" name="layoutWidget_86">
         <property name="geometry">
@@ -5524,19 +5511,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="Line" name="line_10">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>120</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_80">
         <property name="geometry">
          <rect>
@@ -5592,9 +5566,8 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
-             <bold>false</bold>
-             <kerning>true</kerning>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
             </font>
            </property>
            <property name="focusPolicy">
@@ -5644,46 +5617,6 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_56">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>11</y>
-          <width>121</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_55">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>110</y>
-          <width>61</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Templates</string>
-        </property>
-       </widget>
        <widget class="QListWidget" name="templateMoreFiles">
         <property name="geometry">
          <rect>
@@ -5715,7 +5648,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -5766,7 +5699,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -5814,7 +5747,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5852,7 +5785,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -5893,7 +5826,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -5940,7 +5873,7 @@
          <rect>
           <x>240</x>
           <y>60</y>
-          <width>206</width>
+          <width>213</width>
           <height>32</height>
          </rect>
         </property>
@@ -5950,7 +5883,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6002,7 +5935,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6045,6 +5978,72 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_56">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_55">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Templates</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="Export">
        <attribute name="title">
@@ -6065,7 +6064,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6198,7 +6197,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -6359,7 +6358,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6398,7 +6397,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6437,7 +6436,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -6473,7 +6472,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -6493,7 +6492,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6516,7 +6515,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6539,7 +6538,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6562,7 +6561,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -6582,7 +6581,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6605,7 +6604,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6628,7 +6627,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6651,7 +6650,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6674,7 +6673,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6697,7 +6696,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -6717,7 +6716,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6740,7 +6739,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -6751,63 +6750,50 @@
          <string>LABEL</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_83">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_21">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_17">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_83">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_21">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="extract">
        <attribute name="title">
         <string>Extract</string>
        </attribute>
-       <widget class="Line" name="line_31">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_270">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -6895,32 +6881,12 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_160">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>100</y>
-          <width>71</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Term File</string>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_271">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -6992,46 +6958,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_161">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_32">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>110</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QListWidget" name="extractOntologyName">
         <property name="geometry">
          <rect>
@@ -7061,26 +6987,6 @@
          <enum>Qt::Vertical</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_163">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>191</y>
-          <width>41</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Terms</string>
-        </property>
-       </widget>
        <widget class="QListWidget" name="extractTermName">
         <property name="geometry">
          <rect>
@@ -7097,25 +7003,12 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="Line" name="line_34">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_272">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>210</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -7199,7 +7092,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7222,7 +7115,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7329,7 +7222,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7562,7 +7455,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7582,7 +7475,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7620,7 +7513,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7658,7 +7551,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -7699,7 +7592,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -7750,7 +7643,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -7943,7 +7836,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -8036,6 +7929,112 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_18">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_161">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_31">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_19">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_160">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Term File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_32">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>10</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>191</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_163">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Terms</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_34">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="Remove">
        <attribute name="title">
@@ -8062,7 +8061,7 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -8134,19 +8133,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="Line" name="line_36">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QListWidget" name="removeOntologyName">
         <property name="geometry">
          <rect>
@@ -8161,26 +8147,6 @@
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_167">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
         </property>
        </widget>
        <widget class="QWidget" name="layoutWidget_285">
@@ -8689,7 +8655,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -8741,7 +8707,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -8778,7 +8744,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -8860,14 +8826,14 @@
          <rect>
           <x>98</x>
           <y>101</y>
-          <width>38</width>
+          <width>51</width>
           <height>16</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -8875,7 +8841,7 @@
          <string>General</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -8964,7 +8930,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -8972,7 +8938,7 @@
          <string>Exclude</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>470</x>
@@ -9061,13 +9027,46 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
          <string>Include</string>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_21">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_167">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_36">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="filter">
@@ -9088,26 +9087,6 @@
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_217">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
         </property>
        </widget>
        <widget class="Line" name="line_49">
@@ -9487,7 +9466,7 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -9559,19 +9538,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="Line" name="line_52">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_234">
         <property name="geometry">
          <rect>
@@ -9587,7 +9553,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -9639,7 +9605,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -9811,7 +9777,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -9900,7 +9866,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -9908,7 +9874,7 @@
          <string>Exclude</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -9997,7 +9963,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10005,7 +9971,7 @@
          <string>General</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>470</x>
@@ -10094,13 +10060,46 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
          <string>Include</string>
         </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_217">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_52">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="reason">
@@ -10112,7 +10111,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -10319,7 +10318,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -10370,7 +10369,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -10430,7 +10429,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10453,7 +10452,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10476,7 +10475,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10499,7 +10498,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10522,7 +10521,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10545,7 +10544,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10568,7 +10567,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10591,7 +10590,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10611,7 +10610,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10634,7 +10633,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10657,7 +10656,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>false</bold>
          </font>
         </property>
@@ -10680,7 +10679,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -10693,7 +10692,7 @@
          <rect>
           <x>240</x>
           <y>230</y>
-          <width>381</width>
+          <width>371</width>
           <height>241</height>
          </rect>
         </property>
@@ -10715,7 +10714,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10738,7 +10737,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10761,7 +10760,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -10781,7 +10780,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10804,7 +10803,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10827,7 +10826,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10850,7 +10849,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10873,7 +10872,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10896,7 +10895,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10919,7 +10918,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -10939,7 +10938,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10962,7 +10961,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -10985,7 +10984,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -11005,7 +11004,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -11028,7 +11027,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -11051,7 +11050,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -11074,7 +11073,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>false</bold>
           </font>
          </property>
@@ -11097,7 +11096,7 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -11106,38 +11105,38 @@
          </property>
         </widget>
        </widget>
-       <widget class="QLabel" name="label_84">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_22">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_23">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_84">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_22">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <zorder>frame</zorder>
        <zorder>layoutWidget_37</zorder>
@@ -11179,7 +11178,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -11227,7 +11226,7 @@
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -11331,39 +11330,6 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_204">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_41">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>110</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QListWidget" name="materializeOntologyName">
         <property name="geometry">
          <rect>
@@ -11385,7 +11351,7 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -11457,78 +11423,12 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_205">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>100</y>
-          <width>71</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Term File</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_42">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="Line" name="line_43">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_206">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>191</y>
-          <width>41</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Terms</string>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_306">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>210</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -11716,7 +11616,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -11752,6 +11652,105 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_24">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_204">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_43">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_25">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_205">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Term File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_41">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>191</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_26">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_206">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Terms</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_42">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="Rename">
        <attribute name="title">
@@ -11762,7 +11761,7 @@
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -11866,39 +11865,6 @@
          <enum>QFrame::Plain</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_207">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Galvji</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_44">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>110</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="QListWidget" name="renameOntologyName">
         <property name="geometry">
          <rect>
@@ -11920,7 +11886,7 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -11992,85 +11958,12 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_208">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>100</y>
-          <width>71</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Mappings File</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_45">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="Line" name="line_46">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>209</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_209">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>191</y>
-          <width>21</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>IRI</string>
-        </property>
-       </widget>
        <widget class="QWidget" name="layoutWidget_313">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>210</y>
-          <width>212</width>
+          <width>211</width>
           <height>32</height>
          </rect>
         </property>
@@ -12258,7 +12151,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>false</bold>
              <kerning>true</kerning>
             </font>
@@ -12306,7 +12199,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -12344,7 +12237,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -12385,7 +12278,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -12439,7 +12332,7 @@
            <property name="font">
             <font>
              <family>Arial</family>
-             <pointsize>10</pointsize>
+             <pointsize>9</pointsize>
              <bold>true</bold>
             </font>
            </property>
@@ -12477,6 +12370,112 @@
           <widget class="QLineEdit" name="renamePrefixMappingsName">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_27">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_207">
+           <property name="font">
+            <font>
+             <family>Galvji</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_46">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>10</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_28">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_208">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mappings File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_44">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>191</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_29">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_209">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>IRI</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_45">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -12635,7 +12634,7 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>212</width>
+          <width>211</width>
           <height>41</height>
          </rect>
         </property>
@@ -12793,7 +12792,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -12813,7 +12812,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -12833,7 +12832,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -12897,7 +12896,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -13004,7 +13003,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -13086,7 +13085,7 @@
         <property name="font">
          <font>
           <family>Arial</family>
-          <pointsize>10</pointsize>
+          <pointsize>9</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -13282,38 +13281,38 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_85">
-        <property name="geometry">
-         <rect>
-          <x>73</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Import Ontology</string>
-        </property>
-       </widget>
-       <widget class="Line" name="line_23">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>209</width>
-          <height>16</height>
+          <y>30</y>
+          <width>211</width>
+          <height>27</height>
          </rect>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_30">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_85">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Import Ontology</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_23">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>

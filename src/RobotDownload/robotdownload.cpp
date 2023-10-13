@@ -46,7 +46,11 @@ void RobotDownload::downloadRobotJar()
             QProcess process;
             process.start("powershell", QStringList() << "-ExecutionPolicy" << "Unrestricted" << "-Command" << "Invoke-WebRequest" << "-Uri" <<
                                             "https://github.com/ontodev/robot/releases/download/v1.9.5/robot.jar" << "-OutFile" << jarFilePath);
-            process.waitForFinished();
+
+            if (!process.waitForFinished(-1)) {
+                // Handle the process error here if needed
+                qDebug() << "Error: " << process.errorString();
+            }
         }
     }
 }
@@ -108,9 +112,19 @@ void RobotDownload::addToPath()
         pathSeparator = ":";
     }
 
-    if (!path.contains(winAppDir) && QSysInfo::productType() == "windows") {
-        path.prepend(winAppDir + pathSeparator);
-        QProcessEnvironment::systemEnvironment().insert("PATH", path);
-        qputenv("PATH", path.toUtf8());
+    if (QSysInfo::productType() == "macos") {
+        QString macPath = macAppDir;
+        if (!path.contains(macPath)) {
+            path.prepend(macPath + pathSeparator);
+            QProcessEnvironment::systemEnvironment().insert("PATH", path);
+            qputenv("PATH", path.toUtf8());
+        }
+    } else if (QSysInfo::productType() == "windows") {
+        QString winPath = winAppDir;
+        if (!path.contains(winPath)) {
+            path.prepend(winPath + pathSeparator);
+            QProcessEnvironment::systemEnvironment().insert("PATH", path);
+            qputenv("PATH", path.toUtf8());
+        }
     }
 }

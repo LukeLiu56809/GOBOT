@@ -16,6 +16,7 @@ public:
     void createConfigFile();
 
 private:
+    QString winAppDir;
     QString robotJarDirectory;
 };
 
