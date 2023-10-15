@@ -272,7 +272,7 @@ void Report::reportFiles()
     }
     else
     {
-        QMessageBox::warning(nullptr, "Error", "No violations found.");
+        QMessageBox::information(nullptr, "Success", "No violations found.");
     }
 }
 

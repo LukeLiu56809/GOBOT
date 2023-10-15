@@ -163,7 +163,7 @@ void Unmerge::unmergeFiles()
     }
     else
     {
-        QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
+        QMessageBox::information(nullptr, "Success", "Command executed successfully.");
     }
 }
 

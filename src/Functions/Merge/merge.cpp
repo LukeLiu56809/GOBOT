@@ -136,7 +136,7 @@ void Merge::mergeFiles()
     }
     else
     {
-        QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
+        QMessageBox::information(nullptr, "Success", "Command executed successfully.");
     }
 }
 

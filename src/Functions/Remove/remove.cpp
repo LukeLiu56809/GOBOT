@@ -230,7 +230,6 @@ void Remove::resetRemove()
     remove_ui->removeTrim->setCurrentIndex(0);
 }
 
-
 void Remove::removeFiles()
 {
     QString result = getSavePath() + "/" + getNameSave();
@@ -310,7 +309,7 @@ void Remove::removeFiles()
     }
     else
     {
-        QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
+        QMessageBox::information(nullptr, "Success", "Command executed successfully.");
     }
 }
 //------------------------------- Getter methods---------------------------------
