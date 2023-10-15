@@ -5034,7 +5034,7 @@
          <rect>
           <x>280</x>
           <y>200</y>
-          <width>251</width>
+          <width>341</width>
           <height>18</height>
          </rect>
         </property>
@@ -5114,7 +5114,7 @@
          <rect>
           <x>280</x>
           <y>250</y>
-          <width>141</width>
+          <width>191</width>
           <height>21</height>
          </rect>
         </property>
@@ -5209,7 +5209,7 @@
          <rect>
           <x>280</x>
           <y>33</y>
-          <width>204</width>
+          <width>261</width>
           <height>21</height>
          </rect>
         </property>
@@ -6518,7 +6518,7 @@
          <rect>
           <x>250</x>
           <y>200</y>
-          <width>61</width>
+          <width>81</width>
           <height>31</height>
          </rect>
         </property>
@@ -6584,7 +6584,7 @@
          <rect>
           <x>380</x>
           <y>240</y>
-          <width>91</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -8055,7 +8055,7 @@
          <rect>
           <x>10</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8164,7 +8164,7 @@
          <rect>
           <x>10</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -8241,7 +8241,7 @@
          <rect>
           <x>10</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8255,9 +8255,9 @@
        <widget class="QListWidget" name="removeExcludeFileName">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8271,9 +8271,9 @@
        <widget class="QListWidget" name="removeExcludeTermName">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8287,9 +8287,9 @@
        <widget class="QWidget" name="layoutWidget_286">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -8364,7 +8364,7 @@
        <widget class="Line" name="line_3">
         <property name="geometry">
          <rect>
-          <x>220</x>
+          <x>230</x>
           <y>120</y>
           <width>20</width>
           <height>221</height>
@@ -8380,9 +8380,9 @@
        <widget class="QWidget" name="layoutWidget_289">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -8457,9 +8457,9 @@
        <widget class="QListWidget" name="removeIncludeTermName">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8473,7 +8473,7 @@
        <widget class="Line" name="line_5">
         <property name="geometry">
          <rect>
-          <x>450</x>
+          <x>470</x>
           <y>120</y>
           <width>20</width>
           <height>221</height>
@@ -8489,9 +8489,9 @@
        <widget class="QListWidget" name="removeIncludeFileName">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -8746,7 +8746,7 @@
          <rect>
           <x>10</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -8821,9 +8821,9 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -8898,9 +8898,9 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9010,7 +9010,7 @@
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -9041,9 +9041,9 @@
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -9074,9 +9074,9 @@
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -9114,7 +9114,7 @@
          <rect>
           <x>10</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9128,9 +9128,9 @@
        <widget class="QWidget" name="layoutWidget_328">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9205,9 +9205,9 @@
        <widget class="QListWidget" name="filterExcludeTermName">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9221,9 +9221,9 @@
        <widget class="QWidget" name="layoutWidget_329">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9300,7 +9300,7 @@
          <rect>
           <x>10</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9330,9 +9330,9 @@
        <widget class="QListWidget" name="filterIncludeFileName">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9346,9 +9346,9 @@
        <widget class="QListWidget" name="filterIncludeTermName">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>280</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9362,7 +9362,7 @@
        <widget class="Line" name="line_50">
         <property name="geometry">
          <rect>
-          <x>450</x>
+          <x>470</x>
           <y>120</y>
           <width>20</width>
           <height>221</height>
@@ -9378,7 +9378,7 @@
        <widget class="Line" name="line_51">
         <property name="geometry">
          <rect>
-          <x>220</x>
+          <x>230</x>
           <y>120</y>
           <width>20</width>
           <height>221</height>
@@ -9394,9 +9394,9 @@
        <widget class="QListWidget" name="filterExcludeFileName">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>180</y>
-          <width>211</width>
+          <width>221</width>
           <height>61</height>
          </rect>
         </property>
@@ -9412,7 +9412,7 @@
          <rect>
           <x>10</x>
           <y>250</y>
-          <width>212</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9803,9 +9803,9 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9882,7 +9882,7 @@
          <rect>
           <x>10</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -9957,9 +9957,9 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>150</y>
-          <width>211</width>
+          <width>221</width>
           <height>32</height>
          </rect>
         </property>
@@ -10069,7 +10069,7 @@
          <rect>
           <x>10</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -10100,9 +10100,9 @@
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>250</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -10133,9 +10133,9 @@
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>490</x>
           <y>120</y>
-          <width>211</width>
+          <width>221</width>
           <height>31</height>
          </rect>
         </property>
@@ -10484,7 +10484,7 @@
          <rect>
           <x>240</x>
           <y>50</y>
-          <width>141</width>
+          <width>171</width>
           <height>31</height>
          </rect>
         </property>
@@ -10507,7 +10507,7 @@
          <rect>
           <x>240</x>
           <y>70</y>
-          <width>231</width>
+          <width>271</width>
           <height>31</height>
          </rect>
         </property>
@@ -10530,7 +10530,7 @@
          <rect>
           <x>240</x>
           <y>110</y>
-          <width>231</width>
+          <width>271</width>
           <height>31</height>
          </rect>
         </property>
@@ -10622,7 +10622,7 @@
          <rect>
           <x>260</x>
           <y>200</y>
-          <width>91</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -10645,7 +10645,7 @@
          <rect>
           <x>240</x>
           <y>140</y>
-          <width>161</width>
+          <width>171</width>
           <height>26</height>
          </rect>
         </property>
@@ -10746,7 +10746,7 @@
          </font>
         </property>
         <property name="text">
-         <string>--exclude-tautologies</string>
+         <string>--exclude-ontologies</string>
         </property>
        </widget>
        <widget class="QFrame" name="frame">
@@ -10754,7 +10754,7 @@
          <rect>
           <x>240</x>
           <y>230</y>
-          <width>371</width>
+          <width>391</width>
           <height>241</height>
          </rect>
         </property>
@@ -10813,7 +10813,7 @@
         <widget class="QLabel" name="label_191">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>90</y>
            <width>171</width>
            <height>26</height>
@@ -10835,7 +10835,7 @@
           <rect>
            <x>220</x>
            <y>40</y>
-           <width>181</width>
+           <width>191</width>
            <height>31</height>
           </rect>
          </property>
@@ -10902,9 +10902,9 @@
         <widget class="QCheckBox" name="SubClass">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>20</y>
-           <width>71</width>
+           <width>121</width>
            <height>31</height>
           </rect>
          </property>
@@ -10925,9 +10925,9 @@
         <widget class="QCheckBox" name="ClassAssertion">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>110</y>
-           <width>101</width>
+           <width>131</width>
            <height>31</height>
           </rect>
          </property>
@@ -10948,9 +10948,9 @@
         <widget class="QCheckBox" name="PropertyAssertion">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>130</y>
-           <width>111</width>
+           <width>151</width>
            <height>31</height>
           </rect>
          </property>
@@ -10991,9 +10991,9 @@
         <widget class="QCheckBox" name="DisjointClasses">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>60</y>
-           <width>101</width>
+           <width>121</width>
            <height>31</height>
           </rect>
          </property>
@@ -11037,7 +11037,7 @@
         <widget class="QLabel" name="label_189">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>0</y>
            <width>161</width>
            <height>26</height>
@@ -11059,7 +11059,7 @@
           <rect>
            <x>220</x>
            <y>20</y>
-           <width>181</width>
+           <width>191</width>
            <height>31</height>
           </rect>
          </property>
@@ -11126,9 +11126,9 @@
         <widget class="QCheckBox" name="EquivalentClass">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>40</y>
-           <width>101</width>
+           <width>121</width>
            <height>31</height>
           </rect>
          </property>
@@ -12253,7 +12253,7 @@
          <rect>
           <x>240</x>
           <y>80</y>
-          <width>141</width>
+          <width>161</width>
           <height>31</height>
          </rect>
         </property>
@@ -13077,7 +13077,7 @@
          <rect>
           <x>260</x>
           <y>260</y>
-          <width>141</width>
+          <width>171</width>
           <height>31</height>
          </rect>
         </property>
@@ -13284,7 +13284,7 @@
          <rect>
           <x>260</x>
           <y>140</y>
-          <width>131</width>
+          <width>151</width>
           <height>31</height>
          </rect>
         </property>
