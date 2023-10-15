@@ -57,7 +57,8 @@ void Unmerge::addFirstFile()
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         unmerge_ui->firstFile->clear();
@@ -71,8 +72,10 @@ void Unmerge::addMoreFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             unmerge_ui->moreFiles->addItem(fileName);
@@ -85,7 +88,8 @@ void Unmerge::removeFiles(QListWidget* list, QMap<QString, QString> map)
 {
     QListWidgetItem* selectedItem = list->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -101,7 +105,8 @@ void Unmerge::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

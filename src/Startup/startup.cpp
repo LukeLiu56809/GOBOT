@@ -27,7 +27,9 @@ void Startup::runStartupTasks()
             robotDownload.downloadFiles();
         }
         QThread::msleep(3000);
-    } else {
+    }
+    else
+    {
         RobotDownload robotDownload;
         robotDownload.downloadFiles();
     }

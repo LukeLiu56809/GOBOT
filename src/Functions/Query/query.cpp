@@ -96,7 +96,8 @@ void Query::addFiles(QMap<QString, QString>& filesMap, QListWidget* file)
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         file->clear();
@@ -109,7 +110,8 @@ void Query::addFiles(QMap<QString, QString>& filesMap, QListWidget* file)
 void Query::addCatalog()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath(), "(*.xml)");
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         query_ui->queryCatalogSaveName->setText(fileName);
@@ -123,7 +125,8 @@ void Query::queryDirectory(QLineEdit* line)
 {
     QString directory = QFileDialog::getExistingDirectory(nullptr, "Choose Directory", QDir::homePath());
 
-    if (!directory.isEmpty()) {
+    if (!directory.isEmpty())
+    {
         line->setText(directory);
     }
 }
@@ -158,8 +161,10 @@ void Query::addUpdates()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath(), "(*.ru)");
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             query_ui->queryUpdateName->addItem(fileName);
@@ -172,7 +177,8 @@ void Query::removeFiles(QMap<QString, QString>& filesMap, QListWidget* file)
 {
     QListWidgetItem* selectedItem = file->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -188,7 +194,8 @@ void Query::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

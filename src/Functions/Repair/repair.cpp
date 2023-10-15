@@ -56,8 +56,10 @@ void Repair::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             repair_ui->repairFileNames->addItem(fileName);
@@ -70,7 +72,8 @@ void Repair::removeFiles()
 {
     QListWidgetItem* selectedItem = repair_ui->repairFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -86,7 +89,8 @@ void Repair::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -157,10 +161,13 @@ void Repair::onRepairClassesClicked(bool checked)
 {
     repair_ui->repairClassesEdit->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         repair_ui->repairTerms->setChecked(false);
         repair_ui->repairTermsEdit->clear();
-    } else {
+    }
+    else
+    {
         repair_ui->repairClassesEdit->clear();
     }
 }
@@ -170,10 +177,13 @@ void Repair::onRepairTermsClicked(bool checked)
     repair_ui->repairTermsFile->setVisible(checked);
     repair_ui->repairTermsEdit->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         repair_ui->repairClasses->setChecked(false);
         repair_ui->repairClassesEdit->clear();
-    } else {
+    }
+    else
+    {
         repair_ui->repairTermsEdit->clear();
     }
 }
@@ -181,7 +191,8 @@ void Repair::onRepairTermsClicked(bool checked)
 void Repair::onRepairTermsFileClicked()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         repair_ui->repairTermsEdit->setText(fileName);

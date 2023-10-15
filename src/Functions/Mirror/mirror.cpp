@@ -45,8 +45,10 @@ void Mirror::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             mirror_ui->mirrorFileNames->addItem(fileName);
@@ -59,7 +61,8 @@ void Mirror::removeFiles()
 {
     QListWidgetItem* selectedItem = mirror_ui->mirrorFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -75,7 +78,8 @@ void Mirror::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;(*.xml);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -107,7 +111,8 @@ void Mirror::mirrorFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to mirror.");
         return;
     }

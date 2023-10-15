@@ -9,7 +9,6 @@ Validate::Validate(Ui::MainWindow *ui, QObject *parent)
     : QObject(parent),
     validate_ui(ui)
 {
-    // Connect the signals from the UI buttons to the appropriate slots
     connect(validate_ui->validateAddFile, &QPushButton::clicked, this, &Validate::onValidateAddFileClicked);
     connect(validate_ui->validateRemoveFile, &QPushButton::clicked, this, &Validate::onValidateRemoveFileClicked);
     connect(validate_ui->validateSaveAs, &QPushButton::clicked, this, &Validate::onValidateSaveAsClicked);
@@ -46,8 +45,10 @@ void Validate::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             validate_ui->validateFileNames->addItem(fileName);
@@ -60,7 +61,8 @@ void Validate::removeFiles()
 {
     QListWidgetItem* selectedItem = validate_ui->validateFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -76,7 +78,8 @@ void Validate::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -109,7 +112,8 @@ void Validate::validateFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to validate.");
         return;
     }

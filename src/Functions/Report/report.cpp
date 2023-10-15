@@ -88,8 +88,10 @@ void Report::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             report_ui->reportFileNames->addItem(fileName);
@@ -103,7 +105,8 @@ void Report::addURI()
     bool ok;
     QString term = QInputDialog::getText(nullptr, "Add Term", "Enter a term:", QLineEdit::Normal, "", &ok);
 
-    if (ok && !term.isEmpty()) {
+    if (ok && !term.isEmpty())
+    {
         report_ui->reportURIName->addItem(term);
     }
     URITerms.append(term);
@@ -113,7 +116,8 @@ void Report::reportDirectory()
 {
     QString directory = QFileDialog::getExistingDirectory(nullptr, "Choose Directory", QDir::homePath());
 
-    if (!directory.isEmpty()) {
+    if (!directory.isEmpty())
+    {
         report_ui->reportTDBDirectoryName->setText(directory);
     }
 }
@@ -121,7 +125,8 @@ void Report::reportDirectory()
 void Report::addProfile()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         report_ui->defineProfileName->setText(fileName);
@@ -134,7 +139,8 @@ void Report::removeFiles()
 {
     QListWidgetItem* selectedItem = report_ui->reportFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -150,7 +156,8 @@ void Report::removeURI()
 {
     QListWidgetItem* selectedItem = report_ui->reportURIName->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -167,7 +174,8 @@ void Report::saveFiles()
     QString saveFilter = "Ontology File (*." + getFormat() + ");;All Files (*)";
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

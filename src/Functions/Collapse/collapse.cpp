@@ -61,8 +61,10 @@ void Collapse::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             collapse_ui->collapseFileNames->addItem(fileName);
@@ -75,7 +77,8 @@ void Collapse::removeFiles()
 {
     QListWidgetItem* selectedItem = collapse_ui->collapseFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -91,7 +94,8 @@ void Collapse::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -127,7 +131,8 @@ void Collapse::collapseFiles()
         QMessageBox::warning(nullptr, "Error", "You need at least one file to collapse.");
         return;
     }
-    if (getThreshold().isEmpty()) {
+    if (getThreshold().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Enter a threshold value.");
         return;
     }
@@ -136,7 +141,8 @@ void Collapse::collapseFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to collapse.");
         return;
     }
@@ -174,10 +180,13 @@ void Collapse::onCollapsePreciousClassesClicked(bool checked)
 {
     collapse_ui->collapsePreciousClassesEdit->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         collapse_ui->collapsePreciousTerms->setChecked(false);
         collapse_ui->collapsePreciousTermsEdit->clear();
-    } else {
+    }
+    else
+    {
         collapse_ui->collapsePreciousClassesEdit->clear();
     }
 }
@@ -187,10 +196,13 @@ void Collapse::onCollapsePreciousTermsClicked(bool checked)
     collapse_ui->collapsePreciousTermsFile->setVisible(checked);
     collapse_ui->collapsePreciousTermsEdit->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         collapse_ui->collapsePreciousClasses->setChecked(false);
         collapse_ui->collapsePreciousClassesEdit->clear();
-    } else {
+    }
+    else
+    {
         collapse_ui->collapsePreciousTermsEdit->clear();
     }
 }
@@ -198,7 +210,8 @@ void Collapse::onCollapsePreciousTermsClicked(bool checked)
 void Collapse::onCollapsePreciousTermsFileClicked()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         collapse_ui->collapsePreciousTermsEdit->setText(fileName);

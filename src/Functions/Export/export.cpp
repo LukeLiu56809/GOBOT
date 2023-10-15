@@ -52,8 +52,10 @@ void Export::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             export_ui->exportFileNames->addItem(fileName);
@@ -66,7 +68,8 @@ void Export::removeFiles()
 {
     QListWidgetItem* selectedItem = export_ui->exportFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -83,7 +86,8 @@ void Export::saveFiles()
     QString saveFilter = "Ontology File (*." + getFormat() + ");;All Files (*)";
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), saveFilter);
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -152,16 +156,20 @@ void Export::exportFiles()
         command += " --split \"" + getSplit() + " \"";
     }
     QStringList exportOptions;
-    if (export_ui->exportClasses->isChecked()) {
+    if (export_ui->exportClasses->isChecked())
+    {
         exportOptions << "classes";
     }
-    if (export_ui->exportIndividuals->isChecked()) {
+    if (export_ui->exportIndividuals->isChecked())
+    {
         exportOptions << "individuals";
     }
-    if (export_ui->exportProperties->isChecked()) {
+    if (export_ui->exportProperties->isChecked())
+    {
         exportOptions << "properties";
     }
-    if (!exportOptions.isEmpty()) {
+    if (!exportOptions.isEmpty())
+    {
         command += " --include \"" + exportOptions.join(" ") + "\"";
     }
     if (export_ui->exportAny->isChecked())

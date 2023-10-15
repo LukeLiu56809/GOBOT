@@ -22,7 +22,8 @@ void View::createViewMenu(QMainWindow *parent)
 void View::minimizeActionTriggered()
 {
     QMainWindow *mainWin = qobject_cast<QMainWindow *>(parent());
-    if (mainWin) {
+    if (mainWin)
+    {
         mainWin->showMinimized();
     }
 }

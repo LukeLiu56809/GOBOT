@@ -87,7 +87,8 @@ void Diff::addFiles(QMap<QString, QString>& filesMap, QLineEdit* fileNameLineEdi
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         filesMap[fileName] = fileInfo.path();
@@ -98,7 +99,8 @@ void Diff::addFiles(QMap<QString, QString>& filesMap, QLineEdit* fileNameLineEdi
 void Diff::addCatalog(QLineEdit* catalogFile, QString& termPath)
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath(), "(*.xml)");
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         catalogFile->setText(fileName);
@@ -111,7 +113,8 @@ void Diff::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Text File (*.txt);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -197,10 +200,13 @@ void Diff::onLeftOntologyClicked(bool checked)
     leftOntologySave->setVisible(checked);
     leftOntologySaveName->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         diff_ui->leftIRI->setChecked(false);
         diff_ui->leftIRIName->clear();
-    } else {
+    }
+    else
+    {
         diff_ui->leftOntologySaveName->clear();
     }
 }
@@ -209,10 +215,13 @@ void Diff::onLeftIRIClicked(bool checked)
 {
     leftIRIName->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         diff_ui->leftOntology->setChecked(false);
         diff_ui->leftOntologySaveName->clear();
-    } else {
+    }
+    else
+    {
         diff_ui->leftIRIName->clear();
     }
 }
@@ -229,10 +238,13 @@ void Diff::onRightOntologyClicked(bool checked)
     rightOntologySave->setVisible(checked);
     rightOntologySaveName->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         diff_ui->rightIRI->setChecked(false);
         diff_ui->rightIRIName->clear();
-    } else {
+    }
+    else
+    {
         diff_ui->rightOntologySaveName->clear();
     }
 }
@@ -241,10 +253,13 @@ void Diff::onRightIRIClicked(bool checked)
 {
     rightIRIName->setVisible(checked);
 
-    if (checked) {
+    if (checked)
+    {
         diff_ui->rightOntology->setChecked(false);
         diff_ui->rightOntologySaveName->clear();
-    } else {
+    }
+    else
+    {
         diff_ui->rightIRIName->clear();
     }
 }

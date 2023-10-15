@@ -88,7 +88,8 @@ void Rename::addFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         files->clear();
@@ -103,7 +104,8 @@ void Rename::addTerms()
     bool ok;
     QString term = QInputDialog::getText(nullptr, "Add Term", "Enter a term:", QLineEdit::Normal, "", &ok);
 
-    if (ok && !term.isEmpty()) {
+    if (ok && !term.isEmpty())
+    {
         rename_ui->renameTermName->addItem(term);
     }
     mappingTerms.append(term);
@@ -112,7 +114,8 @@ void Rename::addTerms()
 void Rename::addTermFiles(QString& path, QLineEdit* file)
 {
     QString dialog = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!dialog.isEmpty()) {
+    if (!dialog.isEmpty())
+    {
         QFileInfo fileInfo(dialog);
         QString fileName = fileInfo.fileName();
         file->setText(fileName);
@@ -124,7 +127,8 @@ void Rename::addTermFiles(QString& path, QLineEdit* file)
 void Rename::addMapping()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         rename_ui->renamePrefixMappingsName->setText(fileName);
@@ -137,7 +141,8 @@ void Rename::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QListWidgetItem* selectedItem = files->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -153,7 +158,8 @@ void Rename::removeTerms()
 {
     QListWidgetItem* selectedItem = rename_ui->renameTermName->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -169,7 +175,8 @@ void Rename::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

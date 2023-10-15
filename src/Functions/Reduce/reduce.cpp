@@ -45,8 +45,10 @@ void Reduce::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             reduce_ui->reduceFileNames->addItem(fileName);
@@ -59,7 +61,8 @@ void Reduce::removeFiles()
 {
     QListWidgetItem* selectedItem = reduce_ui->reduceFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -75,7 +78,8 @@ void Reduce::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -109,7 +113,8 @@ void Reduce::reduceFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to reduce.");
         return;
     }

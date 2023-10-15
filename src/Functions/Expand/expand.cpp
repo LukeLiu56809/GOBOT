@@ -61,8 +61,10 @@ void Expand::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             expand_ui->expandFileNames->addItem(fileName);
@@ -75,7 +77,8 @@ void Expand::removeFiles()
 {
     QListWidgetItem* selectedItem = expand_ui->expandFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -91,7 +94,8 @@ void Expand::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -132,7 +136,8 @@ void Expand::expandFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to Expand.");
         return;
     }
@@ -184,7 +189,8 @@ void Expand::onExpandNoTermFile(bool checked)
 void Expand::onExpandTermFileSaveClicked()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         expand_ui->expandTermSaveName->setText(fileName);
@@ -196,7 +202,8 @@ void Expand::onExpandTermFileSaveClicked()
 void Expand::onExpandNoTermFileSaveClicked()
 {
     QString file = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!file.isEmpty()) {
+    if (!file.isEmpty())
+    {
         QFileInfo fileInfo(file);
         QString fileName = fileInfo.fileName();
         expand_ui->expandNoTermSaveName->setText(fileName);

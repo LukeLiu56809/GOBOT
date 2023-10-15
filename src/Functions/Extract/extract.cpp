@@ -131,7 +131,8 @@ void Extract::addFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         files->clear();
@@ -146,7 +147,8 @@ void Extract::addTerms()
     bool ok;
     QString term = QInputDialog::getText(nullptr, "Add Term", "Enter a term:", QLineEdit::Normal, "", &ok);
 
-    if (ok && !term.isEmpty()) {
+    if (ok && !term.isEmpty())
+    {
         extract_ui->extractTermName->addItem(term);
     }
 
@@ -156,7 +158,8 @@ void Extract::addTerms()
 void Extract::addTermFiles(QString& path, QLineEdit* file)
 {
     QString dialog = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!dialog.isEmpty()) {
+    if (!dialog.isEmpty())
+    {
         QFileInfo fileInfo(dialog);
         QString fileName = fileInfo.fileName();
         file->setText(fileName);
@@ -170,7 +173,8 @@ void Extract::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QListWidgetItem* selectedItem = files->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -186,7 +190,8 @@ void Extract::removeTerms()
 {
     QListWidgetItem* selectedItem = extract_ui->extractTermName->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -202,7 +207,8 @@ void Extract::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

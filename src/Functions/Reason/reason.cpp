@@ -45,8 +45,10 @@ void Reason::addFiles()
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             reason_ui->reasonFileNames->addItem(fileName);
@@ -59,7 +61,8 @@ void Reason::removeFiles()
 {
     QListWidgetItem* selectedItem = reason_ui->reasonFileNames->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to remove.");
         return;
     }
@@ -75,7 +78,8 @@ void Reason::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -132,7 +136,8 @@ void Reason::reasonFiles()
         QMessageBox::warning(nullptr, "Error", "Please enter a file name and select a directory (Save As).");
         return;
     }
-    if (getSelectedFileName().isEmpty()) {
+    if (getSelectedFileName().isEmpty())
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to reason.");
         return;
     }
@@ -180,49 +185,64 @@ void Reason::reasonFiles()
         command += " --exclude-tautologies structural";
     }
     QStringList axiomGeneratorOptions;
-    if (reason_ui->SubClass->isChecked()) {
+    if (reason_ui->SubClass->isChecked())
+    {
         axiomGeneratorOptions << "SubClass";
     }
-    if (reason_ui->EquivalentClass->isChecked()) {
+    if (reason_ui->EquivalentClass->isChecked())
+    {
         axiomGeneratorOptions << "EquivalentClass";
     }
-    if (reason_ui->DisjointClasses->isChecked()) {
+    if (reason_ui->DisjointClasses->isChecked())
+    {
         axiomGeneratorOptions << "DisjointClasses";
     }
-    if (reason_ui->DataPropertyCharacteristic->isChecked()) {
+    if (reason_ui->DataPropertyCharacteristic->isChecked())
+    {
         axiomGeneratorOptions << "DataPropertyCharacteristic";
     }
-    if (reason_ui->EquivalentDataProperties->isChecked()) {
+    if (reason_ui->EquivalentDataProperties->isChecked())
+    {
         axiomGeneratorOptions << "EquivalentDataProperties";
     }
-    if (reason_ui->SubDataProperty->isChecked()) {
+    if (reason_ui->SubDataProperty->isChecked())
+    {
         axiomGeneratorOptions << "SubDataProperty";
     }
-    if (reason_ui->ClassAssertion->isChecked()) {
+    if (reason_ui->ClassAssertion->isChecked())
+    {
         axiomGeneratorOptions << "ClassAssertion";
     }
-    if (reason_ui->PropertyAssertion->isChecked()) {
+    if (reason_ui->PropertyAssertion->isChecked())
+    {
         axiomGeneratorOptions << "PropertyAssertion";
     }
-    if (reason_ui->EquivalentObjectProperty->isChecked()) {
+    if (reason_ui->EquivalentObjectProperty->isChecked())
+    {
         axiomGeneratorOptions << "EquivalentObjectProperty";
     }
-    if (reason_ui->InverseObjectProperties->isChecked()) {
+    if (reason_ui->InverseObjectProperties->isChecked())
+    {
         axiomGeneratorOptions << "InverseObjectProperties";
     }
-    if (reason_ui->ObjectPropertyCharacteristic->isChecked()) {
+    if (reason_ui->ObjectPropertyCharacteristic->isChecked())
+    {
         axiomGeneratorOptions << "ObjectPropertyCharacteristic";
     }
-    if (reason_ui->SubObjectProperty->isChecked()) {
+    if (reason_ui->SubObjectProperty->isChecked())
+    {
         axiomGeneratorOptions << "SubObjectProperty";
     }
-    if (reason_ui->ObjectPropertyRange->isChecked()) {
+    if (reason_ui->ObjectPropertyRange->isChecked())
+    {
         axiomGeneratorOptions << "ObjectPropertyRange";
     }
-    if (reason_ui->ObjectPropertyDomain->isChecked()) {
+    if (reason_ui->ObjectPropertyDomain->isChecked())
+    {
         axiomGeneratorOptions << "ObjectPropertyDomain";
     }
-    if (!axiomGeneratorOptions.isEmpty()) {
+    if (!axiomGeneratorOptions.isEmpty())
+    {
         command += " --axiom-generators \"" + axiomGeneratorOptions.join(" ") + "\"";
     }
     command += " -o " + result;
@@ -236,7 +256,6 @@ void Reason::reasonFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-    qDebug() << "String: " << command;
 }
 
 //------------------------------- Getter methods---------------------------------

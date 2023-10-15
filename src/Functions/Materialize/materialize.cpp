@@ -72,7 +72,8 @@ void Materialize::addFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         files->clear();
@@ -87,7 +88,8 @@ void Materialize::addTerms()
     bool ok;
     QString term = QInputDialog::getText(nullptr, "Add Term", "Enter a term:", QLineEdit::Normal, "", &ok);
 
-    if (ok && !term.isEmpty()) {
+    if (ok && !term.isEmpty())
+    {
         materialize_ui->materializeTermName->addItem(term);
     }
     materializeTerms.append(term);
@@ -96,7 +98,8 @@ void Materialize::addTerms()
 void Materialize::addTermFiles(QString& path, QLineEdit* file)
 {
     QString dialog = QFileDialog::getOpenFileName(nullptr, "Open file", QDir::homePath());
-    if (!dialog.isEmpty()) {
+    if (!dialog.isEmpty())
+    {
         QFileInfo fileInfo(dialog);
         QString fileName = fileInfo.fileName();
         file->setText(fileName);
@@ -110,7 +113,8 @@ void Materialize::removeFiles(QMap<QString, QString>& filesMap, QListWidget* fil
 {
     QListWidgetItem* selectedItem = files->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -126,7 +130,8 @@ void Materialize::removeTerms()
 {
     QListWidgetItem* selectedItem = materialize_ui->materializeTermName->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file/term to remove.");
         return;
     }
@@ -142,7 +147,8 @@ void Materialize::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();
@@ -206,7 +212,6 @@ void Materialize::materializeFiles()
     {
         QMessageBox::warning(nullptr, "Error", "Command executed successfully.");
     }
-    qDebug() << "String: " << command;
 }
 
 //------------------------------- Getter methods---------------------------------

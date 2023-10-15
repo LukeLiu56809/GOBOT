@@ -120,7 +120,8 @@ void Filter::addImport()
 {
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open files", QDir::homePath());
 
-    if (!filePath.isEmpty()) {
+    if (!filePath.isEmpty())
+    {
         QFileInfo fileInfo(filePath);
         QString fileName = fileInfo.fileName();
         filter_ui->filterOntologyName->clear();
@@ -135,7 +136,8 @@ void Filter::addTerms(QListWidget *listWidget, QList<QString> &termsList)
     bool ok;
     QString term = QInputDialog::getText(nullptr, "Add Term", "Enter a term:", QLineEdit::Normal, "", &ok);
 
-    if (ok && !term.isEmpty()) {
+    if (ok && !term.isEmpty())
+    {
         listWidget->addItem(term);
         termsList.append(term);
     }
@@ -145,8 +147,10 @@ void Filter::addTermFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QStringList filePaths = QFileDialog::getOpenFileNames(nullptr, "Open files", QDir::homePath());
 
-    if (!filePaths.isEmpty()) {
-        for (const QString& filePath : filePaths) {
+    if (!filePaths.isEmpty())
+    {
+        for (const QString& filePath : filePaths)
+        {
             QFileInfo fileInfo(filePath);
             QString fileName = fileInfo.fileName();
             files->addItem(fileName);
@@ -159,7 +163,8 @@ void Filter::removeFiles(QMap<QString, QString>& filesMap, QListWidget* files)
 {
     QListWidgetItem* selectedItem = files->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a file to Filter.");
         return;
     }
@@ -175,7 +180,8 @@ void Filter::removeTerms(QListWidget *listWidget, QList<QString> &termsList)
 {
     QListWidgetItem* selectedItem = listWidget->currentItem();
 
-    if (!selectedItem) {
+    if (!selectedItem)
+    {
         QMessageBox::warning(nullptr, "Error", "Select a term to Filter.");
         return;
     }
@@ -191,7 +197,8 @@ void Filter::saveFiles()
 {
     QString saveFileName = QFileDialog::getSaveFileName(nullptr, "Save As", QDir::homePath(), "Ontology File (*.owl);;All Files (*)");
 
-    if (!saveFileName.isEmpty()) {
+    if (!saveFileName.isEmpty())
+    {
         QFileInfo fileInfo(saveFileName);
         QString fileName = fileInfo.fileName();
         QString directory = fileInfo.path();

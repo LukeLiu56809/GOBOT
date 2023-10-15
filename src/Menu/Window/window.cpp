@@ -35,7 +35,8 @@ void Window::newWindowActionTriggered()
 void Window::closeWindowActionTriggered()
 {
     QMainWindow *mainWin = qobject_cast<QMainWindow *>(parent());
-    if (mainWin) {
+    if (mainWin)
+    {
         mainWin->close();
     }
 }
