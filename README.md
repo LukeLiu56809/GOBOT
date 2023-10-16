@@ -2,7 +2,7 @@
 GOBOT is a user-friendly graphical interface designed to simplify the execution of ROBOT, a powerful command-line tool for ontology development and processing. With GOBOT, you can harness the full capabilities of ROBOT without the need to write complex command-line instructions. Perform ontology tasks effortlessly and efficiently using a convenient graphical interface.
 
 # Screenshot
-<img width="1091" alt="Screenshot 2023-10-04 at 1 50 54 PM" src="https://github.com/LukeLiu56809/GOBOT/assets/124535342/3fc971e9-f10e-4738-9020-8eb5fd642f66">
+<img width="1091" alt="Screenshot 2023-10-04 at 1 50 54 PM" src="/Users/lukeliu/Desktop/Screenshot 2023-10-16 at 11.45.08 AM.png">
 
 # Features
 One-Click Operations: Execute ROBOT commands with just a few clicks, eliminating the need to remember or type out lengthy command-line arguments.
