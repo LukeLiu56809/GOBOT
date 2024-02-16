@@ -57,11 +57,7 @@ Launch the downloaded GOBOT application on your computer.
 
 **Clone the Repository:**
 
-Clone the GOBOT repository to your local machine using Git:
-- Using HTTPS:
-  `git clone https://github.com/LukeLiu56809/GOBOT.git`
-- Using SSH:
-  `git clone git@github.com:LukeLiu56809/GOBOT.git`
+Clone the GOBOT repository to your local machine using Git
 
 **Open in QT Creator:**
 
